@@ -1,0 +1,631 @@
+﻿id,type,title_ja,context_en,role_ai,role_user,level,turns,chatgpt_prompt
+scenario_001,roleplay_scenario,フィッシング初動対応,Two users clicked a suspicious link in a phishing email.,Incident Lead,Security Analyst,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Incident Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Incident Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Incident Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Incident Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Incident Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: フィッシング初動対応
+Context: Two users clicked a suspicious link in a phishing email.
+Your role: Incident Lead
+My role: Security Analyst
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_002,roleplay_scenario,ランサムウェア疑い,Several shared folders suddenly became encrypted.,Incident Commander,SOC Analyst,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Incident Commander""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Incident Commander""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Incident Commander""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Incident Commander""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Incident Commander""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: ランサムウェア疑い
+Context: Several shared folders suddenly became encrypted.
+Your role: Incident Commander
+My role: SOC Analyst
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_003,roleplay_scenario,重大脆弱性への緊急対応,A critical internet-facing vulnerability was announced.,Security Manager,System Owner,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Security Manager""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Security Manager""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Security Manager""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Security Manager""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Security Manager""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 重大脆弱性への緊急対応
+Context: A critical internet-facing vulnerability was announced.
+Your role: Security Manager
+My role: System Owner
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_004,roleplay_scenario,不審な特権ログイン,A privileged account logged in from an unusual country.,SOC Lead,IAM Analyst,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""SOC Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""SOC Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""SOC Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""SOC Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""SOC Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 不審な特権ログイン
+Context: A privileged account logged in from an unusual country.
+Your role: SOC Lead
+My role: IAM Analyst
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_005,roleplay_scenario,クラウドストレージ公開,A cloud storage bucket may have been publicly accessible.,Cloud Security Lead,Cloud Engineer,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Cloud Security Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: クラウドストレージ公開
+Context: A cloud storage bucket may have been publicly accessible.
+Your role: Cloud Security Lead
+My role: Cloud Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_006,roleplay_scenario,監査指摘フォローアップ,Three audit findings remain open.,Auditor,Security Manager,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Auditor""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Auditor""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Auditor""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Auditor""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Auditor""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 監査指摘フォローアップ
+Context: Three audit findings remain open.
+Your role: Auditor
+My role: Security Manager
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_007,roleplay_scenario,ベンダーセキュリティ会議,A software vendor reported a possible security issue.,Customer Security Lead,Vendor Representative,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Customer Security Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Customer Security Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Customer Security Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Customer Security Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Customer Security Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: ベンダーセキュリティ会議
+Context: A software vendor reported a possible security issue.
+Your role: Customer Security Lead
+My role: Vendor Representative
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_008,roleplay_scenario,DLPアラート調査,A large file was uploaded to a personal cloud service.,DLP Analyst,Business Manager,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""DLP Analyst""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""DLP Analyst""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""DLP Analyst""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""DLP Analyst""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""DLP Analyst""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: DLPアラート調査
+Context: A large file was uploaded to a personal cloud service.
+Your role: DLP Analyst
+My role: Business Manager
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_009,roleplay_scenario,経営層向けインシデント報告,Management needs a short non-technical update.,CISO,Executive,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""CISO""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""CISO""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""CISO""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""CISO""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""CISO""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 経営層向けインシデント報告
+Context: Management needs a short non-technical update.
+Your role: CISO
+My role: Executive
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_010,roleplay_scenario,パッチ適用定例,Patch deployment is at eighty percent.,Security Coordinator,IT Operations,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Security Coordinator""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Security Coordinator""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Security Coordinator""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Security Coordinator""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Security Coordinator""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: パッチ適用定例
+Context: Patch deployment is at eighty percent.
+Your role: Security Coordinator
+My role: IT Operations
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_011,roleplay_scenario,アクセス権レビュー,Several inactive and excessive accounts were identified.,IAM Manager,Department Manager,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""IAM Manager""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""IAM Manager""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""IAM Manager""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""IAM Manager""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""IAM Manager""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: アクセス権レビュー
+Context: Several inactive and excessive accounts were identified.
+Your role: IAM Manager
+My role: Department Manager
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_012,roleplay_scenario,事後レビュー,The incident has been closed and the team is reviewing lessons learned.,Incident Manager,Team Member,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Incident Manager""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Incident Manager""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Incident Manager""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Incident Manager""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Incident Manager""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 事後レビュー
+Context: The incident has been closed and the team is reviewing lessons learned.
+Your role: Incident Manager
+My role: Team Member
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_013,roleplay_scenario,WAF検知チューニング,The WAF is generating many alerts for one application.,AppSec Lead,Web Operations,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""AppSec Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""AppSec Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""AppSec Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""AppSec Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""AppSec Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: WAF検知チューニング
+Context: The WAF is generating many alerts for one application.
+Your role: AppSec Lead
+My role: Web Operations
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_014,roleplay_scenario,EDR隔離確認,EDR automatically isolated a user laptop.,SOC Lead,Endpoint Engineer,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""SOC Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""SOC Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""SOC Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""SOC Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""SOC Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: EDR隔離確認
+Context: EDR automatically isolated a user laptop.
+Your role: SOC Lead
+My role: Endpoint Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_015,roleplay_scenario,APIキー漏えい,An API key was accidentally committed to a repository.,Security Engineer,Developer,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Security Engineer""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Security Engineer""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Security Engineer""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Security Engineer""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Security Engineer""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: APIキー漏えい
+Context: An API key was accidentally committed to a repository.
+Your role: Security Engineer
+My role: Developer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_016,roleplay_scenario,VPN異常接続,VPN logins increased from unusual locations.,Network Security Lead,Network Engineer,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Network Security Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Network Security Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Network Security Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Network Security Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Network Security Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: VPN異常接続
+Context: VPN logins increased from unusual locations.
+Your role: Network Security Lead
+My role: Network Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_017,roleplay_scenario,バックアップ復元テスト,The team needs to test recovery after a ransomware concern.,BCP Lead,Infrastructure Engineer,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""BCP Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""BCP Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""BCP Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""BCP Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""BCP Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: バックアップ復元テスト
+Context: The team needs to test recovery after a ransomware concern.
+Your role: BCP Lead
+My role: Infrastructure Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_018,roleplay_scenario,サードパーティリスク評価,A vendor will handle sensitive customer data.,Risk Manager,Vendor Owner,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Risk Manager""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Risk Manager""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Risk Manager""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Risk Manager""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Risk Manager""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: サードパーティリスク評価
+Context: A vendor will handle sensitive customer data.
+Your role: Risk Manager
+My role: Vendor Owner
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_019,roleplay_scenario,ログ欠損調査,A critical log source stopped sending data to the SIEM.,SOC Manager,Platform Engineer,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""SOC Manager""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""SOC Manager""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""SOC Manager""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""SOC Manager""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""SOC Manager""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: ログ欠損調査
+Context: A critical log source stopped sending data to the SIEM.
+Your role: SOC Manager
+My role: Platform Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_020,roleplay_scenario,証明書期限切れ対応,A TLS certificate will expire tomorrow.,Security Operations,Service Owner,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Security Operations""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Security Operations""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Security Operations""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Security Operations""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Security Operations""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 証明書期限切れ対応
+Context: A TLS certificate will expire tomorrow.
+Your role: Security Operations
+My role: Service Owner
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_021,roleplay_scenario,ゼロデイ緊急会議,A zero-day vulnerability is being actively exploited.,Incident Commander,Security Analyst,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Incident Commander""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Incident Commander""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Incident Commander""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Incident Commander""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Incident Commander""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: ゼロデイ緊急会議
+Context: A zero-day vulnerability is being actively exploited.
+Your role: Incident Commander
+My role: Security Analyst
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_022,roleplay_scenario,個人データ漏えい疑い,The incident may involve personal data.,Privacy Lead,Security Manager,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Privacy Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Privacy Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Privacy Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Privacy Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Privacy Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 個人データ漏えい疑い
+Context: The incident may involve personal data.
+Your role: Privacy Lead
+My role: Security Manager
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_023,roleplay_scenario,Kubernetes権限過多,A Kubernetes namespace has excessive permissions.,Cloud Security Lead,Platform Engineer,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Cloud Security Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Cloud Security Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: Kubernetes権限過多
+Context: A Kubernetes namespace has excessive permissions.
+Your role: Cloud Security Lead
+My role: Platform Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_024,roleplay_scenario,SOCアラート疲れ改善,Analysts receive too many low-value alerts.,SOC Manager,Detection Engineer,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""SOC Manager""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""SOC Manager""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""SOC Manager""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""SOC Manager""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""SOC Manager""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: SOCアラート疲れ改善
+Context: Analysts receive too many low-value alerts.
+Your role: SOC Manager
+My role: Detection Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_025,roleplay_scenario,セキュリティ例外申請,A system owner requested a policy exception.,Risk Manager,System Owner,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Risk Manager""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Risk Manager""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Risk Manager""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Risk Manager""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Risk Manager""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: セキュリティ例外申請
+Context: A system owner requested a policy exception.
+Your role: Risk Manager
+My role: System Owner
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_026,roleplay_scenario,セキュリティ定例会議,Weekly meeting to review open security actions.,Security Lead,IT Operations,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Security Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Security Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Security Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Security Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Security Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: セキュリティ定例会議
+Context: Weekly meeting to review open security actions.
+Your role: Security Lead
+My role: IT Operations
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_027,roleplay_scenario,新システム導入レビュー,A new system is going live next month.,Security Architect,Project Manager,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Security Architect""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Security Architect""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Security Architect""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Security Architect""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Security Architect""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 新システム導入レビュー
+Context: A new system is going live next month.
+Your role: Security Architect
+My role: Project Manager
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_028,roleplay_scenario,DDoS初動連絡,Traffic to the service suddenly increased abnormally.,Network Lead,Operations Manager,beginner,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Network Lead""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Network Lead""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Network Lead""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Network Lead""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Network Lead""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: DDoS初動連絡
+Context: Traffic to the service suddenly increased abnormally.
+Your role: Network Lead
+My role: Operations Manager
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_029,roleplay_scenario,メールゲートウェイ障害,The email gateway is delaying inbound mail.,Security Operations,Messaging Engineer,lower_intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""Security Operations""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""Security Operations""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""Security Operations""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""Security Operations""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""Security Operations""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: メールゲートウェイ障害
+Context: The email gateway is delaying inbound mail.
+Your role: Security Operations
+My role: Messaging Engineer
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."
+scenario_030,roleplay_scenario,退職者アカウント確認,A former employee account may still be active.,IAM Analyst,HR Representative,intermediate,"[{""goal"": ""Report current status and known facts."", ""speaker"": ""IAM Analyst""}, {""goal"": ""Confirm scope and business impact."", ""speaker"": ""IAM Analyst""}, {""goal"": ""Suggest immediate containment or mitigation."", ""speaker"": ""IAM Analyst""}, {""goal"": ""Assign owners and deadlines."", ""speaker"": ""IAM Analyst""}, {""goal"": ""Summarize decisions and next steps."", ""speaker"": ""IAM Analyst""}]","You are my English role-play partner for an information-security meeting.
+I am a beginner Japanese English learner.
+
+Scenario: 退職者アカウント確認
+Context: A former employee account may still be active.
+Your role: IAM Analyst
+My role: HR Representative
+
+Rules:
+1. Use voice mode and speak slowly at first.
+2. Use simple English, one or two sentences per turn.
+3. Ask only one question at a time and wait for my answer.
+4. Do not answer for me.
+5. If I say ""Could you speak more slowly?"", repeat more slowly.
+6. After each answer, first respond naturally as the meeting partner.
+7. Then give one short correction in Japanese only when necessary.
+8. Gradually move toward normal meeting speed.
+9. Cover status, impact, recommendation, owner, deadline, and summary.
+10. At the end, give me a score for listening, clarity, vocabulary, and meeting participation, each out of 5.
+
+Start the meeting now with a short greeting and the first question."

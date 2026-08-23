@@ -1,0 +1,3082 @@
+[
+  {
+    "id": "listening_0001",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Sorry, could you say that again?",
+    "correct_ja": "すみません、もう一度言っていただけますか。",
+    "choices_ja": [
+      "すみません、もう一度言っていただけますか。",
+      "今のところデータ持ち出しの証拠は見つかっていません。",
+      "現時点で確認されたデータ侵害はありません。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Sorry, could you say that again?"
+  },
+  {
+    "id": "listening_0002",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you speak a little more slowly, please?",
+    "correct_ja": "もう少しゆっくり話していただけますか。",
+    "choices_ja": [
+      "もう少しゆっくり話していただけますか。",
+      "まず端末を隔離することを提案します。",
+      "予防的な措置を講じています。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you speak a little more slowly, please?"
+  },
+  {
+    "id": "listening_0003",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I caught the first part, but not the last part.",
+    "correct_ja": "前半は聞き取れましたが、後半が分かりませんでした。",
+    "choices_ja": [
+      "前半は聞き取れましたが、後半が分かりませんでした。",
+      "影響を受けたパスワードを直ちにリセットすべきです。",
+      "緊急メンテナンス時間の承認が必要です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I caught the first part, but not the last part."
+  },
+  {
+    "id": "listening_0004",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you spell the domain name?",
+    "correct_ja": "ドメイン名の綴りを教えていただけますか。",
+    "choices_ja": [
+      "ドメイン名の綴りを教えていただけますか。",
+      "送信者とドメインをブロックすることを推奨します。",
+      "影響を受ける製品バージョンを確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you spell the domain name?"
+  },
+  {
+    "id": "listening_0005",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you put that in the chat?",
+    "correct_ja": "それをチャットに入力していただけますか。",
+    "choices_ja": [
+      "それをチャットに入力していただけますか。",
+      "最優先は封じ込めにすべきです。",
+      "修正版はいつ利用可能になりますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you put that in the chat?"
+  },
+  {
+    "id": "listening_0006",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Sorry, the audio cut out for a moment.",
+    "correct_ja": "すみません、一瞬音声が途切れました。",
+    "choices_ja": [
+      "すみません、一瞬音声が途切れました。",
+      "変更前にログを保全すべきです。",
+      "暫定的な回避策はありますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Sorry, the audio cut out for a moment."
+  },
+  {
+    "id": "listening_0007",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Did you say fifteen or fifty?",
+    "correct_ja": "15と言いましたか、それとも50ですか。",
+    "choices_ja": [
+      "15と言いましたか、それとも50ですか。",
+      "7日間監視を強化することを推奨します。",
+      "調査結果を書面で提供してください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Did you say fifteen or fifty?"
+  },
+  {
+    "id": "listening_0008",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain that in simpler words?",
+    "correct_ja": "それをもう少し簡単に説明していただけますか。",
+    "choices_ja": [
+      "それをもう少し簡単に説明していただけますか。",
+      "提案された方法に賛成です。",
+      "本日の緊急電話会議に参加できますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain that in simpler words?"
+  },
+  {
+    "id": "listening_0009",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let me confirm: the server is isolated, right?",
+    "correct_ja": "確認ですが、サーバーは隔離済みですね。",
+    "choices_ja": [
+      "確認ですが、サーバーは隔離済みですね。",
+      "それは妥当だと思います。",
+      "解決まで2時間ごとの更新が必要です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let me confirm: the server is isolated, right?"
+  },
+  {
+    "id": "listening_0010",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Just to make sure, only two users are affected, correct?",
+    "correct_ja": "念のため、影響を受けた利用者は2人だけですね。",
+    "choices_ja": [
+      "念のため、影響を受けた利用者は2人だけですね。",
+      "おっしゃることは分かりますが、さらに証拠が必要です。",
+      "利用者アカウント が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Just to make sure, only two users are affected, correct?"
+  },
+  {
+    "id": "listening_0011",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Do we know when the activity started?",
+    "correct_ja": "活動がいつ始まったか分かっていますか。",
+    "choices_ja": [
+      "活動がいつ始まったか分かっていますか。",
+      "少し異なる意見があります。",
+      "顧客データ が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Do we know when the activity started?"
+  },
+  {
+    "id": "listening_0012",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Has the root cause been confirmed?",
+    "correct_ja": "根本原因は確認できていますか。",
+    "choices_ja": [
+      "根本原因は確認できていますか。",
+      "運用影響を懸念しています。",
+      "本番サーバー が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Has the root cause been confirmed?"
+  },
+  {
+    "id": "listening_0013",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Are we treating this as a security incident?",
+    "correct_ja": "これはセキュリティインシデントとして扱っていますか。",
+    "choices_ja": [
+      "これはセキュリティインシデントとして扱っていますか。",
+      "決定前に証拠を確認できますか。",
+      "VPNサービス が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Are we treating this as a security incident?"
+  },
+  {
+    "id": "listening_0014",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Is this based on confirmed evidence or an assumption?",
+    "correct_ja": "これは確認済みの証拠に基づいていますか、それとも推測ですか。",
+    "choices_ja": [
+      "これは確認済みの証拠に基づいていますか、それとも推測ですか。",
+      "ログを確認し、午後3時までに報告してもらえますか。",
+      "メールゲートウェイ が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Is this based on confirmed evidence or an assumption?"
+  },
+  {
+    "id": "listening_0015",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We detected a suspicious login at 8:40 this morning.",
+    "correct_ja": "今朝8時40分に不審なログインを検知しました。",
+    "choices_ja": [
+      "今朝8時40分に不審なログインを検知しました。",
+      "この対応を担当できるのは誰ですか。",
+      "クラウドストレージバケット が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We detected a suspicious login at 8:40 this morning."
+  },
+  {
+    "id": "listening_0016",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "At this point, the impact appears to be limited.",
+    "correct_ja": "現時点では影響は限定的に見えます。",
+    "choices_ja": [
+      "現時点では影響は限定的に見えます。",
+      "会議後にインシデントの時系列を共有してください。",
+      "ファイアウォールルール が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: At this point, the impact appears to be limited."
+  },
+  {
+    "id": "listening_0017",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The investigation is still in progress.",
+    "correct_ja": "調査はまだ進行中です。",
+    "choices_ja": [
+      "調査はまだ進行中です。",
+      "是正期限を確認していただけますか。",
+      "脆弱性スキャン結果 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The investigation is still in progress."
+  },
+  {
+    "id": "listening_0018",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We have isolated the affected endpoint.",
+    "correct_ja": "影響を受けた端末を隔離しました。",
+    "choices_ja": [
+      "影響を受けた端末を隔離しました。",
+      "影響範囲が拡大した場合は直ちにエスカレーションしてください。",
+      "インシデントの時系列 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We have isolated the affected endpoint."
+  },
+  {
+    "id": "listening_0019",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The affected account has been disabled.",
+    "correct_ja": "影響を受けたアカウントを無効化しました。",
+    "choices_ja": [
+      "影響を受けたアカウントを無効化しました。",
+      "正午までに進捗を報告できます。",
+      "ベンダー回答 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The affected account has been disabled."
+  },
+  {
+    "id": "listening_0020",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We found no evidence of data exfiltration so far.",
+    "correct_ja": "今のところデータ持ち出しの証拠は見つかっていません。",
+    "choices_ja": [
+      "今のところデータ持ち出しの証拠は見つかっていません。",
+      "簡単な状況報告から始めましょう。",
+      "アクセス権レビュー が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We found no evidence of data exfiltration so far."
+  },
+  {
+    "id": "listening_0021",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I suggest isolating the device first.",
+    "correct_ja": "まず端末を隔離することを提案します。",
+    "choices_ja": [
+      "まず端末を隔離することを提案します。",
+      "本日は封じ込め計画を決定する必要があります。",
+      "バックアップ状態 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I suggest isolating the device first."
+  },
+  {
+    "id": "listening_0022",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We should reset the affected passwords immediately.",
+    "correct_ja": "影響を受けたパスワードを直ちにリセットすべきです。",
+    "choices_ja": [
+      "影響を受けたパスワードを直ちにリセットすべきです。",
+      "当面のリスクに集中できますか。",
+      "復旧計画 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should reset the affected passwords immediately."
+  },
+  {
+    "id": "listening_0023",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend blocking the sender and the domain.",
+    "correct_ja": "送信者とドメインをブロックすることを推奨します。",
+    "choices_ja": [
+      "送信者とドメインをブロックすることを推奨します。",
+      "決定事項と対応事項をまとめましょう。",
+      "法的要件 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend blocking the sender and the domain."
+  },
+  {
+    "id": "listening_0024",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Our first priority should be containment.",
+    "correct_ja": "最優先は封じ込めにすべきです。",
+    "choices_ja": [
+      "最優先は封じ込めにすべきです。",
+      "期限は金曜日の正午です。",
+      "監査証跡 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Our first priority should be containment."
+  },
+  {
+    "id": "listening_0025",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We should preserve the logs before making changes.",
+    "correct_ja": "変更前にログを保全すべきです。",
+    "choices_ja": [
+      "変更前にログを保全すべきです。",
+      "ありがとうございます。間もなく議事録を送ります。",
+      "監視ルール が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should preserve the logs before making changes."
+  },
+  {
+    "id": "listening_0026",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend increasing monitoring for seven days.",
+    "correct_ja": "7日間監視を強化することを推奨します。",
+    "choices_ja": [
+      "7日間監視を強化することを推奨します。",
+      "事業への影響は現在限定的です。",
+      "影響を受けた端末 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend increasing monitoring for seven days."
+  },
+  {
+    "id": "listening_0027",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I agree with the proposed approach.",
+    "correct_ja": "提案された方法に賛成です。",
+    "choices_ja": [
+      "提案された方法に賛成です。",
+      "顧客向けサービスは引き続き利用可能です。",
+      "パッチ適用スケジュール が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I agree with the proposed approach."
+  },
+  {
+    "id": "listening_0028",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "That makes sense to me.",
+    "correct_ja": "それは妥当だと思います。",
+    "choices_ja": [
+      "それは妥当だと思います。",
+      "差し迫った脅威は封じ込めました。",
+      "特権アカウント が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: That makes sense to me."
+  },
+  {
+    "id": "listening_0029",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I see your point, but we need more evidence.",
+    "correct_ja": "おっしゃることは分かりますが、さらに証拠が必要です。",
+    "choices_ja": [
+      "おっしゃることは分かりますが、さらに証拠が必要です。",
+      "現時点で確認されたデータ侵害はありません。",
+      "不審なドメイン が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I see your point, but we need more evidence."
+  },
+  {
+    "id": "listening_0030",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I have a slightly different view.",
+    "correct_ja": "少し異なる意見があります。",
+    "choices_ja": [
+      "少し異なる意見があります。",
+      "予防的な措置を講じています。",
+      "DDoS対策状況 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I have a slightly different view."
+  },
+  {
+    "id": "listening_0031",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I am concerned about the operational impact.",
+    "correct_ja": "運用影響を懸念しています。",
+    "choices_ja": [
+      "運用影響を懸念しています。",
+      "緊急メンテナンス時間の承認が必要です。",
+      "サービス影響 が影響を受けているか確認していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I am concerned about the operational impact."
+  },
+  {
+    "id": "listening_0032",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Before we decide, could we review the evidence?",
+    "correct_ja": "決定前に証拠を確認できますか。",
+    "choices_ja": [
+      "決定前に証拠を確認できますか。",
+      "影響を受ける製品バージョンを確認していただけますか。",
+      "判断前に 利用者アカウント を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Before we decide, could we review the evidence?"
+  },
+  {
+    "id": "listening_0033",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you check the logs and report back by 3 p.m.?",
+    "correct_ja": "ログを確認し、午後3時までに報告してもらえますか。",
+    "choices_ja": [
+      "ログを確認し、午後3時までに報告してもらえますか。",
+      "修正版はいつ利用可能になりますか。",
+      "判断前に 顧客データ を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you check the logs and report back by 3 p.m.?"
+  },
+  {
+    "id": "listening_0034",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Who can take ownership of this action?",
+    "correct_ja": "この対応を担当できるのは誰ですか。",
+    "choices_ja": [
+      "この対応を担当できるのは誰ですか。",
+      "暫定的な回避策はありますか。",
+      "判断前に 本番サーバー を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Who can take ownership of this action?"
+  },
+  {
+    "id": "listening_0035",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please share the incident timeline after the meeting.",
+    "correct_ja": "会議後にインシデントの時系列を共有してください。",
+    "choices_ja": [
+      "会議後にインシデントの時系列を共有してください。",
+      "調査結果を書面で提供してください。",
+      "判断前に VPNサービス を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please share the incident timeline after the meeting."
+  },
+  {
+    "id": "listening_0036",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Can you confirm the remediation deadline?",
+    "correct_ja": "是正期限を確認していただけますか。",
+    "choices_ja": [
+      "是正期限を確認していただけますか。",
+      "本日の緊急電話会議に参加できますか。",
+      "判断前に メールゲートウェイ を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Can you confirm the remediation deadline?"
+  },
+  {
+    "id": "listening_0037",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please escalate immediately if the scope increases.",
+    "correct_ja": "影響範囲が拡大した場合は直ちにエスカレーションしてください。",
+    "choices_ja": [
+      "影響範囲が拡大した場合は直ちにエスカレーションしてください。",
+      "解決まで2時間ごとの更新が必要です。",
+      "判断前に クラウドストレージバケット を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please escalate immediately if the scope increases."
+  },
+  {
+    "id": "listening_0038",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I can provide an update by noon.",
+    "correct_ja": "正午までに進捗を報告できます。",
+    "choices_ja": [
+      "正午までに進捗を報告できます。",
+      "利用者アカウント が影響を受けているか確認していただけますか。",
+      "判断前に ファイアウォールルール を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I can provide an update by noon."
+  },
+  {
+    "id": "listening_0039",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's start with a quick status update.",
+    "correct_ja": "簡単な状況報告から始めましょう。",
+    "choices_ja": [
+      "簡単な状況報告から始めましょう。",
+      "顧客データ が影響を受けているか確認していただけますか。",
+      "判断前に 脆弱性スキャン結果 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's start with a quick status update."
+  },
+  {
+    "id": "listening_0040",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Today, we need to decide on the containment plan.",
+    "correct_ja": "本日は封じ込め計画を決定する必要があります。",
+    "choices_ja": [
+      "本日は封じ込め計画を決定する必要があります。",
+      "本番サーバー が影響を受けているか確認していただけますか。",
+      "判断前に インシデントの時系列 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Today, we need to decide on the containment plan."
+  },
+  {
+    "id": "listening_0041",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could we stay focused on the immediate risk?",
+    "correct_ja": "当面のリスクに集中できますか。",
+    "choices_ja": [
+      "当面のリスクに集中できますか。",
+      "VPNサービス が影響を受けているか確認していただけますか。",
+      "判断前に ベンダー回答 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could we stay focused on the immediate risk?"
+  },
+  {
+    "id": "listening_0042",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's summarize the decisions and action items.",
+    "correct_ja": "決定事項と対応事項をまとめましょう。",
+    "choices_ja": [
+      "決定事項と対応事項をまとめましょう。",
+      "メールゲートウェイ が影響を受けているか確認していただけますか。",
+      "判断前に アクセス権レビュー を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's summarize the decisions and action items."
+  },
+  {
+    "id": "listening_0043",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The deadline is Friday at noon.",
+    "correct_ja": "期限は金曜日の正午です。",
+    "choices_ja": [
+      "期限は金曜日の正午です。",
+      "クラウドストレージバケット が影響を受けているか確認していただけますか。",
+      "判断前に バックアップ状態 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The deadline is Friday at noon."
+  },
+  {
+    "id": "listening_0044",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Thank you. I will send the meeting notes shortly.",
+    "correct_ja": "ありがとうございます。間もなく議事録を送ります。",
+    "choices_ja": [
+      "ありがとうございます。間もなく議事録を送ります。",
+      "ファイアウォールルール が影響を受けているか確認していただけますか。",
+      "判断前に 復旧計画 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Thank you. I will send the meeting notes shortly."
+  },
+  {
+    "id": "listening_0045",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The business impact is currently limited.",
+    "correct_ja": "事業への影響は現在限定的です。",
+    "choices_ja": [
+      "事業への影響は現在限定的です。",
+      "脆弱性スキャン結果 が影響を受けているか確認していただけますか。",
+      "判断前に 法的要件 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The business impact is currently limited."
+  },
+  {
+    "id": "listening_0046",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Customer-facing services remain available.",
+    "correct_ja": "顧客向けサービスは引き続き利用可能です。",
+    "choices_ja": [
+      "顧客向けサービスは引き続き利用可能です。",
+      "インシデントの時系列 が影響を受けているか確認していただけますか。",
+      "判断前に 監査証跡 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Customer-facing services remain available."
+  },
+  {
+    "id": "listening_0047",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We have contained the immediate threat.",
+    "correct_ja": "差し迫った脅威は封じ込めました。",
+    "choices_ja": [
+      "差し迫った脅威は封じ込めました。",
+      "ベンダー回答 が影響を受けているか確認していただけますか。",
+      "判断前に 監視ルール を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We have contained the immediate threat."
+  },
+  {
+    "id": "listening_0048",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "There is no confirmed data breach at this time.",
+    "correct_ja": "現時点で確認されたデータ侵害はありません。",
+    "choices_ja": [
+      "現時点で確認されたデータ侵害はありません。",
+      "アクセス権レビュー が影響を受けているか確認していただけますか。",
+      "判断前に 影響を受けた端末 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: There is no confirmed data breach at this time."
+  },
+  {
+    "id": "listening_0049",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We are taking precautionary measures.",
+    "correct_ja": "予防的な措置を講じています。",
+    "choices_ja": [
+      "予防的な措置を講じています。",
+      "バックアップ状態 が影響を受けているか確認していただけますか。",
+      "判断前に パッチ適用スケジュール を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We are taking precautionary measures."
+  },
+  {
+    "id": "listening_0050",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need approval for the emergency maintenance window.",
+    "correct_ja": "緊急メンテナンス時間の承認が必要です。",
+    "choices_ja": [
+      "緊急メンテナンス時間の承認が必要です。",
+      "復旧計画 が影響を受けているか確認していただけますか。",
+      "判断前に 特権アカウント を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need approval for the emergency maintenance window."
+  },
+  {
+    "id": "listening_0051",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm the affected product versions?",
+    "correct_ja": "影響を受ける製品バージョンを確認していただけますか。",
+    "choices_ja": [
+      "影響を受ける製品バージョンを確認していただけますか。",
+      "法的要件 が影響を受けているか確認していただけますか。",
+      "判断前に 不審なドメイン を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm the affected product versions?"
+  },
+  {
+    "id": "listening_0052",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "When will the fixed version be available?",
+    "correct_ja": "修正版はいつ利用可能になりますか。",
+    "choices_ja": [
+      "修正版はいつ利用可能になりますか。",
+      "監査証跡 が影響を受けているか確認していただけますか。",
+      "判断前に DDoS対策状況 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: When will the fixed version be available?"
+  },
+  {
+    "id": "listening_0053",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Do you have a temporary workaround?",
+    "correct_ja": "暫定的な回避策はありますか。",
+    "choices_ja": [
+      "暫定的な回避策はありますか。",
+      "監視ルール が影響を受けているか確認していただけますか。",
+      "判断前に サービス影響 を確認する必要があります。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Do you have a temporary workaround?"
+  },
+  {
+    "id": "listening_0054",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please provide your findings in writing.",
+    "correct_ja": "調査結果を書面で提供してください。",
+    "choices_ja": [
+      "調査結果を書面で提供してください。",
+      "影響を受けた端末 が影響を受けているか確認していただけますか。",
+      "次のステップとして 利用者アカウント の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please provide your findings in writing."
+  },
+  {
+    "id": "listening_0055",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Can you join the bridge call today?",
+    "correct_ja": "本日の緊急電話会議に参加できますか。",
+    "choices_ja": [
+      "本日の緊急電話会議に参加できますか。",
+      "パッチ適用スケジュール が影響を受けているか確認していただけますか。",
+      "次のステップとして 顧客データ の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Can you join the bridge call today?"
+  },
+  {
+    "id": "listening_0056",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need an update every two hours until resolution.",
+    "correct_ja": "解決まで2時間ごとの更新が必要です。",
+    "choices_ja": [
+      "解決まで2時間ごとの更新が必要です。",
+      "特権アカウント が影響を受けているか確認していただけますか。",
+      "次のステップとして 本番サーバー の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need an update every two hours until resolution."
+  },
+  {
+    "id": "listening_0057",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether user accounts is affected?",
+    "correct_ja": "利用者アカウント が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "利用者アカウント が影響を受けているか確認していただけますか。",
+      "不審なドメイン が影響を受けているか確認していただけますか。",
+      "次のステップとして VPNサービス の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether user accounts is affected?"
+  },
+  {
+    "id": "listening_0058",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you confirm whether customer data is affected?",
+    "correct_ja": "顧客データ が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "顧客データ が影響を受けているか確認していただけますか。",
+      "DDoS対策状況 が影響を受けているか確認していただけますか。",
+      "次のステップとして メールゲートウェイ の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether customer data is affected?"
+  },
+  {
+    "id": "listening_0059",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you confirm whether the production server is affected?",
+    "correct_ja": "本番サーバー が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "本番サーバー が影響を受けているか確認していただけますか。",
+      "サービス影響 が影響を受けているか確認していただけますか。",
+      "次のステップとして クラウドストレージバケット の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the production server is affected?"
+  },
+  {
+    "id": "listening_0060",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether the VPN service is affected?",
+    "correct_ja": "VPNサービス が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "VPNサービス が影響を受けているか確認していただけますか。",
+      "判断前に 利用者アカウント を確認する必要があります。",
+      "次のステップとして ファイアウォールルール の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the VPN service is affected?"
+  },
+  {
+    "id": "listening_0061",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you confirm whether the email gateway is affected?",
+    "correct_ja": "メールゲートウェイ が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "メールゲートウェイ が影響を受けているか確認していただけますか。",
+      "判断前に 顧客データ を確認する必要があります。",
+      "次のステップとして 脆弱性スキャン結果 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the email gateway is affected?"
+  },
+  {
+    "id": "listening_0062",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you confirm whether the cloud storage bucket is affected?",
+    "correct_ja": "クラウドストレージバケット が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "クラウドストレージバケット が影響を受けているか確認していただけますか。",
+      "判断前に 本番サーバー を確認する必要があります。",
+      "次のステップとして インシデントの時系列 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the cloud storage bucket is affected?"
+  },
+  {
+    "id": "listening_0063",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether the firewall rule is affected?",
+    "correct_ja": "ファイアウォールルール が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "ファイアウォールルール が影響を受けているか確認していただけますか。",
+      "判断前に VPNサービス を確認する必要があります。",
+      "次のステップとして ベンダー回答 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the firewall rule is affected?"
+  },
+  {
+    "id": "listening_0064",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you confirm whether the vulnerability scan result is affected?",
+    "correct_ja": "脆弱性スキャン結果 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "脆弱性スキャン結果 が影響を受けているか確認していただけますか。",
+      "判断前に メールゲートウェイ を確認する必要があります。",
+      "次のステップとして アクセス権レビュー の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the vulnerability scan result is affected?"
+  },
+  {
+    "id": "listening_0065",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you confirm whether the incident timeline is affected?",
+    "correct_ja": "インシデントの時系列 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "インシデントの時系列 が影響を受けているか確認していただけますか。",
+      "判断前に クラウドストレージバケット を確認する必要があります。",
+      "次のステップとして バックアップ状態 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the incident timeline is affected?"
+  },
+  {
+    "id": "listening_0066",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether the vendor response is affected?",
+    "correct_ja": "ベンダー回答 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "ベンダー回答 が影響を受けているか確認していただけますか。",
+      "判断前に ファイアウォールルール を確認する必要があります。",
+      "次のステップとして 復旧計画 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the vendor response is affected?"
+  },
+  {
+    "id": "listening_0067",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you confirm whether the access review is affected?",
+    "correct_ja": "アクセス権レビュー が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "アクセス権レビュー が影響を受けているか確認していただけますか。",
+      "判断前に 脆弱性スキャン結果 を確認する必要があります。",
+      "次のステップとして 法的要件 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the access review is affected?"
+  },
+  {
+    "id": "listening_0068",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you confirm whether the backup status is affected?",
+    "correct_ja": "バックアップ状態 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "バックアップ状態 が影響を受けているか確認していただけますか。",
+      "判断前に インシデントの時系列 を確認する必要があります。",
+      "次のステップとして 監査証跡 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the backup status is affected?"
+  },
+  {
+    "id": "listening_0069",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether the recovery plan is affected?",
+    "correct_ja": "復旧計画 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "復旧計画 が影響を受けているか確認していただけますか。",
+      "判断前に ベンダー回答 を確認する必要があります。",
+      "次のステップとして 監視ルール の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the recovery plan is affected?"
+  },
+  {
+    "id": "listening_0070",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you confirm whether the legal requirement is affected?",
+    "correct_ja": "法的要件 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "法的要件 が影響を受けているか確認していただけますか。",
+      "判断前に アクセス権レビュー を確認する必要があります。",
+      "次のステップとして 影響を受けた端末 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the legal requirement is affected?"
+  },
+  {
+    "id": "listening_0071",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you confirm whether the audit evidence is affected?",
+    "correct_ja": "監査証跡 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "監査証跡 が影響を受けているか確認していただけますか。",
+      "判断前に バックアップ状態 を確認する必要があります。",
+      "次のステップとして パッチ適用スケジュール の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the audit evidence is affected?"
+  },
+  {
+    "id": "listening_0072",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether the monitoring rule is affected?",
+    "correct_ja": "監視ルール が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "監視ルール が影響を受けているか確認していただけますか。",
+      "判断前に 復旧計画 を確認する必要があります。",
+      "次のステップとして 特権アカウント の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the monitoring rule is affected?"
+  },
+  {
+    "id": "listening_0073",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you confirm whether the affected endpoint is affected?",
+    "correct_ja": "影響を受けた端末 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "影響を受けた端末 が影響を受けているか確認していただけますか。",
+      "判断前に 法的要件 を確認する必要があります。",
+      "次のステップとして 不審なドメイン の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the affected endpoint is affected?"
+  },
+  {
+    "id": "listening_0074",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you confirm whether the patch schedule is affected?",
+    "correct_ja": "パッチ適用スケジュール が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "パッチ適用スケジュール が影響を受けているか確認していただけますか。",
+      "判断前に 監査証跡 を確認する必要があります。",
+      "次のステップとして DDoS対策状況 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the patch schedule is affected?"
+  },
+  {
+    "id": "listening_0075",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether the privileged account is affected?",
+    "correct_ja": "特権アカウント が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "特権アカウント が影響を受けているか確認していただけますか。",
+      "判断前に 監視ルール を確認する必要があります。",
+      "次のステップとして サービス影響 の確認を推奨します。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the privileged account is affected?"
+  },
+  {
+    "id": "listening_0076",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you confirm whether the suspicious domain is affected?",
+    "correct_ja": "不審なドメイン が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "不審なドメイン が影響を受けているか確認していただけますか。",
+      "判断前に 影響を受けた端末 を確認する必要があります。",
+      "本日中に 利用者アカウント について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the suspicious domain is affected?"
+  },
+  {
+    "id": "listening_0077",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you confirm whether the DDoS mitigation status is affected?",
+    "correct_ja": "DDoS対策状況 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "DDoS対策状況 が影響を受けているか確認していただけますか。",
+      "判断前に パッチ適用スケジュール を確認する必要があります。",
+      "本日中に 顧客データ について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the DDoS mitigation status is affected?"
+  },
+  {
+    "id": "listening_0078",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you confirm whether the service impact is affected?",
+    "correct_ja": "サービス影響 が影響を受けているか確認していただけますか。",
+    "choices_ja": [
+      "サービス影響 が影響を受けているか確認していただけますか。",
+      "判断前に 特権アカウント を確認する必要があります。",
+      "本日中に 本番サーバー について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you confirm whether the service impact is affected?"
+  },
+  {
+    "id": "listening_0079",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check user accounts before making a decision.",
+    "correct_ja": "判断前に 利用者アカウント を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 利用者アカウント を確認する必要があります。",
+      "判断前に 不審なドメイン を確認する必要があります。",
+      "本日中に VPNサービス について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check user accounts before making a decision."
+  },
+  {
+    "id": "listening_0080",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need to check customer data before making a decision.",
+    "correct_ja": "判断前に 顧客データ を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 顧客データ を確認する必要があります。",
+      "判断前に DDoS対策状況 を確認する必要があります。",
+      "本日中に メールゲートウェイ について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check customer data before making a decision."
+  },
+  {
+    "id": "listening_0081",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We need to check the production server before making a decision.",
+    "correct_ja": "判断前に 本番サーバー を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 本番サーバー を確認する必要があります。",
+      "判断前に サービス影響 を確認する必要があります。",
+      "本日中に クラウドストレージバケット について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the production server before making a decision."
+  },
+  {
+    "id": "listening_0082",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check the VPN service before making a decision.",
+    "correct_ja": "判断前に VPNサービス を確認する必要があります。",
+    "choices_ja": [
+      "判断前に VPNサービス を確認する必要があります。",
+      "次のステップとして 利用者アカウント の確認を推奨します。",
+      "本日中に ファイアウォールルール について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the VPN service before making a decision."
+  },
+  {
+    "id": "listening_0083",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need to check the email gateway before making a decision.",
+    "correct_ja": "判断前に メールゲートウェイ を確認する必要があります。",
+    "choices_ja": [
+      "判断前に メールゲートウェイ を確認する必要があります。",
+      "次のステップとして 顧客データ の確認を推奨します。",
+      "本日中に 脆弱性スキャン結果 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the email gateway before making a decision."
+  },
+  {
+    "id": "listening_0084",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We need to check the cloud storage bucket before making a decision.",
+    "correct_ja": "判断前に クラウドストレージバケット を確認する必要があります。",
+    "choices_ja": [
+      "判断前に クラウドストレージバケット を確認する必要があります。",
+      "次のステップとして 本番サーバー の確認を推奨します。",
+      "本日中に インシデントの時系列 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the cloud storage bucket before making a decision."
+  },
+  {
+    "id": "listening_0085",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check the firewall rule before making a decision.",
+    "correct_ja": "判断前に ファイアウォールルール を確認する必要があります。",
+    "choices_ja": [
+      "判断前に ファイアウォールルール を確認する必要があります。",
+      "次のステップとして VPNサービス の確認を推奨します。",
+      "本日中に ベンダー回答 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the firewall rule before making a decision."
+  },
+  {
+    "id": "listening_0086",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need to check the vulnerability scan result before making a decision.",
+    "correct_ja": "判断前に 脆弱性スキャン結果 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 脆弱性スキャン結果 を確認する必要があります。",
+      "次のステップとして メールゲートウェイ の確認を推奨します。",
+      "本日中に アクセス権レビュー について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the vulnerability scan result before making a decision."
+  },
+  {
+    "id": "listening_0087",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We need to check the incident timeline before making a decision.",
+    "correct_ja": "判断前に インシデントの時系列 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に インシデントの時系列 を確認する必要があります。",
+      "次のステップとして クラウドストレージバケット の確認を推奨します。",
+      "本日中に バックアップ状態 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the incident timeline before making a decision."
+  },
+  {
+    "id": "listening_0088",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check the vendor response before making a decision.",
+    "correct_ja": "判断前に ベンダー回答 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に ベンダー回答 を確認する必要があります。",
+      "次のステップとして ファイアウォールルール の確認を推奨します。",
+      "本日中に 復旧計画 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the vendor response before making a decision."
+  },
+  {
+    "id": "listening_0089",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need to check the access review before making a decision.",
+    "correct_ja": "判断前に アクセス権レビュー を確認する必要があります。",
+    "choices_ja": [
+      "判断前に アクセス権レビュー を確認する必要があります。",
+      "次のステップとして 脆弱性スキャン結果 の確認を推奨します。",
+      "本日中に 法的要件 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the access review before making a decision."
+  },
+  {
+    "id": "listening_0090",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We need to check the backup status before making a decision.",
+    "correct_ja": "判断前に バックアップ状態 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に バックアップ状態 を確認する必要があります。",
+      "次のステップとして インシデントの時系列 の確認を推奨します。",
+      "本日中に 監査証跡 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the backup status before making a decision."
+  },
+  {
+    "id": "listening_0091",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check the recovery plan before making a decision.",
+    "correct_ja": "判断前に 復旧計画 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 復旧計画 を確認する必要があります。",
+      "次のステップとして ベンダー回答 の確認を推奨します。",
+      "本日中に 監視ルール について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the recovery plan before making a decision."
+  },
+  {
+    "id": "listening_0092",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need to check the legal requirement before making a decision.",
+    "correct_ja": "判断前に 法的要件 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 法的要件 を確認する必要があります。",
+      "次のステップとして アクセス権レビュー の確認を推奨します。",
+      "本日中に 影響を受けた端末 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the legal requirement before making a decision."
+  },
+  {
+    "id": "listening_0093",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We need to check the audit evidence before making a decision.",
+    "correct_ja": "判断前に 監査証跡 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 監査証跡 を確認する必要があります。",
+      "次のステップとして バックアップ状態 の確認を推奨します。",
+      "本日中に パッチ適用スケジュール について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the audit evidence before making a decision."
+  },
+  {
+    "id": "listening_0094",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check the monitoring rule before making a decision.",
+    "correct_ja": "判断前に 監視ルール を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 監視ルール を確認する必要があります。",
+      "次のステップとして 復旧計画 の確認を推奨します。",
+      "本日中に 特権アカウント について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the monitoring rule before making a decision."
+  },
+  {
+    "id": "listening_0095",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need to check the affected endpoint before making a decision.",
+    "correct_ja": "判断前に 影響を受けた端末 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 影響を受けた端末 を確認する必要があります。",
+      "次のステップとして 法的要件 の確認を推奨します。",
+      "本日中に 不審なドメイン について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the affected endpoint before making a decision."
+  },
+  {
+    "id": "listening_0096",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We need to check the patch schedule before making a decision.",
+    "correct_ja": "判断前に パッチ適用スケジュール を確認する必要があります。",
+    "choices_ja": [
+      "判断前に パッチ適用スケジュール を確認する必要があります。",
+      "次のステップとして 監査証跡 の確認を推奨します。",
+      "本日中に DDoS対策状況 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the patch schedule before making a decision."
+  },
+  {
+    "id": "listening_0097",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check the privileged account before making a decision.",
+    "correct_ja": "判断前に 特権アカウント を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 特権アカウント を確認する必要があります。",
+      "次のステップとして 監視ルール の確認を推奨します。",
+      "本日中に サービス影響 について更新を送ってください。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the privileged account before making a decision."
+  },
+  {
+    "id": "listening_0098",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We need to check the suspicious domain before making a decision.",
+    "correct_ja": "判断前に 不審なドメイン を確認する必要があります。",
+    "choices_ja": [
+      "判断前に 不審なドメイン を確認する必要があります。",
+      "次のステップとして 影響を受けた端末 の確認を推奨します。",
+      "主な懸念は 利用者アカウント への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the suspicious domain before making a decision."
+  },
+  {
+    "id": "listening_0099",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We need to check the DDoS mitigation status before making a decision.",
+    "correct_ja": "判断前に DDoS対策状況 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に DDoS対策状況 を確認する必要があります。",
+      "次のステップとして パッチ適用スケジュール の確認を推奨します。",
+      "主な懸念は 顧客データ への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the DDoS mitigation status before making a decision."
+  },
+  {
+    "id": "listening_0100",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We need to check the service impact before making a decision.",
+    "correct_ja": "判断前に サービス影響 を確認する必要があります。",
+    "choices_ja": [
+      "判断前に サービス影響 を確認する必要があります。",
+      "次のステップとして 特権アカウント の確認を推奨します。",
+      "主な懸念は 本番サーバー への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We need to check the service impact before making a decision."
+  },
+  {
+    "id": "listening_0101",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing user accounts as the next step.",
+    "correct_ja": "次のステップとして 利用者アカウント の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 利用者アカウント の確認を推奨します。",
+      "次のステップとして 不審なドメイン の確認を推奨します。",
+      "主な懸念は VPNサービス への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing user accounts as the next step."
+  },
+  {
+    "id": "listening_0102",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I recommend reviewing customer data as the next step.",
+    "correct_ja": "次のステップとして 顧客データ の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 顧客データ の確認を推奨します。",
+      "次のステップとして DDoS対策状況 の確認を推奨します。",
+      "主な懸念は メールゲートウェイ への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing customer data as the next step."
+  },
+  {
+    "id": "listening_0103",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I recommend reviewing the production server as the next step.",
+    "correct_ja": "次のステップとして 本番サーバー の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 本番サーバー の確認を推奨します。",
+      "次のステップとして サービス影響 の確認を推奨します。",
+      "主な懸念は クラウドストレージバケット への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the production server as the next step."
+  },
+  {
+    "id": "listening_0104",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing the VPN service as the next step.",
+    "correct_ja": "次のステップとして VPNサービス の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして VPNサービス の確認を推奨します。",
+      "本日中に 利用者アカウント について更新を送ってください。",
+      "主な懸念は ファイアウォールルール への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the VPN service as the next step."
+  },
+  {
+    "id": "listening_0105",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I recommend reviewing the email gateway as the next step.",
+    "correct_ja": "次のステップとして メールゲートウェイ の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして メールゲートウェイ の確認を推奨します。",
+      "本日中に 顧客データ について更新を送ってください。",
+      "主な懸念は 脆弱性スキャン結果 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the email gateway as the next step."
+  },
+  {
+    "id": "listening_0106",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I recommend reviewing the cloud storage bucket as the next step.",
+    "correct_ja": "次のステップとして クラウドストレージバケット の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして クラウドストレージバケット の確認を推奨します。",
+      "本日中に 本番サーバー について更新を送ってください。",
+      "主な懸念は インシデントの時系列 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the cloud storage bucket as the next step."
+  },
+  {
+    "id": "listening_0107",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing the firewall rule as the next step.",
+    "correct_ja": "次のステップとして ファイアウォールルール の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして ファイアウォールルール の確認を推奨します。",
+      "本日中に VPNサービス について更新を送ってください。",
+      "主な懸念は ベンダー回答 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the firewall rule as the next step."
+  },
+  {
+    "id": "listening_0108",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I recommend reviewing the vulnerability scan result as the next step.",
+    "correct_ja": "次のステップとして 脆弱性スキャン結果 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 脆弱性スキャン結果 の確認を推奨します。",
+      "本日中に メールゲートウェイ について更新を送ってください。",
+      "主な懸念は アクセス権レビュー への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the vulnerability scan result as the next step."
+  },
+  {
+    "id": "listening_0109",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I recommend reviewing the incident timeline as the next step.",
+    "correct_ja": "次のステップとして インシデントの時系列 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして インシデントの時系列 の確認を推奨します。",
+      "本日中に クラウドストレージバケット について更新を送ってください。",
+      "主な懸念は バックアップ状態 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the incident timeline as the next step."
+  },
+  {
+    "id": "listening_0110",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing the vendor response as the next step.",
+    "correct_ja": "次のステップとして ベンダー回答 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして ベンダー回答 の確認を推奨します。",
+      "本日中に ファイアウォールルール について更新を送ってください。",
+      "主な懸念は 復旧計画 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the vendor response as the next step."
+  },
+  {
+    "id": "listening_0111",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I recommend reviewing the access review as the next step.",
+    "correct_ja": "次のステップとして アクセス権レビュー の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして アクセス権レビュー の確認を推奨します。",
+      "本日中に 脆弱性スキャン結果 について更新を送ってください。",
+      "主な懸念は 法的要件 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the access review as the next step."
+  },
+  {
+    "id": "listening_0112",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I recommend reviewing the backup status as the next step.",
+    "correct_ja": "次のステップとして バックアップ状態 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして バックアップ状態 の確認を推奨します。",
+      "本日中に インシデントの時系列 について更新を送ってください。",
+      "主な懸念は 監査証跡 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the backup status as the next step."
+  },
+  {
+    "id": "listening_0113",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing the recovery plan as the next step.",
+    "correct_ja": "次のステップとして 復旧計画 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 復旧計画 の確認を推奨します。",
+      "本日中に ベンダー回答 について更新を送ってください。",
+      "主な懸念は 監視ルール への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the recovery plan as the next step."
+  },
+  {
+    "id": "listening_0114",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I recommend reviewing the legal requirement as the next step.",
+    "correct_ja": "次のステップとして 法的要件 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 法的要件 の確認を推奨します。",
+      "本日中に アクセス権レビュー について更新を送ってください。",
+      "主な懸念は 影響を受けた端末 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the legal requirement as the next step."
+  },
+  {
+    "id": "listening_0115",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I recommend reviewing the audit evidence as the next step.",
+    "correct_ja": "次のステップとして 監査証跡 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 監査証跡 の確認を推奨します。",
+      "本日中に バックアップ状態 について更新を送ってください。",
+      "主な懸念は パッチ適用スケジュール への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the audit evidence as the next step."
+  },
+  {
+    "id": "listening_0116",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing the monitoring rule as the next step.",
+    "correct_ja": "次のステップとして 監視ルール の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 監視ルール の確認を推奨します。",
+      "本日中に 復旧計画 について更新を送ってください。",
+      "主な懸念は 特権アカウント への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the monitoring rule as the next step."
+  },
+  {
+    "id": "listening_0117",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I recommend reviewing the affected endpoint as the next step.",
+    "correct_ja": "次のステップとして 影響を受けた端末 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 影響を受けた端末 の確認を推奨します。",
+      "本日中に 法的要件 について更新を送ってください。",
+      "主な懸念は 不審なドメイン への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the affected endpoint as the next step."
+  },
+  {
+    "id": "listening_0118",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I recommend reviewing the patch schedule as the next step.",
+    "correct_ja": "次のステップとして パッチ適用スケジュール の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして パッチ適用スケジュール の確認を推奨します。",
+      "本日中に 監査証跡 について更新を送ってください。",
+      "主な懸念は DDoS対策状況 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the patch schedule as the next step."
+  },
+  {
+    "id": "listening_0119",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing the privileged account as the next step.",
+    "correct_ja": "次のステップとして 特権アカウント の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 特権アカウント の確認を推奨します。",
+      "本日中に 監視ルール について更新を送ってください。",
+      "主な懸念は サービス影響 への影響です。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the privileged account as the next step."
+  },
+  {
+    "id": "listening_0120",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "I recommend reviewing the suspicious domain as the next step.",
+    "correct_ja": "次のステップとして 不審なドメイン の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして 不審なドメイン の確認を推奨します。",
+      "本日中に 影響を受けた端末 について更新を送ってください。",
+      "利用者アカウント に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the suspicious domain as the next step."
+  },
+  {
+    "id": "listening_0121",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "I recommend reviewing the DDoS mitigation status as the next step.",
+    "correct_ja": "次のステップとして DDoS対策状況 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして DDoS対策状況 の確認を推奨します。",
+      "本日中に パッチ適用スケジュール について更新を送ってください。",
+      "顧客データ に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the DDoS mitigation status as the next step."
+  },
+  {
+    "id": "listening_0122",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "I recommend reviewing the service impact as the next step.",
+    "correct_ja": "次のステップとして サービス影響 の確認を推奨します。",
+    "choices_ja": [
+      "次のステップとして サービス影響 の確認を推奨します。",
+      "本日中に 特権アカウント について更新を送ってください。",
+      "本番サーバー に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: I recommend reviewing the service impact as the next step."
+  },
+  {
+    "id": "listening_0123",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about user accounts by the end of the day.",
+    "correct_ja": "本日中に 利用者アカウント について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 利用者アカウント について更新を送ってください。",
+      "本日中に 不審なドメイン について更新を送ってください。",
+      "VPNサービス に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about user accounts by the end of the day."
+  },
+  {
+    "id": "listening_0124",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please send an update about customer data by the end of the day.",
+    "correct_ja": "本日中に 顧客データ について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 顧客データ について更新を送ってください。",
+      "本日中に DDoS対策状況 について更新を送ってください。",
+      "メールゲートウェイ に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about customer data by the end of the day."
+  },
+  {
+    "id": "listening_0125",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please send an update about the production server by the end of the day.",
+    "correct_ja": "本日中に 本番サーバー について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 本番サーバー について更新を送ってください。",
+      "本日中に サービス影響 について更新を送ってください。",
+      "クラウドストレージバケット に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the production server by the end of the day."
+  },
+  {
+    "id": "listening_0126",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about the VPN service by the end of the day.",
+    "correct_ja": "本日中に VPNサービス について更新を送ってください。",
+    "choices_ja": [
+      "本日中に VPNサービス について更新を送ってください。",
+      "主な懸念は 利用者アカウント への影響です。",
+      "ファイアウォールルール に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the VPN service by the end of the day."
+  },
+  {
+    "id": "listening_0127",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please send an update about the email gateway by the end of the day.",
+    "correct_ja": "本日中に メールゲートウェイ について更新を送ってください。",
+    "choices_ja": [
+      "本日中に メールゲートウェイ について更新を送ってください。",
+      "主な懸念は 顧客データ への影響です。",
+      "脆弱性スキャン結果 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the email gateway by the end of the day."
+  },
+  {
+    "id": "listening_0128",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please send an update about the cloud storage bucket by the end of the day.",
+    "correct_ja": "本日中に クラウドストレージバケット について更新を送ってください。",
+    "choices_ja": [
+      "本日中に クラウドストレージバケット について更新を送ってください。",
+      "主な懸念は 本番サーバー への影響です。",
+      "インシデントの時系列 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the cloud storage bucket by the end of the day."
+  },
+  {
+    "id": "listening_0129",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about the firewall rule by the end of the day.",
+    "correct_ja": "本日中に ファイアウォールルール について更新を送ってください。",
+    "choices_ja": [
+      "本日中に ファイアウォールルール について更新を送ってください。",
+      "主な懸念は VPNサービス への影響です。",
+      "ベンダー回答 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the firewall rule by the end of the day."
+  },
+  {
+    "id": "listening_0130",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please send an update about the vulnerability scan result by the end of the day.",
+    "correct_ja": "本日中に 脆弱性スキャン結果 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 脆弱性スキャン結果 について更新を送ってください。",
+      "主な懸念は メールゲートウェイ への影響です。",
+      "アクセス権レビュー に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the vulnerability scan result by the end of the day."
+  },
+  {
+    "id": "listening_0131",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please send an update about the incident timeline by the end of the day.",
+    "correct_ja": "本日中に インシデントの時系列 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に インシデントの時系列 について更新を送ってください。",
+      "主な懸念は クラウドストレージバケット への影響です。",
+      "バックアップ状態 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the incident timeline by the end of the day."
+  },
+  {
+    "id": "listening_0132",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about the vendor response by the end of the day.",
+    "correct_ja": "本日中に ベンダー回答 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に ベンダー回答 について更新を送ってください。",
+      "主な懸念は ファイアウォールルール への影響です。",
+      "復旧計画 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the vendor response by the end of the day."
+  },
+  {
+    "id": "listening_0133",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please send an update about the access review by the end of the day.",
+    "correct_ja": "本日中に アクセス権レビュー について更新を送ってください。",
+    "choices_ja": [
+      "本日中に アクセス権レビュー について更新を送ってください。",
+      "主な懸念は 脆弱性スキャン結果 への影響です。",
+      "法的要件 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the access review by the end of the day."
+  },
+  {
+    "id": "listening_0134",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please send an update about the backup status by the end of the day.",
+    "correct_ja": "本日中に バックアップ状態 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に バックアップ状態 について更新を送ってください。",
+      "主な懸念は インシデントの時系列 への影響です。",
+      "監査証跡 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the backup status by the end of the day."
+  },
+  {
+    "id": "listening_0135",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about the recovery plan by the end of the day.",
+    "correct_ja": "本日中に 復旧計画 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 復旧計画 について更新を送ってください。",
+      "主な懸念は ベンダー回答 への影響です。",
+      "監視ルール に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the recovery plan by the end of the day."
+  },
+  {
+    "id": "listening_0136",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please send an update about the legal requirement by the end of the day.",
+    "correct_ja": "本日中に 法的要件 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 法的要件 について更新を送ってください。",
+      "主な懸念は アクセス権レビュー への影響です。",
+      "影響を受けた端末 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the legal requirement by the end of the day."
+  },
+  {
+    "id": "listening_0137",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please send an update about the audit evidence by the end of the day.",
+    "correct_ja": "本日中に 監査証跡 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 監査証跡 について更新を送ってください。",
+      "主な懸念は バックアップ状態 への影響です。",
+      "パッチ適用スケジュール に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the audit evidence by the end of the day."
+  },
+  {
+    "id": "listening_0138",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about the monitoring rule by the end of the day.",
+    "correct_ja": "本日中に 監視ルール について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 監視ルール について更新を送ってください。",
+      "主な懸念は 復旧計画 への影響です。",
+      "特権アカウント に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the monitoring rule by the end of the day."
+  },
+  {
+    "id": "listening_0139",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please send an update about the affected endpoint by the end of the day.",
+    "correct_ja": "本日中に 影響を受けた端末 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 影響を受けた端末 について更新を送ってください。",
+      "主な懸念は 法的要件 への影響です。",
+      "不審なドメイン に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the affected endpoint by the end of the day."
+  },
+  {
+    "id": "listening_0140",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please send an update about the patch schedule by the end of the day.",
+    "correct_ja": "本日中に パッチ適用スケジュール について更新を送ってください。",
+    "choices_ja": [
+      "本日中に パッチ適用スケジュール について更新を送ってください。",
+      "主な懸念は 監査証跡 への影響です。",
+      "DDoS対策状況 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the patch schedule by the end of the day."
+  },
+  {
+    "id": "listening_0141",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about the privileged account by the end of the day.",
+    "correct_ja": "本日中に 特権アカウント について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 特権アカウント について更新を送ってください。",
+      "主な懸念は 監視ルール への影響です。",
+      "サービス影響 に関する決定を文書化しましょう。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the privileged account by the end of the day."
+  },
+  {
+    "id": "listening_0142",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Please send an update about the suspicious domain by the end of the day.",
+    "correct_ja": "本日中に 不審なドメイン について更新を送ってください。",
+    "choices_ja": [
+      "本日中に 不審なドメイン について更新を送ってください。",
+      "主な懸念は 影響を受けた端末 への影響です。",
+      "利用者アカウント の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the suspicious domain by the end of the day."
+  },
+  {
+    "id": "listening_0143",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Please send an update about the DDoS mitigation status by the end of the day.",
+    "correct_ja": "本日中に DDoS対策状況 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に DDoS対策状況 について更新を送ってください。",
+      "主な懸念は パッチ適用スケジュール への影響です。",
+      "顧客データ の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the DDoS mitigation status by the end of the day."
+  },
+  {
+    "id": "listening_0144",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Please send an update about the service impact by the end of the day.",
+    "correct_ja": "本日中に サービス影響 について更新を送ってください。",
+    "choices_ja": [
+      "本日中に サービス影響 について更新を送ってください。",
+      "主な懸念は 特権アカウント への影響です。",
+      "本番サーバー の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Please send an update about the service impact by the end of the day."
+  },
+  {
+    "id": "listening_0145",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on user accounts.",
+    "correct_ja": "主な懸念は 利用者アカウント への影響です。",
+    "choices_ja": [
+      "主な懸念は 利用者アカウント への影響です。",
+      "主な懸念は 不審なドメイン への影響です。",
+      "VPNサービス の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on user accounts."
+  },
+  {
+    "id": "listening_0146",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The main concern is the impact on customer data.",
+    "correct_ja": "主な懸念は 顧客データ への影響です。",
+    "choices_ja": [
+      "主な懸念は 顧客データ への影響です。",
+      "主な懸念は DDoS対策状況 への影響です。",
+      "メールゲートウェイ の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on customer data."
+  },
+  {
+    "id": "listening_0147",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The main concern is the impact on the production server.",
+    "correct_ja": "主な懸念は 本番サーバー への影響です。",
+    "choices_ja": [
+      "主な懸念は 本番サーバー への影響です。",
+      "主な懸念は サービス影響 への影響です。",
+      "クラウドストレージバケット の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the production server."
+  },
+  {
+    "id": "listening_0148",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on the VPN service.",
+    "correct_ja": "主な懸念は VPNサービス への影響です。",
+    "choices_ja": [
+      "主な懸念は VPNサービス への影響です。",
+      "利用者アカウント に関する決定を文書化しましょう。",
+      "ファイアウォールルール の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the VPN service."
+  },
+  {
+    "id": "listening_0149",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The main concern is the impact on the email gateway.",
+    "correct_ja": "主な懸念は メールゲートウェイ への影響です。",
+    "choices_ja": [
+      "主な懸念は メールゲートウェイ への影響です。",
+      "顧客データ に関する決定を文書化しましょう。",
+      "脆弱性スキャン結果 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the email gateway."
+  },
+  {
+    "id": "listening_0150",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The main concern is the impact on the cloud storage bucket.",
+    "correct_ja": "主な懸念は クラウドストレージバケット への影響です。",
+    "choices_ja": [
+      "主な懸念は クラウドストレージバケット への影響です。",
+      "本番サーバー に関する決定を文書化しましょう。",
+      "インシデントの時系列 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the cloud storage bucket."
+  },
+  {
+    "id": "listening_0151",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on the firewall rule.",
+    "correct_ja": "主な懸念は ファイアウォールルール への影響です。",
+    "choices_ja": [
+      "主な懸念は ファイアウォールルール への影響です。",
+      "VPNサービス に関する決定を文書化しましょう。",
+      "ベンダー回答 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the firewall rule."
+  },
+  {
+    "id": "listening_0152",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The main concern is the impact on the vulnerability scan result.",
+    "correct_ja": "主な懸念は 脆弱性スキャン結果 への影響です。",
+    "choices_ja": [
+      "主な懸念は 脆弱性スキャン結果 への影響です。",
+      "メールゲートウェイ に関する決定を文書化しましょう。",
+      "アクセス権レビュー の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the vulnerability scan result."
+  },
+  {
+    "id": "listening_0153",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The main concern is the impact on the incident timeline.",
+    "correct_ja": "主な懸念は インシデントの時系列 への影響です。",
+    "choices_ja": [
+      "主な懸念は インシデントの時系列 への影響です。",
+      "クラウドストレージバケット に関する決定を文書化しましょう。",
+      "バックアップ状態 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the incident timeline."
+  },
+  {
+    "id": "listening_0154",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on the vendor response.",
+    "correct_ja": "主な懸念は ベンダー回答 への影響です。",
+    "choices_ja": [
+      "主な懸念は ベンダー回答 への影響です。",
+      "ファイアウォールルール に関する決定を文書化しましょう。",
+      "復旧計画 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the vendor response."
+  },
+  {
+    "id": "listening_0155",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The main concern is the impact on the access review.",
+    "correct_ja": "主な懸念は アクセス権レビュー への影響です。",
+    "choices_ja": [
+      "主な懸念は アクセス権レビュー への影響です。",
+      "脆弱性スキャン結果 に関する決定を文書化しましょう。",
+      "法的要件 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the access review."
+  },
+  {
+    "id": "listening_0156",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The main concern is the impact on the backup status.",
+    "correct_ja": "主な懸念は バックアップ状態 への影響です。",
+    "choices_ja": [
+      "主な懸念は バックアップ状態 への影響です。",
+      "インシデントの時系列 に関する決定を文書化しましょう。",
+      "監査証跡 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the backup status."
+  },
+  {
+    "id": "listening_0157",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on the recovery plan.",
+    "correct_ja": "主な懸念は 復旧計画 への影響です。",
+    "choices_ja": [
+      "主な懸念は 復旧計画 への影響です。",
+      "ベンダー回答 に関する決定を文書化しましょう。",
+      "監視ルール の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the recovery plan."
+  },
+  {
+    "id": "listening_0158",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The main concern is the impact on the legal requirement.",
+    "correct_ja": "主な懸念は 法的要件 への影響です。",
+    "choices_ja": [
+      "主な懸念は 法的要件 への影響です。",
+      "アクセス権レビュー に関する決定を文書化しましょう。",
+      "影響を受けた端末 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the legal requirement."
+  },
+  {
+    "id": "listening_0159",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The main concern is the impact on the audit evidence.",
+    "correct_ja": "主な懸念は 監査証跡 への影響です。",
+    "choices_ja": [
+      "主な懸念は 監査証跡 への影響です。",
+      "バックアップ状態 に関する決定を文書化しましょう。",
+      "パッチ適用スケジュール の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the audit evidence."
+  },
+  {
+    "id": "listening_0160",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on the monitoring rule.",
+    "correct_ja": "主な懸念は 監視ルール への影響です。",
+    "choices_ja": [
+      "主な懸念は 監視ルール への影響です。",
+      "復旧計画 に関する決定を文書化しましょう。",
+      "特権アカウント の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the monitoring rule."
+  },
+  {
+    "id": "listening_0161",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The main concern is the impact on the affected endpoint.",
+    "correct_ja": "主な懸念は 影響を受けた端末 への影響です。",
+    "choices_ja": [
+      "主な懸念は 影響を受けた端末 への影響です。",
+      "法的要件 に関する決定を文書化しましょう。",
+      "不審なドメイン の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the affected endpoint."
+  },
+  {
+    "id": "listening_0162",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The main concern is the impact on the patch schedule.",
+    "correct_ja": "主な懸念は パッチ適用スケジュール への影響です。",
+    "choices_ja": [
+      "主な懸念は パッチ適用スケジュール への影響です。",
+      "監査証跡 に関する決定を文書化しましょう。",
+      "DDoS対策状況 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the patch schedule."
+  },
+  {
+    "id": "listening_0163",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on the privileged account.",
+    "correct_ja": "主な懸念は 特権アカウント への影響です。",
+    "choices_ja": [
+      "主な懸念は 特権アカウント への影響です。",
+      "監視ルール に関する決定を文書化しましょう。",
+      "サービス影響 の現在状況を説明していただけますか。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the privileged account."
+  },
+  {
+    "id": "listening_0164",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "The main concern is the impact on the suspicious domain.",
+    "correct_ja": "主な懸念は 不審なドメイン への影響です。",
+    "choices_ja": [
+      "主な懸念は 不審なドメイン への影響です。",
+      "影響を受けた端末 に関する決定を文書化しましょう。",
+      "利用者アカウント の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the suspicious domain."
+  },
+  {
+    "id": "listening_0165",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "The main concern is the impact on the DDoS mitigation status.",
+    "correct_ja": "主な懸念は DDoS対策状況 への影響です。",
+    "choices_ja": [
+      "主な懸念は DDoS対策状況 への影響です。",
+      "パッチ適用スケジュール に関する決定を文書化しましょう。",
+      "顧客データ の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the DDoS mitigation status."
+  },
+  {
+    "id": "listening_0166",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "The main concern is the impact on the service impact.",
+    "correct_ja": "主な懸念は サービス影響 への影響です。",
+    "choices_ja": [
+      "主な懸念は サービス影響 への影響です。",
+      "特権アカウント に関する決定を文書化しましょう。",
+      "本番サーバー の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: The main concern is the impact on the service impact."
+  },
+  {
+    "id": "listening_0167",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about user accounts.",
+    "correct_ja": "利用者アカウント に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "利用者アカウント に関する決定を文書化しましょう。",
+      "不審なドメイン に関する決定を文書化しましょう。",
+      "VPNサービス の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about user accounts."
+  },
+  {
+    "id": "listening_0168",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's document the decision about customer data.",
+    "correct_ja": "顧客データ に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "顧客データ に関する決定を文書化しましょう。",
+      "DDoS対策状況 に関する決定を文書化しましょう。",
+      "メールゲートウェイ の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about customer data."
+  },
+  {
+    "id": "listening_0169",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Let's document the decision about the production server.",
+    "correct_ja": "本番サーバー に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "本番サーバー に関する決定を文書化しましょう。",
+      "サービス影響 に関する決定を文書化しましょう。",
+      "クラウドストレージバケット の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the production server."
+  },
+  {
+    "id": "listening_0170",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about the VPN service.",
+    "correct_ja": "VPNサービス に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "VPNサービス に関する決定を文書化しましょう。",
+      "利用者アカウント の現在状況を説明していただけますか。",
+      "ファイアウォールルール の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the VPN service."
+  },
+  {
+    "id": "listening_0171",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's document the decision about the email gateway.",
+    "correct_ja": "メールゲートウェイ に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "メールゲートウェイ に関する決定を文書化しましょう。",
+      "顧客データ の現在状況を説明していただけますか。",
+      "脆弱性スキャン結果 の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the email gateway."
+  },
+  {
+    "id": "listening_0172",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Let's document the decision about the cloud storage bucket.",
+    "correct_ja": "クラウドストレージバケット に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "クラウドストレージバケット に関する決定を文書化しましょう。",
+      "本番サーバー の現在状況を説明していただけますか。",
+      "インシデントの時系列 の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the cloud storage bucket."
+  },
+  {
+    "id": "listening_0173",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about the firewall rule.",
+    "correct_ja": "ファイアウォールルール に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "ファイアウォールルール に関する決定を文書化しましょう。",
+      "VPNサービス の現在状況を説明していただけますか。",
+      "ベンダー回答 の担当者を割り当てるべきです。"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the firewall rule."
+  },
+  {
+    "id": "listening_0174",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's document the decision about the vulnerability scan result.",
+    "correct_ja": "脆弱性スキャン結果 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "脆弱性スキャン結果 に関する決定を文書化しましょう。",
+      "メールゲートウェイ の現在状況を説明していただけますか。",
+      "asset（資産）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the vulnerability scan result."
+  },
+  {
+    "id": "listening_0175",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Let's document the decision about the incident timeline.",
+    "correct_ja": "インシデントの時系列 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "インシデントの時系列 に関する決定を文書化しましょう。",
+      "クラウドストレージバケット の現在状況を説明していただけますか。",
+      "critical asset（重要資産）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the incident timeline."
+  },
+  {
+    "id": "listening_0176",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about the vendor response.",
+    "correct_ja": "ベンダー回答 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "ベンダー回答 に関する決定を文書化しましょう。",
+      "ファイアウォールルール の現在状況を説明していただけますか。",
+      "threat（脅威）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the vendor response."
+  },
+  {
+    "id": "listening_0177",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's document the decision about the access review.",
+    "correct_ja": "アクセス権レビュー に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "アクセス権レビュー に関する決定を文書化しましょう。",
+      "脆弱性スキャン結果 の現在状況を説明していただけますか。",
+      "threat actor（脅威アクター）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the access review."
+  },
+  {
+    "id": "listening_0178",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Let's document the decision about the backup status.",
+    "correct_ja": "バックアップ状態 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "バックアップ状態 に関する決定を文書化しましょう。",
+      "インシデントの時系列 の現在状況を説明していただけますか。",
+      "attack vector（攻撃経路）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the backup status."
+  },
+  {
+    "id": "listening_0179",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about the recovery plan.",
+    "correct_ja": "復旧計画 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "復旧計画 に関する決定を文書化しましょう。",
+      "ベンダー回答 の現在状況を説明していただけますか。",
+      "attack surface（攻撃対象領域）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the recovery plan."
+  },
+  {
+    "id": "listening_0180",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's document the decision about the legal requirement.",
+    "correct_ja": "法的要件 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "法的要件 に関する決定を文書化しましょう。",
+      "アクセス権レビュー の現在状況を説明していただけますか。",
+      "exposure（露出）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the legal requirement."
+  },
+  {
+    "id": "listening_0181",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Let's document the decision about the audit evidence.",
+    "correct_ja": "監査証跡 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "監査証跡 に関する決定を文書化しましょう。",
+      "バックアップ状態 の現在状況を説明していただけますか。",
+      "vulnerability（脆弱性）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the audit evidence."
+  },
+  {
+    "id": "listening_0182",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about the monitoring rule.",
+    "correct_ja": "監視ルール に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "監視ルール に関する決定を文書化しましょう。",
+      "復旧計画 の現在状況を説明していただけますか。",
+      "exploit（攻撃コード／悪用）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the monitoring rule."
+  },
+  {
+    "id": "listening_0183",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's document the decision about the affected endpoint.",
+    "correct_ja": "影響を受けた端末 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "影響を受けた端末 に関する決定を文書化しましょう。",
+      "法的要件 の現在状況を説明していただけますか。",
+      "risk（リスク）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the affected endpoint."
+  },
+  {
+    "id": "listening_0184",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Let's document the decision about the patch schedule.",
+    "correct_ja": "パッチ適用スケジュール に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "パッチ適用スケジュール に関する決定を文書化しましょう。",
+      "監査証跡 の現在状況を説明していただけますか。",
+      "inherent risk（固有リスク）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the patch schedule."
+  },
+  {
+    "id": "listening_0185",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about the privileged account.",
+    "correct_ja": "特権アカウント に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "特権アカウント に関する決定を文書化しましょう。",
+      "監視ルール の現在状況を説明していただけますか。",
+      "residual risk（残留リスク）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the privileged account."
+  },
+  {
+    "id": "listening_0186",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Let's document the decision about the suspicious domain.",
+    "correct_ja": "不審なドメイン に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "不審なドメイン に関する決定を文書化しましょう。",
+      "影響を受けた端末 の現在状況を説明していただけますか。",
+      "likelihood（発生可能性）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the suspicious domain."
+  },
+  {
+    "id": "listening_0187",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Let's document the decision about the DDoS mitigation status.",
+    "correct_ja": "DDoS対策状況 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "DDoS対策状況 に関する決定を文書化しましょう。",
+      "パッチ適用スケジュール の現在状況を説明していただけますか。",
+      "impact（影響）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the DDoS mitigation status."
+  },
+  {
+    "id": "listening_0188",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Let's document the decision about the service impact.",
+    "correct_ja": "サービス影響 に関する決定を文書化しましょう。",
+    "choices_ja": [
+      "サービス影響 に関する決定を文書化しましょう。",
+      "特権アカウント の現在状況を説明していただけますか。",
+      "risk rating（リスク評価レベル）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Let's document the decision about the service impact."
+  },
+  {
+    "id": "listening_0189",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of user accounts?",
+    "correct_ja": "利用者アカウント の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "利用者アカウント の現在状況を説明していただけますか。",
+      "不審なドメイン の現在状況を説明していただけますか。",
+      "risk assessment（リスク評価）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of user accounts?"
+  },
+  {
+    "id": "listening_0190",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you explain the current status of customer data?",
+    "correct_ja": "顧客データ の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "顧客データ の現在状況を説明していただけますか。",
+      "DDoS対策状況 の現在状況を説明していただけますか。",
+      "risk treatment（リスク対応）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of customer data?"
+  },
+  {
+    "id": "listening_0191",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain the current status of the production server?",
+    "correct_ja": "本番サーバー の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "本番サーバー の現在状況を説明していただけますか。",
+      "サービス影響 の現在状況を説明していただけますか。",
+      "risk acceptance（リスク受容）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the production server?"
+  },
+  {
+    "id": "listening_0192",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of the VPN service?",
+    "correct_ja": "VPNサービス の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "VPNサービス の現在状況を説明していただけますか。",
+      "利用者アカウント の担当者を割り当てるべきです。",
+      "risk mitigation（リスク軽減）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the VPN service?"
+  },
+  {
+    "id": "listening_0193",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you explain the current status of the email gateway?",
+    "correct_ja": "メールゲートウェイ の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "メールゲートウェイ の現在状況を説明していただけますか。",
+      "顧客データ の担当者を割り当てるべきです。",
+      "risk appetite（リスク許容度）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the email gateway?"
+  },
+  {
+    "id": "listening_0194",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain the current status of the cloud storage bucket?",
+    "correct_ja": "クラウドストレージバケット の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "クラウドストレージバケット の現在状況を説明していただけますか。",
+      "本番サーバー の担当者を割り当てるべきです。",
+      "control（管理策）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the cloud storage bucket?"
+  },
+  {
+    "id": "listening_0195",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of the firewall rule?",
+    "correct_ja": "ファイアウォールルール の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "ファイアウォールルール の現在状況を説明していただけますか。",
+      "VPNサービス の担当者を割り当てるべきです。",
+      "compensating control（代替管理策）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the firewall rule?"
+  },
+  {
+    "id": "listening_0196",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you explain the current status of the vulnerability scan result?",
+    "correct_ja": "脆弱性スキャン結果 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "脆弱性スキャン結果 の現在状況を説明していただけますか。",
+      "メールゲートウェイ の担当者を割り当てるべきです。",
+      "control effectiveness（管理策の有効性）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the vulnerability scan result?"
+  },
+  {
+    "id": "listening_0197",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain the current status of the incident timeline?",
+    "correct_ja": "インシデントの時系列 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "インシデントの時系列 の現在状況を説明していただけますか。",
+      "クラウドストレージバケット の担当者を割り当てるべきです。",
+      "security posture（セキュリティ態勢）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the incident timeline?"
+  },
+  {
+    "id": "listening_0198",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of the vendor response?",
+    "correct_ja": "ベンダー回答 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "ベンダー回答 の現在状況を説明していただけますか。",
+      "ファイアウォールルール の担当者を割り当てるべきです。",
+      "security baseline（セキュリティ基準）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the vendor response?"
+  },
+  {
+    "id": "listening_0199",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you explain the current status of the access review?",
+    "correct_ja": "アクセス権レビュー の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "アクセス権レビュー の現在状況を説明していただけますか。",
+      "脆弱性スキャン結果 の担当者を割り当てるべきです。",
+      "defense in depth（多層防御）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the access review?"
+  },
+  {
+    "id": "listening_0200",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain the current status of the backup status?",
+    "correct_ja": "バックアップ状態 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "バックアップ状態 の現在状況を説明していただけますか。",
+      "インシデントの時系列 の担当者を割り当てるべきです。",
+      "acceptable risk（許容可能なリスク）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the backup status?"
+  },
+  {
+    "id": "listening_0201",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of the recovery plan?",
+    "correct_ja": "復旧計画 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "復旧計画 の現在状況を説明していただけますか。",
+      "ベンダー回答 の担当者を割り当てるべきです。",
+      "risk register（リスク登録簿）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the recovery plan?"
+  },
+  {
+    "id": "listening_0202",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you explain the current status of the legal requirement?",
+    "correct_ja": "法的要件 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "法的要件 の現在状況を説明していただけますか。",
+      "asset（資産）に関する例文",
+      "policy exception（ポリシー例外）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the legal requirement?"
+  },
+  {
+    "id": "listening_0203",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain the current status of the audit evidence?",
+    "correct_ja": "監査証跡 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "監査証跡 の現在状況を説明していただけますか。",
+      "critical asset（重要資産）に関する例文",
+      "governance（ガバナンス）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the audit evidence?"
+  },
+  {
+    "id": "listening_0204",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of the monitoring rule?",
+    "correct_ja": "監視ルール の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "監視ルール の現在状況を説明していただけますか。",
+      "threat（脅威）に関する例文",
+      "incident（インシデント）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the monitoring rule?"
+  },
+  {
+    "id": "listening_0205",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you explain the current status of the affected endpoint?",
+    "correct_ja": "影響を受けた端末 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "影響を受けた端末 の現在状況を説明していただけますか。",
+      "threat actor（脅威アクター）に関する例文",
+      "security event（セキュリティイベント）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the affected endpoint?"
+  },
+  {
+    "id": "listening_0206",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain the current status of the patch schedule?",
+    "correct_ja": "パッチ適用スケジュール の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "パッチ適用スケジュール の現在状況を説明していただけますか。",
+      "attack vector（攻撃経路）に関する例文",
+      "alert（アラート）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the patch schedule?"
+  },
+  {
+    "id": "listening_0207",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of the privileged account?",
+    "correct_ja": "特権アカウント の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "特権アカウント の現在状況を説明していただけますか。",
+      "attack surface（攻撃対象領域）に関する例文",
+      "triage（トリアージ）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the privileged account?"
+  },
+  {
+    "id": "listening_0208",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "Could you explain the current status of the suspicious domain?",
+    "correct_ja": "不審なドメイン の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "不審なドメイン の現在状況を説明していただけますか。",
+      "exposure（露出）に関する例文",
+      "investigation（調査）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the suspicious domain?"
+  },
+  {
+    "id": "listening_0209",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "Could you explain the current status of the DDoS mitigation status?",
+    "correct_ja": "DDoS対策状況 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "DDoS対策状況 の現在状況を説明していただけますか。",
+      "vulnerability（脆弱性）に関する例文",
+      "containment（封じ込め）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the DDoS mitigation status?"
+  },
+  {
+    "id": "listening_0210",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "Could you explain the current status of the service impact?",
+    "correct_ja": "サービス影響 の現在状況を説明していただけますか。",
+    "choices_ja": [
+      "サービス影響 の現在状況を説明していただけますか。",
+      "exploit（攻撃コード／悪用）に関する例文",
+      "eradication（根絶）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: Could you explain the current status of the service impact?"
+  },
+  {
+    "id": "listening_0211",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We should assign an owner for user accounts.",
+    "correct_ja": "利用者アカウント の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "利用者アカウント の担当者を割り当てるべきです。",
+      "risk（リスク）に関する例文",
+      "recovery（復旧）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for user accounts."
+  },
+  {
+    "id": "listening_0212",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We should assign an owner for customer data.",
+    "correct_ja": "顧客データ の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "顧客データ の担当者を割り当てるべきです。",
+      "inherent risk（固有リスク）に関する例文",
+      "lessons learned（教訓）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for customer data."
+  },
+  {
+    "id": "listening_0213",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We should assign an owner for the production server.",
+    "correct_ja": "本番サーバー の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "本番サーバー の担当者を割り当てるべきです。",
+      "residual risk（残留リスク）に関する例文",
+      "root cause（根本原因）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the production server."
+  },
+  {
+    "id": "listening_0214",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We should assign an owner for the VPN service.",
+    "correct_ja": "VPNサービス の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "VPNサービス の担当者を割り当てるべきです。",
+      "likelihood（発生可能性）に関する例文",
+      "timeline（時系列）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the VPN service."
+  },
+  {
+    "id": "listening_0215",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We should assign an owner for the email gateway.",
+    "correct_ja": "メールゲートウェイ の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "メールゲートウェイ の担当者を割り当てるべきです。",
+      "impact（影響）に関する例文",
+      "scope（範囲）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the email gateway."
+  },
+  {
+    "id": "listening_0216",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We should assign an owner for the cloud storage bucket.",
+    "correct_ja": "クラウドストレージバケット の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "クラウドストレージバケット の担当者を割り当てるべきです。",
+      "risk rating（リスク評価レベル）に関する例文",
+      "severity（重大度）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the cloud storage bucket."
+  },
+  {
+    "id": "listening_0217",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We should assign an owner for the firewall rule.",
+    "correct_ja": "ファイアウォールルール の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "ファイアウォールルール の担当者を割り当てるべきです。",
+      "risk assessment（リスク評価）に関する例文",
+      "priority（優先度）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the firewall rule."
+  },
+  {
+    "id": "listening_0218",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "lower_intermediate",
+    "sentence_en": "We should assign an owner for the vulnerability scan result.",
+    "correct_ja": "脆弱性スキャン結果 の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "脆弱性スキャン結果 の担当者を割り当てるべきです。",
+      "risk treatment（リスク対応）に関する例文",
+      "escalation（エスカレーション）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the vulnerability scan result."
+  },
+  {
+    "id": "listening_0219",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "intermediate",
+    "sentence_en": "We should assign an owner for the incident timeline.",
+    "correct_ja": "インシデントの時系列 の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "インシデントの時系列 の担当者を割り当てるべきです。",
+      "risk acceptance（リスク受容）に関する例文",
+      "incident commander（インシデント指揮官）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the incident timeline."
+  },
+  {
+    "id": "listening_0220",
+    "type": "listening",
+    "category": "security_meeting",
+    "level": "beginner",
+    "sentence_en": "We should assign an owner for the vendor response.",
+    "correct_ja": "ベンダー回答 の担当者を割り当てるべきです。",
+    "choices_ja": [
+      "ベンダー回答 の担当者を割り当てるべきです。",
+      "risk mitigation（リスク軽減）に関する例文",
+      "war room（緊急対応会議室）に関する例文"
+    ],
+    "chatgpt_prompt": "Read this sentence slowly first, then at normal meeting speed: We should assign an owner for the vendor response."
+  }
+]

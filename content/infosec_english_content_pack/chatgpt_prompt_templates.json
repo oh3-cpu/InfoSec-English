@@ -1,0 +1,17 @@
+[
+  {
+    "id": "prompt_pronunciation_single",
+    "title_ja": "単語1語の発音練習",
+    "prompt_en": "You are my English pronunciation coach for information security. Target term: {{term_en}}. Meaning in Japanese: {{meaning_ja}}. Example: {{example_en}}. In voice mode, pronounce it slowly, break it into chunks, ask me to repeat, and correct one point in Japanese."
+  },
+  {
+    "id": "prompt_meeting_phrase",
+    "title_ja": "会議文の発音・暗唱練習",
+    "prompt_en": "Practice sentence: {{sentence_en}}. Japanese meaning: {{meaning_ja}}. Read it slowly, then at normal meeting speed. Ask me to repeat and correct one point in Japanese."
+  },
+  {
+    "id": "prompt_daily_drill",
+    "title_ja": "1日30分の総合練習",
+    "prompt_en": "Run a 30-minute information-security English practice session with vocabulary, listening, meeting phrases, and one short role play. Speak slowly first and correct me in Japanese."
+  }
+]

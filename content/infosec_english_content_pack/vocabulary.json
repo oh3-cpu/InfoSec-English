@@ -1,0 +1,5147 @@
+[
+  {
+    "id": "vocab_0001",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "asset",
+    "meaning_ja": "資産",
+    "example_en": "This asset requires follow-up by Friday.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0002",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "critical asset",
+    "meaning_ja": "重要資産",
+    "example_en": "We need to review the critical asset before the meeting.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0003",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "threat",
+    "meaning_ja": "脅威",
+    "example_en": "The security team is checking the threat.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0004",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "threat actor",
+    "meaning_ja": "脅威アクター",
+    "example_en": "Please confirm the current threat actor.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0005",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "attack vector",
+    "meaning_ja": "攻撃経路",
+    "example_en": "Please confirm the current attack vector.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0006",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "attack surface",
+    "meaning_ja": "攻撃対象領域",
+    "example_en": "The security team is checking the attack surface.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0007",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "exposure",
+    "meaning_ja": "露出",
+    "example_en": "This exposure requires follow-up by Friday.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0008",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "vulnerability",
+    "meaning_ja": "脆弱性",
+    "example_en": "Please confirm the current vulnerability.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0009",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "exploit",
+    "meaning_ja": "攻撃コード／悪用",
+    "example_en": "We should document the exploit clearly.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0010",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "risk",
+    "meaning_ja": "リスク",
+    "example_en": "The security team is checking the risk.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0011",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "inherent risk",
+    "meaning_ja": "固有リスク",
+    "example_en": "Please confirm the current inherent risk.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0012",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "residual risk",
+    "meaning_ja": "残留リスク",
+    "example_en": "We need to review the residual risk before the meeting.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0013",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "likelihood",
+    "meaning_ja": "発生可能性",
+    "example_en": "We should document the likelihood clearly.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0014",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "impact",
+    "meaning_ja": "影響",
+    "example_en": "This impact requires follow-up by Friday.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0015",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "risk rating",
+    "meaning_ja": "リスク評価レベル",
+    "example_en": "The security team is checking the risk rating.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0016",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "risk assessment",
+    "meaning_ja": "リスク評価",
+    "example_en": "This risk assessment requires follow-up by Friday.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0017",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "risk treatment",
+    "meaning_ja": "リスク対応",
+    "example_en": "Please confirm the current risk treatment.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0018",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "risk acceptance",
+    "meaning_ja": "リスク受容",
+    "example_en": "We need to review the risk acceptance before the meeting.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0019",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "risk mitigation",
+    "meaning_ja": "リスク軽減",
+    "example_en": "This risk mitigation requires follow-up by Friday.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0020",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "risk appetite",
+    "meaning_ja": "リスク許容度",
+    "example_en": "The security team is checking the risk appetite.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0021",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "control",
+    "meaning_ja": "管理策",
+    "example_en": "The control may affect the incident response plan.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0022",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "compensating control",
+    "meaning_ja": "代替管理策",
+    "example_en": "Please confirm the current compensating control.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0023",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "control effectiveness",
+    "meaning_ja": "管理策の有効性",
+    "example_en": "The control effectiveness may affect the incident response plan.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0024",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "security posture",
+    "meaning_ja": "セキュリティ態勢",
+    "example_en": "We should document the security posture clearly.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0025",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "security baseline",
+    "meaning_ja": "セキュリティ基準",
+    "example_en": "We need to review the security baseline before the meeting.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0026",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "defense in depth",
+    "meaning_ja": "多層防御",
+    "example_en": "The defense in depth may affect the incident response plan.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0027",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "acceptable risk",
+    "meaning_ja": "許容可能なリスク",
+    "example_en": "Please confirm the current acceptable risk.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0028",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "risk register",
+    "meaning_ja": "リスク登録簿",
+    "example_en": "This risk register requires follow-up by Friday.",
+    "tags": [
+      "risk_governance",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0029",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "lower_intermediate",
+    "term_en": "policy exception",
+    "meaning_ja": "ポリシー例外",
+    "example_en": "This policy exception requires follow-up by Friday.",
+    "tags": [
+      "risk_governance",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0030",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "intermediate",
+    "term_en": "governance",
+    "meaning_ja": "ガバナンス",
+    "example_en": "We need to review the governance before the meeting.",
+    "tags": [
+      "risk_governance",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0031",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "incident",
+    "meaning_ja": "インシデント",
+    "example_en": "We should document the incident clearly.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0032",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "security event",
+    "meaning_ja": "セキュリティイベント",
+    "example_en": "We should document the security event clearly.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0033",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "alert",
+    "meaning_ja": "アラート",
+    "example_en": "The alert may affect the incident response plan.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0034",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "triage",
+    "meaning_ja": "トリアージ",
+    "example_en": "We need to review the triage before the meeting.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0035",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "investigation",
+    "meaning_ja": "調査",
+    "example_en": "We need to review the investigation before the meeting.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0036",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "containment",
+    "meaning_ja": "封じ込め",
+    "example_en": "Please confirm the current containment.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0037",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "eradication",
+    "meaning_ja": "根絶",
+    "example_en": "Please confirm the current eradication.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0038",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "recovery",
+    "meaning_ja": "復旧",
+    "example_en": "This recovery requires follow-up by Friday.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0039",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "lessons learned",
+    "meaning_ja": "教訓",
+    "example_en": "The lessons learned may affect the incident response plan.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0040",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "root cause",
+    "meaning_ja": "根本原因",
+    "example_en": "This root cause requires follow-up by Friday.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0041",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "timeline",
+    "meaning_ja": "時系列",
+    "example_en": "We need to review the timeline before the meeting.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0042",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "scope",
+    "meaning_ja": "範囲",
+    "example_en": "Please confirm the current scope.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0043",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "severity",
+    "meaning_ja": "重大度",
+    "example_en": "This severity requires follow-up by Friday.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0044",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "priority",
+    "meaning_ja": "優先度",
+    "example_en": "The priority may affect the incident response plan.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0045",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "escalation",
+    "meaning_ja": "エスカレーション",
+    "example_en": "This escalation requires follow-up by Friday.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0046",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "incident commander",
+    "meaning_ja": "インシデント指揮官",
+    "example_en": "This incident commander requires follow-up by Friday.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0047",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "war room",
+    "meaning_ja": "緊急対応会議室",
+    "example_en": "The security team is checking the war room.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0048",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "bridge call",
+    "meaning_ja": "緊急電話会議",
+    "example_en": "The security team is checking the bridge call.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0049",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "status update",
+    "meaning_ja": "状況報告",
+    "example_en": "This status update requires follow-up by Friday.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0050",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "action item",
+    "meaning_ja": "対応事項",
+    "example_en": "The security team is checking the action item.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0051",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "owner",
+    "meaning_ja": "担当者",
+    "example_en": "Please confirm the current owner.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0052",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "deadline",
+    "meaning_ja": "期限",
+    "example_en": "We should document the deadline clearly.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0053",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "evidence",
+    "meaning_ja": "証拠",
+    "example_en": "We should document the evidence clearly.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0054",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "chain of custody",
+    "meaning_ja": "証拠保全の記録",
+    "example_en": "We need to review the chain of custody before the meeting.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0055",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "forensic image",
+    "meaning_ja": "フォレンジックイメージ",
+    "example_en": "The security team is checking the forensic image.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0056",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "indicator of compromise",
+    "meaning_ja": "侵害指標",
+    "example_en": "Please confirm the current indicator of compromise.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0057",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "compromise",
+    "meaning_ja": "侵害",
+    "example_en": "The security team is checking the compromise.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0058",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "post-incident review",
+    "meaning_ja": "事後レビュー",
+    "example_en": "The security team is checking the post-incident review.",
+    "tags": [
+      "incident_response",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0059",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "communication plan",
+    "meaning_ja": "連絡計画",
+    "example_en": "We should document the communication plan clearly.",
+    "tags": [
+      "incident_response",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0060",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "stakeholder notification",
+    "meaning_ja": "関係者通知",
+    "example_en": "Please confirm the current stakeholder notification.",
+    "tags": [
+      "incident_response",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0061",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "phishing",
+    "meaning_ja": "フィッシング",
+    "example_en": "Please confirm the current phishing.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0062",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "spear phishing",
+    "meaning_ja": "標的型フィッシング",
+    "example_en": "The security team is checking the spear phishing.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0063",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "whaling",
+    "meaning_ja": "経営層向けフィッシング",
+    "example_en": "We should document the whaling clearly.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0064",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "business email compromise",
+    "meaning_ja": "ビジネスメール詐欺",
+    "example_en": "We should document the business email compromise clearly.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0065",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "malicious attachment",
+    "meaning_ja": "悪意ある添付ファイル",
+    "example_en": "The malicious attachment may affect the incident response plan.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0066",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "malicious link",
+    "meaning_ja": "悪意あるリンク",
+    "example_en": "We should document the malicious link clearly.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0067",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "sender",
+    "meaning_ja": "送信者",
+    "example_en": "We need to review the sender before the meeting.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0068",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "recipient",
+    "meaning_ja": "受信者",
+    "example_en": "We should document the recipient clearly.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0069",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "spoofing",
+    "meaning_ja": "なりすまし",
+    "example_en": "The security team is checking the spoofing.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0070",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "impersonation",
+    "meaning_ja": "なりすまし",
+    "example_en": "The impersonation may affect the incident response plan.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0071",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "quarantine",
+    "meaning_ja": "隔離",
+    "example_en": "The quarantine may affect the incident response plan.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0072",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "email gateway",
+    "meaning_ja": "メールゲートウェイ",
+    "example_en": "The security team is checking the email gateway.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0073",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "mail header",
+    "meaning_ja": "メールヘッダー",
+    "example_en": "This mail header requires follow-up by Friday.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0074",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "header analysis",
+    "meaning_ja": "メールヘッダー分析",
+    "example_en": "We should document the header analysis clearly.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0075",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "domain reputation",
+    "meaning_ja": "ドメイン評価",
+    "example_en": "This domain reputation requires follow-up by Friday.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0076",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "URL reputation",
+    "meaning_ja": "URL評価",
+    "example_en": "We should document the URL reputation clearly.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0077",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "user report",
+    "meaning_ja": "利用者報告",
+    "example_en": "Please confirm the current user report.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0078",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "credential harvesting",
+    "meaning_ja": "認証情報の窃取",
+    "example_en": "We should document the credential harvesting clearly.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0079",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "lookalike domain",
+    "meaning_ja": "類似ドメイン",
+    "example_en": "We should document the lookalike domain clearly.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0080",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "typosquatting",
+    "meaning_ja": "タイポスクワッティング",
+    "example_en": "This typosquatting requires follow-up by Friday.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0081",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "DMARC",
+    "meaning_ja": "DMARC",
+    "example_en": "This DMARC requires follow-up by Friday.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0082",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "DKIM",
+    "meaning_ja": "DKIM",
+    "example_en": "Please confirm the current DKIM.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0083",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "SPF",
+    "meaning_ja": "SPF",
+    "example_en": "We need to review the SPF before the meeting.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0084",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "mail flow rule",
+    "meaning_ja": "メールフロールール",
+    "example_en": "This mail flow rule requires follow-up by Friday.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0085",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "safe links",
+    "meaning_ja": "安全なリンク機能",
+    "example_en": "We should document the safe links clearly.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0086",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "safe attachments",
+    "meaning_ja": "安全な添付ファイル機能",
+    "example_en": "The safe attachments may affect the incident response plan.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0087",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "campaign",
+    "meaning_ja": "キャンペーン",
+    "example_en": "We need to review the campaign before the meeting.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0088",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "beginner",
+    "term_en": "takedown request",
+    "meaning_ja": "削除依頼",
+    "example_en": "We need to review the takedown request before the meeting.",
+    "tags": [
+      "phishing_email",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0089",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "awareness training",
+    "meaning_ja": "意識向上教育",
+    "example_en": "We should document the awareness training clearly.",
+    "tags": [
+      "phishing_email",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0090",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "report phishing button",
+    "meaning_ja": "フィッシング報告ボタン",
+    "example_en": "The security team is checking the report phishing button.",
+    "tags": [
+      "phishing_email",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0091",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "malware",
+    "meaning_ja": "マルウェア",
+    "example_en": "The security team is checking the malware.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0092",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "ransomware",
+    "meaning_ja": "ランサムウェア",
+    "example_en": "The security team is checking the ransomware.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0093",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "trojan",
+    "meaning_ja": "トロイの木馬",
+    "example_en": "We should document the trojan clearly.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0094",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "worm",
+    "meaning_ja": "ワーム",
+    "example_en": "Please confirm the current worm.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0095",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "spyware",
+    "meaning_ja": "スパイウェア",
+    "example_en": "The spyware may affect the incident response plan.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0096",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "keylogger",
+    "meaning_ja": "キーロガー",
+    "example_en": "This keylogger requires follow-up by Friday.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0097",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "backdoor",
+    "meaning_ja": "バックドア",
+    "example_en": "We should document the backdoor clearly.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0098",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "payload",
+    "meaning_ja": "ペイロード",
+    "example_en": "We need to review the payload before the meeting.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0099",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "dropper",
+    "meaning_ja": "ドロッパー",
+    "example_en": "We need to review the dropper before the meeting.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0100",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "loader",
+    "meaning_ja": "ローダー",
+    "example_en": "This loader requires follow-up by Friday.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0101",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "command and control",
+    "meaning_ja": "C2",
+    "example_en": "We should document the command and control clearly.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0102",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "C2 server",
+    "meaning_ja": "C2サーバー",
+    "example_en": "We need to review the C2 server before the meeting.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0103",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "beaconing",
+    "meaning_ja": "ビーコン通信",
+    "example_en": "The beaconing may affect the incident response plan.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0104",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "lateral movement",
+    "meaning_ja": "横展開",
+    "example_en": "The security team is checking the lateral movement.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0105",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "persistence",
+    "meaning_ja": "永続化",
+    "example_en": "The security team is checking the persistence.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0106",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "privilege escalation",
+    "meaning_ja": "権限昇格",
+    "example_en": "The privilege escalation may affect the incident response plan.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0107",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "credential dumping",
+    "meaning_ja": "認証情報ダンプ",
+    "example_en": "The security team is checking the credential dumping.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0108",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "data exfiltration",
+    "meaning_ja": "データ持ち出し",
+    "example_en": "We need to review the data exfiltration before the meeting.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0109",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "ransom note",
+    "meaning_ja": "身代金要求文",
+    "example_en": "Please confirm the current ransom note.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0110",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "hash value",
+    "meaning_ja": "ハッシュ値",
+    "example_en": "The hash value may affect the incident response plan.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0111",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "sandbox",
+    "meaning_ja": "サンドボックス",
+    "example_en": "The security team is checking the sandbox.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0112",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "YARA rule",
+    "meaning_ja": "YARAルール",
+    "example_en": "The security team is checking the YARA rule.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0113",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "signature",
+    "meaning_ja": "シグネチャ",
+    "example_en": "Please confirm the current signature.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0114",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "behavior analysis",
+    "meaning_ja": "振る舞い分析",
+    "example_en": "This behavior analysis requires follow-up by Friday.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0115",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "process injection",
+    "meaning_ja": "プロセスインジェクション",
+    "example_en": "We need to review the process injection before the meeting.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0116",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "memory dump",
+    "meaning_ja": "メモリダンプ",
+    "example_en": "The memory dump may affect the incident response plan.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0117",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "persistence mechanism",
+    "meaning_ja": "永続化メカニズム",
+    "example_en": "The persistence mechanism may affect the incident response plan.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0118",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "malware family",
+    "meaning_ja": "マルウェアファミリー",
+    "example_en": "This malware family requires follow-up by Friday.",
+    "tags": [
+      "malware_ransomware",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0119",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "lower_intermediate",
+    "term_en": "reverse engineering",
+    "meaning_ja": "リバースエンジニアリング",
+    "example_en": "This reverse engineering requires follow-up by Friday.",
+    "tags": [
+      "malware_ransomware",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0120",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "encryption routine",
+    "meaning_ja": "暗号化処理",
+    "example_en": "Please confirm the current encryption routine.",
+    "tags": [
+      "malware_ransomware",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0121",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "patch",
+    "meaning_ja": "パッチ",
+    "example_en": "The security team is checking the patch.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0122",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "patch management",
+    "meaning_ja": "パッチ管理",
+    "example_en": "We should document the patch management clearly.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0123",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "security update",
+    "meaning_ja": "セキュリティ更新",
+    "example_en": "The security team is checking the security update.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0124",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "zero-day vulnerability",
+    "meaning_ja": "ゼロデイ脆弱性",
+    "example_en": "This zero-day vulnerability requires follow-up by Friday.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0125",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "known exploited vulnerability",
+    "meaning_ja": "既知悪用脆弱性",
+    "example_en": "We should document the known exploited vulnerability clearly.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0126",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "CVE",
+    "meaning_ja": "CVE",
+    "example_en": "The security team is checking the CVE.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0127",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "CVSS score",
+    "meaning_ja": "CVSSスコア",
+    "example_en": "The security team is checking the CVSS score.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0128",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "proof of concept",
+    "meaning_ja": "概念実証コード",
+    "example_en": "This proof of concept requires follow-up by Friday.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0129",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "exploit code",
+    "meaning_ja": "攻撃コード",
+    "example_en": "Please confirm the current exploit code.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0130",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "remediation",
+    "meaning_ja": "是正",
+    "example_en": "We should document the remediation clearly.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0131",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "workaround",
+    "meaning_ja": "回避策",
+    "example_en": "We should document the workaround clearly.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0132",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "configuration issue",
+    "meaning_ja": "設定不備",
+    "example_en": "This configuration issue requires follow-up by Friday.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0133",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "misconfiguration",
+    "meaning_ja": "誤設定",
+    "example_en": "We need to review the misconfiguration before the meeting.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0134",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "unsupported system",
+    "meaning_ja": "サポート終了システム",
+    "example_en": "The security team is checking the unsupported system.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0135",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "end of life",
+    "meaning_ja": "サポート終了",
+    "example_en": "Please confirm the current end of life.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0136",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "vulnerability scan",
+    "meaning_ja": "脆弱性スキャン",
+    "example_en": "We need to review the vulnerability scan before the meeting.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0137",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "authenticated scan",
+    "meaning_ja": "認証付きスキャン",
+    "example_en": "This authenticated scan requires follow-up by Friday.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0138",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "penetration test",
+    "meaning_ja": "侵入テスト",
+    "example_en": "We need to review the penetration test before the meeting.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0139",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "false positive",
+    "meaning_ja": "誤検知",
+    "example_en": "This false positive requires follow-up by Friday.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0140",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "false negative",
+    "meaning_ja": "検知漏れ",
+    "example_en": "We need to review the false negative before the meeting.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0141",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "exception request",
+    "meaning_ja": "例外申請",
+    "example_en": "The exception request may affect the incident response plan.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0142",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "maintenance window",
+    "meaning_ja": "メンテナンス時間",
+    "example_en": "Please confirm the current maintenance window.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0143",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "rollback plan",
+    "meaning_ja": "切り戻し計画",
+    "example_en": "Please confirm the current rollback plan.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0144",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "change approval",
+    "meaning_ja": "変更承認",
+    "example_en": "We should document the change approval clearly.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0145",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "emergency change",
+    "meaning_ja": "緊急変更",
+    "example_en": "Please confirm the current emergency change.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0146",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "configuration drift",
+    "meaning_ja": "設定ドリフト",
+    "example_en": "The security team is checking the configuration drift.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0147",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "secure configuration",
+    "meaning_ja": "安全な設定",
+    "example_en": "This secure configuration requires follow-up by Friday.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0148",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "beginner",
+    "term_en": "hardening",
+    "meaning_ja": "ハードニング",
+    "example_en": "We need to review the hardening before the meeting.",
+    "tags": [
+      "vulnerability_patch",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0149",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "attack path",
+    "meaning_ja": "攻撃経路",
+    "example_en": "Please confirm the current attack path.",
+    "tags": [
+      "vulnerability_patch",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0150",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "remediation plan",
+    "meaning_ja": "是正計画",
+    "example_en": "We need to review the remediation plan before the meeting.",
+    "tags": [
+      "vulnerability_patch",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0151",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "authentication",
+    "meaning_ja": "認証",
+    "example_en": "We need to review the authentication before the meeting.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0152",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "authorization",
+    "meaning_ja": "認可",
+    "example_en": "The authorization may affect the incident response plan.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0153",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "multi-factor authentication",
+    "meaning_ja": "多要素認証",
+    "example_en": "The security team is checking the multi-factor authentication.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0154",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "single sign-on",
+    "meaning_ja": "シングルサインオン",
+    "example_en": "The single sign-on may affect the incident response plan.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0155",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "identity provider",
+    "meaning_ja": "IDプロバイダー",
+    "example_en": "We need to review the identity provider before the meeting.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0156",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "privileged account",
+    "meaning_ja": "特権アカウント",
+    "example_en": "This privileged account requires follow-up by Friday.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0157",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "privileged access management",
+    "meaning_ja": "特権アクセス管理",
+    "example_en": "This privileged access management requires follow-up by Friday.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0158",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "least privilege",
+    "meaning_ja": "最小権限",
+    "example_en": "This least privilege requires follow-up by Friday.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0159",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "role-based access control",
+    "meaning_ja": "ロールベースアクセス制御",
+    "example_en": "This role-based access control requires follow-up by Friday.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0160",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "attribute-based access control",
+    "meaning_ja": "属性ベースアクセス制御",
+    "example_en": "We should document the attribute-based access control clearly.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0161",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "access review",
+    "meaning_ja": "アクセス権レビュー",
+    "example_en": "We need to review the access review before the meeting.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0162",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "account lockout",
+    "meaning_ja": "アカウントロック",
+    "example_en": "We should document the account lockout clearly.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0163",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "password reset",
+    "meaning_ja": "パスワードリセット",
+    "example_en": "The password reset may affect the incident response plan.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0164",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "credential",
+    "meaning_ja": "認証情報",
+    "example_en": "Please confirm the current credential.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0165",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "service account",
+    "meaning_ja": "サービスアカウント",
+    "example_en": "This service account requires follow-up by Friday.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0166",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "inactive account",
+    "meaning_ja": "休眠アカウント",
+    "example_en": "The security team is checking the inactive account.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0167",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "orphaned account",
+    "meaning_ja": "孤立アカウント",
+    "example_en": "Please confirm the current orphaned account.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0168",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "joiner mover leaver process",
+    "meaning_ja": "入社・異動・退職管理",
+    "example_en": "The joiner mover leaver process may affect the incident response plan.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0169",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "session timeout",
+    "meaning_ja": "セッションタイムアウト",
+    "example_en": "We should document the session timeout clearly.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0170",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "conditional access",
+    "meaning_ja": "条件付きアクセス",
+    "example_en": "The security team is checking the conditional access.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0171",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "password policy",
+    "meaning_ja": "パスワードポリシー",
+    "example_en": "We should document the password policy clearly.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0172",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "account takeover",
+    "meaning_ja": "アカウント乗っ取り",
+    "example_en": "Please confirm the current account takeover.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0173",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "impossible travel",
+    "meaning_ja": "不可能な移動",
+    "example_en": "The security team is checking the impossible travel.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0174",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "risky sign-in",
+    "meaning_ja": "危険なサインイン",
+    "example_en": "The risky sign-in may affect the incident response plan.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0175",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "break-glass account",
+    "meaning_ja": "緊急用アカウント",
+    "example_en": "We should document the break-glass account clearly.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0176",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "access request",
+    "meaning_ja": "アクセス申請",
+    "example_en": "This access request requires follow-up by Friday.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0177",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "approval workflow",
+    "meaning_ja": "承認ワークフロー",
+    "example_en": "Please confirm the current approval workflow.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0178",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "entitlement",
+    "meaning_ja": "権限付与",
+    "example_en": "This entitlement requires follow-up by Friday.",
+    "tags": [
+      "iam_access",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0179",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "lower_intermediate",
+    "term_en": "deprovisioning",
+    "meaning_ja": "権限削除",
+    "example_en": "The deprovisioning may affect the incident response plan.",
+    "tags": [
+      "iam_access",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0180",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "identity lifecycle",
+    "meaning_ja": "IDライフサイクル",
+    "example_en": "Please confirm the current identity lifecycle.",
+    "tags": [
+      "iam_access",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0181",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "firewall",
+    "meaning_ja": "ファイアウォール",
+    "example_en": "This firewall requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0182",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "intrusion detection system",
+    "meaning_ja": "侵入検知システム",
+    "example_en": "We should document the intrusion detection system clearly.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0183",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "intrusion prevention system",
+    "meaning_ja": "侵入防止システム",
+    "example_en": "The intrusion prevention system may affect the incident response plan.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0184",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "endpoint",
+    "meaning_ja": "エンドポイント",
+    "example_en": "We need to review the endpoint before the meeting.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0185",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "endpoint detection and response",
+    "meaning_ja": "EDR",
+    "example_en": "We need to review the endpoint detection and response before the meeting.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0186",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "antivirus",
+    "meaning_ja": "アンチウイルス",
+    "example_en": "We need to review the antivirus before the meeting.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0187",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "network segmentation",
+    "meaning_ja": "ネットワーク分離",
+    "example_en": "We should document the network segmentation clearly.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0188",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "VPN",
+    "meaning_ja": "VPN",
+    "example_en": "This VPN requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0189",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "proxy server",
+    "meaning_ja": "プロキシサーバー",
+    "example_en": "The proxy server may affect the incident response plan.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0190",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "DNS",
+    "meaning_ja": "DNS",
+    "example_en": "We should document the DNS clearly.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0191",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "IP address",
+    "meaning_ja": "IPアドレス",
+    "example_en": "We should document the IP address clearly.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0192",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "port",
+    "meaning_ja": "ポート",
+    "example_en": "This port requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0193",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "packet capture",
+    "meaning_ja": "パケットキャプチャ",
+    "example_en": "The packet capture may affect the incident response plan.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0194",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "traffic",
+    "meaning_ja": "通信",
+    "example_en": "This traffic requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0195",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "isolation",
+    "meaning_ja": "隔離",
+    "example_en": "The isolation may affect the incident response plan.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0196",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "blocklist",
+    "meaning_ja": "ブロックリスト",
+    "example_en": "The security team is checking the blocklist.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0197",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "allowlist",
+    "meaning_ja": "許可リスト",
+    "example_en": "This allowlist requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0198",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "remote access",
+    "meaning_ja": "リモートアクセス",
+    "example_en": "Please confirm the current remote access.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0199",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "network flow",
+    "meaning_ja": "ネットワークフロー",
+    "example_en": "We need to review the network flow before the meeting.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0200",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "egress traffic",
+    "meaning_ja": "外向き通信",
+    "example_en": "We should document the egress traffic clearly.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0201",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "ingress traffic",
+    "meaning_ja": "内向き通信",
+    "example_en": "We should document the ingress traffic clearly.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0202",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "DDoS attack",
+    "meaning_ja": "DDoS攻撃",
+    "example_en": "This DDoS attack requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0203",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "rate limiting",
+    "meaning_ja": "レート制限",
+    "example_en": "The rate limiting may affect the incident response plan.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0204",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "web application firewall",
+    "meaning_ja": "WAF",
+    "example_en": "The security team is checking the web application firewall.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0205",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "load balancer",
+    "meaning_ja": "ロードバランサー",
+    "example_en": "The security team is checking the load balancer.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0206",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "TLS certificate",
+    "meaning_ja": "TLS証明書",
+    "example_en": "We need to review the TLS certificate before the meeting.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0207",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "certificate authority",
+    "meaning_ja": "認証局",
+    "example_en": "This certificate authority requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0208",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "beginner",
+    "term_en": "network device",
+    "meaning_ja": "ネットワーク機器",
+    "example_en": "This network device requires follow-up by Friday.",
+    "tags": [
+      "network_endpoint",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0209",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "lower_intermediate",
+    "term_en": "firmware",
+    "meaning_ja": "ファームウェア",
+    "example_en": "Please confirm the current firmware.",
+    "tags": [
+      "network_endpoint",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0210",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "remote shell",
+    "meaning_ja": "リモートシェル",
+    "example_en": "We should document the remote shell clearly.",
+    "tags": [
+      "network_endpoint",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0211",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "log",
+    "meaning_ja": "ログ",
+    "example_en": "We should document the log clearly.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0212",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "audit log",
+    "meaning_ja": "監査ログ",
+    "example_en": "This audit log requires follow-up by Friday.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0213",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "log source",
+    "meaning_ja": "ログソース",
+    "example_en": "The security team is checking the log source.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0214",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "SIEM",
+    "meaning_ja": "SIEM",
+    "example_en": "This SIEM requires follow-up by Friday.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0215",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "SOC",
+    "meaning_ja": "SOC",
+    "example_en": "Please confirm the current SOC.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0216",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "use case",
+    "meaning_ja": "検知ユースケース",
+    "example_en": "This use case requires follow-up by Friday.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0217",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "detection rule",
+    "meaning_ja": "検知ルール",
+    "example_en": "We should document the detection rule clearly.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0218",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "correlation",
+    "meaning_ja": "相関分析",
+    "example_en": "We should document the correlation clearly.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0219",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "baseline",
+    "meaning_ja": "基準値",
+    "example_en": "We should document the baseline clearly.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0220",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "anomaly",
+    "meaning_ja": "異常",
+    "example_en": "The security team is checking the anomaly.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0221",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "telemetry",
+    "meaning_ja": "テレメトリー",
+    "example_en": "The telemetry may affect the incident response plan.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0222",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "retention period",
+    "meaning_ja": "保存期間",
+    "example_en": "This retention period requires follow-up by Friday.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0223",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "dashboard",
+    "meaning_ja": "ダッシュボード",
+    "example_en": "We should document the dashboard clearly.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0224",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "monitoring",
+    "meaning_ja": "監視",
+    "example_en": "We should document the monitoring clearly.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0225",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "threat intelligence",
+    "meaning_ja": "脅威インテリジェンス",
+    "example_en": "We need to review the threat intelligence before the meeting.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0226",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "threat hunting",
+    "meaning_ja": "脅威ハンティング",
+    "example_en": "We need to review the threat hunting before the meeting.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0227",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "alert fatigue",
+    "meaning_ja": "アラート疲れ",
+    "example_en": "We need to review the alert fatigue before the meeting.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0228",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "suppression rule",
+    "meaning_ja": "抑制ルール",
+    "example_en": "We should document the suppression rule clearly.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0229",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "tuning",
+    "meaning_ja": "チューニング",
+    "example_en": "The security team is checking the tuning.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0230",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "playbook",
+    "meaning_ja": "プレイブック",
+    "example_en": "We need to review the playbook before the meeting.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0231",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "runbook",
+    "meaning_ja": "ランブック",
+    "example_en": "Please confirm the current runbook.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0232",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "case management",
+    "meaning_ja": "ケース管理",
+    "example_en": "We should document the case management clearly.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0233",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "mean time to detect",
+    "meaning_ja": "平均検知時間",
+    "example_en": "Please confirm the current mean time to detect.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0234",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "mean time to respond",
+    "meaning_ja": "平均対応時間",
+    "example_en": "Please confirm the current mean time to respond.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0235",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "log ingestion",
+    "meaning_ja": "ログ取り込み",
+    "example_en": "The security team is checking the log ingestion.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0236",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "parser",
+    "meaning_ja": "パーサー",
+    "example_en": "Please confirm the current parser.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0237",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "field mapping",
+    "meaning_ja": "フィールドマッピング",
+    "example_en": "This field mapping requires follow-up by Friday.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0238",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "watchlist",
+    "meaning_ja": "監視リスト",
+    "example_en": "This watchlist requires follow-up by Friday.",
+    "tags": [
+      "soc_logging",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0239",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "threat hunting query",
+    "meaning_ja": "脅威ハンティングクエリ",
+    "example_en": "The threat hunting query may affect the incident response plan.",
+    "tags": [
+      "soc_logging",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0240",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "alert severity",
+    "meaning_ja": "アラート重大度",
+    "example_en": "We need to review the alert severity before the meeting.",
+    "tags": [
+      "soc_logging",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0241",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "cloud security",
+    "meaning_ja": "クラウドセキュリティ",
+    "example_en": "We should document the cloud security clearly.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0242",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "shared responsibility model",
+    "meaning_ja": "責任共有モデル",
+    "example_en": "This shared responsibility model requires follow-up by Friday.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0243",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "storage bucket",
+    "meaning_ja": "ストレージバケット",
+    "example_en": "Please confirm the current storage bucket.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0244",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "security group",
+    "meaning_ja": "セキュリティグループ",
+    "example_en": "The security group may affect the incident response plan.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0245",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "API key",
+    "meaning_ja": "APIキー",
+    "example_en": "We should document the API key clearly.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0246",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "secret",
+    "meaning_ja": "シークレット",
+    "example_en": "The secret may affect the incident response plan.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0247",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "secret rotation",
+    "meaning_ja": "シークレットローテーション",
+    "example_en": "This secret rotation requires follow-up by Friday.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0248",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "data classification",
+    "meaning_ja": "データ分類",
+    "example_en": "Please confirm the current data classification.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0249",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "data loss prevention",
+    "meaning_ja": "DLP",
+    "example_en": "We should document the data loss prevention clearly.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0250",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "personal data",
+    "meaning_ja": "個人データ",
+    "example_en": "The personal data may affect the incident response plan.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0251",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "sensitive data",
+    "meaning_ja": "機密データ",
+    "example_en": "We need to review the sensitive data before the meeting.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0252",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "data breach",
+    "meaning_ja": "データ侵害",
+    "example_en": "The data breach may affect the incident response plan.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0253",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "backup",
+    "meaning_ja": "バックアップ",
+    "example_en": "The backup may affect the incident response plan.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0254",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "restore",
+    "meaning_ja": "復元",
+    "example_en": "The security team is checking the restore.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0255",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "immutable backup",
+    "meaning_ja": "変更不能バックアップ",
+    "example_en": "This immutable backup requires follow-up by Friday.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0256",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "encryption at rest",
+    "meaning_ja": "保存時暗号化",
+    "example_en": "We need to review the encryption at rest before the meeting.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0257",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "encryption in transit",
+    "meaning_ja": "通信時暗号化",
+    "example_en": "We need to review the encryption in transit before the meeting.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0258",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "key management",
+    "meaning_ja": "鍵管理",
+    "example_en": "This key management requires follow-up by Friday.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0259",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "KMS",
+    "meaning_ja": "鍵管理サービス",
+    "example_en": "We need to review the KMS before the meeting.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0260",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "public exposure",
+    "meaning_ja": "公開状態",
+    "example_en": "This public exposure requires follow-up by Friday.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0261",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "private endpoint",
+    "meaning_ja": "プライベートエンドポイント",
+    "example_en": "Please confirm the current private endpoint.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0262",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "cloud workload",
+    "meaning_ja": "クラウドワークロード",
+    "example_en": "This cloud workload requires follow-up by Friday.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0263",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "container image",
+    "meaning_ja": "コンテナイメージ",
+    "example_en": "Please confirm the current container image.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0264",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "image registry",
+    "meaning_ja": "イメージレジストリ",
+    "example_en": "We should document the image registry clearly.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0265",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "Kubernetes cluster",
+    "meaning_ja": "Kubernetesクラスター",
+    "example_en": "We need to review the Kubernetes cluster before the meeting.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0266",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "namespace",
+    "meaning_ja": "名前空間",
+    "example_en": "Please confirm the current namespace.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0267",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "pod",
+    "meaning_ja": "Pod",
+    "example_en": "The pod may affect the incident response plan.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0268",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "serverless function",
+    "meaning_ja": "サーバーレス関数",
+    "example_en": "We should document the serverless function clearly.",
+    "tags": [
+      "cloud_data",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0269",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "object storage",
+    "meaning_ja": "オブジェクトストレージ",
+    "example_en": "Please confirm the current object storage.",
+    "tags": [
+      "cloud_data",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0270",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "intermediate",
+    "term_en": "data retention",
+    "meaning_ja": "データ保持",
+    "example_en": "The security team is checking the data retention.",
+    "tags": [
+      "cloud_data",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0271",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "policy",
+    "meaning_ja": "ポリシー",
+    "example_en": "We should document the policy clearly.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0272",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "standard",
+    "meaning_ja": "標準",
+    "example_en": "The standard may affect the incident response plan.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0273",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "procedure",
+    "meaning_ja": "手順",
+    "example_en": "The security team is checking the procedure.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0274",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "guideline",
+    "meaning_ja": "ガイドライン",
+    "example_en": "The security team is checking the guideline.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0275",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "compliance",
+    "meaning_ja": "コンプライアンス",
+    "example_en": "The compliance may affect the incident response plan.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0276",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "audit",
+    "meaning_ja": "監査",
+    "example_en": "The audit may affect the incident response plan.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0277",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "audit finding",
+    "meaning_ja": "監査指摘",
+    "example_en": "The security team is checking the audit finding.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0278",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "corrective action",
+    "meaning_ja": "是正措置",
+    "example_en": "We need to review the corrective action before the meeting.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0279",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "evidence request",
+    "meaning_ja": "証跡依頼",
+    "example_en": "The evidence request may affect the incident response plan.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0280",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "control owner",
+    "meaning_ja": "管理策担当者",
+    "example_en": "We should document the control owner clearly.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0281",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "control testing",
+    "meaning_ja": "管理策テスト",
+    "example_en": "The control testing may affect the incident response plan.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0282",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "management response",
+    "meaning_ja": "経営側回答",
+    "example_en": "This management response requires follow-up by Friday.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0283",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "gap analysis",
+    "meaning_ja": "ギャップ分析",
+    "example_en": "The gap analysis may affect the incident response plan.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0284",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "regulatory requirement",
+    "meaning_ja": "規制要件",
+    "example_en": "This regulatory requirement requires follow-up by Friday.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0285",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "internal control",
+    "meaning_ja": "内部統制",
+    "example_en": "We should document the internal control clearly.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0286",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "third-party risk",
+    "meaning_ja": "サードパーティリスク",
+    "example_en": "Please confirm the current third-party risk.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0287",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "vendor assessment",
+    "meaning_ja": "ベンダー評価",
+    "example_en": "We need to review the vendor assessment before the meeting.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0288",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "due diligence",
+    "meaning_ja": "デューデリジェンス",
+    "example_en": "We need to review the due diligence before the meeting.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0289",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "service-level agreement",
+    "meaning_ja": "SLA",
+    "example_en": "The security team is checking the service-level agreement.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0290",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "data processing agreement",
+    "meaning_ja": "データ処理契約",
+    "example_en": "We should document the data processing agreement clearly.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0291",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "privacy impact assessment",
+    "meaning_ja": "プライバシー影響評価",
+    "example_en": "We need to review the privacy impact assessment before the meeting.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0292",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "retention policy",
+    "meaning_ja": "保持ポリシー",
+    "example_en": "We should document the retention policy clearly.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0293",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "acceptable use policy",
+    "meaning_ja": "利用規程",
+    "example_en": "The security team is checking the acceptable use policy.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0294",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "exception approval",
+    "meaning_ja": "例外承認",
+    "example_en": "We should document the exception approval clearly.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0295",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "compliance evidence",
+    "meaning_ja": "準拠証跡",
+    "example_en": "We need to review the compliance evidence before the meeting.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0296",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "audit trail",
+    "meaning_ja": "監査証跡",
+    "example_en": "This audit trail requires follow-up by Friday.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0297",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "segregation of duties",
+    "meaning_ja": "職務分掌",
+    "example_en": "We need to review the segregation of duties before the meeting.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0298",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "beginner",
+    "term_en": "security committee",
+    "meaning_ja": "セキュリティ委員会",
+    "example_en": "The security team is checking the security committee.",
+    "tags": [
+      "compliance_audit",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0299",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "regulator",
+    "meaning_ja": "規制当局",
+    "example_en": "This regulator requires follow-up by Friday.",
+    "tags": [
+      "compliance_audit",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0300",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "audit scope",
+    "meaning_ja": "監査範囲",
+    "example_en": "The security team is checking the audit scope.",
+    "tags": [
+      "compliance_audit",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0301",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "agenda",
+    "meaning_ja": "議題",
+    "example_en": "The agenda may affect the incident response plan.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0302",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "objective",
+    "meaning_ja": "目的",
+    "example_en": "We should document the objective clearly.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0303",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "decision",
+    "meaning_ja": "決定",
+    "example_en": "Please confirm the current decision.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0304",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "assumption",
+    "meaning_ja": "前提",
+    "example_en": "We should document the assumption clearly.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0305",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "dependency",
+    "meaning_ja": "依存関係",
+    "example_en": "This dependency requires follow-up by Friday.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0306",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "constraint",
+    "meaning_ja": "制約",
+    "example_en": "We need to review the constraint before the meeting.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0307",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "timeline",
+    "meaning_ja": "スケジュール",
+    "example_en": "Please confirm the current timeline.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0308",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "milestone",
+    "meaning_ja": "マイルストーン",
+    "example_en": "We need to review the milestone before the meeting.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0309",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "blocker",
+    "meaning_ja": "阻害要因",
+    "example_en": "The blocker may affect the incident response plan.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0310",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "follow-up",
+    "meaning_ja": "フォローアップ",
+    "example_en": "We should document the follow-up clearly.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0311",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "meeting minutes",
+    "meaning_ja": "議事録",
+    "example_en": "Please confirm the current meeting minutes.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0312",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "decision log",
+    "meaning_ja": "決定事項ログ",
+    "example_en": "We need to review the decision log before the meeting.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0313",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "stakeholder",
+    "meaning_ja": "関係者",
+    "example_en": "We need to review the stakeholder before the meeting.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0314",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "alignment",
+    "meaning_ja": "認識合わせ",
+    "example_en": "Please confirm the current alignment.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0315",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "clarification",
+    "meaning_ja": "明確化",
+    "example_en": "The security team is checking the clarification.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0316",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "summary",
+    "meaning_ja": "まとめ",
+    "example_en": "The security team is checking the summary.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0317",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "next step",
+    "meaning_ja": "次のステップ",
+    "example_en": "This next step requires follow-up by Friday.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0318",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "open item",
+    "meaning_ja": "未解決事項",
+    "example_en": "Please confirm the current open item.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0319",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "parking lot",
+    "meaning_ja": "後で扱う事項",
+    "example_en": "We need to review the parking lot before the meeting.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0320",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "approval",
+    "meaning_ja": "承認",
+    "example_en": "The approval may affect the incident response plan.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0321",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "recommendation",
+    "meaning_ja": "推奨事項",
+    "example_en": "This recommendation requires follow-up by Friday.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0322",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "concern",
+    "meaning_ja": "懸念",
+    "example_en": "We need to review the concern before the meeting.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0323",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "trade-off",
+    "meaning_ja": "トレードオフ",
+    "example_en": "The trade-off may affect the incident response plan.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0324",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "implementation plan",
+    "meaning_ja": "実装計画",
+    "example_en": "The security team is checking the implementation plan.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0325",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "communication channel",
+    "meaning_ja": "連絡チャネル",
+    "example_en": "Please confirm the current communication channel.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0326",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "point of contact",
+    "meaning_ja": "窓口",
+    "example_en": "Please confirm the current point of contact.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0327",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "handover",
+    "meaning_ja": "引き継ぎ",
+    "example_en": "The security team is checking the handover.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0328",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "availability",
+    "meaning_ja": "可用性",
+    "example_en": "The availability may affect the incident response plan.",
+    "tags": [
+      "meeting_business",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0329",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "time zone",
+    "meaning_ja": "タイムゾーン",
+    "example_en": "The time zone may affect the incident response plan.",
+    "tags": [
+      "meeting_business",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0330",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "meeting cadence",
+    "meaning_ja": "会議頻度",
+    "example_en": "The security team is checking the meeting cadence.",
+    "tags": [
+      "meeting_business",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0331",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "confirm the scope",
+    "meaning_ja": "影響範囲を確認する",
+    "example_en": "We need to confirm the scope today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0332",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "isolate the host",
+    "meaning_ja": "ホストを隔離する",
+    "example_en": "We need to isolate the host today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0333",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "disable the account",
+    "meaning_ja": "アカウントを無効化する",
+    "example_en": "We need to disable the account today.",
+    "tags": [
+      "iam_access",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0334",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "reset the password",
+    "meaning_ja": "パスワードをリセットする",
+    "example_en": "We need to reset the password today.",
+    "tags": [
+      "iam_access",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0335",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "block the domain",
+    "meaning_ja": "ドメインをブロックする",
+    "example_en": "We need to block the domain today.",
+    "tags": [
+      "phishing_email",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0336",
+    "type": "vocabulary",
+    "category": "network_endpoint",
+    "category_ja": "ネットワーク・エンドポイント",
+    "level": "intermediate",
+    "term_en": "block the IP address",
+    "meaning_ja": "IPアドレスをブロックする",
+    "example_en": "We need to block the IP address today.",
+    "tags": [
+      "network_endpoint",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0337",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "beginner",
+    "term_en": "preserve the logs",
+    "meaning_ja": "ログを保全する",
+    "example_en": "We need to preserve the logs today.",
+    "tags": [
+      "soc_logging",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0338",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "collect evidence",
+    "meaning_ja": "証拠を収集する",
+    "example_en": "We need to collect evidence today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0339",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "intermediate",
+    "term_en": "review the timeline",
+    "meaning_ja": "時系列を確認する",
+    "example_en": "We need to review the timeline today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0340",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "raise the severity",
+    "meaning_ja": "重大度を上げる",
+    "example_en": "We need to raise the severity today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0341",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "apply the patch",
+    "meaning_ja": "パッチを適用する",
+    "example_en": "We need to apply the patch today.",
+    "tags": [
+      "vulnerability_patch",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0342",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "intermediate",
+    "term_en": "prepare a rollback plan",
+    "meaning_ja": "切り戻し計画を準備する",
+    "example_en": "We need to prepare a rollback plan today.",
+    "tags": [
+      "vulnerability_patch",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0343",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "verify the backup",
+    "meaning_ja": "バックアップを確認する",
+    "example_en": "We need to verify the backup today.",
+    "tags": [
+      "cloud_data",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0344",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "restore the service",
+    "meaning_ja": "サービスを復旧する",
+    "example_en": "We need to restore the service today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0345",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "notify stakeholders",
+    "meaning_ja": "関係者に通知する",
+    "example_en": "We need to notify stakeholders today.",
+    "tags": [
+      "meeting_business",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0346",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "beginner",
+    "term_en": "escalate to management",
+    "meaning_ja": "経営層へエスカレーションする",
+    "example_en": "We need to escalate to management today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0347",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "lower_intermediate",
+    "term_en": "request vendor support",
+    "meaning_ja": "ベンダー支援を依頼する",
+    "example_en": "We need to request vendor support today.",
+    "tags": [
+      "compliance_audit",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0348",
+    "type": "vocabulary",
+    "category": "compliance_audit",
+    "category_ja": "監査・コンプライアンス",
+    "level": "intermediate",
+    "term_en": "document the exception",
+    "meaning_ja": "例外を文書化する",
+    "example_en": "We need to document the exception today.",
+    "tags": [
+      "compliance_audit",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0349",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "accept the residual risk",
+    "meaning_ja": "残留リスクを受容する",
+    "example_en": "We need to accept the residual risk today.",
+    "tags": [
+      "risk_governance",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0350",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "lower_intermediate",
+    "term_en": "tune the detection rule",
+    "meaning_ja": "検知ルールを調整する",
+    "example_en": "We need to tune the detection rule today.",
+    "tags": [
+      "soc_logging",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0351",
+    "type": "vocabulary",
+    "category": "soc_logging",
+    "category_ja": "SOC・ログ・監視",
+    "level": "intermediate",
+    "term_en": "increase monitoring",
+    "meaning_ja": "監視を強化する",
+    "example_en": "We need to increase monitoring today.",
+    "tags": [
+      "soc_logging",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0352",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "beginner",
+    "term_en": "revoke the API key",
+    "meaning_ja": "APIキーを失効する",
+    "example_en": "We need to revoke the API key today.",
+    "tags": [
+      "cloud_data",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0353",
+    "type": "vocabulary",
+    "category": "cloud_data",
+    "category_ja": "クラウド・データ保護",
+    "level": "lower_intermediate",
+    "term_en": "rotate the secret",
+    "meaning_ja": "シークレットをローテーションする",
+    "example_en": "We need to rotate the secret today.",
+    "tags": [
+      "cloud_data",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0354",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "intermediate",
+    "term_en": "review access rights",
+    "meaning_ja": "アクセス権を確認する",
+    "example_en": "We need to review access rights today.",
+    "tags": [
+      "iam_access",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0355",
+    "type": "vocabulary",
+    "category": "iam_access",
+    "category_ja": "認証・アクセス管理",
+    "level": "beginner",
+    "term_en": "remove excessive permissions",
+    "meaning_ja": "過剰権限を削除する",
+    "example_en": "We need to remove excessive permissions today.",
+    "tags": [
+      "iam_access",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0356",
+    "type": "vocabulary",
+    "category": "vulnerability_patch",
+    "category_ja": "脆弱性・パッチ",
+    "level": "lower_intermediate",
+    "term_en": "run a vulnerability scan",
+    "meaning_ja": "脆弱性スキャンを実行する",
+    "example_en": "We need to run a vulnerability scan today.",
+    "tags": [
+      "vulnerability_patch",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0357",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "intermediate",
+    "term_en": "check lateral movement",
+    "meaning_ja": "横展開を確認する",
+    "example_en": "We need to check lateral movement today.",
+    "tags": [
+      "malware_ransomware",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0358",
+    "type": "vocabulary",
+    "category": "malware_ransomware",
+    "category_ja": "マルウェア・ランサムウェア",
+    "level": "beginner",
+    "term_en": "check data exfiltration",
+    "meaning_ja": "データ持ち出しを確認する",
+    "example_en": "We need to check data exfiltration today.",
+    "tags": [
+      "malware_ransomware",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0359",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "lower_intermediate",
+    "term_en": "send a takedown request",
+    "meaning_ja": "削除依頼を送る",
+    "example_en": "We need to send a takedown request today.",
+    "tags": [
+      "phishing_email",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0360",
+    "type": "vocabulary",
+    "category": "phishing_email",
+    "category_ja": "フィッシング・メール",
+    "level": "intermediate",
+    "term_en": "analyze the mail header",
+    "meaning_ja": "メールヘッダーを分析する",
+    "example_en": "We need to analyze the mail header today.",
+    "tags": [
+      "phishing_email",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0361",
+    "type": "vocabulary",
+    "category": "risk_governance",
+    "category_ja": "リスク・ガバナンス",
+    "level": "beginner",
+    "term_en": "confirm business impact",
+    "meaning_ja": "事業影響を確認する",
+    "example_en": "We need to confirm business impact today.",
+    "tags": [
+      "risk_governance",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0362",
+    "type": "vocabulary",
+    "category": "incident_response",
+    "category_ja": "インシデント対応",
+    "level": "lower_intermediate",
+    "term_en": "prepare the incident report",
+    "meaning_ja": "インシデント報告書を準備する",
+    "example_en": "We need to prepare the incident report today.",
+    "tags": [
+      "incident_response",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0363",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "intermediate",
+    "term_en": "summarize the action items",
+    "meaning_ja": "対応事項をまとめる",
+    "example_en": "We need to summarize the action items today.",
+    "tags": [
+      "meeting_business",
+      "action_phrase",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "vocab_0364",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "beginner",
+    "term_en": "assign an owner",
+    "meaning_ja": "担当者を割り当てる",
+    "example_en": "We need to assign an owner today.",
+    "tags": [
+      "meeting_business",
+      "action_phrase",
+      "beginner"
+    ]
+  },
+  {
+    "id": "vocab_0365",
+    "type": "vocabulary",
+    "category": "meeting_business",
+    "category_ja": "会議・ビジネス表現",
+    "level": "lower_intermediate",
+    "term_en": "agree on a deadline",
+    "meaning_ja": "期限を合意する",
+    "example_en": "We need to agree on a deadline today.",
+    "tags": [
+      "meeting_business",
+      "action_phrase",
+      "lower_intermediate"
+    ]
+  }
+]
