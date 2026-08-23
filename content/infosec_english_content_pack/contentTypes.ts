@@ -1,4 +1,4 @@
-export type Level = "beginner" | "lower_intermediate" | "intermediate";
+export type Level = "beginner" | "lower_intermediate" | "intermediate" | "advanced";
 
 export type VocabularyItem = {
   id: string;
@@ -50,6 +50,7 @@ export function levelLabel(level: Level): string {
     beginner: "初級",
     lower_intermediate: "初中級",
     intermediate: "中級",
+    advanced: "上級",
   }[level];
 }
 

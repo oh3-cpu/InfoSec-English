@@ -1,18 +1,24 @@
 import { useEffect, useMemo, useState } from "react";
-import vocabulary from "../content/infosec_english_content_pack/vocabulary.json";
-import phrases from "../content/infosec_english_content_pack/meeting_phrases.json";
-import listening from "../content/infosec_english_content_pack/listening_items.json";
-import scenarios from "../content/infosec_english_content_pack/roleplay_scenarios.json";
+import baseVocabulary from "../content/infosec_english_content_pack/vocabulary.json";
+import basePhrases from "../content/infosec_english_content_pack/meeting_phrases.json";
+import baseListening from "../content/infosec_english_content_pack/listening_items.json";
+import baseScenarios from "../content/infosec_english_content_pack/roleplay_scenarios.json";
 import promptTemplates from "../content/infosec_english_content_pack/chatgpt_prompt_templates.json";
+import advancedContent from "../content/infosec_english_content_pack/advanced_waf_ndr.json";
 
-type Level = "beginner" | "lower_intermediate" | "intermediate";
+type Level = "beginner" | "lower_intermediate" | "intermediate" | "advanced";
 type Vocabulary = { id: string; category_ja: string; level: Level; term_en: string; meaning_ja: string; example_en: string };
 type Phrase = { id: string; function: string; level: Level; sentence_en: string; meaning_ja: string };
 type Listening = { id: string; category: string; level: Level; sentence_en: string; correct_ja: string; choices_ja: string[]; chatgpt_prompt: string };
 type Scenario = { id: string; title_ja: string; context_en: string; role_ai: string; role_user: string; level: Level; turns: { speaker: string; goal: string }[]; chatgpt_prompt: string };
 type Progress = { known: string[]; difficult: string[]; correct: number; attempts: number; minutes: number; lastDate: string };
 
-const labels: Record<Level, string> = { beginner: "初級", lower_intermediate: "初中級", intermediate: "中級" };
+const labels: Record<Level, string> = { beginner: "初級", lower_intermediate: "初中級", intermediate: "中級", advanced: "上級" };
+const advanced = advancedContent as { vocabulary: Vocabulary[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[] };
+const vocabulary = [...(baseVocabulary as Vocabulary[]), ...advanced.vocabulary];
+const phrases = [...(basePhrases as Phrase[]), ...advanced.phrases];
+const listening = [...(baseListening as Listening[]), ...advanced.listening];
+const scenarios = [...(baseScenarios as Scenario[]), ...advanced.scenarios];
 const emptyProgress: Progress = { known: [], difficult: [], correct: 0, attempts: 0, minutes: 0, lastDate: "" };
 const storeKey = "infosec-english-progress-v1";
 const getProgress = (): Progress => { try { return { ...emptyProgress, ...JSON.parse(localStorage.getItem(storeKey) || "{}") }; } catch { return emptyProgress; } };

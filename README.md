@@ -13,6 +13,7 @@ iPhoneで使う、情報セキュリティ英語会議のための教材・問�
 - 聞き取り: `listening_items.json` / CSV
 - 模擬会議: `roleplay_scenarios.json` / CSV
 - TypeScript型定義・取り込みガイド・ChatGPTプロンプト
+- 上級WAF・NDR教材: `advanced_waf_ndr.json`（WAFチューニング、NDR、横展開、C2、MITRE ATT&CK、DLP、ゼロトラスト、マイクロセグメンテーション）
 
 ## 開発
 
