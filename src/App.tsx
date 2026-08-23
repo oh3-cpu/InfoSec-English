@@ -3,6 +3,7 @@ import vocabulary from "../content/infosec_english_content_pack/vocabulary.json"
 import phrases from "../content/infosec_english_content_pack/meeting_phrases.json";
 import listening from "../content/infosec_english_content_pack/listening_items.json";
 import scenarios from "../content/infosec_english_content_pack/roleplay_scenarios.json";
+import promptTemplates from "../content/infosec_english_content_pack/chatgpt_prompt_templates.json";
 
 type Level = "beginner" | "lower_intermediate" | "intermediate";
 type Vocabulary = { id: string; category_ja: string; level: Level; term_en: string; meaning_ja: string; example_en: string };
@@ -24,7 +25,7 @@ export default function App() {
   useEffect(() => { const timer = window.setInterval(() => setProgress(p => ({ ...p, minutes: p.minutes + 1, lastDate: new Date().toISOString().slice(0, 10) })), 60000); return () => clearInterval(timer); }, []);
   const toggle = (id: string, field: "known" | "difficult") => setProgress(p => ({ ...p, [field]: p[field].includes(id) ? p[field].filter(x => x !== id) : [...p[field], id] }));
   const copy = async (text: string) => { try { await navigator.clipboard.writeText(text); setNotice("ChatGPT用プロンプトをコピーしました"); } catch { setNotice("コピーできませんでした。文章を長押ししてコピーしてください。"); } setTimeout(() => setNotice(""), 2800); };
-  const content = tab === "home" ? <Dashboard progress={progress} onNavigate={setTab} />
+  const content = tab === "home" ? <Dashboard progress={progress} onNavigate={setTab} copy={copy} />
     : tab === "vocabulary" ? <VocabularyView progress={progress} toggle={toggle} copy={copy} />
     : tab === "phrases" ? <PhrasesView copy={copy} />
     : tab === "listening" ? <ListeningView progress={progress} setProgress={setProgress} toggle={toggle} copy={copy} />
@@ -32,9 +33,10 @@ export default function App() {
   return <main className="app"><header><div><p className="eyebrow">3か月の情報セキュリティ英語</p><h1>InfoSec English Trainer</h1></div><span className="shield">✦</span></header>{notice && <div className="toast" role="status">{notice}</div>}<section className="content">{content}</section><nav aria-label="メインメニュー">{[["home","ホーム","⌂"],["vocabulary","単語","Aa"],["phrases","会議文","☷"],["listening","聞き取り","◉"],["roleplay","会議練習","♧"]].map(([id,label,icon]) => <button key={id} className={tab === id ? "active" : ""} onClick={() => setTab(id)}><b>{icon}</b><span>{label}</span></button>)}</nav></main>;
 }
 
-function Dashboard({ progress, onNavigate }: { progress: Progress; onNavigate: (tab: string) => void }) {
+function Dashboard({ progress, onNavigate, copy }: { progress: Progress; onNavigate: (tab: string) => void; copy: (s: string) => void }) {
   const review = progress.difficult.length || Math.max(0, 10 - progress.known.length);
-  return <><section className="hero"><p>今日の学習</p><h2>小さく続けて、会議で使える英語へ。</h2><button onClick={() => onNavigate("vocabulary")}>今日の単語を始める →</button></section><div className="stats"><Stat label="学習時間" value={`${progress.minutes}分`} /><Stat label="覚えた単語" value={`${progress.known.length}語`} /><Stat label="苦手項目" value={`${progress.difficult.length}件`} /><Stat label="復習候補" value={`${review}件`} /></div><section className="card"><h2>3か月の目安</h2><div className="progress"><i style={{ width: `${Math.min(100, Math.round(progress.known.length / (vocabulary as Vocabulary[]).length * 100))}%` }} /></div><p>{progress.known.length} / {(vocabulary as Vocabulary[]).length} 語を記録済み。まずは毎日10分、単語・会議文・聞き取りを1つずつ。</p></section><section className="card"><h2>今日のおすすめ</h2><div className="quick"><button onClick={() => onNavigate("phrases")}>会議で聞き返す表現</button><button onClick={() => onNavigate("listening")}>短い聞き取り問題</button><button onClick={() => onNavigate("roleplay")}>ChatGPTで模擬会議</button></div></section></>;
+  const dailyPrompt = (promptTemplates as { id: string; prompt_en: string }[]).find(x => x.id === "prompt_daily_drill")?.prompt_en || "";
+  return <><section className="hero"><p>今日の学習</p><h2>小さく続けて、会議で使える英語へ。</h2><button onClick={() => onNavigate("vocabulary")}>今日の単語を始める →</button></section><div className="stats"><Stat label="学習時間" value={`${progress.minutes}分`} /><Stat label="覚えた単語" value={`${progress.known.length}語`} /><Stat label="苦手項目" value={`${progress.difficult.length}件`} /><Stat label="復習候補" value={`${review}件`} /></div><section className="card"><h2>3か月の目安</h2><div className="progress"><i style={{ width: `${Math.min(100, Math.round(progress.known.length / (vocabulary as Vocabulary[]).length * 100))}%` }} /></div><p>{progress.known.length} / {(vocabulary as Vocabulary[]).length} 語を記録済み。まずは毎日10分、単語・会議文・聞き取りを1つずつ。</p></section><section className="card"><h2>今日のおすすめ</h2><div className="quick"><button onClick={() => onNavigate("phrases")}>会議で聞き返す表現</button><button onClick={() => onNavigate("listening")}>短い聞き取り問題</button><button onClick={() => onNavigate("roleplay")}>ChatGPTで模擬会議</button><button onClick={() => copy(dailyPrompt)}>🎙 30分練習をコピー</button></div></section></>;
 }
 function Stat({ label, value }: { label: string; value: string }) { return <div className="stat"><strong>{value}</strong><span>{label}</span></div>; }
 
