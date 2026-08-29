@@ -22,6 +22,8 @@ export type SessionSummary = {
   recommendation: string;
 };
 
+export type DailyStat = { date: string; attempts: number; correct: number; minutes: number };
+
 export type Progress = {
   version: 3;
   known: string[];
@@ -35,6 +37,7 @@ export type Progress = {
   preferredVoice: VoicePreference;
   courseLevel: "beginner" | "lower_intermediate" | "intermediate" | "advanced";
   lastSession: SessionSummary | null;
+  dailyStats: DailyStat[];
 };
 
 export const storeKey = "infosec-english-progress-v1";
@@ -51,6 +54,7 @@ export const emptyProgress: Progress = {
   preferredVoice: "Ava",
   courseLevel: "beginner",
   lastSession: null,
+  dailyStats: [],
 };
 
 const dateText = (date: Date) => {
@@ -93,6 +97,7 @@ export function normalizeProgress(value: unknown): Progress {
     preferredVoice: voicePreferences.includes(source.preferredVoice as VoicePreference) ? source.preferredVoice as VoicePreference : "Ava",
     courseLevel: levels.includes(source.courseLevel as typeof levels[number]) ? source.courseLevel as Progress["courseLevel"] : "beginner",
     lastSession: source.lastSession && typeof source.lastSession === "object" ? source.lastSession as SessionSummary : null,
+    dailyStats: Array.isArray(source.dailyStats) ? source.dailyStats.filter((item): item is DailyStat => Boolean(item && typeof item === "object" && typeof (item as DailyStat).date === "string" && typeof (item as DailyStat).attempts === "number" && typeof (item as DailyStat).correct === "number" && typeof (item as DailyStat).minutes === "number")).slice(-90) : [],
   };
 }
 
@@ -130,6 +135,9 @@ export function recordResult(progress: Progress, kind: ItemKind, itemId: string,
     reviews = [...reviews, existing];
   }
 
+  const date = todayText();
+  const previous = progress.dailyStats.find(stat => stat.date === date) ?? { date, attempts: 0, correct: 0, minutes: 0 };
+  const dailyStats = [...progress.dailyStats.filter(stat => stat.date !== date), { ...previous, attempts: previous.attempts + 1, correct: previous.correct + (isCorrect ? 1 : 0) }].slice(-90);
   return {
     ...progress,
     difficult,
@@ -137,7 +145,14 @@ export function recordResult(progress: Progress, kind: ItemKind, itemId: string,
     attempts: progress.attempts + 1,
     correct: progress.correct + (isCorrect ? 1 : 0),
     lastDate: todayText(),
+    dailyStats,
   };
+}
+
+export function addMinutes(progress: Progress, amount = 1): Progress {
+  const date = todayText();
+  const previous = progress.dailyStats.find(stat => stat.date === date) ?? { date, attempts: 0, correct: 0, minutes: 0 };
+  return { ...progress, minutes: progress.minutes + amount, lastDate: date, dailyStats: [...progress.dailyStats.filter(stat => stat.date !== date), { ...previous, minutes: previous.minutes + amount }].slice(-90) };
 }
 
 export function recordVocabulary(progress: Progress, itemId: string, remembered: boolean): Progress {
