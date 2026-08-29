@@ -7,6 +7,7 @@ Codexで作った英会話アプリへ追加投入するための教材データ
 - 専門用語: 365件
 - 会議文: 232件
 - 聞き取り問題: 220件
+- 会議全体リスニング: 6件
 - 模擬会議シナリオ: 30件
 - ChatGPT音声練習用プロンプトテンプレート: 3件
 
@@ -22,6 +23,7 @@ Codexで作った英会話アプリへ追加投入するための教材データ
 - vocabulary.json / vocabulary.csv
 - meeting_phrases.json / meeting_phrases.csv
 - listening_items.json / listening_items.csv
+- meeting_listening.json
 - roleplay_scenarios.json / roleplay_scenarios.csv
 - chatgpt_prompt_templates.json
 - contentTypes.ts

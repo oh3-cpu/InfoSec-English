@@ -33,6 +33,17 @@ export type ListeningItem = {
   chatgpt_prompt: string;
 };
 
+export type MeetingListeningItem = {
+  id: string;
+  title_ja: string;
+  context_ja: string;
+  level: Level;
+  dialogue: { speaker: string; sentence_en: string }[];
+  question_ja: string;
+  correct_ja: string;
+  choices_ja: string[];
+};
+
 export type RoleplayScenario = {
   id: string;
   type: "roleplay_scenario";

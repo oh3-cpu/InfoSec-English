@@ -1,0 +1,207 @@
+.modeSwitch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 5px;
+  background: #dceceb;
+  border-radius: 14px;
+}
+
+.modeSwitch button {
+  padding: 11px 8px;
+  border-radius: 10px;
+  background: transparent;
+  color: #41666a;
+  font-weight: 750;
+}
+
+.modeSwitch .selected {
+  background: #fff;
+  color: #075e63;
+  box-shadow: 0 2px 8px #16474c1a;
+}
+
+.sessionStart {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+}
+
+.sessionStart h2 {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+.fieldLabel {
+  display: grid;
+  gap: 6px;
+  color: #41666a;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.fieldLabel select {
+  min-height: 46px;
+  padding: 10px;
+  border: 1px solid #bed5d7;
+  border-radius: 11px;
+  background: #fff;
+  color: #16474c;
+}
+
+.primaryButton,
+.nextButton {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #0f766e;
+  color: #fff;
+  font-weight: 800;
+}
+
+.nextButton {
+  margin-top: 18px;
+  font-size: 1rem;
+}
+
+.nextButton small {
+  display: block;
+  margin-top: 3px;
+  color: #bff8ed;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.textButton {
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px;
+  background: transparent;
+  color: #4b7175;
+  text-decoration: underline;
+}
+
+.counter {
+  color: #587478;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.focusCard {
+  padding: 22px;
+}
+
+.focusWord {
+  margin-top: 18px;
+  font-size: 2rem !important;
+}
+
+.hiddenSentence,
+.shownSentence {
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  margin: 16px 0;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.hiddenSentence {
+  background: linear-gradient(145deg, #073b4c, #0f766e);
+  color: #fff;
+}
+
+.hiddenSentence .meaning {
+  color: #c9f5ef;
+}
+
+.shownSentence {
+  background: #f1f8f7;
+}
+
+.meetingCard {
+  padding: 22px;
+}
+
+.meetingCard > h2 {
+  margin-top: 14px;
+  font-size: 1.35rem;
+}
+
+.audioOnly {
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  margin-top: 18px;
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #073b4c, #0f766e);
+  color: #fff;
+  text-align: center;
+}
+
+.audioOnly span {
+  font-size: 2.4rem;
+}
+
+.audioOnly p {
+  max-width: 430px;
+  margin: 12px 0 0;
+  color: #d2f8f2;
+  line-height: 1.55;
+}
+
+.transcript {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.dialogueLine {
+  padding: 12px 14px;
+  border-left: 4px solid #14b8a6;
+  border-radius: 14px;
+  background: #f1f7f7;
+}
+
+.dialogueLine b {
+  color: #08716c;
+  font-size: 0.78rem;
+}
+
+.dialogueLine p {
+  margin: 4px 0 0;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+}
+
+.meetingQuestion {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #d7e8e9;
+}
+
+.meetingQuestion h3 {
+  margin: 0;
+  color: #173f46;
+  font-size: 1rem;
+}
+
+@media (max-width: 420px) {
+  .modeSwitch button {
+    font-size: 0.84rem;
+  }
+
+  .focusWord {
+    font-size: 1.72rem !important;
+  }
+
+  .actions button {
+    flex-grow: 1;
+  }
+
+  .meetingCard {
+    padding: 18px;
+  }
+}
