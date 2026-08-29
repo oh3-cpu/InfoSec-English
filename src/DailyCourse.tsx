@@ -17,11 +17,13 @@ type Props = {
   onLevel: (level: Level) => void;
   onFinish: (summary: SessionSummary) => void;
   onHome: () => void;
+  reviewOnly?: boolean;
 };
 
-function buildQueue<T extends { id: string; level: Level }>(items: T[], progress: Progress, kind: ItemKind, level: Level, count: number) {
+function buildQueue<T extends { id: string; level: Level }>(items: T[], progress: Progress, kind: ItemKind, level: Level, count: number, reviewOnly = false) {
   const prioritized = prioritizedItems(items, progress, kind);
   const dueKeys = new Set(dueReviews(progress, kind).map(review => review.itemId.split(":")[0]));
+  if (reviewOnly) return prioritized.filter(item => dueKeys.has(item.id)).slice(0, count);
   const due = prioritized.filter(item => dueKeys.has(item.id));
   const levelItems = shuffle(prioritized.filter(item => item.level === level && !dueKeys.has(item.id)));
   const fallback = shuffle(prioritized.filter(item => item.level !== level && !dueKeys.has(item.id)));
@@ -33,7 +35,7 @@ function choicesForPhrase(item: Phrase) {
   return shuffle([item.meaning_ja, ...alternatives.slice(0, 2)]);
 }
 
-export default function DailyCourse({ progress, read, readMeeting, onVocabulary, onAnswer, onLevel, onFinish, onHome }: Props) {
+export default function DailyCourse({ progress, read, readMeeting, onVocabulary, onAnswer, onLevel, onFinish, onHome, reviewOnly = false }: Props) {
   const [stage, setStage] = useState<Stage>("intro");
   const [level, setLevel] = useState<Level>(progress.courseLevel);
   const [wordQueue, setWordQueue] = useState<Vocabulary[]>([]);
@@ -50,10 +52,10 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
   const [summary, setSummary] = useState<SessionSummary | null>(null);
 
   const begin = () => {
-    const words = buildQueue(vocabulary, progress, "vocabulary", level, 15);
-    const phraseItems = buildQueue(phrases, progress, "phrase", level, 5);
-    const listeningItems = buildQueue(listening, progress, "listening", level, 3);
-    const meetingItems = buildQueue(meetings, progress, "meeting", level, 1);
+    const words = buildQueue(vocabulary, progress, "vocabulary", level, 15, reviewOnly);
+    const phraseItems = buildQueue(phrases, progress, "phrase", level, 5, reviewOnly);
+    const listeningItems = buildQueue(listening, progress, "listening", level, 3, reviewOnly);
+    const meetingItems = reviewOnly ? [] : buildQueue(meetings, progress, "meeting", level, 1);
     setWordQueue(words);
     setPhraseQueue(phraseItems);
     setListeningQueue(listeningItems);
@@ -61,9 +63,11 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     setPosition(0);
     setStats({ correct: 0, attempts: 0, known: [], difficult: [] });
     setStartedAt(Date.now());
-    setStage("vocabulary");
+    setStage(words[0] ? "vocabulary" : phraseItems[0] ? "phrase" : listeningItems[0] ? "listening" : "summary");
     onLevel(level);
     if (words[0]) read(`${words[0].term_en}. ${words[0].example_en}`, audioKey("vocabulary", words[0].id));
+    else if (phraseItems[0]) { setChoices(choicesForPhrase(phraseItems[0])); read(phraseItems[0].sentence_en, audioKey("phrase", phraseItems[0].id)); }
+    else if (listeningItems[0]) { setChoices(shuffle(listeningItems[0].choices_ja)); read(listeningItems[0].sentence_en, audioKey("listening", listeningItems[0].id)); }
   };
 
   const recordLocal = (correct: boolean, id?: string, vocabularyResult = false) => {
@@ -95,7 +99,9 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       const next = wordQueue[position + 1];
       setPosition(position + 1);
       read(`${next.term_en}. ${next.example_en}`, audioKey("vocabulary", next.id));
-    } else startPhrase();
+    } else if (phraseQueue[0]) startPhrase();
+    else if (listeningQueue[0]) { setStage("listening"); setPosition(0); setAnswer(null); setChoices(shuffle(listeningQueue[0].choices_ja)); read(listeningQueue[0].sentence_en, audioKey("listening", listeningQueue[0].id)); }
+    else { const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes: Math.max(1, Math.ceil((Date.now() - startedAt) / 60000)), correct: stats.correct, attempts: stats.attempts, knownWords: stats.known.length, difficultItems: stats.difficult.length, recommendation: "次回も期限が来た苦手項目を優先して復習しましょう。" }; setSummary(result); setStage("summary"); onFinish(result); }
   };
 
   const answerItem = (kind: "phrase" | "listening", item: Phrase | Listening, selected: string, correctText: string) => {
@@ -116,6 +122,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       return;
     }
     const first = listeningQueue[0];
+    if (!first && reviewOnly) { const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes: Math.max(1, Math.ceil((Date.now() - startedAt) / 60000)), correct: stats.correct, attempts: stats.attempts, knownWords: stats.known.length, difficultItems: stats.difficult.length, recommendation: "次回も期限が来た苦手項目を優先して復習しましょう。" }; setSummary(result); setStage("summary"); onFinish(result); return; }
     setStage("listening");
     setPosition(0);
     setAnswer(null);
@@ -133,6 +140,12 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       setChoices(shuffle(next.choices_ja));
       read(next.sentence_en, audioKey("listening", next.id));
       return;
+    }
+    if (reviewOnly) {
+      const elapsedMinutes = Math.max(1, Math.ceil((Date.now() - startedAt) / 60000));
+      const accuracy = stats.attempts ? Math.round(stats.correct / stats.attempts * 100) : 0;
+      const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes, correct: stats.correct, attempts: stats.attempts, knownWords: stats.known.length, difficultItems: stats.difficult.length, recommendation: accuracy >= 85 ? "次回は通常の30分コースに進みましょう。" : "次回も期限が来た苦手項目を優先して復習しましょう。" };
+      setSummary(result); setStage("summary"); onFinish(result); return;
     }
     const first = meetingQueue[0];
     setStage("meeting");
@@ -191,14 +204,14 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     <section className="dailyHero">
       <p className="eyebrow">TODAY'S 30-MINUTE COURSE</p>
       <h2>今日の30分コース</h2>
-      <p>順番を考えず、音声に沿って最後まで進めます。復習期限の来た問題は各パートで先に出題されます。</p>
+      <p>{reviewOnly ? "今日が期限の苦手項目だけを短時間で復習します。" : "順番を考えず、音声に沿って最後まで進めます。復習期限の来た問題は各パートで先に出題されます。"}</p>
     </section>
     <section className="card courseIntro">
       <ol className="coursePlan">
         <li><b>単語 15語</b><span>覚えた／苦手を判断</span></li>
         <li><b>短文 5問</b><span>会議表現の意味を確認</span></li>
         <li><b>Listening 3問</b><span>英文を見ずに聞き取り</span></li>
-        <li><b>会議 1本</b><span>状況・決定・担当者／期限の3問</span></li>
+        {!reviewOnly && <li><b>会議 1本</b><span>状況・決定・担当者／期限の3問</span></li>}
       </ol>
       <label className="fieldLabel">今日の難易度
         <select value={level} onChange={event => setLevel(event.target.value as Level)}>
@@ -206,7 +219,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
         </select>
       </label>
       <p className="reviewHint">今日が期限の復習：<b>{dueReviews(progress).length}件</b></p>
-      <button className="primaryButton" onClick={begin}>▶ 30分コースを始める</button>
+      <button className="primaryButton" onClick={begin}>▶ {reviewOnly ? "今日の復習を始める" : "30分コースを始める"}</button>
     </section>
   </>;
 
@@ -257,7 +270,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
         <span className="questionType">{questionTypeLabels[question.question_type]} · {questionIndex + 1}/3</span>
         <h3>{question.question_ja}</h3>
         <div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === question.correct_ja ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => answerMeeting(choice)}>{choice}</button>)}</div>
-        {answer && <div className="answer"><b>{answer === question.correct_ja ? "正解！" : "もう一度、会議の要点を確認しましょう。"}</b><p>正解：{question.correct_ja}</p></div>}
+        {answer && <div className="answer"><b>{answer === question.correct_ja ? "正解！" : "もう一度、会議の要点を確認しましょう。"}</b><p>正解：{question.correct_ja}</p><p className="explanation">重要表現：<b>{question.question_type === "status" ? "current situation" : question.question_type === "decision" ? "decision" : "owner and deadline"}</b>。会議の要点をこの観点で聞き取りましょう。</p></div>}
       </section>
       {answer && <button className="nextButton" onClick={nextMeetingQuestion}>{questionIndex === 2 ? "学習結果を見る →" : "次の確認問題へ →"}</button>}
     </article>}
@@ -278,7 +291,7 @@ function QuestionCard({ title, tag, choices, answer, correct, onChoose, onReplay
     <div className={showEnglish ? "shownSentence" : "hiddenSentence"}><h2>{showEnglish ? english : "Listen without reading"}</h2><p>{title}</p></div>
     <div className="actions"><button onClick={onReplay}>🔊 もう一度</button><button onClick={() => setShowEnglish(value => !value)}>{showEnglish ? "英文を隠す" : "英文を表示"}</button></div>
     <div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === correct ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => onChoose(choice)}>{choice}</button>)}</div>
-    {answer && <div className="answer"><b>{answer === correct ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{correct}</p></div>}
+    {answer && <div className="answer"><b>{answer === correct ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{correct}</p><p className="explanation">日本語訳：{correct}。重要表現を英文の中で聞き分ける練習です。</p></div>}
     {answer && <button className="nextButton" onClick={onNext}>{nextLabel} → <small>次の音声をすぐ読み上げます</small></button>}
   </article>;
 }
