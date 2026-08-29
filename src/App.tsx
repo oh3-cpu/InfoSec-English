@@ -7,8 +7,7 @@ import { labels, listening, meetings, phrases, questionTypeLabels, scenarios, vo
 import type { Level, MeetingListening, Phrase, Vocabulary } from "./content";
 import { addMinutes, dueReviews, loadProgress, normalizeProgress, prioritizedItems, recordResult, recordVocabulary, shuffle, storeKey, todayText } from "./learning";
 import type { ItemKind, PlaybackRate, Progress, SessionSummary } from "./learning";
-import { findVoice, meetingVoicePool, voiceOptions, voiceStatus } from "./voices";
-import type { VoicePreference } from "./voices";
+import { findVoice, meetingVoicePool } from "./voices";
 
 type Tab = "home" | "course" | "vocabulary" | "phrases" | "listening" | "roleplay";
 
@@ -17,7 +16,6 @@ export default function App() {
   const [reviewOnly, setReviewOnly] = useState(false);
   const [progress, setProgress] = useState<Progress>(loadProgress);
   const [notice, setNotice] = useState("");
-  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [audioManifest, setAudioManifest] = useState<AudioManifest>({ version: 1, items: {} });
   const [audioStatus, setAudioStatus] = useState<"idle" | "playing" | "paused" | "completed">("idle");
   const [audioTitle, setAudioTitle] = useState("");
@@ -37,18 +35,6 @@ export default function App() {
       .then(response => response.ok ? response.json() as Promise<AudioManifest> : Promise.reject(new Error("manifest unavailable")))
       .then(manifest => setAudioManifest(manifest))
       .catch(() => setAudioManifest({ version: 1, items: {} }));
-  }, []);
-  useEffect(() => {
-    if (!("speechSynthesis" in window)) return;
-    const synthesis = window.speechSynthesis;
-    const refreshVoices = () => setAvailableVoices(synthesis.getVoices());
-    refreshVoices();
-    synthesis.addEventListener("voiceschanged", refreshVoices);
-    const retry = window.setTimeout(refreshVoices, 500);
-    return () => {
-      synthesis.removeEventListener("voiceschanged", refreshVoices);
-      window.clearTimeout(retry);
-    };
   }, []);
   useEffect(() => {
     const timer = window.setInterval(() => setProgress(current => addMinutes(current)), 60000);
@@ -192,7 +178,6 @@ export default function App() {
   const markVocabulary = (id: string, remembered: boolean) => setProgress(current => recordVocabulary(current, id, remembered));
   const markAnswer = (kind: ItemKind, id: string, correct: boolean) => setProgress(current => recordResult(current, kind, id, correct));
   const setRate = (rate: PlaybackRate) => setProgress(current => ({ ...current, playbackRate: rate }));
-  const setVoice = (preferredVoice: VoicePreference) => setProgress(current => ({ ...current, preferredVoice }));
   const setCourseLevel = (courseLevel: Level) => setProgress(current => ({ ...current, courseLevel }));
   const finishCourse = (lastSession: SessionSummary) => setProgress(current => ({ ...current, lastSession, lastDate: todayText() }));
 
@@ -229,7 +214,6 @@ export default function App() {
   return <main className="app">
     <header><div><p className="eyebrow">3か月の情報セキュリティ英語</p><h1>InfoSec English Trainer</h1></div><span className="shield">✦</span></header>
     <SpeedControl rate={progress.playbackRate} onChange={setRate} />
-    <VoiceControl voices={availableVoices} value={progress.preferredVoice} onChange={setVoice} onPreview={() => read("The security team is reviewing the incident now.")} audioReady={Object.keys(audioManifest.items).length > 0} audioCount={Object.keys(audioManifest.items).length} />
     <AudioStatusBar status={audioStatus} title={audioTitle} onPause={pauseAudio} onResume={resumeAudio} onStop={stopReading} />
     {notice && <div className="toast" role="status">{notice}</div>}
     <section className="content">{content}</section>
@@ -246,15 +230,6 @@ function AudioStatusBar({ status, title, onPause, onResume, onStop }: { status: 
 
 function SpeedControl({ rate, onChange }: { rate: PlaybackRate; onChange: (rate: PlaybackRate) => void }) {
   return <div className="speedBar" aria-label="音声速度"><span>🔊 音声速度</span>{([0.7, 0.85, 1] as PlaybackRate[]).map(value => <button key={value} className={rate === value ? "selected" : ""} onClick={() => onChange(value)}>{value}倍</button>)}</div>;
-}
-
-function VoiceControl({ voices, value, onChange, onPreview, audioReady, audioCount }: { voices: SpeechSynthesisVoice[]; value: VoicePreference; onChange: (voice: VoicePreference) => void; onPreview: () => void; audioReady: boolean; audioCount: number }) {
-  return <section className="voiceBar" aria-label="ナチュラル音声">
-    <label><span>🎙 フォールバック音声</span><select value={value} onChange={event => onChange(event.target.value as VoicePreference)}>{voiceOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
-    <button onClick={onPreview}>試聴</button>
-    <small>{audioReady ? `自然音声MP3を使用中（${audioCount}件）` : "自然音声MP3未生成。現在は端末音声を使用します"}</small>
-    <small>{voiceStatus(voices, value)}。MP3がない場合のみ、この音声設定を使います。</small>
-  </section>;
 }
 
 function Dashboard({ progress, onNavigate, onReview, copy, exportProgress, importProgress }: { progress: Progress; onNavigate: (tab: Tab) => void; onReview: () => void; copy: (text: string) => void; exportProgress: () => void; importProgress: (file: File) => void }) {
