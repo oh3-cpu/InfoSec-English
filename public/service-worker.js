@@ -1,5 +1,5 @@
 const BASE = self.location.pathname.replace(/service-worker\.js$/, "");
-const CACHE = "infosec-english-v2";
+const CACHE = "infosec-english-v3";
 const APP_SHELL = [BASE, `${BASE}manifest.json`, `${BASE}icon.svg`];
 
 self.addEventListener("install", (event) => {

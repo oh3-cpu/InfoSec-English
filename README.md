@@ -11,6 +11,7 @@ iPhoneで使う、情報セキュリティ英語会議のための教材・問�
 - 専門用語: `vocabulary.json` / CSV
 - 会議フレーズ: `meeting_phrases.json` / CSV
 - 聞き取り: `listening_items.json` / CSV
+- 会議全体リスニング: `meeting_listening.json`（複数人の会議音声・要点問題）
 - 模擬会議: `roleplay_scenarios.json` / CSV
 - TypeScript型定義・取り込みガイド・ChatGPTプロンプト
 - 上級WAF・NDR教材: `advanced_waf_ndr.json`（WAFチューニング、NDR、横展開、C2、MITRE ATT&CK、DLP、ゼロトラスト、マイクロセグメンテーション）
@@ -43,6 +44,10 @@ npm run build
 教材とアプリ本体は、一度開いた後はオフラインでも利用できます。ChatGPTの音声モードだけはインターネット接続が必要です。
 
 ## ChatGPT音声モード
+
+単語とListeningは、学習開始後にランダムな問題を1件ずつ表示します。**次の単語** または **次の問題** を押すと、次の英語をすぐに読み上げます。
+
+会議フレーズの **会議全体リスニング** では、複数人による6〜8発言の模擬会議を通して聞き、会議の結論を選びます。英文は必要なときだけ表示できます。
 
 各教材の **ChatGPTで練習** または **会議練習をコピー** を押し、コピーされた文章をChatGPT iPhoneアプリのチャット欄に貼り付けて音声モードを始めます。発音、復唱、自然な会議会話、短い日本語での修正を受けられます。
 

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "meeting_listening_001",
+    "title_ja": "フィッシングメールの初動会議",
+    "context_ja": "不審なリンクをクリックした利用者が2名いることが分かり、初動対応を決めます。",
+    "level": "beginner",
+    "dialogue": [
+      { "speaker": "Incident Lead", "sentence_en": "Good morning. Let's review the phishing incident." },
+      { "speaker": "SOC Analyst", "sentence_en": "Two users clicked the link, but we have not confirmed any data loss." },
+      { "speaker": "Incident Lead", "sentence_en": "Have we isolated their laptops?" },
+      { "speaker": "SOC Analyst", "sentence_en": "Yes. Both laptops are isolated, and we are checking the sign-in logs now." },
+      { "speaker": "IT Support", "sentence_en": "I will reset both passwords within fifteen minutes." },
+      { "speaker": "Incident Lead", "sentence_en": "Good. Please send the next update at ten thirty." }
+    ],
+    "question_ja": "会議で決まった次の対応は何ですか？",
+    "correct_ja": "端末を隔離し、パスワードをリセットして、10時30分に状況を更新する。",
+    "choices_ja": [
+      "端末を隔離し、パスワードをリセットして、10時30分に状況を更新する。",
+      "端末をすぐ通常業務に戻し、調査を終了する。",
+      "データ流出が確定するまで何もしない。"
+    ]
+  },
+  {
+    "id": "meeting_listening_002",
+    "title_ja": "重大脆弱性の緊急パッチ会議",
+    "context_ja": "インターネット公開サーバーに重大な脆弱性が見つかり、対応時間を決めます。",
+    "level": "lower_intermediate",
+    "dialogue": [
+      { "speaker": "Security Manager", "sentence_en": "We need to discuss the new critical vulnerability." },
+      { "speaker": "System Owner", "sentence_en": "The affected service is internet-facing, but we have not seen any signs of exploitation." },
+      { "speaker": "Security Manager", "sentence_en": "Is a vendor patch available?" },
+      { "speaker": "System Owner", "sentence_en": "Yes. We can test it in staging this afternoon." },
+      { "speaker": "Operations Lead", "sentence_en": "If the test is successful, we can deploy it at ten tonight." },
+      { "speaker": "Security Manager", "sentence_en": "Agreed. Please keep the temporary firewall rule in place until the patch is verified." },
+      { "speaker": "System Owner", "sentence_en": "I will report the test result by five p.m." }
+    ],
+    "question_ja": "パッチ適用までの暫定対策は何ですか？",
+    "correct_ja": "パッチの確認が終わるまで、一時的なファイアウォールルールを維持する。",
+    "choices_ja": [
+      "パッチの確認が終わるまで、一時的なファイアウォールルールを維持する。",
+      "すべてのファイアウォールルールを削除する。",
+      "テストをせず、すぐ本番環境へ適用する。"
+    ]
+  },
+  {
+    "id": "meeting_listening_003",
+    "title_ja": "DDoS攻撃の対応会議",
+    "context_ja": "ゲームサービスへの通信量が急増し、DDoS対策を発動するか判断します。",
+    "level": "intermediate",
+    "dialogue": [
+      { "speaker": "Network Lead", "sentence_en": "Traffic has increased to three times the normal peak in the last ten minutes." },
+      { "speaker": "NOC Engineer", "sentence_en": "We are seeing packet loss on the primary transit, and some players are reporting login failures." },
+      { "speaker": "Service Manager", "sentence_en": "Do we know whether this is a DDoS attack or legitimate traffic?" },
+      { "speaker": "Network Lead", "sentence_en": "The traffic pattern is consistent with a UDP flood from many source networks." },
+      { "speaker": "NOC Engineer", "sentence_en": "The mitigation provider is ready. We can redirect the affected prefixes now." },
+      { "speaker": "Service Manager", "sentence_en": "Please start mitigation and notify the development team." },
+      { "speaker": "Network Lead", "sentence_en": "Understood. We will monitor latency and packet loss for the next thirty minutes." }
+    ],
+    "question_ja": "会議で決まった対応は何ですか？",
+    "correct_ja": "DDoS対策を開始し、開発チームへ連絡して、30分間監視する。",
+    "choices_ja": [
+      "DDoS対策を開始し、開発チームへ連絡して、30分間監視する。",
+      "正規通信と判断し、監視を終了する。",
+      "全ユーザーのアカウントを停止する。"
+    ]
+  },
+  {
+    "id": "meeting_listening_004",
+    "title_ja": "NDRアラート調査会議",
+    "context_ja": "社内ネットワークで不審な東西通信とDNS通信が検出され、調査範囲を決めます。",
+    "level": "intermediate",
+    "dialogue": [
+      { "speaker": "Incident Commander", "sentence_en": "Please summarize the NDR alert and the related endpoint activity." },
+      { "speaker": "SOC Analyst", "sentence_en": "The NDR detected unusual east-west traffic from one workstation to three servers." },
+      { "speaker": "SOC Analyst", "sentence_en": "We also found repeated DNS requests to a newly registered domain." },
+      { "speaker": "Incident Commander", "sentence_en": "Have we confirmed lateral movement?" },
+      { "speaker": "SOC Analyst", "sentence_en": "Not yet. We need memory data and authentication logs before we can confirm it." },
+      { "speaker": "Forensics Lead", "sentence_en": "I recommend isolating the workstation while preserving the current memory image." },
+      { "speaker": "Incident Commander", "sentence_en": "Approved. Please isolate it, preserve the evidence, and begin a hunt for the same indicators." }
+    ],
+    "question_ja": "横展開は確定していますか？",
+    "correct_ja": "まだ確定しておらず、メモリと認証ログの調査が必要である。",
+    "choices_ja": [
+      "まだ確定しておらず、メモリと認証ログの調査が必要である。",
+      "すでに横展開が完全に確定している。",
+      "誤検知と確定したため調査を終了する。"
+    ]
+  },
+  {
+    "id": "meeting_listening_005",
+    "title_ja": "監査指摘のフォローアップ会議",
+    "context_ja": "アクセス権の定期レビューに関する監査指摘について、改善担当と期限を決めます。",
+    "level": "lower_intermediate",
+    "dialogue": [
+      { "speaker": "Audit Manager", "sentence_en": "The audit found that two access reviews were completed after the deadline." },
+      { "speaker": "System Owner", "sentence_en": "The reviewers did not receive an automatic reminder from the system." },
+      { "speaker": "Audit Manager", "sentence_en": "What action will prevent this from happening again?" },
+      { "speaker": "System Owner", "sentence_en": "We will add reminders seven days and one day before each deadline." },
+      { "speaker": "Compliance Lead", "sentence_en": "Please also document the escalation process for overdue reviews." },
+      { "speaker": "System Owner", "sentence_en": "I will update the procedure and provide evidence by next Friday." },
+      { "speaker": "Audit Manager", "sentence_en": "That works. We will review the evidence at the next meeting." }
+    ],
+    "question_ja": "再発防止策は何ですか？",
+    "correct_ja": "期限前の自動通知と、期限超過時のエスカレーション手順を追加する。",
+    "choices_ja": [
+      "期限前の自動通知と、期限超過時のエスカレーション手順を追加する。",
+      "アクセスレビューそのものを廃止する。",
+      "監査結果を記録せずに会議を終了する。"
+    ]
+  },
+  {
+    "id": "meeting_listening_006",
+    "title_ja": "WAFルール調整会議",
+    "context_ja": "正規の決済通信がWAFに遮断される一方、不審なペイロードも確認されています。",
+    "level": "advanced",
+    "dialogue": [
+      { "speaker": "Application Security Lead", "sentence_en": "The current rule is blocking valid checkout requests, but it also detected a suspicious encoded payload." },
+      { "speaker": "Security Engineer", "sentence_en": "The valid requests contain a product field that resembles a command-injection pattern." },
+      { "speaker": "Application Owner", "sentence_en": "Can we disable the rule only for that field?" },
+      { "speaker": "Security Engineer", "sentence_en": "We can narrow the exclusion to the checkout path and the product field, but we should keep the rule active everywhere else." },
+      { "speaker": "Application Security Lead", "sentence_en": "What is the rollback condition?" },
+      { "speaker": "Security Engineer", "sentence_en": "We will roll back the change if we see a matching payload outside the expected format or an increase in suspicious requests." },
+      { "speaker": "Application Owner", "sentence_en": "I will validate the checkout flow after the change." },
+      { "speaker": "Application Security Lead", "sentence_en": "Approved. Apply the narrow exclusion, increase monitoring, and review the results in one hour." }
+    ],
+    "question_ja": "合意したWAF調整方針は何ですか？",
+    "correct_ja": "除外を対象パスと項目だけに限定し、監視を強化して1時間後に確認する。",
+    "choices_ja": [
+      "除外を対象パスと項目だけに限定し、監視を強化して1時間後に確認する。",
+      "WAFを完全に停止して監視もしない。",
+      "決済サービスを恒久的に停止する。"
+    ]
+  }
+]
