@@ -220,6 +220,63 @@
   color: #fff;
 }
 
+.voiceBar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 7px 10px;
+  margin: -6px 0 14px;
+  padding: 11px;
+  border: 1px solid #cfe4e4;
+  border-radius: 13px;
+  background: #ffffffd9;
+}
+
+.voiceBar label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.voiceBar label span {
+  color: #41666a;
+  font-size: .78rem;
+  font-weight: 750;
+}
+
+.voiceBar select,
+.voiceBar button {
+  min-height: 38px;
+  border: 1px solid #bed5d7;
+  border-radius: 9px;
+  background: #f4fafa;
+  color: #16474c;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.voiceBar select {
+  min-width: 0;
+  padding: 7px 9px;
+}
+
+.voiceBar button {
+  padding: 7px 12px;
+  background: #dff6f3;
+  color: #08716c;
+}
+
+.voiceBar small {
+  grid-column: 1 / -1;
+  color: #587478;
+  font-size: .72rem;
+  line-height: 1.35;
+}
+
+.voiceBar small + small {
+  margin-top: -3px;
+}
+
 .dailyHero .heroText,
 .dailyHero > p:last-of-type {
   color: #c9f5ef;
@@ -444,6 +501,11 @@
 
   .speedBar button {
     padding-inline: 7px;
+  }
+
+  .voiceBar label {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
 

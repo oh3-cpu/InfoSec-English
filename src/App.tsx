@@ -5,6 +5,8 @@ import { labels, listening, meetings, phrases, questionTypeLabels, scenarios, vo
 import type { Level, MeetingListening, Phrase, Vocabulary } from "./content";
 import { dueReviews, loadProgress, normalizeProgress, prioritizedItems, recordResult, recordVocabulary, shuffle, storeKey, todayText } from "./learning";
 import type { ItemKind, PlaybackRate, Progress, SessionSummary } from "./learning";
+import { findVoice, meetingVoicePool, voiceOptions, voiceStatus } from "./voices";
+import type { VoicePreference } from "./voices";
 
 type Tab = "home" | "course" | "vocabulary" | "phrases" | "listening" | "roleplay";
 
@@ -12,6 +14,7 @@ export default function App() {
   const [tab, setTab] = useState<Tab>("home");
   const [progress, setProgress] = useState<Progress>(loadProgress);
   const [notice, setNotice] = useState("");
+  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
   const noticeTimer = useRef<number | null>(null);
 
   const showNotice = (message: string, duration = 2200) => {
@@ -22,6 +25,18 @@ export default function App() {
 
   useEffect(() => { localStorage.setItem(storeKey, JSON.stringify(progress)); }, [progress]);
   useEffect(() => {
+    if (!("speechSynthesis" in window)) return;
+    const synthesis = window.speechSynthesis;
+    const refreshVoices = () => setAvailableVoices(synthesis.getVoices());
+    refreshVoices();
+    synthesis.addEventListener("voiceschanged", refreshVoices);
+    const retry = window.setTimeout(refreshVoices, 500);
+    return () => {
+      synthesis.removeEventListener("voiceschanged", refreshVoices);
+      window.clearTimeout(retry);
+    };
+  }, []);
+  useEffect(() => {
     const timer = window.setInterval(() => setProgress(current => ({ ...current, minutes: current.minutes + 1, lastDate: todayText() })), 60000);
     return () => window.clearInterval(timer);
   }, []);
@@ -31,21 +46,27 @@ export default function App() {
     if (!("speechSynthesis" in window)) return showNotice("このブラウザでは読み上げを利用できません。");
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "en-US";
+    const selectedVoice = findVoice(window.speechSynthesis.getVoices(), progress.preferredVoice);
+    if (selectedVoice) utterance.voice = selectedVoice;
+    utterance.lang = selectedVoice?.lang || "en-US";
     utterance.rate = progress.playbackRate;
     window.speechSynthesis.speak(utterance);
-    showNotice(`${progress.playbackRate}倍で読み上げています`, 1500);
+    showNotice(`${selectedVoice?.name || "自動音声"}・${progress.playbackRate}倍`, 1800);
   };
 
   const readMeeting = (dialogue: MeetingListening["dialogue"]) => {
     if (!("speechSynthesis" in window)) return showNotice("このブラウザでは読み上げを利用できません。");
     window.speechSynthesis.cancel();
     const speakers = [...new Set(dialogue.map(line => line.speaker))];
+    const voicePool = meetingVoicePool(window.speechSynthesis.getVoices(), progress.preferredVoice);
     dialogue.forEach((line, index) => {
       const utterance = new SpeechSynthesisUtterance(line.sentence_en);
-      utterance.lang = "en-US";
+      const speakerIndex = speakers.indexOf(line.speaker);
+      const speakerVoice = voicePool.length ? voicePool[speakerIndex % voicePool.length] : undefined;
+      if (speakerVoice) utterance.voice = speakerVoice;
+      utterance.lang = speakerVoice?.lang || "en-US";
       utterance.rate = progress.playbackRate;
-      utterance.pitch = speakers.indexOf(line.speaker) % 2 === 0 ? 1.03 : 0.94;
+      utterance.pitch = speakerVoice ? 1 : speakerIndex % 2 === 0 ? 1.03 : 0.94;
       if (index === dialogue.length - 1) utterance.onend = () => setNotice("");
       window.speechSynthesis.speak(utterance);
     });
@@ -74,11 +95,12 @@ export default function App() {
   const markVocabulary = (id: string, remembered: boolean) => setProgress(current => recordVocabulary(current, id, remembered));
   const markAnswer = (kind: ItemKind, id: string, correct: boolean) => setProgress(current => recordResult(current, kind, id, correct));
   const setRate = (rate: PlaybackRate) => setProgress(current => ({ ...current, playbackRate: rate }));
+  const setVoice = (preferredVoice: VoicePreference) => setProgress(current => ({ ...current, preferredVoice }));
   const setCourseLevel = (courseLevel: Level) => setProgress(current => ({ ...current, courseLevel }));
   const finishCourse = (lastSession: SessionSummary) => setProgress(current => ({ ...current, lastSession, lastDate: todayText() }));
 
   const exportProgress = () => {
-    const body = JSON.stringify({ app: "InfoSec English Trainer", version: 2, exportedAt: new Date().toISOString(), progress }, null, 2);
+    const body = JSON.stringify({ app: "InfoSec English Trainer", version: 3, exportedAt: new Date().toISOString(), progress }, null, 2);
     const url = URL.createObjectURL(new Blob([body], { type: "application/json" }));
     const anchor = document.createElement("a");
     anchor.href = url;
@@ -110,6 +132,7 @@ export default function App() {
   return <main className="app">
     <header><div><p className="eyebrow">3か月の情報セキュリティ英語</p><h1>InfoSec English Trainer</h1></div><span className="shield">✦</span></header>
     <SpeedControl rate={progress.playbackRate} onChange={setRate} />
+    <VoiceControl voices={availableVoices} value={progress.preferredVoice} onChange={setVoice} onPreview={() => read("The security team is reviewing the incident now.")} />
     {notice && <div className="toast" role="status">{notice}</div>}
     <section className="content">{content}</section>
     <nav aria-label="メインメニュー">{([[
@@ -119,6 +142,15 @@ export default function App() {
 
 function SpeedControl({ rate, onChange }: { rate: PlaybackRate; onChange: (rate: PlaybackRate) => void }) {
   return <div className="speedBar" aria-label="音声速度"><span>🔊 音声速度</span>{([0.7, 0.85, 1] as PlaybackRate[]).map(value => <button key={value} className={rate === value ? "selected" : ""} onClick={() => onChange(value)}>{value}倍</button>)}</div>;
+}
+
+function VoiceControl({ voices, value, onChange, onPreview }: { voices: SpeechSynthesisVoice[]; value: VoicePreference; onChange: (voice: VoicePreference) => void; onPreview: () => void }) {
+  return <section className="voiceBar" aria-label="ナチュラル音声">
+    <label><span>🎙 ナチュラル音声</span><select value={value} onChange={event => onChange(event.target.value as VoicePreference)}>{voiceOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
+    <button onClick={onPreview}>試聴</button>
+    <small>{voiceStatus(voices, value)}</small>
+    <small>会議ではAva・Alex・Alisonを話者ごとに切り替えます。</small>
+  </section>;
 }
 
 function Dashboard({ progress, onNavigate, copy, exportProgress, importProgress }: { progress: Progress; onNavigate: (tab: Tab) => void; copy: (text: string) => void; exportProgress: () => void; importProgress: (file: File) => void }) {
