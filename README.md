@@ -11,7 +11,7 @@ iPhoneで使う、情報セキュリティ英語会議のための教材・問�
 - 専門用語: `vocabulary.json` / CSV
 - 会議フレーズ: `meeting_phrases.json` / CSV
 - 聞き取り: `listening_items.json` / CSV
-- 会議全体リスニング: `meeting_listening.json`（複数人の会議音声・要点問題）
+- 会議全体リスニング: `meeting_listening.json`（複数人の会議音声・1会議3問）
 - 模擬会議: `roleplay_scenarios.json` / CSV
 - TypeScript型定義・取り込みガイド・ChatGPTプロンプト
 - 上級WAF・NDR教材: `advanced_waf_ndr.json`（WAFチューニング、NDR、横展開、C2、MITRE ATT&CK、DLP、ゼロトラスト、マイクロセグメンテーション）
@@ -45,15 +45,21 @@ npm run build
 
 ## ChatGPT音声モード
 
-単語とListeningは、学習開始後にランダムな問題を1件ずつ表示します。**次の単語** または **次の問題** を押すと、次の英語をすぐに読み上げます。
+ホームの **今日の30分コース** は、単語15語 → 短文5問 → Listening 3問 → 会議1本を順番に案内します。各パートでは、復習期限の来た苦手問題が優先されます。
 
-会議フレーズの **会議全体リスニング** では、複数人による6〜8発言の模擬会議を通して聞き、会議の結論を選びます。英文は必要なときだけ表示できます。
+単語とListeningは、学習開始後にランダムな問題を1件ずつ表示します。回答して次へ進むと、次の英語をすぐに読み上げます。間違えた項目は翌日・3日後・7日後に優先して復習します。
+
+会議フレーズの **会議全体リスニング** では、複数人による6〜8発言の模擬会議を通して聞き、「現在の状況」「決定事項」「担当者・期限」の3問に答えます。英文は必要なときだけ表示できます。
+
+音声速度は全画面共通で0.7倍・0.85倍・1.0倍から選べます。ホーム画面では学習記録をJSONで保存・読み込みできるため、端末変更時にも記録を移行できます。
 
 各教材の **ChatGPTで練習** または **会議練習をコピー** を押し、コピーされた文章をChatGPT iPhoneアプリのチャット欄に貼り付けて音声モードを始めます。発音、復唱、自然な会議会話、短い日本語での修正を受けられます。
 
 ## 主な変更ファイル
 
-- `src/App.tsx` — 日本語UI、教材統合、学習記録、プロンプトコピー
+- `src/App.tsx` — 日本語UI、教材統合、学習記録、JSONバックアップ
+- `src/DailyCourse.tsx` — 30分コースと学習終了画面
+- `src/learning.ts` — 復習スケジュールと学習記録の移行
 - `src/styles.css` — iPhone向けUI
 - `public/manifest.json` / `public/service-worker.js` / `public/icon.svg` — PWA・オフライン対応
 - `.github/workflows/deploy.yml` — GitHub Pagesの自動公開
