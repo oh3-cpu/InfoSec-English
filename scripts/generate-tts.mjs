@@ -59,13 +59,19 @@ const synthesize = async job => {
 };
 
 let next = 0;
+let failed = 0;
 const worker = async () => {
   while (next < jobs.length) {
     const job = jobs[next++];
-    await synthesize(job);
-    manifest.items[job.key] = `./audio/${job.file}`;
+    try {
+      await synthesize(job);
+      manifest.items[job.key] = `./audio/${job.file}`;
+    } catch (error) {
+      failed += 1;
+      console.warn(`Natural audio skipped for ${job.key}: ${error instanceof Error ? error.message : String(error)}`);
+    }
   }
 };
 await Promise.all([worker(), worker(), worker(), worker()]);
 await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + "\n");
-console.log(`Generated ${Object.keys(manifest.items).length} natural MP3 files.`);
+console.log(`Generated ${Object.keys(manifest.items).length} natural MP3 files${failed ? `; skipped ${failed} items` : ""}.`);
