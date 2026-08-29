@@ -21,6 +21,11 @@
   box-shadow: 0 2px 8px #16474c1a;
 }
 
+.stageTabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 14px; }
+.stageTabs button { padding: 9px 5px; border-radius: 9px; background: #e7f2f2; color: #315b60; font-size: .72rem; font-weight: 750; }
+.stageTabs button.selected { background: #0f766e; color: #fff; }
+.explanation { color: #41666a; font-size: .82rem; line-height: 1.45; }
+
 .sessionStart {
   display: grid;
   gap: 14px;
@@ -219,6 +224,40 @@
   background: #0f766e;
   color: #fff;
 }
+
+.audioStatusBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: -6px 0 14px;
+  padding: 9px 11px;
+  border: 1px solid #9ed8d1;
+  border-radius: 12px;
+  background: #e9fbf7;
+  color: #075e63;
+  font-size: .78rem;
+  font-weight: 750;
+}
+
+.audioStatusBar div {
+  display: flex;
+  gap: 6px;
+}
+
+.audioStatusBar button {
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #fff;
+  color: #075e63;
+  font-size: .72rem;
+  font-weight: 750;
+}
+
+.weeklyCard h2 { margin: 0; }
+.weeklyChart { display: flex; align-items: end; justify-content: space-around; height: 100px; margin-top: 12px; padding: 8px 4px 0; border-bottom: 1px solid #cfe4e4; }
+.chartDay { display: grid; justify-items: center; align-content: end; gap: 5px; height: 100%; color: #587478; font-size: .7rem; }
+.chartDay i { display: block; width: 18px; min-height: 4px; border-radius: 6px 6px 0 0; background: linear-gradient(#14b8a6, #0f766e); }
 
 .voiceBar {
   display: grid;
