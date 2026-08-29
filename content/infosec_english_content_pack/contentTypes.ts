@@ -39,9 +39,12 @@ export type MeetingListeningItem = {
   context_ja: string;
   level: Level;
   dialogue: { speaker: string; sentence_en: string }[];
-  question_ja: string;
-  correct_ja: string;
-  choices_ja: string[];
+  questions: {
+    question_type: "status" | "decision" | "owner_deadline";
+    question_ja: string;
+    correct_ja: string;
+    choices_ja: string[];
+  }[];
 };
 
 export type RoleplayScenario = {

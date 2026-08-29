@@ -12,12 +12,25 @@
       { "speaker": "IT Support", "sentence_en": "I will reset both passwords within fifteen minutes." },
       { "speaker": "Incident Lead", "sentence_en": "Good. Please send the next update at ten thirty." }
     ],
-    "question_ja": "会議で決まった次の対応は何ですか？",
-    "correct_ja": "端末を隔離し、パスワードをリセットして、10時30分に状況を更新する。",
-    "choices_ja": [
-      "端末を隔離し、パスワードをリセットして、10時30分に状況を更新する。",
-      "端末をすぐ通常業務に戻し、調査を終了する。",
-      "データ流出が確定するまで何もしない。"
+    "questions": [
+      {
+        "question_type": "status",
+        "question_ja": "現在の状況はどうなっていますか？",
+        "correct_ja": "2名がリンクをクリックしたが、データ流出はまだ確認されていない。",
+        "choices_ja": ["2名がリンクをクリックしたが、データ流出はまだ確認されていない。", "データ流出がすでに確定している。", "不審メールを開いた利用者はいない。"]
+      },
+      {
+        "question_type": "decision",
+        "question_ja": "会議で決まった対応は何ですか？",
+        "correct_ja": "端末を隔離し、ログを確認して、パスワードをリセットする。",
+        "choices_ja": ["端末を隔離し、ログを確認して、パスワードをリセットする。", "端末をすぐ通常業務に戻す。", "証拠を削除して調査を終了する。"]
+      },
+      {
+        "question_type": "owner_deadline",
+        "question_ja": "担当者と期限はどうなっていますか？",
+        "correct_ja": "IT Supportが15分以内にパスワードをリセットし、10時30分に次回報告する。",
+        "choices_ja": ["IT Supportが15分以内にパスワードをリセットし、10時30分に次回報告する。", "SOC Analystが翌週までに端末を交換する。", "担当者も期限も決まっていない。"]
+      }
     ]
   },
   {
@@ -34,12 +47,25 @@
       { "speaker": "Security Manager", "sentence_en": "Agreed. Please keep the temporary firewall rule in place until the patch is verified." },
       { "speaker": "System Owner", "sentence_en": "I will report the test result by five p.m." }
     ],
-    "question_ja": "パッチ適用までの暫定対策は何ですか？",
-    "correct_ja": "パッチの確認が終わるまで、一時的なファイアウォールルールを維持する。",
-    "choices_ja": [
-      "パッチの確認が終わるまで、一時的なファイアウォールルールを維持する。",
-      "すべてのファイアウォールルールを削除する。",
-      "テストをせず、すぐ本番環境へ適用する。"
+    "questions": [
+      {
+        "question_type": "status",
+        "question_ja": "現在の状況はどうなっていますか？",
+        "correct_ja": "インターネット公開サービスが影響対象だが、悪用の兆候は確認されていない。",
+        "choices_ja": ["インターネット公開サービスが影響対象だが、悪用の兆候は確認されていない。", "社内専用サービスで悪用が確定している。", "ベンダーパッチは提供されていない。"]
+      },
+      {
+        "question_type": "decision",
+        "question_ja": "会議で決まった対応は何ですか？",
+        "correct_ja": "午後にステージングでテストし、成功すれば22時に適用し、それまで暫定ルールを維持する。",
+        "choices_ja": ["午後にステージングでテストし、成功すれば22時に適用し、それまで暫定ルールを維持する。", "テストせず直ちに本番へ適用する。", "脆弱性対応を翌月まで延期する。"]
+      },
+      {
+        "question_type": "owner_deadline",
+        "question_ja": "担当者と期限はどうなっていますか？",
+        "correct_ja": "System Ownerが17時までにテスト結果を報告する。",
+        "choices_ja": ["System Ownerが17時までにテスト結果を報告する。", "Audit Managerが正午までに監査する。", "担当者は未定で、期限は翌週である。"]
+      }
     ]
   },
   {
@@ -56,12 +82,25 @@
       { "speaker": "Service Manager", "sentence_en": "Please start mitigation and notify the development team." },
       { "speaker": "Network Lead", "sentence_en": "Understood. We will monitor latency and packet loss for the next thirty minutes." }
     ],
-    "question_ja": "会議で決まった対応は何ですか？",
-    "correct_ja": "DDoS対策を開始し、開発チームへ連絡して、30分間監視する。",
-    "choices_ja": [
-      "DDoS対策を開始し、開発チームへ連絡して、30分間監視する。",
-      "正規通信と判断し、監視を終了する。",
-      "全ユーザーのアカウントを停止する。"
+    "questions": [
+      {
+        "question_type": "status",
+        "question_ja": "現在の状況はどうなっていますか？",
+        "correct_ja": "通信量が通常ピークの3倍になり、パケットロスとログイン障害が発生している。",
+        "choices_ja": ["通信量が通常ピークの3倍になり、パケットロスとログイン障害が発生している。", "通信量は通常以下でサービス影響もない。", "データベース障害だけが発生している。"]
+      },
+      {
+        "question_type": "decision",
+        "question_ja": "会議で決まった対応は何ですか？",
+        "correct_ja": "DDoS対策を開始し、影響プレフィックスを迂回させ、開発チームへ連絡する。",
+        "choices_ja": ["DDoS対策を開始し、影響プレフィックスを迂回させ、開発チームへ連絡する。", "正規通信と判断して監視を終了する。", "全ユーザーのアカウントを停止する。"]
+      },
+      {
+        "question_type": "owner_deadline",
+        "question_ja": "担当者と期限はどうなっていますか？",
+        "correct_ja": "Network Leadが遅延とパケットロスを今後30分間監視する。",
+        "choices_ja": ["Network Leadが遅延とパケットロスを今後30分間監視する。", "IT Supportが翌日までに端末を交換する。", "監視担当も期限も決まっていない。"]
+      }
     ]
   },
   {
@@ -76,14 +115,28 @@
       { "speaker": "Incident Commander", "sentence_en": "Have we confirmed lateral movement?" },
       { "speaker": "SOC Analyst", "sentence_en": "Not yet. We need memory data and authentication logs before we can confirm it." },
       { "speaker": "Forensics Lead", "sentence_en": "I recommend isolating the workstation while preserving the current memory image." },
-      { "speaker": "Incident Commander", "sentence_en": "Approved. Please isolate it, preserve the evidence, and begin a hunt for the same indicators." }
+      { "speaker": "Incident Commander", "sentence_en": "Approved. Please isolate it, preserve the evidence, and begin a hunt for the same indicators." },
+      { "speaker": "SOC Analyst", "sentence_en": "I will provide the initial hunting results in thirty minutes." }
     ],
-    "question_ja": "横展開は確定していますか？",
-    "correct_ja": "まだ確定しておらず、メモリと認証ログの調査が必要である。",
-    "choices_ja": [
-      "まだ確定しておらず、メモリと認証ログの調査が必要である。",
-      "すでに横展開が完全に確定している。",
-      "誤検知と確定したため調査を終了する。"
+    "questions": [
+      {
+        "question_type": "status",
+        "question_ja": "現在の状況はどうなっていますか？",
+        "correct_ja": "1台の端末から3台のサーバーへの不審な東西通信と、新規ドメインへのDNS通信が見つかった。",
+        "choices_ja": ["1台の端末から3台のサーバーへの不審な東西通信と、新規ドメインへのDNS通信が見つかった。", "すべての端末がランサムウェアに感染した。", "NDRにもDNSにもアラートはない。"]
+      },
+      {
+        "question_type": "decision",
+        "question_ja": "会議で決まった対応は何ですか？",
+        "correct_ja": "端末を隔離し、メモリを保全して、同じ指標のハンティングを開始する。",
+        "choices_ja": ["端末を隔離し、メモリを保全して、同じ指標のハンティングを開始する。", "端末を再起動してメモリ情報を消去する。", "横展開が未確定なので何もしない。"]
+      },
+      {
+        "question_type": "owner_deadline",
+        "question_ja": "担当者と期限はどうなっていますか？",
+        "correct_ja": "SOC Analystが30分後に初期ハンティング結果を報告する。",
+        "choices_ja": ["SOC Analystが30分後に初期ハンティング結果を報告する。", "Application Ownerが翌週にWAFを停止する。", "報告担当者も期限も決まっていない。"]
+      }
     ]
   },
   {
@@ -100,12 +153,25 @@
       { "speaker": "System Owner", "sentence_en": "I will update the procedure and provide evidence by next Friday." },
       { "speaker": "Audit Manager", "sentence_en": "That works. We will review the evidence at the next meeting." }
     ],
-    "question_ja": "再発防止策は何ですか？",
-    "correct_ja": "期限前の自動通知と、期限超過時のエスカレーション手順を追加する。",
-    "choices_ja": [
-      "期限前の自動通知と、期限超過時のエスカレーション手順を追加する。",
-      "アクセスレビューそのものを廃止する。",
-      "監査結果を記録せずに会議を終了する。"
+    "questions": [
+      {
+        "question_type": "status",
+        "question_ja": "現在の状況はどうなっていますか？",
+        "correct_ja": "2件のアクセスレビューが期限後に完了し、自動通知が送られていなかった。",
+        "choices_ja": ["2件のアクセスレビューが期限後に完了し、自動通知が送られていなかった。", "すべてのレビューが期限前に完了した。", "アクセス権の不正利用が確定した。"]
+      },
+      {
+        "question_type": "decision",
+        "question_ja": "会議で決まった対応は何ですか？",
+        "correct_ja": "期限7日前と1日前の通知、および期限超過時のエスカレーション手順を追加する。",
+        "choices_ja": ["期限7日前と1日前の通知、および期限超過時のエスカレーション手順を追加する。", "アクセスレビューを廃止する。", "監査結果を記録せず終了する。"]
+      },
+      {
+        "question_type": "owner_deadline",
+        "question_ja": "担当者と期限はどうなっていますか？",
+        "correct_ja": "System Ownerが次の金曜日までに手順を更新して証跡を提出する。",
+        "choices_ja": ["System Ownerが次の金曜日までに手順を更新して証跡を提出する。", "Audit Managerが今日中にシステムを停止する。", "担当者は未定で期限は1か月後である。"]
+      }
     ]
   },
   {
@@ -123,12 +189,25 @@
       { "speaker": "Application Owner", "sentence_en": "I will validate the checkout flow after the change." },
       { "speaker": "Application Security Lead", "sentence_en": "Approved. Apply the narrow exclusion, increase monitoring, and review the results in one hour." }
     ],
-    "question_ja": "合意したWAF調整方針は何ですか？",
-    "correct_ja": "除外を対象パスと項目だけに限定し、監視を強化して1時間後に確認する。",
-    "choices_ja": [
-      "除外を対象パスと項目だけに限定し、監視を強化して1時間後に確認する。",
-      "WAFを完全に停止して監視もしない。",
-      "決済サービスを恒久的に停止する。"
+    "questions": [
+      {
+        "question_type": "status",
+        "question_ja": "現在の状況はどうなっていますか？",
+        "correct_ja": "正規の決済リクエストが遮断される一方、不審なエンコード済みペイロードも検出された。",
+        "choices_ja": ["正規の決済リクエストが遮断される一方、不審なエンコード済みペイロードも検出された。", "WAFは正規通信も攻撃通信も検出していない。", "決済アプリケーションは停止している。"]
+      },
+      {
+        "question_type": "decision",
+        "question_ja": "会議で決まった対応は何ですか？",
+        "correct_ja": "除外を決済パスと対象項目だけに限定し、他の場所ではルールを維持して監視を強化する。",
+        "choices_ja": ["除外を決済パスと対象項目だけに限定し、他の場所ではルールを維持して監視を強化する。", "WAFを全面停止する。", "すべての決済リクエストを恒久的に遮断する。"]
+      },
+      {
+        "question_type": "owner_deadline",
+        "question_ja": "担当者と期限はどうなっていますか？",
+        "correct_ja": "Application Ownerが変更後の決済を確認し、チームは1時間後に結果をレビューする。",
+        "choices_ja": ["Application Ownerが変更後の決済を確認し、チームは1時間後に結果をレビューする。", "SOC Analystが翌月に監査する。", "確認担当者もレビュー時刻も未定である。"]
+      }
     ]
   }
 ]
