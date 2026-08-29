@@ -1,3 +1,5 @@
+import type { VoicePreference } from "./voices";
+
 export type ItemKind = "vocabulary" | "phrase" | "listening" | "meeting";
 export type PlaybackRate = 0.7 | 0.85 | 1;
 
@@ -21,7 +23,7 @@ export type SessionSummary = {
 };
 
 export type Progress = {
-  version: 2;
+  version: 3;
   known: string[];
   difficult: string[];
   correct: number;
@@ -30,13 +32,14 @@ export type Progress = {
   lastDate: string;
   reviews: ReviewRecord[];
   playbackRate: PlaybackRate;
+  preferredVoice: VoicePreference;
   courseLevel: "beginner" | "lower_intermediate" | "intermediate" | "advanced";
   lastSession: SessionSummary | null;
 };
 
 export const storeKey = "infosec-english-progress-v1";
 export const emptyProgress: Progress = {
-  version: 2,
+  version: 3,
   known: [],
   difficult: [],
   correct: 0,
@@ -45,6 +48,7 @@ export const emptyProgress: Progress = {
   lastDate: "",
   reviews: [],
   playbackRate: 0.85,
+  preferredVoice: "Ava",
   courseLevel: "beginner",
   lastSession: null,
 };
@@ -69,6 +73,7 @@ export function normalizeProgress(value: unknown): Progress {
   if (!value || typeof value !== "object") return { ...emptyProgress };
   const source = value as Partial<Progress>;
   const rates: PlaybackRate[] = [0.7, 0.85, 1];
+  const voicePreferences: VoicePreference[] = ["auto", "Ava", "Alex", "Alison"];
   const levels = ["beginner", "lower_intermediate", "intermediate", "advanced"] as const;
   const reviews = Array.isArray(source.reviews) ? source.reviews.filter((review): review is ReviewRecord => {
     if (!review || typeof review !== "object") return false;
@@ -76,7 +81,7 @@ export function normalizeProgress(value: unknown): Progress {
     return typeof item.key === "string" && typeof item.itemId === "string" && ["vocabulary", "phrase", "listening", "meeting"].includes(item.kind) && [0, 1, 2].includes(item.stage) && /^\d{4}-\d{2}-\d{2}$/.test(item.dueDate);
   }) : [];
   return {
-    version: 2,
+    version: 3,
     known: strings(source.known),
     difficult: strings(source.difficult),
     correct: numberOr(source.correct, 0),
@@ -85,6 +90,7 @@ export function normalizeProgress(value: unknown): Progress {
     lastDate: typeof source.lastDate === "string" ? source.lastDate : "",
     reviews,
     playbackRate: rates.includes(source.playbackRate as PlaybackRate) ? source.playbackRate as PlaybackRate : 0.85,
+    preferredVoice: voicePreferences.includes(source.preferredVoice as VoicePreference) ? source.preferredVoice as VoicePreference : "Ava",
     courseLevel: levels.includes(source.courseLevel as typeof levels[number]) ? source.courseLevel as Progress["courseLevel"] : "beginner",
     lastSession: source.lastSession && typeof source.lastSession === "object" ? source.lastSession as SessionSummary : null,
   };
