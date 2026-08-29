@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { labels, listening, meetings, phrases, questionTypeLabels, vocabulary } from "./content";
+import { audioKey } from "./audio";
 import type { Level, Listening, MeetingListening, Phrase, Vocabulary } from "./content";
 import { dueReviews, prioritizedItems, shuffle } from "./learning";
 import type { ItemKind, Progress, SessionSummary } from "./learning";
@@ -9,8 +10,8 @@ type Stats = { correct: number; attempts: number; known: string[]; difficult: st
 
 type Props = {
   progress: Progress;
-  read: (text: string) => void;
-  readMeeting: (dialogue: MeetingListening["dialogue"]) => void;
+  read: (text: string, key?: string) => void;
+  readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string) => void;
   onVocabulary: (id: string, remembered: boolean) => void;
   onAnswer: (kind: ItemKind, id: string, correct: boolean) => void;
   onLevel: (level: Level) => void;
@@ -62,7 +63,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     setStartedAt(Date.now());
     setStage("vocabulary");
     onLevel(level);
-    if (words[0]) read(`${words[0].term_en}. ${words[0].example_en}`);
+    if (words[0]) read(`${words[0].term_en}. ${words[0].example_en}`, audioKey("vocabulary", words[0].id));
   };
 
   const recordLocal = (correct: boolean, id?: string, vocabularyResult = false) => {
@@ -81,7 +82,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     setAnswer(null);
     if (item) {
       setChoices(choicesForPhrase(item));
-      read(item.sentence_en);
+      read(item.sentence_en, audioKey("phrase", item.id));
     }
   };
 
@@ -93,7 +94,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     if (position + 1 < wordQueue.length) {
       const next = wordQueue[position + 1];
       setPosition(position + 1);
-      read(`${next.term_en}. ${next.example_en}`);
+      read(`${next.term_en}. ${next.example_en}`, audioKey("vocabulary", next.id));
     } else startPhrase();
   };
 
@@ -111,7 +112,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       setPosition(position + 1);
       setAnswer(null);
       setChoices(choicesForPhrase(next));
-      read(next.sentence_en);
+      read(next.sentence_en, audioKey("phrase", next.id));
       return;
     }
     const first = listeningQueue[0];
@@ -120,7 +121,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     setAnswer(null);
     if (first) {
       setChoices(shuffle(first.choices_ja));
-      read(first.sentence_en);
+      read(first.sentence_en, audioKey("listening", first.id));
     }
   };
 
@@ -130,7 +131,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       setPosition(position + 1);
       setAnswer(null);
       setChoices(shuffle(next.choices_ja));
-      read(next.sentence_en);
+      read(next.sentence_en, audioKey("listening", next.id));
       return;
     }
     const first = meetingQueue[0];
@@ -141,7 +142,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     setShowTranscript(false);
     if (first) {
       setChoices(shuffle(first.questions[0].choices_ja));
-      readMeeting(first.dialogue);
+      readMeeting(first.dialogue, first.id);
     }
   };
 
@@ -219,7 +220,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
         <h2 className="focusWord">{item.term_en}</h2>
         <p className="meaning">{item.meaning_ja}</p>
         <p className="example">{item.example_en}</p>
-        <button onClick={() => read(`${item.term_en}. ${item.example_en}`)}>🔊 もう一度聞く</button>
+        <button onClick={() => read(`${item.term_en}. ${item.example_en}`, audioKey("vocabulary", item.id))}>🔊 もう一度聞く</button>
         <div className="courseDecision">
           <button className="warning" onClick={() => wordResult(false)}>まだ苦手</button>
           <button className="successButton" onClick={() => wordResult(true)}>✓ 覚えた</button>
@@ -232,14 +233,14 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
   if (stage === "phrase") {
     const item = phraseQueue[position];
     return <><CourseProgress stage="短文" current={position + 1} total={5} section={1} />
-      {item && <QuestionCard key={item.id} title="音声を聞いて意味を選んでください" tag={`${item.function} · ${labels[item.level]}`} choices={choices} answer={answer} correct={item.meaning_ja} onChoose={choice => answerItem("phrase", item, choice, item.meaning_ja)} onReplay={() => read(item.sentence_en)} onNext={nextPhrase} nextLabel={position + 1 === phraseQueue.length ? "Listeningへ" : "次の短文へ"} english={item.sentence_en} />}
+      {item && <QuestionCard key={item.id} title="音声を聞いて意味を選んでください" tag={`${item.function} · ${labels[item.level]}`} choices={choices} answer={answer} correct={item.meaning_ja} onChoose={choice => answerItem("phrase", item, choice, item.meaning_ja)} onReplay={() => read(item.sentence_en, audioKey("phrase", item.id))} onNext={nextPhrase} nextLabel={position + 1 === phraseQueue.length ? "Listeningへ" : "次の短文へ"} english={item.sentence_en} />}
     </>;
   }
 
   if (stage === "listening") {
     const item = listeningQueue[position];
     return <><CourseProgress stage="Listening" current={position + 1} total={3} section={2} />
-      {item && <QuestionCard key={item.id} title="英文を見ずに意味を選んでください" tag={`${item.category} · ${labels[item.level]}`} choices={choices} answer={answer} correct={item.correct_ja} onChoose={choice => answerItem("listening", item, choice, item.correct_ja)} onReplay={() => read(item.sentence_en)} onNext={nextListening} nextLabel={position + 1 === listeningQueue.length ? "会議リスニングへ" : "次の問題へ"} english={item.sentence_en} />}
+      {item && <QuestionCard key={item.id} title="英文を見ずに意味を選んでください" tag={`${item.category} · ${labels[item.level]}`} choices={choices} answer={answer} correct={item.correct_ja} onChoose={choice => answerItem("listening", item, choice, item.correct_ja)} onReplay={() => read(item.sentence_en, audioKey("listening", item.id))} onNext={nextListening} nextLabel={position + 1 === listeningQueue.length ? "会議リスニングへ" : "次の問題へ"} english={item.sentence_en} />}
     </>;
   }
 
@@ -250,7 +251,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       <span className="tag">{labels[meeting.level]} · 会議1本</span>
       <h2>{meeting.title_ja}</h2>
       <p className="meaning">{meeting.context_ja}</p>
-      <div className="actions"><button onClick={() => readMeeting(meeting.dialogue)}>🔊 会議をもう一度</button><button onClick={() => setShowTranscript(value => !value)}>{showTranscript ? "英文を隠す" : "英文を表示"}</button></div>
+      <div className="actions"><button onClick={() => readMeeting(meeting.dialogue, meeting.id)}>🔊 会議をもう一度</button><button onClick={() => setShowTranscript(value => !value)}>{showTranscript ? "英文を隠す" : "英文を表示"}</button></div>
       {showTranscript ? <div className="transcript">{meeting.dialogue.map((line, index) => <div className="dialogueLine" key={`${line.speaker}-${index}`}><b>{line.speaker}</b><p>{line.sentence_en}</p></div>)}</div> : <div className="audioOnly"><span>🎧</span><p>会議全体から、状況・決定・担当者と期限を聞き取ります。</p></div>}
       <section className="meetingQuestion">
         <span className="questionType">{questionTypeLabels[question.question_type]} · {questionIndex + 1}/3</span>
