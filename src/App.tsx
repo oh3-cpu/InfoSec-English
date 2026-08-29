@@ -114,10 +114,10 @@ export default function App() {
     speakWithBrowser(text);
   };
 
-  const readMeeting = (dialogue: MeetingListening["dialogue"], meetingId?: string) => {
+  const readMeeting = (dialogue: MeetingListening["dialogue"], meetingId?: string, lineIndex?: number) => {
     window.speechSynthesis.cancel();
     stopAudio();
-    const requestedPaths = meetingId ? dialogue.map((_, index) => audioManifest.items[meetingAudioKey(meetingId, index)]) : [];
+    const requestedPaths = meetingId ? (lineIndex === undefined ? dialogue.map((_, index) => audioManifest.items[meetingAudioKey(meetingId, index)]) : [audioManifest.items[meetingAudioKey(meetingId, lineIndex)]]) : [];
     const audioPaths = requestedPaths.filter((path): path is string => Boolean(path));
     if (audioPaths.length === dialogue.length) {
       let index = 0;
@@ -318,7 +318,7 @@ function VocabularyView({ progress, onResult, copy, read }: { progress: Progress
   </>;
 }
 
-function PhrasesView({ progress, onAnswer, copy, read, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void; readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string) => void; stopReading: () => void }) {
+function PhrasesView({ progress, onAnswer, copy, read, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void; readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string, lineIndex?: number) => void; stopReading: () => void }) {
   const [mode, setMode] = useState<"phrases" | "meeting">("phrases");
   const [group, setGroup] = useState("all");
   const groups = [...new Set(phrases.map(item => item.function))];
@@ -328,7 +328,7 @@ function PhrasesView({ progress, onAnswer, copy, read, readMeeting, stopReading 
   </>;
 }
 
-function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string) => void; stopReading: () => void }) {
+function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string, lineIndex?: number) => void; stopReading: () => void }) {
   const [level, setLevel] = useState<"all" | Level>("all");
   const [queue, setQueue] = useState<MeetingListening[]>([]);
   const [position, setPosition] = useState(0);
@@ -364,7 +364,7 @@ function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: 
   };
   if (!meeting || !question) return <section className="card sessionStart"><span className="tag">会議全体＋3問</span><h2>会議を最後まで聞いて要点を整理</h2><p className="meaning">1本の会議につき、現在の状況・決定事項・担当者／期限を別々に確認します。</p><LevelSelect value={level} onChange={setLevel} all /><p className="reviewHint">今日が期限の会議問題：<b>{dueReviews(progress, "meeting").length}件</b></p><button className="primaryButton" onClick={start}>▶ ランダムな会議を開始</button></section>;
   return <article className="card meetingCard"><div className="row"><span className="tag">{labels[meeting.level]} · 会議全体</span><span className="counter">{position + 1} / {queue.length}</span></div><h2>{meeting.title_ja}</h2><p className="meaning">{meeting.context_ja}</p><div className="stageTabs"><button className={stageMode === "full" ? "selected" : ""} onClick={() => { setStageMode("full"); readMeeting(meeting.dialogue, meeting.id); }}>① 会議全体</button><button className={stageMode === "line" ? "selected" : ""} onClick={() => setStageMode("line")}>② 1発言ずつ</button><button className={stageMode === "caption" ? "selected" : ""} onClick={() => { setStageMode("caption"); setShowTranscript(true); }}>③ 字幕付き</button></div><div className="actions"><button onClick={() => readMeeting(meeting.dialogue, meeting.id)}>🔊 全体をもう一度</button><button className="warning" onClick={stopReading}>■ 停止</button></div>
-    {stageMode === "line" ? <div className="transcript">{meeting.dialogue.map((line, index) => <div className="dialogueLine" key={`${line.speaker}-${index}`}><b>{line.speaker}</b><p>{line.sentence_en}</p><button onClick={() => readMeeting([line], meeting.id)}>▶ この発言を聞く</button></div>)}</div> : showTranscript ? <div className="transcript">{meeting.dialogue.map((line, index) => <div className="dialogueLine" key={`${line.speaker}-${index}`}><b>{line.speaker}</b><p>{line.sentence_en}</p></div>)}</div> : <div className="audioOnly"><span>🎧</span><p>英文を見ずに、会議全体の要点を聞き取ってください。</p></div>}
+    {stageMode === "line" ? <div className="transcript">{meeting.dialogue.map((line, index) => <div className="dialogueLine" key={`${line.speaker}-${index}`}><b>{line.speaker}</b><p>{line.sentence_en}</p><button onClick={() => readMeeting([line], meeting.id, index)}>▶ この発言を聞く</button></div>)}</div> : showTranscript ? <div className="transcript">{meeting.dialogue.map((line, index) => <div className="dialogueLine" key={`${line.speaker}-${index}`}><b>{line.speaker}</b><p>{line.sentence_en}</p></div>)}</div> : <div className="audioOnly"><span>🎧</span><p>英文を見ずに、会議全体の要点を聞き取ってください。</p></div>}
     <section className="meetingQuestion"><span className="questionType">{questionTypeLabels[question.question_type]} · {questionIndex + 1}/3</span><h3>{question.question_ja}</h3><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === question.correct_ja ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === question.correct_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{question.correct_ja}</p></div>}</section>
     {answer && <button className="nextButton" onClick={next}>{questionIndex === 2 ? "次の会議へ" : "次の確認問題へ"} → <small>{questionIndex === 2 ? "次の会議をすぐ読み上げます" : "同じ会議について答えます"}</small></button>}<button className="textButton" onClick={() => { stopReading(); setQueue([]); }}>難易度を変更する</button>
   </article>;
