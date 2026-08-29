@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import promptTemplates from "../content/infosec_english_content_pack/chatgpt_prompt_templates.json";
 import DailyCourse from "./DailyCourse";
+import { audioKey, meetingAudioKey } from "./audio";
+import type { AudioManifest } from "./audio";
 import { labels, listening, meetings, phrases, questionTypeLabels, scenarios, vocabulary } from "./content";
 import type { Level, MeetingListening, Phrase, Vocabulary } from "./content";
 import { dueReviews, loadProgress, normalizeProgress, prioritizedItems, recordResult, recordVocabulary, shuffle, storeKey, todayText } from "./learning";
@@ -15,6 +17,8 @@ export default function App() {
   const [progress, setProgress] = useState<Progress>(loadProgress);
   const [notice, setNotice] = useState("");
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [audioManifest, setAudioManifest] = useState<AudioManifest>({ version: 1, items: {} });
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const noticeTimer = useRef<number | null>(null);
 
   const showNotice = (message: string, duration = 2200) => {
@@ -24,6 +28,12 @@ export default function App() {
   };
 
   useEffect(() => { localStorage.setItem(storeKey, JSON.stringify(progress)); }, [progress]);
+  useEffect(() => {
+    fetch("./audio/manifest.json", { cache: "no-store" })
+      .then(response => response.ok ? response.json() as Promise<AudioManifest> : Promise.reject(new Error("manifest unavailable")))
+      .then(manifest => setAudioManifest(manifest))
+      .catch(() => setAudioManifest({ version: 1, items: {} }));
+  }, []);
   useEffect(() => {
     if (!("speechSynthesis" in window)) return;
     const synthesis = window.speechSynthesis;
@@ -42,21 +52,66 @@ export default function App() {
   }, []);
   useEffect(() => () => { if (noticeTimer.current) window.clearTimeout(noticeTimer.current); }, []);
 
-  const read = (text: string) => {
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      audioRef.current = null;
+    }
+  };
+
+  const speakWithBrowser = (text: string) => {
     if (!("speechSynthesis" in window)) return showNotice("このブラウザでは読み上げを利用できません。");
-    window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     const selectedVoice = findVoice(window.speechSynthesis.getVoices(), progress.preferredVoice);
     if (selectedVoice) utterance.voice = selectedVoice;
     utterance.lang = selectedVoice?.lang || "en-US";
     utterance.rate = progress.playbackRate;
     window.speechSynthesis.speak(utterance);
-    showNotice(`${selectedVoice?.name || "自動音声"}・${progress.playbackRate}倍`, 1800);
+    showNotice(`${selectedVoice?.name || "端末の自動音声"}・${progress.playbackRate}倍`, 1800);
   };
 
-  const readMeeting = (dialogue: MeetingListening["dialogue"]) => {
-    if (!("speechSynthesis" in window)) return showNotice("このブラウザでは読み上げを利用できません。");
+  const read = (text: string, key?: string) => {
     window.speechSynthesis.cancel();
+    stopAudio();
+    const audioPath = key ? audioManifest.items[key] : undefined;
+    if (audioPath) {
+      const audio = new Audio(new URL(audioPath, document.baseURI).href);
+      audio.playbackRate = progress.playbackRate;
+      audio.onended = () => { if (audioRef.current === audio) audioRef.current = null; };
+      audio.onerror = () => { if (audioRef.current === audio) audioRef.current = null; speakWithBrowser(text); };
+      audioRef.current = audio;
+      void audio.play().then(() => showNotice(`自然音声MP3・${progress.playbackRate}倍`, 1800)).catch(() => speakWithBrowser(text));
+      return;
+    }
+    speakWithBrowser(text);
+  };
+
+  const readMeeting = (dialogue: MeetingListening["dialogue"], meetingId?: string) => {
+    window.speechSynthesis.cancel();
+    stopAudio();
+    const requestedPaths = meetingId ? dialogue.map((_, index) => audioManifest.items[meetingAudioKey(meetingId, index)]) : [];
+    const audioPaths = requestedPaths.filter((path): path is string => Boolean(path));
+    if (audioPaths.length === dialogue.length) {
+      let index = 0;
+      const playNext = () => {
+        if (index >= audioPaths.length) { audioRef.current = null; return; }
+        const audio = new Audio(new URL(audioPaths[index], document.baseURI).href);
+        audio.playbackRate = progress.playbackRate;
+        audioRef.current = audio;
+        audio.onended = () => { index += 1; playNext(); };
+        audio.onerror = () => { stopAudio(); speakMeetingWithBrowser(dialogue); };
+        void audio.play().catch(() => { stopAudio(); speakMeetingWithBrowser(dialogue); });
+      };
+      playNext();
+      showNotice(`会議の自然音声MP3・${progress.playbackRate}倍`, 5000);
+      return;
+    }
+    speakMeetingWithBrowser(dialogue);
+  };
+
+  const speakMeetingWithBrowser = (dialogue: MeetingListening["dialogue"]) => {
+    if (!("speechSynthesis" in window)) return showNotice("自然音声MP3が未生成のため、端末音声を利用できません。");
     const speakers = [...new Set(dialogue.map(line => line.speaker))];
     const voicePool = meetingVoicePool(window.speechSynthesis.getVoices(), progress.preferredVoice);
     dialogue.forEach((line, index) => {
@@ -75,11 +130,13 @@ export default function App() {
 
   const stopReading = () => {
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    stopAudio();
     showNotice("読み上げを停止しました", 1200);
   };
 
   const navigate = (next: Tab) => {
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    stopAudio();
     setTab(next);
   };
 
@@ -132,7 +189,7 @@ export default function App() {
   return <main className="app">
     <header><div><p className="eyebrow">3か月の情報セキュリティ英語</p><h1>InfoSec English Trainer</h1></div><span className="shield">✦</span></header>
     <SpeedControl rate={progress.playbackRate} onChange={setRate} />
-    <VoiceControl voices={availableVoices} value={progress.preferredVoice} onChange={setVoice} onPreview={() => read("The security team is reviewing the incident now.")} />
+    <VoiceControl voices={availableVoices} value={progress.preferredVoice} onChange={setVoice} onPreview={() => read("The security team is reviewing the incident now.")} audioReady={Object.keys(audioManifest.items).length > 0} audioCount={Object.keys(audioManifest.items).length} />
     {notice && <div className="toast" role="status">{notice}</div>}
     <section className="content">{content}</section>
     <nav aria-label="メインメニュー">{([[
@@ -144,12 +201,12 @@ function SpeedControl({ rate, onChange }: { rate: PlaybackRate; onChange: (rate:
   return <div className="speedBar" aria-label="音声速度"><span>🔊 音声速度</span>{([0.7, 0.85, 1] as PlaybackRate[]).map(value => <button key={value} className={rate === value ? "selected" : ""} onClick={() => onChange(value)}>{value}倍</button>)}</div>;
 }
 
-function VoiceControl({ voices, value, onChange, onPreview }: { voices: SpeechSynthesisVoice[]; value: VoicePreference; onChange: (voice: VoicePreference) => void; onPreview: () => void }) {
+function VoiceControl({ voices, value, onChange, onPreview, audioReady, audioCount }: { voices: SpeechSynthesisVoice[]; value: VoicePreference; onChange: (voice: VoicePreference) => void; onPreview: () => void; audioReady: boolean; audioCount: number }) {
   return <section className="voiceBar" aria-label="ナチュラル音声">
-    <label><span>🎙 ナチュラル音声</span><select value={value} onChange={event => onChange(event.target.value as VoicePreference)}>{voiceOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
+    <label><span>🎙 フォールバック音声</span><select value={value} onChange={event => onChange(event.target.value as VoicePreference)}>{voiceOptions.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
     <button onClick={onPreview}>試聴</button>
-    <small>{voiceStatus(voices, value)}</small>
-    <small>会議ではAva・Alex・Alisonを話者ごとに切り替えます。</small>
+    <small>{audioReady ? `自然音声MP3を使用中（${audioCount}件）` : "自然音声MP3未生成。現在は端末音声を使用します"}</small>
+    <small>{voiceStatus(voices, value)}。MP3がない場合のみ、この音声設定を使います。</small>
   </section>;
 }
 
@@ -168,7 +225,7 @@ function Dashboard({ progress, onNavigate, copy, exportProgress, importProgress 
   </>;
 }
 
-function VocabularyView({ progress, onResult, copy, read }: { progress: Progress; onResult: (id: string, remembered: boolean) => void; copy: (text: string) => void; read: (text: string) => void }) {
+function VocabularyView({ progress, onResult, copy, read }: { progress: Progress; onResult: (id: string, remembered: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {
   const [mode, setMode] = useState<"study" | "list">("study");
   const [level, setLevel] = useState<"all" | Level>("all");
   const [queue, setQueue] = useState<Vocabulary[]>([]);
@@ -181,7 +238,7 @@ function VocabularyView({ progress, onResult, copy, read }: { progress: Progress
   const start = () => {
     const next = prioritizedItems(available, progress, "vocabulary");
     setQueue(next); setPosition(0);
-    if (next[0]) read(`${next[0].term_en}. ${next[0].example_en}`);
+    if (next[0]) read(`${next[0].term_en}. ${next[0].example_en}`, audioKey("vocabulary", next[0].id));
   };
   const decide = (remembered: boolean) => {
     if (!item) return;
@@ -191,28 +248,28 @@ function VocabularyView({ progress, onResult, copy, read }: { progress: Progress
     if (nextPosition >= queue.length) { nextQueue = prioritizedItems(available, progress, "vocabulary"); nextPosition = 0; setQueue(nextQueue); }
     setPosition(nextPosition);
     const next = nextQueue[nextPosition];
-    if (next) read(`${next.term_en}. ${next.example_en}`);
+    if (next) read(`${next.term_en}. ${next.example_en}`, audioKey("vocabulary", next.id));
   };
 
   return <><ViewTitle title="専門用語" text="ランダムに1語ずつ出題。復習期限の来た苦手語を先に表示します。" />
     <div className="modeSwitch"><button className={mode === "study" ? "selected" : ""} onClick={() => setMode("study")}>1語ずつ学習</button><button className={mode === "list" ? "selected" : ""} onClick={() => setMode("list")}>一覧・検索</button></div>
     {mode === "study" ? !item ? <section className="card sessionStart"><span className="tag">ランダム＋復習優先</span><h2>1語ずつ、音声と例文で覚える</h2><p className="meaning">開始時と「覚えた／まだ苦手」を選んだ直後に、次の単語を読み上げます。</p><LevelSelect value={level} onChange={setLevel} all /><p className="reviewHint">今日が期限の単語：<b>{dueReviews(progress, "vocabulary").length}語</b></p><button className="primaryButton" onClick={start}>▶ 学習を開始</button></section>
-      : <article className="card focusCard"><div className="row"><span className="tag">{item.category_ja} · {labels[item.level]}</span><span className="counter">{position + 1} / {queue.length}</span></div><h2 className="focusWord">{item.term_en}</h2><p className="meaning">{item.meaning_ja}</p><p className="example">{item.example_en}</p><div className="actions"><button onClick={() => read(`${item.term_en}. ${item.example_en}`)}>🔊 もう一度</button><button onClick={() => copy(pronunciationPrompt(item))}>🎙 ChatGPTで練習</button></div><div className="courseDecision"><button className="warning" onClick={() => decide(false)}>まだ苦手</button><button className="successButton" onClick={() => decide(true)}>✓ 覚えた</button></div><p className="small">選ぶと次の単語をすぐ読み上げます。</p><button className="textButton" onClick={() => setQueue([])}>難易度を変更する</button></article>
-      : <><div className="filters"><input value={query} onChange={event => setQuery(event.target.value)} placeholder="単語・意味・分野を検索" /><LevelSelect value={level} onChange={setLevel} all /></div><p className="result">{listItems.length}件</p>{listItems.map(word => <article className="card item" key={word.id}><span className="tag">{word.category_ja} · {labels[word.level]}</span><h2>{word.term_en}</h2><p className="meaning">{word.meaning_ja}</p><p className="example">{word.example_en}</p><div className="actions"><button onClick={() => read(`${word.term_en}. ${word.example_en}`)}>🔊 読み上げ</button><button onClick={() => onResult(word.id, !progress.known.includes(word.id))}>{progress.known.includes(word.id) ? "✓ 覚えた" : "覚えたにする"}</button></div></article>)}</>}
+      : <article className="card focusCard"><div className="row"><span className="tag">{item.category_ja} · {labels[item.level]}</span><span className="counter">{position + 1} / {queue.length}</span></div><h2 className="focusWord">{item.term_en}</h2><p className="meaning">{item.meaning_ja}</p><p className="example">{item.example_en}</p><div className="actions"><button onClick={() => read(`${item.term_en}. ${item.example_en}`, audioKey("vocabulary", item.id))}>🔊 もう一度</button><button onClick={() => copy(pronunciationPrompt(item))}>🎙 ChatGPTで練習</button></div><div className="courseDecision"><button className="warning" onClick={() => decide(false)}>まだ苦手</button><button className="successButton" onClick={() => decide(true)}>✓ 覚えた</button></div><p className="small">選ぶと次の単語をすぐ読み上げます。</p><button className="textButton" onClick={() => setQueue([])}>難易度を変更する</button></article>
+      : <><div className="filters"><input value={query} onChange={event => setQuery(event.target.value)} placeholder="単語・意味・分野を検索" /><LevelSelect value={level} onChange={setLevel} all /></div><p className="result">{listItems.length}件</p>{listItems.map(word => <article className="card item" key={word.id}><span className="tag">{word.category_ja} · {labels[word.level]}</span><h2>{word.term_en}</h2><p className="meaning">{word.meaning_ja}</p><p className="example">{word.example_en}</p><div className="actions"><button onClick={() => read(`${word.term_en}. ${word.example_en}`, audioKey("vocabulary", word.id))}>🔊 読み上げ</button><button onClick={() => onResult(word.id, !progress.known.includes(word.id))}>{progress.known.includes(word.id) ? "✓ 覚えた" : "覚えたにする"}</button></div></article>)}</>}
   </>;
 }
 
-function PhrasesView({ progress, onAnswer, copy, read, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string) => void; readMeeting: (dialogue: MeetingListening["dialogue"]) => void; stopReading: () => void }) {
+function PhrasesView({ progress, onAnswer, copy, read, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void; readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string) => void; stopReading: () => void }) {
   const [mode, setMode] = useState<"phrases" | "meeting">("phrases");
   const [group, setGroup] = useState("all");
   const groups = [...new Set(phrases.map(item => item.function))];
   const items = phrases.filter(item => group === "all" || item.function === group);
   return <><ViewTitle title="会議フレーズ" text="場面別の短文と、会議全体を通した3問の聞き取りを練習できます。" /><div className="modeSwitch"><button className={mode === "phrases" ? "selected" : ""} onClick={() => setMode("phrases")}>場面別フレーズ</button><button className={mode === "meeting" ? "selected" : ""} onClick={() => setMode("meeting")}>会議全体リスニング</button></div>
-    {mode === "meeting" ? <MeetingListeningView progress={progress} onAnswer={onAnswer} readMeeting={readMeeting} stopReading={stopReading} /> : <><div className="chips"><button className={group === "all" ? "selected" : ""} onClick={() => setGroup("all")}>すべて</button>{groups.map(name => <button key={name} className={group === name ? "selected" : ""} onClick={() => setGroup(name)}>{name}</button>)}</div>{items.map(item => <article className="card item" key={item.id}><span className="tag">{item.function} · {labels[item.level]}</span><h2>{item.sentence_en}</h2><p className="meaning">{item.meaning_ja}</p><div className="actions"><button onClick={() => read(item.sentence_en)}>🔊 読み上げ</button><button onClick={() => copy(phrasePrompt(item))}>🎙 ChatGPTで練習</button></div></article>)}</>}
+    {mode === "meeting" ? <MeetingListeningView progress={progress} onAnswer={onAnswer} readMeeting={readMeeting} stopReading={stopReading} /> : <><div className="chips"><button className={group === "all" ? "selected" : ""} onClick={() => setGroup("all")}>すべて</button>{groups.map(name => <button key={name} className={group === name ? "selected" : ""} onClick={() => setGroup(name)}>{name}</button>)}</div>{items.map(item => <article className="card item" key={item.id}><span className="tag">{item.function} · {labels[item.level]}</span><h2>{item.sentence_en}</h2><p className="meaning">{item.meaning_ja}</p><div className="actions"><button onClick={() => read(item.sentence_en, audioKey("phrase", item.id))}>🔊 読み上げ</button><button onClick={() => copy(phrasePrompt(item))}>🎙 ChatGPTで練習</button></div></article>)}</>}
   </>;
 }
 
-function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; readMeeting: (dialogue: MeetingListening["dialogue"]) => void; stopReading: () => void }) {
+function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string) => void; stopReading: () => void }) {
   const [level, setLevel] = useState<"all" | Level>("all");
   const [queue, setQueue] = useState<MeetingListening[]>([]);
   const [position, setPosition] = useState(0);
@@ -226,7 +283,7 @@ function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: 
   const start = () => {
     const next = prioritizedItems(available, progress, "meeting");
     setQueue(next); setPosition(0); setQuestionIndex(0); setAnswer(null); setShowTranscript(false);
-    if (next[0]) { setChoices(shuffle(next[0].questions[0].choices_ja)); readMeeting(next[0].dialogue); }
+    if (next[0]) { setChoices(shuffle(next[0].questions[0].choices_ja)); readMeeting(next[0].dialogue, next[0].id); }
   };
   const choose = (choice: string) => {
     if (!meeting || !question || answer) return;
@@ -243,17 +300,17 @@ function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: 
     if (nextPosition >= queue.length) { nextQueue = prioritizedItems(available, progress, "meeting"); nextPosition = 0; setQueue(nextQueue); }
     const nextMeeting = nextQueue[nextPosition];
     setPosition(nextPosition); setQuestionIndex(0); setAnswer(null); setShowTranscript(false);
-    if (nextMeeting) { setChoices(shuffle(nextMeeting.questions[0].choices_ja)); readMeeting(nextMeeting.dialogue); }
+    if (nextMeeting) { setChoices(shuffle(nextMeeting.questions[0].choices_ja)); readMeeting(nextMeeting.dialogue, nextMeeting.id); }
   };
   if (!meeting || !question) return <section className="card sessionStart"><span className="tag">会議全体＋3問</span><h2>会議を最後まで聞いて要点を整理</h2><p className="meaning">1本の会議につき、現在の状況・決定事項・担当者／期限を別々に確認します。</p><LevelSelect value={level} onChange={setLevel} all /><p className="reviewHint">今日が期限の会議問題：<b>{dueReviews(progress, "meeting").length}件</b></p><button className="primaryButton" onClick={start}>▶ ランダムな会議を開始</button></section>;
-  return <article className="card meetingCard"><div className="row"><span className="tag">{labels[meeting.level]} · 会議全体</span><span className="counter">{position + 1} / {queue.length}</span></div><h2>{meeting.title_ja}</h2><p className="meaning">{meeting.context_ja}</p><div className="actions"><button onClick={() => readMeeting(meeting.dialogue)}>🔊 全体をもう一度</button><button className="warning" onClick={stopReading}>■ 停止</button><button onClick={() => setShowTranscript(value => !value)}>{showTranscript ? "英文を隠す" : "英文を表示"}</button></div>
+  return <article className="card meetingCard"><div className="row"><span className="tag">{labels[meeting.level]} · 会議全体</span><span className="counter">{position + 1} / {queue.length}</span></div><h2>{meeting.title_ja}</h2><p className="meaning">{meeting.context_ja}</p><div className="actions"><button onClick={() => readMeeting(meeting.dialogue, meeting.id)}>🔊 全体をもう一度</button><button className="warning" onClick={stopReading}>■ 停止</button><button onClick={() => setShowTranscript(value => !value)}>{showTranscript ? "英文を隠す" : "英文を表示"}</button></div>
     {showTranscript ? <div className="transcript">{meeting.dialogue.map((line, index) => <div className="dialogueLine" key={`${line.speaker}-${index}`}><b>{line.speaker}</b><p>{line.sentence_en}</p></div>)}</div> : <div className="audioOnly"><span>🎧</span><p>英文を見ずに、会議全体の要点を聞き取ってください。</p></div>}
     <section className="meetingQuestion"><span className="questionType">{questionTypeLabels[question.question_type]} · {questionIndex + 1}/3</span><h3>{question.question_ja}</h3><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === question.correct_ja ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === question.correct_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{question.correct_ja}</p></div>}</section>
     {answer && <button className="nextButton" onClick={next}>{questionIndex === 2 ? "次の会議へ" : "次の確認問題へ"} → <small>{questionIndex === 2 ? "次の会議をすぐ読み上げます" : "同じ会議について答えます"}</small></button>}<button className="textButton" onClick={() => { stopReading(); setQueue([]); }}>難易度を変更する</button>
   </article>;
 }
 
-function ListeningView({ progress, onAnswer, copy, read }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string) => void }) {
+function ListeningView({ progress, onAnswer, copy, read }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {
   const [level, setLevel] = useState<"all" | Level>("all");
   const [queue, setQueue] = useState<typeof listening>([]);
   const [position, setPosition] = useState(0);
@@ -265,7 +322,7 @@ function ListeningView({ progress, onAnswer, copy, read }: { progress: Progress;
   const start = () => {
     const next = prioritizedItems(available, progress, "listening");
     setQueue(next); setPosition(0); setAnswer(null); setShowEnglish(false);
-    if (next[0]) { setChoices(shuffle(next[0].choices_ja)); read(next[0].sentence_en); }
+    if (next[0]) { setChoices(shuffle(next[0].choices_ja)); read(next[0].sentence_en, audioKey("listening", next[0].id)); }
   };
   const choose = (choice: string) => { if (!item || answer) return; setAnswer(choice); onAnswer("listening", item.id, choice === item.correct_ja); };
   const next = () => {
@@ -273,7 +330,7 @@ function ListeningView({ progress, onAnswer, copy, read }: { progress: Progress;
     let nextQueue = queue;
     if (nextPosition >= queue.length) { nextQueue = prioritizedItems(available, progress, "listening"); nextPosition = 0; setQueue(nextQueue); }
     const nextItem = nextQueue[nextPosition]; setPosition(nextPosition); setAnswer(null); setShowEnglish(false);
-    if (nextItem) { setChoices(shuffle(nextItem.choices_ja)); read(nextItem.sentence_en); }
+    if (nextItem) { setChoices(shuffle(nextItem.choices_ja)); read(nextItem.sentence_en, audioKey("listening", nextItem.id)); }
   };
   return <><ViewTitle title="Listening" text="ランダムに1問ずつ出題。次へ進むとすぐ読み上げます。" />{!item ? <section className="card sessionStart"><span className="tag">ランダム＋復習優先</span><h2>英文を見ずに、1問ずつ聞く</h2><p className="meaning">間違えた問題は翌日・3日後・7日後に優先して再出題します。</p><LevelSelect value={level} onChange={setLevel} all /><p className="reviewHint">今日が期限のListening：<b>{dueReviews(progress, "listening").length}問</b></p><button className="primaryButton" onClick={start}>▶ Listeningを開始</button></section>
     : <article className="card focusCard"><div className="row"><span className="tag">{labels[item.level]} · {item.category}</span><span className="counter">{position + 1} / {queue.length}</span></div><div className={showEnglish ? "shownSentence" : "hiddenSentence"}><h2>{showEnglish ? item.sentence_en : "Listen without reading"}</h2><p>{showEnglish ? "英文を確認してもう一度聞きましょう。" : "音声を聞いて意味を選んでください。"}</p></div><div className="actions"><button onClick={() => read(item.sentence_en)}>🔊 もう一度</button><button onClick={() => setShowEnglish(value => !value)}>{showEnglish ? "英文を隠す" : "英文を表示"}</button><button onClick={() => copy(item.chatgpt_prompt)}>🎙 ChatGPTで聞く</button></div><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === item.correct_ja ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === item.correct_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{item.correct_ja}</p></div>}{answer && <button className="nextButton" onClick={next}>次の問題へ → <small>すぐ読み上げます</small></button>}<button className="textButton" onClick={() => setQueue([])}>難易度を変更する</button></article>}</>;

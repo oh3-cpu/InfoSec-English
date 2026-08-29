@@ -24,6 +24,14 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Generate natural MP3 audio
+        run: npm run generate:tts
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+          AZURE_VOICE_PRIMARY: ${{ vars.AZURE_VOICE_PRIMARY }}
+          AZURE_VOICE_SECONDARY: ${{ vars.AZURE_VOICE_SECONDARY }}
+          AZURE_VOICE_TERTIARY: ${{ vars.AZURE_VOICE_TERTIARY }}
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

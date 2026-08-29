@@ -51,7 +51,9 @@ npm run build
 
 会議フレーズの **会議全体リスニング** では、複数人による6〜8発言の模擬会議を通して聞き、「現在の状況」「決定事項」「担当者・期限」の3問に答えます。英文は必要なときだけ表示できます。
 
-音声速度は全画面共通で0.7倍・0.85倍・1.0倍から選べます。iPhoneに追加したAva（プレミアム）・Alex・Alison（拡張）をアプリ内で選択でき、会議では話者ごとに利用可能な音声を切り替えます。Safariから検出できない音声は端末の自動英語音声へフォールバックします。
+音声速度は全画面共通で0.7倍・0.85倍・1.0倍から選べます。Safari 26以降はWebページからiPhoneの追加音声を安定して検出できないため、公開ビルドではAzure Speechの自然なニューラル音声をMP3として生成し、MP3を優先再生します。MP3が未生成の環境では、選択した端末音声（Ava／Alex／Alison）または自動英語音声へフォールバックします。
+
+自然音声MP3を生成するには、GitHubの **Settings → Secrets and variables → Actions** に `AZURE_SPEECH_KEY` と `AZURE_SPEECH_REGION` を登録してください。任意でRepository variablesに `AZURE_VOICE_PRIMARY`・`AZURE_VOICE_SECONDARY`・`AZURE_VOICE_TERTIARY` を設定できます。キーを登録しなくてもビルドは成功し、端末音声で利用できます。
 
 ホーム画面では学習記録をJSONで保存・読み込みできるため、端末変更時にも音声設定を含む記録を移行できます。
 
