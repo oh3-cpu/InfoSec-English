@@ -15,6 +15,7 @@ const voices = {
 const source = async name => JSON.parse(await readFile(path.join(root, "content", "infosec_english_content_pack", name), "utf8"));
 const advanced = await source("advanced_waf_ndr.json");
 const commutingCourses = await source("commuting_listening_courses.json");
+const commutingNarrations = await source("commuting_narrations.json");
 const vocabulary = [...(await source("vocabulary.json")), ...advanced.vocabulary];
 const phrases = [...(await source("meeting_phrases.json")), ...advanced.phrases];
 const listening = [...(await source("listening_items.json")), ...advanced.listening, ...commutingCourses.flatMap(course => course.items)];
@@ -24,6 +25,7 @@ const jobs = [];
 for (const item of vocabulary) jobs.push({ key: `vocabulary:${item.id}`, text: `${item.term_en}. ${item.example_en}`, voice: voices.primary, file: `vocabulary/${item.id}.mp3` });
 for (const item of phrases) jobs.push({ key: `phrase:${item.id}`, text: item.sentence_en, voice: voices.primary, file: `phrase/${item.id}.mp3` });
 for (const item of listening) jobs.push({ key: `listening:${item.id}`, text: item.sentence_en, voice: voices.primary, file: `listening/${item.id}.mp3` });
+for (const item of commutingNarrations) jobs.push({ key: `commuting:${item.id}`, text: item.narration_en, voice: voices.primary, file: `commuting/${item.id}.mp3` });
 for (const meeting of meetings) {
   const speakers = [...new Set(meeting.dialogue.map(line => line.speaker))];
   for (const [lineIndex, line] of meeting.dialogue.entries()) {
