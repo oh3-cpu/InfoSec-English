@@ -14,9 +14,10 @@ const voices = {
 
 const source = async name => JSON.parse(await readFile(path.join(root, "content", "infosec_english_content_pack", name), "utf8"));
 const advanced = await source("advanced_waf_ndr.json");
+const commutingCourses = await source("commuting_listening_courses.json");
 const vocabulary = [...(await source("vocabulary.json")), ...advanced.vocabulary];
 const phrases = [...(await source("meeting_phrases.json")), ...advanced.phrases];
-const listening = [...(await source("listening_items.json")), ...advanced.listening];
+const listening = [...(await source("listening_items.json")), ...advanced.listening, ...commutingCourses.flatMap(course => course.items)];
 const meetings = await source("meeting_listening.json");
 const jobs = [];
 
