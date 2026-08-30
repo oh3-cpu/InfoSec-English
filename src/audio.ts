@@ -7,3 +7,4 @@ export type AudioManifest = {
 
 export const audioKey = (kind: "vocabulary" | "phrase" | "listening", id: string) => `${kind}:${id}`;
 export const meetingAudioKey = (meetingId: string, lineIndex: number) => `meeting:${meetingId}:${lineIndex}`;
+export const commutingAudioKey = (narrationId: string) => `commuting:${narrationId}`;
