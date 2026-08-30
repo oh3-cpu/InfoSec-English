@@ -3,8 +3,8 @@ import promptTemplates from "../content/infosec_english_content_pack/chatgpt_pro
 import DailyCourse from "./DailyCourse";
 import { audioKey, meetingAudioKey } from "./audio";
 import type { AudioManifest } from "./audio";
-import { labels, listening, meetings, phrases, questionTypeLabels, scenarios, vocabulary } from "./content";
-import type { Level, MeetingListening, Phrase, Vocabulary } from "./content";
+import { commutingCourses, labels, listening, meetings, phrases, questionTypeLabels, scenarios, vocabulary } from "./content";
+import type { Level, Listening, MeetingListening, Phrase, Vocabulary } from "./content";
 import { addMinutes, dueReviews, loadProgress, normalizeProgress, prioritizedItems, recordResult, recordVocabulary, shuffle, storeKey, todayText } from "./learning";
 import type { ItemKind, PlaybackRate, Progress, SessionSummary } from "./learning";
 import { findVoice, meetingVoicePool } from "./voices";
@@ -243,7 +243,7 @@ function Dashboard({ progress, onNavigate, onReview, copy, exportProgress, impor
     {last && <section className="card"><h2>前回の学習結果</h2><div className="summaryGrid"><Stat label="正解率" value={`${lastAccuracy}%`} /><Stat label="覚えた単語" value={`${last.knownWords}語`} /><Stat label="苦手項目" value={`${last.difficultItems}件`} /><Stat label="学習時間" value={`${last.elapsedMinutes}分`} /></div><p className="recommendation">{last.recommendation}</p></section>}
     <section className="card"><h2>3か月の進捗</h2><div className="progress"><i style={{ width: `${Math.min(100, Math.round(progress.known.length / vocabulary.length * 100))}%` }} /></div><p>{progress.known.length} / {vocabulary.length} 語を記録済み。間違えた問題は翌日・3日後・7日後に優先出題されます。</p></section>
     <WeeklyProgress progress={progress} />
-    <section className="card"><h2>個別に練習</h2><div className="quick"><button onClick={() => onNavigate("vocabulary")}>単語を1語ずつ</button><button onClick={() => onNavigate("phrases")}>会議全体リスニング</button><button onClick={() => onNavigate("listening")}>短いListening</button><button className="reviewButton" disabled={!due} onClick={onReview}>今日の復習（{due}件）</button><button onClick={() => copy(dailyPrompt)}>🎙 ChatGPT練習をコピー</button></div></section>
+    <section className="card"><h2>個別に練習</h2><div className="quick"><button onClick={() => onNavigate("vocabulary")}>単語を1語ずつ</button><button onClick={() => onNavigate("phrases")}>会議全体リスニング</button><button onClick={() => onNavigate("listening")}>🚆 通勤Listening 5コース</button><button className="reviewButton" disabled={!due} onClick={onReview}>今日の復習（{due}件）</button><button onClick={() => copy(dailyPrompt)}>🎙 ChatGPT練習をコピー</button></div></section>
     <section className="card backupCard"><h2>学習記録のバックアップ</h2><p>JSONを保存しておくと、iPhoneを変更したあとも同じ記録を読み込めます。</p><div className="actions"><button onClick={exportProgress}>↓ JSONを保存</button><label className="fileButton">↑ JSONを読み込む<input type="file" accept="application/json,.json" onChange={event => { const file = event.target.files?.[0]; if (file) void importProgress(file); event.currentTarget.value = ""; }} /></label></div></section>
   </>;
 }
@@ -363,6 +363,42 @@ function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: 
 }
 
 function ListeningView({ progress, onAnswer, copy, read }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {
+  const [mode, setMode] = useState<"commute" | "all">("commute");
+  return <><ViewTitle title="Listening" text="通勤向け5コース、または全教材からランダムに1問ずつ練習できます。" /><div className="modeSwitch"><button className={mode === "commute" ? "selected" : ""} onClick={() => setMode("commute")}>通勤Listening</button><button className={mode === "all" ? "selected" : ""} onClick={() => setMode("all")}>全問題から練習</button></div>{mode === "commute" ? <CommutingListeningView progress={progress} onAnswer={onAnswer} copy={copy} read={read} /> : <GeneralListeningView progress={progress} onAnswer={onAnswer} copy={copy} read={read} />}</>;
+}
+
+function CommutingListeningView({ progress, onAnswer, copy, read }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {
+  const [courseId, setCourseId] = useState(commutingCourses[0]?.id ?? "");
+  const [queue, setQueue] = useState<Listening[]>([]);
+  const [position, setPosition] = useState(0);
+  const [answer, setAnswer] = useState<string | null>(null);
+  const [choices, setChoices] = useState<string[]>([]);
+  const [showEnglish, setShowEnglish] = useState(false);
+  const course = commutingCourses.find(entry => entry.id === courseId) ?? commutingCourses[0];
+  const item = queue[position];
+  const dueIds = new Set(dueReviews(progress, "listening").map(review => review.itemId));
+  const dueCount = course?.items.filter(entry => dueIds.has(entry.id)).length ?? 0;
+  const start = () => {
+    if (!course) return;
+    const next = prioritizedItems(course.items, progress, "listening");
+    setQueue(next); setPosition(0); setAnswer(null); setShowEnglish(false);
+    if (next[0]) { setChoices(shuffle(next[0].choices_ja)); read(next[0].sentence_en, audioKey("listening", next[0].id)); }
+  };
+  const choose = (choice: string) => { if (!item || answer) return; setAnswer(choice); onAnswer("listening", item.id, choice === item.correct_ja); };
+  const next = () => {
+    if (!course) return;
+    let nextPosition = position + 1;
+    let nextQueue = queue;
+    if (nextPosition >= queue.length) { nextQueue = prioritizedItems(course.items, progress, "listening"); nextPosition = 0; setQueue(nextQueue); }
+    const nextItem = nextQueue[nextPosition]; setPosition(nextPosition); setAnswer(null); setShowEnglish(false);
+    if (nextItem) { setChoices(shuffle(nextItem.choices_ja)); read(nextItem.sentence_en, audioKey("listening", nextItem.id)); }
+  };
+  if (!course) return null;
+  if (!item) return <section className="card sessionStart commuteStart"><div className="row"><span className="tag">通勤向け・各約10分</span><span className="counter">全40問</span></div><h2>学習するコースを選択</h2><p className="meaning">初中級から上級まで順に混ぜています。開始直後と「次へ」を押した直後に自然音声を再生します。</p><div className="commuteCourseGrid">{commutingCourses.map((entry, index) => <button key={entry.id} className={courseId === entry.id ? "selected" : ""} onClick={() => setCourseId(entry.id)}><span>{index + 1}</span><strong>{entry.title_ja}</strong><small>{entry.description_ja}</small><em>{entry.items.length}問・約{entry.duration_min}分</em></button>)}</div><div className="selectedCourse"><b>{course.title_ja}</b><span>{course.description_ja}</span><small>今日が期限の復習：{dueCount}問</small></div><button className="primaryButton" onClick={start}>▶ このコースを開始</button></section>;
+  return <article className="card focusCard commuteCard"><div className="row"><span className="tag">{course.title_ja} · {labels[item.level]}</span><span className="counter">{position + 1} / {queue.length}</span></div><div className={showEnglish ? "shownSentence" : "hiddenSentence"}><h2>{showEnglish ? item.sentence_en : "Listen without reading"}</h2><p>{showEnglish ? "英文を確認して、もう一度聞きましょう。" : "セキュリティの状況を聞き取り、意味を選んでください。"}</p></div><div className="actions"><button onClick={() => read(item.sentence_en, audioKey("listening", item.id))}>🔊 もう一度</button><button onClick={() => setShowEnglish(value => !value)}>{showEnglish ? "英文を隠す" : "英文を表示"}</button><button onClick={() => copy(item.chatgpt_prompt)}>🎙 ChatGPTで聞く</button></div><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === item.correct_ja ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === item.correct_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>日本語訳：{item.correct_ja}</p><p className="explanation">重要表現：{item.sentence_en}</p></div>}{answer && <button className="nextButton" onClick={next}>次の問題へ → <small>次の音声をすぐ再生します</small></button>}<button className="textButton" onClick={() => setQueue([])}>コースを変更する</button></article>;
+}
+
+function GeneralListeningView({ progress, onAnswer, copy, read }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {
   const [level, setLevel] = useState<"all" | Level>("all");
   const [queue, setQueue] = useState<typeof listening>([]);
   const [position, setPosition] = useState(0);
@@ -384,8 +420,8 @@ function ListeningView({ progress, onAnswer, copy, read }: { progress: Progress;
     const nextItem = nextQueue[nextPosition]; setPosition(nextPosition); setAnswer(null); setShowEnglish(false);
     if (nextItem) { setChoices(shuffle(nextItem.choices_ja)); read(nextItem.sentence_en, audioKey("listening", nextItem.id)); }
   };
-  return <><ViewTitle title="Listening" text="ランダムに1問ずつ出題。次へ進むとすぐ読み上げます。" />{!item ? <section className="card sessionStart"><span className="tag">ランダム＋復習優先</span><h2>英文を見ずに、1問ずつ聞く</h2><p className="meaning">間違えた問題は翌日・3日後・7日後に優先して再出題します。</p><LevelSelect value={level} onChange={setLevel} all /><p className="reviewHint">今日が期限のListening：<b>{dueReviews(progress, "listening").length}問</b></p><button className="primaryButton" onClick={start}>▶ Listeningを開始</button></section>
-    : <article className="card focusCard"><div className="row"><span className="tag">{labels[item.level]} · {item.category}</span><span className="counter">{position + 1} / {queue.length}</span></div><div className={showEnglish ? "shownSentence" : "hiddenSentence"}><h2>{showEnglish ? item.sentence_en : "Listen without reading"}</h2><p>{showEnglish ? "英文を確認してもう一度聞きましょう。" : "音声を聞いて意味を選んでください。"}</p></div><div className="actions"><button onClick={() => read(item.sentence_en)}>🔊 もう一度</button><button onClick={() => setShowEnglish(value => !value)}>{showEnglish ? "英文を隠す" : "英文を表示"}</button><button onClick={() => copy(item.chatgpt_prompt)}>🎙 ChatGPTで聞く</button></div><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === item.correct_ja ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === item.correct_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{item.correct_ja}</p></div>}{answer && <button className="nextButton" onClick={next}>次の問題へ → <small>すぐ読み上げます</small></button>}<button className="textButton" onClick={() => setQueue([])}>難易度を変更する</button></article>}</>;
+  return <>{!item ? <section className="card sessionStart"><span className="tag">ランダム＋復習優先</span><h2>全教材から1問ずつ聞く</h2><p className="meaning">間違えた問題は翌日・3日後・7日後に優先して再出題します。</p><LevelSelect value={level} onChange={setLevel} all /><p className="reviewHint">今日が期限のListening：<b>{dueReviews(progress, "listening").length}問</b></p><button className="primaryButton" onClick={start}>▶ Listeningを開始</button></section>
+    : <article className="card focusCard"><div className="row"><span className="tag">{labels[item.level]} · {item.category}</span><span className="counter">{position + 1} / {queue.length}</span></div><div className={showEnglish ? "shownSentence" : "hiddenSentence"}><h2>{showEnglish ? item.sentence_en : "Listen without reading"}</h2><p>{showEnglish ? "英文を確認してもう一度聞きましょう。" : "音声を聞いて意味を選んでください。"}</p></div><div className="actions"><button onClick={() => read(item.sentence_en, audioKey("listening", item.id))}>🔊 もう一度</button><button onClick={() => setShowEnglish(value => !value)}>{showEnglish ? "英文を隠す" : "英文を表示"}</button><button onClick={() => copy(item.chatgpt_prompt)}>🎙 ChatGPTで聞く</button></div><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? (choice === item.correct_ja ? "correct" : choice === answer ? "incorrect" : "") : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === item.correct_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{item.correct_ja}</p></div>}{answer && <button className="nextButton" onClick={next}>次の問題へ → <small>すぐ読み上げます</small></button>}<button className="textButton" onClick={() => setQueue([])}>難易度を変更する</button></article>}</>;
 }
 
 function RoleplayView({ copy, read }: { copy: (text: string) => void; read: (text: string) => void }) {
