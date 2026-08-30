@@ -5,6 +5,7 @@ import baseScenarios from "../content/infosec_english_content_pack/roleplay_scen
 import meetingListening from "../content/infosec_english_content_pack/meeting_listening.json";
 import advancedContent from "../content/infosec_english_content_pack/advanced_waf_ndr.json";
 import commutingListeningCourses from "../content/infosec_english_content_pack/commuting_listening_courses.json";
+import commutingNarrationData from "../content/infosec_english_content_pack/commuting_narrations.json";
 
 export type Level = "beginner" | "lower_intermediate" | "intermediate" | "advanced";
 export type Vocabulary = { id: string; category_ja: string; level: Level; term_en: string; meaning_ja: string; example_en: string };
@@ -14,6 +15,7 @@ export type Scenario = { id: string; title_ja: string; context_en: string; role_
 export type MeetingQuestion = { question_type: "status" | "decision" | "owner_deadline"; question_ja: string; correct_ja: string; choices_ja: string[] };
 export type MeetingListening = { id: string; title_ja: string; context_ja: string; level: Level; dialogue: { speaker: string; sentence_en: string }[]; questions: MeetingQuestion[] };
 export type CommutingListeningCourse = { id: string; title_ja: string; description_ja: string; recommended_level: Level; duration_min: number; items: Listening[] };
+export type CommutingNarration = { id: string; course_id: string; title_ja: string; duration_min: number; narration_en: string; summary_ja: string; key_points_ja: string[] };
 
 export const labels: Record<Level, string> = {
   beginner: "初級",
@@ -24,6 +26,7 @@ export const labels: Record<Level, string> = {
 
 const advanced = advancedContent as { vocabulary: Vocabulary[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[] };
 export const commutingCourses = commutingListeningCourses as CommutingListeningCourse[];
+export const commutingNarrations = commutingNarrationData as CommutingNarration[];
 export const commutingListening = commutingCourses.flatMap(course => course.items);
 export const vocabulary = [...(baseVocabulary as Vocabulary[]), ...advanced.vocabulary];
 export const phrases = [...(basePhrases as Phrase[]), ...advanced.phrases];
