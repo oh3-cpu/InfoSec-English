@@ -26,6 +26,98 @@
 .stageTabs button.selected { background: #0f766e; color: #fff; }
 .explanation { color: #41666a; font-size: .82rem; line-height: 1.45; }
 
+.commuteStart {
+  margin-top: 14px;
+}
+
+.commuteCourseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.commuteCourseGrid button {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 4px 9px;
+  padding: 13px;
+  border: 1px solid #c8dddd;
+  border-radius: 14px;
+  background: #f7fbfb;
+  color: #16474c;
+  text-align: left;
+}
+
+.commuteCourseGrid button > span {
+  display: grid;
+  grid-row: 1 / 4;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #dcefee;
+  color: #0f766e;
+  font-weight: 850;
+}
+
+.commuteCourseGrid strong {
+  font-size: .9rem;
+}
+
+.commuteCourseGrid small {
+  color: #587478;
+  font-size: .72rem;
+  line-height: 1.4;
+}
+
+.commuteCourseGrid em {
+  color: #0f766e;
+  font-size: .7rem;
+  font-style: normal;
+  font-weight: 750;
+}
+
+.commuteCourseGrid button.selected {
+  border-color: #0f766e;
+  background: #e8f8f5;
+  box-shadow: 0 0 0 2px #0f766e22;
+}
+
+.commuteCourseGrid button.selected > span {
+  background: #0f766e;
+  color: #fff;
+}
+
+.selectedCourse {
+  display: grid;
+  gap: 4px;
+  padding: 13px 15px;
+  border-left: 4px solid #14b8a6;
+  border-radius: 12px;
+  background: #eef8f7;
+  color: #315b60;
+}
+
+.selectedCourse b {
+  color: #075e63;
+}
+
+.selectedCourse span,
+.selectedCourse small {
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+.commuteCard {
+  margin-top: 14px;
+}
+
+@media (max-width: 560px) {
+  .commuteCourseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .sessionStart {
   display: grid;
   gap: 14px;
