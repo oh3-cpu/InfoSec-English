@@ -10,6 +10,7 @@ import type { ItemKind, PlaybackRate, Progress, SessionSummary } from "./learnin
 import { findVoice, meetingVoicePool } from "./voices";
 
 type Tab = "home" | "course" | "vocabulary" | "phrases" | "listening" | "roleplay";
+type PlaybackProgress = { currentTime: number; duration: number };
 
 export default function App() {
   const [tab, setTab] = useState<Tab>("home");
@@ -21,6 +22,7 @@ export default function App() {
   const [audioTitle, setAudioTitle] = useState("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playbackGeneration = useRef(0);
+  const browserProgressTimer = useRef<number | null>(null);
   const preloadedAudio = useRef(new Map<string, HTMLAudioElement>());
   const noticeTimer = useRef<number | null>(null);
 
@@ -45,6 +47,10 @@ export default function App() {
 
   const stopAudio = () => {
     playbackGeneration.current += 1;
+    if (browserProgressTimer.current) {
+      window.clearInterval(browserProgressTimer.current);
+      browserProgressTimer.current = null;
+    }
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
@@ -71,41 +77,62 @@ export default function App() {
     if (index >= 0) preloadAudio(keys[index + 1]);
   };
 
-  const speakWithBrowser = (text: string, onEnded?: () => void) => {
+  const speakWithBrowser = (text: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => {
     if (!("speechSynthesis" in window)) return showNotice("このブラウザでは読み上げを利用できません。");
     const utterance = new SpeechSynthesisUtterance(text);
     const selectedVoice = findVoice(window.speechSynthesis.getVoices(), progress.preferredVoice);
     if (selectedVoice) utterance.voice = selectedVoice;
     utterance.lang = selectedVoice?.lang || "en-US";
     utterance.rate = progress.playbackRate;
-    utterance.onstart = () => setAudioStatus("playing");
-    utterance.onend = () => { setAudioStatus("completed"); onEnded?.(); };
-    utterance.onerror = () => setAudioStatus("idle");
+    const estimatedDuration = Math.max(1, text.trim().split(/\s+/).length / (145 * progress.playbackRate) * 60);
+    let elapsed = 0;
+    let previousTime = performance.now();
+    const stopProgress = () => {
+      if (browserProgressTimer.current) window.clearInterval(browserProgressTimer.current);
+      browserProgressTimer.current = null;
+    };
+    utterance.onstart = () => {
+      setAudioStatus("playing");
+      onProgress?.({ currentTime: 0, duration: estimatedDuration });
+      previousTime = performance.now();
+      browserProgressTimer.current = window.setInterval(() => {
+        const currentTime = performance.now();
+        if (!window.speechSynthesis.paused) elapsed += (currentTime - previousTime) / 1000;
+        previousTime = currentTime;
+        onProgress?.({ currentTime: Math.min(elapsed, estimatedDuration), duration: estimatedDuration });
+      }, 300);
+    };
+    utterance.onend = () => { stopProgress(); onProgress?.({ currentTime: estimatedDuration, duration: estimatedDuration }); setAudioStatus("completed"); onEnded?.(); };
+    utterance.onerror = () => { stopProgress(); setAudioStatus("idle"); };
     setAudioTitle(text.split(".")[0]);
     window.speechSynthesis.speak(utterance);
     showNotice(`${selectedVoice?.name || "端末の自動音声"}・${progress.playbackRate}倍`, 1800);
   };
 
-  const read = (text: string, key?: string, onEnded?: () => void) => {
+  const read = (text: string, key?: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => {
     window.speechSynthesis.cancel();
     stopAudio();
     const generation = playbackGeneration.current;
     const complete = () => { if (playbackGeneration.current === generation) onEnded?.(); };
+    const report = (value: PlaybackProgress) => { if (playbackGeneration.current === generation) onProgress?.(value); };
     const audioPath = key ? audioManifest.items[key] : undefined;
     if (audioPath && key) {
       preloadAdjacent(key);
       const audio = preloadedAudio.current.get(key) ?? new Audio(new URL(audioPath, document.baseURI).href);
+      if (audio.ended || (Number.isFinite(audio.duration) && audio.currentTime >= audio.duration)) audio.currentTime = 0;
       audio.playbackRate = progress.playbackRate;
       audio.onplay = () => setAudioStatus("playing");
       audio.onpause = () => { if (!audio.ended) setAudioStatus("paused"); };
-      audio.onended = () => { if (audioRef.current === audio) audioRef.current = null; setAudioStatus("completed"); complete(); };
-      audio.onerror = () => { if (audioRef.current === audio) audioRef.current = null; setAudioStatus("idle"); speakWithBrowser(text, complete); };
+      audio.onloadedmetadata = () => report({ currentTime: audio.currentTime, duration: Number.isFinite(audio.duration) ? audio.duration : 0 });
+      audio.ontimeupdate = () => report({ currentTime: audio.currentTime, duration: Number.isFinite(audio.duration) ? audio.duration : 0 });
+      audio.onended = () => { if (audioRef.current === audio) audioRef.current = null; report({ currentTime: audio.duration, duration: audio.duration }); setAudioStatus("completed"); complete(); };
+      audio.onerror = () => { if (audioRef.current === audio) audioRef.current = null; setAudioStatus("idle"); speakWithBrowser(text, complete, report); };
       audioRef.current = audio;
       setAudioTitle(text.split(".")[0]);
-      void audio.play().then(() => showNotice(`自然音声MP3・${progress.playbackRate}倍`, 1800)).catch(() => { audioRef.current = null; speakWithBrowser(text, complete); });
+      void audio.play().then(() => showNotice(`自然音声MP3・${progress.playbackRate}倍`, 1800)).catch(() => { audioRef.current = null; speakWithBrowser(text, complete, report); });
       return;
     }
-    speakWithBrowser(text, complete);
+    speakWithBrowser(text, complete, report);
   };
 
   const readMeeting = (dialogue: MeetingListening["dialogue"], meetingId?: string, lineIndex?: number) => {
@@ -370,38 +397,90 @@ function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: 
   </article>;
 }
 
-function ListeningView({ progress, onAnswer, copy, read, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string, onEnded?: () => void) => void; stopReading: () => void }) {
+function ListeningView({ progress, onAnswer, copy, read, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => void; stopReading: () => void }) {
   const [mode, setMode] = useState<"commute" | "all">("commute");
   const changeMode = (next: "commute" | "all") => { stopReading(); setMode(next); };
   return <><ViewTitle title="Listening" text="通勤中は約4分の長文を連続・繰り返し再生。あとで40問の理解度チェックもできます。" /><div className="modeSwitch"><button className={mode === "commute" ? "selected" : ""} onClick={() => changeMode("commute")}>🚆 通勤聞き流し</button><button className={mode === "all" ? "selected" : ""} onClick={() => changeMode("all")}>理解度チェック</button></div>{mode === "commute" ? <CommutingListeningView read={read} stopReading={stopReading} /> : <GeneralListeningView progress={progress} onAnswer={onAnswer} copy={copy} read={read} />}</>;
 }
 
-function CommutingListeningView({ read, stopReading }: { read: (text: string, key?: string, onEnded?: () => void) => void; stopReading: () => void }) {
+function CommutingListeningView({ read, stopReading }: { read: (text: string, key?: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => void; stopReading: () => void }) {
   type PlayMode = "once" | "repeat" | "continuous";
+  type EnglishMode = "hidden" | "focus" | "full";
   const [courseId, setCourseId] = useState(commutingCourses[0]?.id ?? "");
   const [playMode, setPlayMode] = useState<PlayMode>("continuous");
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-  const [showEnglish, setShowEnglish] = useState(false);
+  const [englishMode, setEnglishMode] = useState<EnglishMode>("hidden");
+  const [playbackProgress, setPlaybackProgress] = useState<PlaybackProgress>({ currentTime: 0, duration: 0 });
   const course = commutingCourses.find(entry => entry.id === courseId) ?? commutingCourses[0];
   const narration = commutingNarrations.find(entry => entry.course_id === courseId) ?? commutingNarrations[0];
+  const selectedIndex = Math.max(0, commutingNarrations.findIndex(entry => entry.course_id === courseId));
+  const currentNarration = playingIndex === null ? narration : commutingNarrations[playingIndex];
+  const sentences = useMemo(() => currentNarration?.narration_en.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(sentence => sentence.trim()).filter(Boolean) ?? [], [currentNarration]);
+  const currentSentenceIndex = useMemo(() => {
+    if (!sentences.length || !playbackProgress.duration) return 0;
+    const wordCounts = sentences.map(sentence => Math.max(1, sentence.split(/\s+/).length));
+    const totalWords = wordCounts.reduce((sum, count) => sum + count, 0);
+    const targetWord = Math.min(1, Math.max(0, playbackProgress.currentTime / playbackProgress.duration)) * totalWords;
+    let cumulative = 0;
+    for (let index = 0; index < wordCounts.length; index += 1) {
+      cumulative += wordCounts[index];
+      if (targetWord < cumulative) return index;
+    }
+    return sentences.length - 1;
+  }, [sentences, playbackProgress]);
+
   const playTrack = (index: number, mode = playMode) => {
     const target = commutingNarrations[index];
     if (!target) return;
     setCourseId(target.course_id);
     setPlayingIndex(index);
     setShowDetails(false);
-    setShowEnglish(false);
+    setPlaybackProgress({ currentTime: 0, duration: 0 });
     read(target.narration_en, commutingAudioKey(target.id), () => {
       if (mode === "repeat") playTrack(index, mode);
       if (mode === "continuous") playTrack((index + 1) % commutingNarrations.length, mode);
-    });
+    }, setPlaybackProgress);
   };
-  const selectedIndex = Math.max(0, commutingNarrations.findIndex(entry => entry.course_id === courseId));
-  const currentNarration = playingIndex === null ? narration : commutingNarrations[playingIndex];
-  const stopPlayer = () => { stopReading(); setPlayingIndex(null); };
+  const stopPlayer = () => {
+    stopReading();
+    setPlayingIndex(null);
+    setPlaybackProgress({ currentTime: 0, duration: 0 });
+  };
   if (!course) return null;
-  return <section className="card sessionStart commuteStart"><div className="row"><span className="tag">ハンズフリー長文Listening</span><span className="counter">全5本・1周約15〜20分</span></div><h2>{playingIndex === null ? "開始するコースを選択" : currentNarration?.title_ja}</h2>{playingIndex === null ? <><p className="meaning">1本約3分です。5コース連続ループまたは同じコースの繰り返しなら、再生開始後の操作は不要です。</p><div className="commuteCourseGrid">{commutingCourses.map((entry, index) => <button key={entry.id} className={courseId === entry.id ? "selected" : ""} onClick={() => setCourseId(entry.id)}><span>{index + 1}</span><strong>{entry.title_ja}</strong><small>{entry.description_ja}</small><em>長文 約{commutingNarrations.find(item => item.course_id === entry.id)?.duration_min ?? 3}分</em></button>)}</div><div className="selectedCourse"><b>{narration?.title_ja}</b><span>{narration?.summary_ja}</span></div><div className="playModeSelect" aria-label="再生方法"><button className={playMode === "once" ? "selected" : ""} onClick={() => setPlayMode("once")}>1回だけ</button><button className={playMode === "repeat" ? "selected" : ""} onClick={() => setPlayMode("repeat")}>同じ内容を繰り返す</button><button className={playMode === "continuous" ? "selected" : ""} onClick={() => setPlayMode("continuous")}>5コース連続ループ</button></div><button className="primaryButton" onClick={() => playTrack(selectedIndex)}>▶ ハンズフリー再生を開始</button><p className="small">開始後は上部の「一時停止／再開／停止」だけで操作できます。</p></> : <><div className="audioOnly commuteAudio"><span>🎧</span><p>{playMode === "repeat" ? "このコースを自動で繰り返します。" : playMode === "continuous" ? "終了すると次のコースを自動再生し、5本目の後は1本目へ戻ります。" : "このコースを1回再生します。"}</p></div><div className="handsFreeControls"><button onClick={() => playTrack(playingIndex, playMode)}>↻ 最初から</button><button onClick={() => playTrack((playingIndex + 1) % commutingNarrations.length, playMode)}>次のコースへ</button><button onClick={() => setShowEnglish(value => !value)}>{showEnglish ? "英文を隠す" : "英文を表示"}</button><button onClick={() => setShowDetails(value => !value)}>{showDetails ? "解説を隠す" : "日本語解説"}</button></div>{(showDetails || showEnglish) && currentNarration && <div className="narrationDetails">{showDetails && <><h3>日本語概要</h3><p>{currentNarration.summary_ja}</p><h3>重要表現</h3><ul>{currentNarration.key_points_ja.map(point => <li key={point}>{point}</li>)}</ul></>}{showEnglish && <><h3>English Transcript</h3><p className="narrationEnglish">{currentNarration.narration_en}</p></>}</div>}<button className="textButton" onClick={stopPlayer}>コース選択へ戻る</button></>}</section>;
+
+  return <section className="card sessionStart commuteStart">
+    <div className="row"><span className="tag">ハンズフリー長文Listening</span><span className="counter">全5本・1周約15〜20分</span></div>
+    <h2>{playingIndex === null ? "開始するコースを選択" : currentNarration?.title_ja}</h2>
+    {playingIndex === null ? <>
+      <p className="meaning">1本約3分です。5コース連続ループまたは同じコースの繰り返しなら、再生開始後の操作は不要です。</p>
+      <div className="commuteCourseGrid">{commutingCourses.map((entry, index) => <button key={entry.id} className={courseId === entry.id ? "selected" : ""} onClick={() => setCourseId(entry.id)}><span>{index + 1}</span><strong>{entry.title_ja}</strong><small>{entry.description_ja}</small><em>長文 約{commutingNarrations.find(item => item.course_id === entry.id)?.duration_min ?? 3}分</em></button>)}</div>
+      <div className="selectedCourse"><b>{narration?.title_ja}</b><span>{narration?.summary_ja}</span></div>
+      <div className="playModeSelect" aria-label="再生方法"><button className={playMode === "once" ? "selected" : ""} onClick={() => setPlayMode("once")}>1回だけ</button><button className={playMode === "repeat" ? "selected" : ""} onClick={() => setPlayMode("repeat")}>同じ内容を繰り返す</button><button className={playMode === "continuous" ? "selected" : ""} onClick={() => setPlayMode("continuous")}>5コース連続ループ</button></div>
+      <button className="primaryButton" onClick={() => playTrack(selectedIndex)}>▶ ハンズフリー再生を開始</button>
+      <p className="small">開始後は上部の「一時停止／再開／停止」だけで操作できます。</p>
+    </> : <>
+      <div className="audioOnly commuteAudio"><span>🎧</span><p>{playMode === "repeat" ? "このコースを自動で繰り返します。" : playMode === "continuous" ? "終了すると次のコースを自動再生し、5本目の後は1本目へ戻ります。" : "このコースを1回再生します。"}</p></div>
+      <div className="handsFreeControls">
+        <button onClick={() => playTrack(playingIndex, playMode)}>↻ 最初から</button>
+        <button onClick={() => playTrack((playingIndex + 1) % commutingNarrations.length, playMode)}>次のコースへ</button>
+        <button className={englishMode === "focus" ? "selected" : ""} onClick={() => setEnglishMode(value => value === "focus" ? "hidden" : "focus")}>{englishMode === "focus" ? "3文表示を閉じる" : "前後3文を表示"}</button>
+        <button className={englishMode === "full" ? "selected" : ""} onClick={() => setEnglishMode(value => value === "full" ? "hidden" : "full")}>{englishMode === "full" ? "英文全文を隠す" : "英文全文を表示"}</button>
+        <button onClick={() => setShowDetails(value => !value)}>{showDetails ? "解説を隠す" : "日本語解説"}</button>
+      </div>
+      {englishMode === "focus" && currentNarration && <div className="syncedTranscript">
+        <div className="syncedTranscriptHead"><b>音声位置に追従</b><span>{currentSentenceIndex + 1} / {sentences.length}</span></div>
+        {sentences[currentSentenceIndex - 1] && <p className="previous"><span>前の文</span>{sentences[currentSentenceIndex - 1]}</p>}
+        <p className="current"><span>▶ 読み上げ中</span>{sentences[currentSentenceIndex]}</p>
+        {sentences[currentSentenceIndex + 1] && <p className="next"><span>次の文</span>{sentences[currentSentenceIndex + 1]}</p>}
+      </div>}
+      {(showDetails || englishMode === "full") && currentNarration && <div className="narrationDetails">
+        {showDetails && <><h3>日本語概要</h3><p>{currentNarration.summary_ja}</p><h3>重要表現</h3><ul>{currentNarration.key_points_ja.map(point => <li key={point}>{point}</li>)}</ul></>}
+        {englishMode === "full" && <><h3>English Transcript</h3><p className="narrationEnglish">{currentNarration.narration_en}</p></>}
+      </div>}
+      <button className="textButton" onClick={stopPlayer}>コース選択へ戻る</button>
+    </>}
+  </section>;
 }
 
 function GeneralListeningView({ progress, onAnswer, copy, read }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {
