@@ -153,6 +153,62 @@
   font-weight: 750;
 }
 
+.handsFreeControls button.selected {
+  background: #0f766e;
+  color: #fff;
+}
+
+.syncedTranscript {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid #9ed8d1;
+  border-radius: 15px;
+  background: #f7fbfb;
+}
+
+.syncedTranscriptHead {
+  display: flex;
+  justify-content: space-between;
+  color: #41666a;
+  font-size: .74rem;
+}
+
+.syncedTranscript p {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 11px 12px;
+  border-radius: 11px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.syncedTranscript p span {
+  font-family: system-ui, sans-serif;
+  font-size: .65rem;
+  font-weight: 800;
+}
+
+.syncedTranscript .previous,
+.syncedTranscript .next {
+  background: #edf4f4;
+  color: #678084;
+}
+
+.syncedTranscript .current {
+  border: 2px solid #14b8a6;
+  background: #e5faf5;
+  color: #123f43;
+  font-size: 1rem;
+  box-shadow: 0 3px 12px #0f766e1c;
+}
+
+.syncedTranscript .current span {
+  color: #0f766e;
+}
+
 .narrationDetails {
   display: grid;
   gap: 8px;
