@@ -139,7 +139,7 @@
 
 .handsFreeControls {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 7px;
 }
 
@@ -172,6 +172,13 @@
 .narrationDetails li {
   font-size: .8rem;
   line-height: 1.6;
+}
+
+.narrationDetails .narrationEnglish {
+  color: #173f46;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .94rem;
+  line-height: 1.75;
 }
 
 .narrationDetails ul {
