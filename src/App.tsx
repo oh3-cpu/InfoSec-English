@@ -278,7 +278,7 @@ function Dashboard({ progress, onNavigate, onReview, copy, exportProgress, impor
     {last && <section className="card"><h2>前回の学習結果</h2><div className="summaryGrid"><Stat label="正解率" value={`${lastAccuracy}%`} /><Stat label="覚えた単語" value={`${last.knownWords}語`} /><Stat label="苦手項目" value={`${last.difficultItems}件`} /><Stat label="学習時間" value={`${last.elapsedMinutes}分`} /></div><p className="recommendation">{last.recommendation}</p></section>}
     <section className="card"><h2>3か月の進捗</h2><div className="progress"><i style={{ width: `${Math.min(100, Math.round(progress.known.length / vocabulary.length * 100))}%` }} /></div><p>{progress.known.length} / {vocabulary.length} 語を記録済み。間違えた問題は翌日・3日後・7日後に優先出題されます。</p></section>
     <WeeklyProgress progress={progress} />
-    <section className="card"><h2>個別に練習</h2><div className="quick"><button onClick={() => onNavigate("vocabulary")}>単語を1語ずつ</button><button onClick={() => onNavigate("phrases")}>会議全体リスニング</button><button onClick={() => onNavigate("listening")}>🚆 通勤Listening 5コース</button><button className="reviewButton" disabled={!due} onClick={onReview}>今日の復習（{due}件）</button><button onClick={() => copy(dailyPrompt)}>🎙 ChatGPT練習をコピー</button></div></section>
+    <section className="card"><h2>個別に練習</h2><div className="quick"><button onClick={() => onNavigate("vocabulary")}>単語を1語ずつ</button><button onClick={() => onNavigate("phrases")}>会議全体リスニング</button><button onClick={() => onNavigate("listening")}>🚆 通勤Listening {commutingCourses.length}コース</button><button className="reviewButton" disabled={!due} onClick={onReview}>今日の復習（{due}件）</button><button onClick={() => copy(dailyPrompt)}>🎙 ChatGPT練習をコピー</button></div></section>
     <section className="card backupCard"><h2>学習記録のバックアップ</h2><p>JSONを保存しておくと、iPhoneを変更したあとも同じ記録を読み込めます。</p><div className="actions"><button onClick={exportProgress}>↓ JSONを保存</button><label className="fileButton">↑ JSONを読み込む<input type="file" accept="application/json,.json" onChange={event => { const file = event.target.files?.[0]; if (file) void importProgress(file); event.currentTarget.value = ""; }} /></label></div></section>
   </>;
 }
@@ -453,10 +453,10 @@ function CommutingListeningView({ read, stopReading }: { read: (text: string, ke
     <div className="row"><span className="tag">ハンズフリー長文Listening</span><span className="counter">全5本・1周約15〜20分</span></div>
     <h2>{playingIndex === null ? "開始するコースを選択" : currentNarration?.title_ja}</h2>
     {playingIndex === null ? <>
-      <p className="meaning">1本約3分です。5コース連続ループまたは同じコースの繰り返しなら、再生開始後の操作は不要です。</p>
+      <p className="meaning">長文は1本約3〜4分（標準速度の目安）です。{commutingCourses.length}コース連続ループまたは同じコースの繰り返しなら、再生開始後の操作は不要です。</p>
       <div className="commuteCourseGrid">{commutingCourses.map((entry, index) => <button key={entry.id} className={courseId === entry.id ? "selected" : ""} onClick={() => setCourseId(entry.id)}><span>{index + 1}</span><strong>{entry.title_ja}</strong><small>{entry.description_ja}</small><em>長文 約{commutingNarrations.find(item => item.course_id === entry.id)?.duration_min ?? 3}分</em></button>)}</div>
       <div className="selectedCourse"><b>{narration?.title_ja}</b><span>{narration?.summary_ja}</span></div>
-      <div className="playModeSelect" aria-label="再生方法"><button className={playMode === "once" ? "selected" : ""} onClick={() => setPlayMode("once")}>1回だけ</button><button className={playMode === "repeat" ? "selected" : ""} onClick={() => setPlayMode("repeat")}>同じ内容を繰り返す</button><button className={playMode === "continuous" ? "selected" : ""} onClick={() => setPlayMode("continuous")}>5コース連続ループ</button></div>
+      <div className="playModeSelect" aria-label="再生方法"><button className={playMode === "once" ? "selected" : ""} onClick={() => setPlayMode("once")}>1回だけ</button><button className={playMode === "repeat" ? "selected" : ""} onClick={() => setPlayMode("repeat")}>同じ内容を繰り返す</button><button className={playMode === "continuous" ? "selected" : ""} onClick={() => setPlayMode("continuous")}>{commutingCourses.length}コース連続ループ</button></div>
       <button className="primaryButton" onClick={() => playTrack(selectedIndex)}>▶ ハンズフリー再生を開始</button>
       <p className="small">開始後は上部の「一時停止／再開／停止」だけで操作できます。</p>
     </> : <>
