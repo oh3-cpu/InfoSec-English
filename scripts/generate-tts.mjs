@@ -49,6 +49,7 @@ if (process.argv.includes("--dry-run")) {
 await mkdir(publicAudio, { recursive: true });
 const manifest = { version: 1, generatedAt: new Date().toISOString(), provider: "Azure Speech neural TTS", items: {} };
 if (!key || !region) {
+  if (process.argv.includes("--require-complete")) throw new Error("Azure Speech configuration missing; refusing to deploy without natural audio.");
   await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + "\n");
   console.warn("Natural audio skipped: set AZURE_SPEECH_KEY and AZURE_SPEECH_REGION to generate MP3 files.");
   process.exit(0);
@@ -61,15 +62,26 @@ const synthesize = async job => {
   const output = path.join(publicAudio, job.file);
   try { if ((await stat(output)).size > 100) return; } catch { /* create it */ }
   const ssml = `<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="${locale(job.voice)}"><voice name="${job.voice}">${escapeXml(job.text)}</voice></speak>`;
-  for (let attempt = 1; attempt <= 3; attempt += 1) {
-    const response = await fetch(endpoint, { method: "POST", headers: { "Ocp-Apim-Subscription-Key": key, "Content-Type": "application/ssml+xml", "X-Microsoft-OutputFormat": "audio-24khz-160kbitrate-mono-mp3" }, body: ssml });
+  for (let attempt = 1; attempt <= 8; attempt += 1) {
+    let response;
+    try {
+      response = await fetch(endpoint, { method: "POST", signal: AbortSignal.timeout(30000), headers: { "Ocp-Apim-Subscription-Key": key, "Content-Type": "application/ssml+xml", "X-Microsoft-OutputFormat": "audio-24khz-160kbitrate-mono-mp3" }, body: ssml });
+    } catch (error) {
+      if (attempt === 8) throw error;
+      await new Promise(resolve => setTimeout(resolve, Math.min(60000, 2000 * 2 ** (attempt - 1))));
+      continue;
+    }
     if (response.ok) {
       await mkdir(path.dirname(output), { recursive: true });
       await writeFile(output, Buffer.from(await response.arrayBuffer()));
       return;
     }
-    if (attempt === 3) throw new Error(`${response.status} ${await response.text()}`);
-    await new Promise(resolve => setTimeout(resolve, attempt * 1000));
+    if (attempt === 8 || (response.status !== 429 && response.status < 500)) throw new Error(`Azure Speech HTTP ${response.status}`);
+    const retryAfter = response.headers.get("retry-after");
+    const serverDelay = retryAfter ? (/^\d+(\.\d+)?$/.test(retryAfter) ? Number(retryAfter) * 1000 : Date.parse(retryAfter) - Date.now()) : 0;
+    await response.arrayBuffer();
+    const delay = Math.max(Number.isFinite(serverDelay) ? serverDelay : 0, Math.min(60000, 2000 * 2 ** (attempt - 1)));
+    await new Promise(resolve => setTimeout(resolve, delay));
   }
 };
 
@@ -87,6 +99,9 @@ const worker = async () => {
     }
   }
 };
-await Promise.all([worker(), worker(), worker(), worker()]);
+await Promise.all([worker(), worker()]);
 await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + "\n");
 console.log(`Generated ${Object.keys(manifest.items).length} natural MP3 files${failed ? `; skipped ${failed} items` : ""}.`);
+if (failed && process.argv.includes("--require-complete")) {
+  throw new Error(`${failed} MP3 files are missing; refusing to deploy incomplete natural audio. Retry after checking Azure Speech availability and quota.`);
+}
