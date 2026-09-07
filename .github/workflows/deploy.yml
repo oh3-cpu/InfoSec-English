@@ -25,7 +25,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Generate natural MP3 audio
-        run: npm run generate:tts
+        run: npm run generate:tts -- --require-complete
         env:
           AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
           AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
