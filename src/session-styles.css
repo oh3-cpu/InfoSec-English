@@ -209,6 +209,45 @@
   color: #0f766e;
 }
 
+.transcriptViewport {
+  height: 360px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(transparent, #000 12%, #000 88%, transparent);
+}
+
+.transcriptReel {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  will-change: transform;
+}
+
+.transcriptReel.moving {
+  transition: transform 900ms cubic-bezier(.22, .61, .36, 1);
+}
+
+.syncedTranscript .transcriptReel p {
+  font-size: 1rem;
+  line-height: 1.75;
+  border: 2px solid transparent;
+  box-shadow: none;
+}
+
+.syncedTranscript .transcriptReel .neighbor {
+  color: #678084;
+  background: transparent;
+}
+
+.syncedTranscript .transcriptReel .current {
+  border-color: #14b8a6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transcriptReel.moving { transition: none; }
+}
+
 .narrationDetails {
   display: grid;
   gap: 8px;
