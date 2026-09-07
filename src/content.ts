@@ -6,6 +6,7 @@ import meetingListening from "../content/infosec_english_content_pack/meeting_li
 import advancedContent from "../content/infosec_english_content_pack/advanced_waf_ndr.json";
 import commutingListeningCourses from "../content/infosec_english_content_pack/commuting_listening_courses.json";
 import commutingNarrationData from "../content/infosec_english_content_pack/commuting_narrations.json";
+import expansionData from "../content/infosec_english_content_pack/content_expansion_202609.json";
 
 export type Level = "beginner" | "lower_intermediate" | "intermediate" | "advanced";
 export type Vocabulary = { id: string; category_ja: string; level: Level; term_en: string; meaning_ja: string; example_en: string };
@@ -25,14 +26,15 @@ export const labels: Record<Level, string> = {
 };
 
 const advanced = advancedContent as { vocabulary: Vocabulary[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[] };
-export const commutingCourses = commutingListeningCourses as CommutingListeningCourse[];
-export const commutingNarrations = commutingNarrationData as CommutingNarration[];
+const expansion = expansionData as { vocabulary: Vocabulary[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[]; meetings: MeetingListening[]; commutingCourses: CommutingListeningCourse[]; commutingNarrations: CommutingNarration[] };
+export const commutingCourses = [...(commutingListeningCourses as CommutingListeningCourse[]), ...expansion.commutingCourses];
+export const commutingNarrations = [...(commutingNarrationData as CommutingNarration[]), ...expansion.commutingNarrations];
 export const commutingListening = commutingCourses.flatMap(course => course.items);
-export const vocabulary = [...(baseVocabulary as Vocabulary[]), ...advanced.vocabulary];
-export const phrases = [...(basePhrases as Phrase[]), ...advanced.phrases];
-export const listening = [...(baseListening as Listening[]), ...advanced.listening, ...commutingListening];
-export const scenarios = [...(baseScenarios as Scenario[]), ...advanced.scenarios];
-export const meetings = meetingListening as MeetingListening[];
+export const vocabulary = [...(baseVocabulary as Vocabulary[]), ...advanced.vocabulary, ...expansion.vocabulary];
+export const phrases = [...(basePhrases as Phrase[]), ...advanced.phrases, ...expansion.phrases];
+export const listening = [...(baseListening as Listening[]), ...advanced.listening, ...expansion.listening, ...commutingListening];
+export const scenarios = [...(baseScenarios as Scenario[]), ...advanced.scenarios, ...expansion.scenarios];
+export const meetings = [...(meetingListening as MeetingListening[]), ...expansion.meetings];
 
 export const questionTypeLabels: Record<MeetingQuestion["question_type"], string> = {
   status: "現在の状況",
