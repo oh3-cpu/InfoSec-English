@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import promptTemplates from "../content/infosec_english_content_pack/chatgpt_prompt_templates.json";
 import DailyCourse from "./DailyCourse";
 import { audioKey, commutingAudioKey, meetingAudioKey } from "./audio";
@@ -468,18 +468,57 @@ function CommutingListeningView({ read, stopReading }: { read: (text: string, ke
         <button className={englishMode === "full" ? "selected" : ""} onClick={() => setEnglishMode(value => value === "full" ? "hidden" : "full")}>{englishMode === "full" ? "英文全文を隠す" : "英文全文を表示"}</button>
         <button onClick={() => setShowDetails(value => !value)}>{showDetails ? "解説を隠す" : "日本語解説"}</button>
       </div>
-      {englishMode === "focus" && currentNarration && <div className="syncedTranscript">
-        <div className="syncedTranscriptHead"><b>音声位置に追従</b><span>{currentSentenceIndex + 1} / {sentences.length}</span></div>
-        {sentences[currentSentenceIndex - 1] && <p className="previous"><span>前の文</span>{sentences[currentSentenceIndex - 1]}</p>}
-        <p className="current"><span>▶ 読み上げ中</span>{sentences[currentSentenceIndex]}</p>
-        {sentences[currentSentenceIndex + 1] && <p className="next"><span>次の文</span>{sentences[currentSentenceIndex + 1]}</p>}
-      </div>}
+      {englishMode === "focus" && currentNarration && <RollingTranscript key={currentNarration.id} sentences={sentences} currentIndex={currentSentenceIndex} />}
       {(showDetails || englishMode === "full") && currentNarration && <div className="narrationDetails">
         {showDetails && <><h3>日本語概要</h3><p>{currentNarration.summary_ja}</p><h3>重要表現</h3><ul>{currentNarration.key_points_ja.map(point => <li key={point}>{point}</li>)}</ul></>}
         {englishMode === "full" && <><h3>English Transcript</h3><p className="narrationEnglish">{currentNarration.narration_en}</p></>}
       </div>}
       <button className="textButton" onClick={stopPlayer}>コース選択へ戻る</button>
     </>}
+  </section>;
+}
+
+function RollingTranscript({ sentences, currentIndex }: { sentences: string[]; currentIndex: number }) {
+  const viewport = useRef<HTMLDivElement>(null);
+  const reel = useRef<HTMLDivElement>(null);
+  const previousIndex = useRef(currentIndex);
+  const initialized = useRef(false);
+  const [position, setPosition] = useState({ offset: 0, animate: false });
+
+  useLayoutEffect(() => {
+    const frame = viewport.current;
+    const content = reel.current;
+    if (!frame || !content) return;
+    const measure = (animate: boolean) => {
+      const active = content.children[currentIndex] as HTMLElement | undefined;
+      if (!active) return;
+      setPosition({
+        offset: frame.clientHeight / 2 - active.offsetTop - active.offsetHeight / 2,
+        animate,
+      });
+    };
+    // Opening the view, rewinding and changing courses must not fly through old text.
+    measure(initialized.current && currentIndex > previousIndex.current);
+    initialized.current = true;
+    previousIndex.current = currentIndex;
+    let dimensions = [frame.clientWidth, frame.clientHeight, content.offsetHeight].join(":");
+    const observer = new ResizeObserver(() => {
+      const next = [frame.clientWidth, frame.clientHeight, content.offsetHeight].join(":");
+      if (next !== dimensions) { dimensions = next; measure(false); }
+    });
+    observer.observe(frame);
+    observer.observe(content);
+    return () => observer.disconnect();
+  }, [currentIndex, sentences]);
+
+  return <section className="syncedTranscript" aria-label="自動スクロール英文">
+    <div className="syncedTranscriptHead"><b>下から上へ自動スクロール</b><span>{currentIndex + 1} / {sentences.length}</span></div>
+    <div className="transcriptViewport" ref={viewport}>
+      <div className={position.animate ? "transcriptReel moving" : "transcriptReel"} ref={reel} style={{ transform: `translateY(${position.offset}px)` }}>
+        {sentences.map((sentence, index) => <p key={index} lang="en" aria-current={index === currentIndex ? "true" : undefined} className={index === currentIndex ? "current" : "neighbor"}>{sentence}</p>)}
+      </div>
+    </div>
+    <small className="small">中央の強調文に追従します（音声時刻と文の長さから推定）。</small>
   </section>;
 }
 
