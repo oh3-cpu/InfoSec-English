@@ -24,3 +24,5 @@ jobs:
         run: npm run generate:tts -- --dry-run
       - name: Build application
         run: npm run build
+      - name: Test audio updates and playback controls
+        run: node --test scripts/audio-regression.test.mjs
