@@ -3,6 +3,8 @@ import promptTemplates from "../content/infosec_english_content_pack/chatgpt_pro
 import DailyCourse from "./DailyCourse";
 import { audioKey, commutingAudioKey, meetingAudioKey } from "./audio";
 import type { AudioManifest } from "./audio";
+import { createSpeechPlayback } from "./speechPlayback";
+import type { SpeechPlayback } from "./speechPlayback";
 import { commutingCourses, commutingNarrations, labels, listening, meetings, phrases, questionTypeLabels, scenarios, vocabulary } from "./content";
 import type { Level, MeetingListening, Phrase, Vocabulary } from "./content";
 import { addMinutes, dueReviews, loadProgress, normalizeProgress, prioritizedItems, recordResult, recordVocabulary, shuffle, storeKey, todayText } from "./learning";
@@ -22,7 +24,8 @@ export default function App() {
   const [audioTitle, setAudioTitle] = useState("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playbackGeneration = useRef(0);
-  const browserProgressTimer = useRef<number | null>(null);
+  const browserPlayback = useRef<SpeechPlayback | null>(null);
+  const playbackRateRef = useRef(progress.playbackRate);
   const preloadedAudio = useRef(new Map<string, HTMLAudioElement>());
   const noticeTimer = useRef<number | null>(null);
 
@@ -34,11 +37,32 @@ export default function App() {
 
   useEffect(() => { localStorage.setItem(storeKey, JSON.stringify(progress)); }, [progress]);
   useEffect(() => {
-    fetch("./audio/manifest.json", { cache: "no-store" })
-      .then(response => response.ok ? response.json() as Promise<AudioManifest> : Promise.reject(new Error("manifest unavailable")))
-      .then(manifest => setAudioManifest(manifest))
-      .catch(() => setAudioManifest({ version: 1, items: {} }));
+    let disposed = false;
+    const refresh = () => {
+      if (document.visibilityState === "hidden") return;
+      void fetch("./audio/manifest.json", { cache: "no-store" })
+        .then(response => response.ok ? response.json() as Promise<AudioManifest> : Promise.reject(new Error("manifest unavailable")))
+        .then(manifest => {
+          if (!disposed && manifest.version === 1 && manifest.items) {
+            preloadedAudio.current.clear();
+            setAudioManifest(manifest);
+          }
+        }).catch(() => { /* Keep the last usable inventory during a temporary outage. */ });
+    };
+    refresh();
+    navigator.serviceWorker?.addEventListener("controllerchange", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      disposed = true;
+      navigator.serviceWorker?.removeEventListener("controllerchange", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
   }, []);
+  useEffect(() => {
+    playbackRateRef.current = progress.playbackRate;
+    if (audioRef.current) audioRef.current.playbackRate = progress.playbackRate;
+    browserPlayback.current?.setRate(progress.playbackRate);
+  }, [progress.playbackRate]);
   useEffect(() => {
     const timer = window.setInterval(() => setProgress(current => addMinutes(current)), 60000);
     return () => window.clearInterval(timer);
@@ -47,10 +71,8 @@ export default function App() {
 
   const stopAudio = () => {
     playbackGeneration.current += 1;
-    if (browserProgressTimer.current) {
-      window.clearInterval(browserProgressTimer.current);
-      browserProgressTimer.current = null;
-    }
+    browserPlayback.current?.stop();
+    browserPlayback.current = null;
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
@@ -79,34 +101,12 @@ export default function App() {
 
   const speakWithBrowser = (text: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => {
     if (!("speechSynthesis" in window)) return showNotice("このブラウザでは読み上げを利用できません。");
-    const utterance = new SpeechSynthesisUtterance(text);
     const selectedVoice = findVoice(window.speechSynthesis.getVoices(), progress.preferredVoice);
-    if (selectedVoice) utterance.voice = selectedVoice;
-    utterance.lang = selectedVoice?.lang || "en-US";
-    utterance.rate = progress.playbackRate;
-    const estimatedDuration = Math.max(1, text.trim().split(/\s+/).length / (145 * progress.playbackRate) * 60);
-    let elapsed = 0;
-    let previousTime = performance.now();
-    const stopProgress = () => {
-      if (browserProgressTimer.current) window.clearInterval(browserProgressTimer.current);
-      browserProgressTimer.current = null;
-    };
-    utterance.onstart = () => {
-      setAudioStatus("playing");
-      onProgress?.({ currentTime: 0, duration: estimatedDuration });
-      previousTime = performance.now();
-      browserProgressTimer.current = window.setInterval(() => {
-        const currentTime = performance.now();
-        if (!window.speechSynthesis.paused) elapsed += (currentTime - previousTime) / 1000;
-        previousTime = currentTime;
-        onProgress?.({ currentTime: Math.min(elapsed, estimatedDuration), duration: estimatedDuration });
-      }, 300);
-    };
-    utterance.onend = () => { stopProgress(); onProgress?.({ currentTime: estimatedDuration, duration: estimatedDuration }); setAudioStatus("completed"); onEnded?.(); };
-    utterance.onerror = () => { stopProgress(); setAudioStatus("idle"); };
+    browserPlayback.current = createSpeechPlayback([{ text, voice: selectedVoice ?? undefined }], playbackRateRef.current, {
+      status: setAudioStatus, progress: onProgress, ended: onEnded,
+    });
     setAudioTitle(text.split(".")[0]);
-    window.speechSynthesis.speak(utterance);
-    showNotice(`${selectedVoice?.name || "端末の自動音声"}・${progress.playbackRate}倍`, 1800);
+    showNotice(`MP3を利用できないため端末音声・${playbackRateRef.current}倍（速度変更時は現在の文を読み直します）`, 5000);
   };
 
   const read = (text: string, key?: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => {
@@ -120,7 +120,7 @@ export default function App() {
       preloadAdjacent(key);
       const audio = preloadedAudio.current.get(key) ?? new Audio(new URL(audioPath, document.baseURI).href);
       if (audio.ended || (Number.isFinite(audio.duration) && audio.currentTime >= audio.duration)) audio.currentTime = 0;
-      audio.playbackRate = progress.playbackRate;
+      audio.playbackRate = playbackRateRef.current;
       audio.onplay = () => setAudioStatus("playing");
       audio.onpause = () => { if (!audio.ended) setAudioStatus("paused"); };
       audio.onloadedmetadata = () => report({ currentTime: audio.currentTime, duration: Number.isFinite(audio.duration) ? audio.duration : 0 });
@@ -149,7 +149,7 @@ export default function App() {
         const audio = new Audio(new URL(currentPath, document.baseURI).href);
         audio.preload = "auto";
         if (index + 1 < audioPaths.length) { const nextAudio = new Audio(new URL(audioPaths[index + 1], document.baseURI).href); nextAudio.preload = "auto"; nextAudio.load(); }
-        audio.playbackRate = progress.playbackRate;
+        audio.playbackRate = playbackRateRef.current;
         audioRef.current = audio;
         audio.onplay = () => setAudioStatus("playing");
         audio.onpause = () => { if (!audio.ended) setAudioStatus("paused"); };
@@ -169,18 +169,13 @@ export default function App() {
     if (!("speechSynthesis" in window)) return showNotice("自然音声MP3が未生成のため、端末音声を利用できません。");
     const speakers = [...new Set(dialogue.map(line => line.speaker))];
     const voicePool = meetingVoicePool(window.speechSynthesis.getVoices(), progress.preferredVoice);
-    dialogue.forEach((line, index) => {
-      const utterance = new SpeechSynthesisUtterance(line.sentence_en);
+    browserPlayback.current = createSpeechPlayback(dialogue.map(line => {
       const speakerIndex = speakers.indexOf(line.speaker);
-      const speakerVoice = voicePool.length ? voicePool[speakerIndex % voicePool.length] : undefined;
-      if (speakerVoice) utterance.voice = speakerVoice;
-      utterance.lang = speakerVoice?.lang || "en-US";
-      utterance.rate = progress.playbackRate;
-      utterance.pitch = speakerVoice ? 1 : speakerIndex % 2 === 0 ? 1.03 : 0.94;
-      if (index === dialogue.length - 1) utterance.onend = () => setNotice("");
-      window.speechSynthesis.speak(utterance);
-    });
-    showNotice(`会議全体を${progress.playbackRate}倍で読み上げています`, 5000);
+      const voice = voicePool.length ? voicePool[speakerIndex % voicePool.length] : undefined;
+      return { text: line.sentence_en, voice, pitch: voice ? 1 : speakerIndex % 2 === 0 ? 1.03 : 0.94 };
+    }), playbackRateRef.current, { status: setAudioStatus });
+    setAudioTitle("会議全体");
+    showNotice(`MP3を利用できないため会議を端末音声で再生・${playbackRateRef.current}倍`, 5000);
   };
 
   const stopReading = () => {
@@ -189,8 +184,8 @@ export default function App() {
     showNotice("読み上げを停止しました", 1200);
   };
 
-  const pauseAudio = () => { if (audioRef.current) audioRef.current.pause(); else if ("speechSynthesis" in window) window.speechSynthesis.pause(); setAudioStatus("paused"); };
-  const resumeAudio = () => { if (audioRef.current) void audioRef.current.play(); else if ("speechSynthesis" in window) window.speechSynthesis.resume(); setAudioStatus("playing"); };
+  const pauseAudio = () => { if (audioRef.current) audioRef.current.pause(); else browserPlayback.current?.pause(); setAudioStatus("paused"); };
+  const resumeAudio = () => { if (audioRef.current) void audioRef.current.play(); else browserPlayback.current?.resume(); setAudioStatus("playing"); };
 
   const navigate = (next: Tab) => {
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
@@ -212,7 +207,7 @@ export default function App() {
 
   const markVocabulary = (id: string, remembered: boolean) => setProgress(current => recordVocabulary(current, id, remembered));
   const markAnswer = (kind: ItemKind, id: string, correct: boolean) => setProgress(current => recordResult(current, kind, id, correct));
-  const setRate = (rate: PlaybackRate) => setProgress(current => ({ ...current, playbackRate: rate }));
+  const setRate = (rate: PlaybackRate) => { playbackRateRef.current = rate; setProgress(current => ({ ...current, playbackRate: rate })); };
   const setCourseLevel = (courseLevel: Level) => setProgress(current => ({ ...current, courseLevel }));
   const finishCourse = (lastSession: SessionSummary) => setProgress(current => ({ ...current, lastSession, lastDate: todayText() }));
 
