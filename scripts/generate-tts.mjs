@@ -14,12 +14,13 @@ const voices = {
 
 const source = async name => JSON.parse(await readFile(path.join(root, "content", "infosec_english_content_pack", name), "utf8"));
 const advanced = await source("advanced_waf_ndr.json");
-const commutingCourses = await source("commuting_listening_courses.json");
-const commutingNarrations = await source("commuting_narrations.json");
-const vocabulary = [...(await source("vocabulary.json")), ...advanced.vocabulary];
-const phrases = [...(await source("meeting_phrases.json")), ...advanced.phrases];
-const listening = [...(await source("listening_items.json")), ...advanced.listening, ...commutingCourses.flatMap(course => course.items)];
-const meetings = await source("meeting_listening.json");
+const expansion = await source("content_expansion_202609.json");
+const commutingCourses = [...(await source("commuting_listening_courses.json")), ...expansion.commutingCourses];
+const commutingNarrations = [...(await source("commuting_narrations.json")), ...expansion.commutingNarrations];
+const vocabulary = [...(await source("vocabulary.json")), ...advanced.vocabulary, ...expansion.vocabulary];
+const phrases = [...(await source("meeting_phrases.json")), ...advanced.phrases, ...expansion.phrases];
+const listening = [...(await source("listening_items.json")), ...advanced.listening, ...expansion.listening, ...commutingCourses.flatMap(course => course.items)];
+const meetings = [...(await source("meeting_listening.json")), ...expansion.meetings];
 const jobs = [];
 
 for (const item of vocabulary) jobs.push({ key: `vocabulary:${item.id}`, text: `${item.term_en}. ${item.example_en}`, voice: voices.primary, file: `vocabulary/${item.id}.mp3` });
@@ -32,6 +33,17 @@ for (const meeting of meetings) {
     const voice = [voices.primary, voices.secondary, voices.tertiary][speakers.indexOf(line.speaker) % 3];
     jobs.push({ key: `meeting:${meeting.id}:${lineIndex}`, text: line.sentence_en, voice, file: `meeting/${meeting.id}-${lineIndex}.mp3` });
   }
+}
+
+// Validate the complete audio inventory without credentials, network calls or file writes.
+if (process.argv.includes("--dry-run")) {
+  if (new Set(jobs.map(job => job.key)).size !== jobs.length) throw new Error("Duplicate audio key");
+  if (new Set(jobs.map(job => job.file)).size !== jobs.length) throw new Error("Duplicate audio file");
+  if (jobs.some(job => !job.text.trim())) throw new Error("Empty audio text");
+  const counts = {};
+  for (const job of jobs) { const kind = job.key.split(":")[0]; counts[kind] = (counts[kind] || 0) + 1; }
+  console.log(JSON.stringify({ total: jobs.length, counts }, null, 2));
+  process.exit(0);
 }
 
 await mkdir(publicAudio, { recursive: true });
