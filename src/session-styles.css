@@ -304,6 +304,23 @@
   }
 }
 
+.exampleTranslation {
+  color: #305c62;
+  font-size: .92rem;
+  line-height: 1.7;
+  margin: -4px 0 16px;
+  padding-left: 12px;
+  border-left: 3px solid #b7dedb;
+  overflow-wrap: anywhere;
+}
+.exampleTranslation span {
+  display: block;
+  color: #42676c;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
 .sessionStart {
   display: grid;
   gap: 14px;
@@ -831,20 +848,29 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-.exampleTranslation {
-  color: #305c62;
-  font-size: .92rem;
-  line-height: 1.7;
-  margin: -4px 0 16px;
-  padding-left: 12px;
-  border-left: 3px solid #b7dedb;
-  overflow-wrap: anywhere;
-}
-.exampleTranslation span {
-  display: block;
-  color: #42676c;
-  font-size: .75rem;
-  font-weight: 700;
-  margin-bottom: 3px;
+.commutePlayer { display: grid; gap: 18px; }
+.commutePlayer h2, .commutePlayer h3 { margin-bottom: 8px; }
+.commuteSetup { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.commuteSetup label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
+.commuteSetup select { width: 100%; min-width: 0; min-height: 44px; padding: 9px; border: 1px solid #cbd5e1; border-radius: 10px; background: white; color: #162a42; }
+.commuteSetup > p { grid-column: 1 / -1; margin: 0; }
+.commuteNow { border-top: 1px solid #dce5ee; padding-top: 16px; }
+.commutePlayer .handsFreeControls { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.commutePlayer button { min-height: 44px; }
+.commutePlayer button[aria-pressed="true"] { color: #13468a; background: #e5efff; border-color: #4777bd; }
+.commutePlayer .primaryButton { background: #174ba1; color: white; border: 0; padding: 12px 16px; border-radius: 10px; font-weight: 700; }
+.commuteError { color: #8e251d; background: #fff0eb; padding: 12px; border-radius: 10px; }
+.commuteFullText { max-height: 420px; overflow-y: auto; padding: 12px 18px; margin: 14px 0; background: #f4f7fb; border-radius: 12px; line-height: 1.8; }
+.commuteFullText p[aria-current="true"] { border-left: 3px solid #235ebe; padding-left: 10px; color: #16489a; font-weight: 700; }
+.commuteTranslation { margin: 16px 0; padding: 16px; background: #f2f8f5; border-radius: 12px; }
+.commuteTranslation p { line-height: 1.9; white-space: pre-line; }
+.commuteBookmarks, .commuteDownloads { border-top: 1px solid #dce5ee; padding-top: 14px; }
+.commutePlayer summary { cursor: pointer; font-weight: 700; min-height: 44px; padding: 10px 0; }
+.downloadRow, .savedSentence { padding: 14px 0; border-bottom: 1px solid #e2e8f0; }
+.downloadRow > strong, .downloadRow > span { display: block; margin-bottom: 8px; }
+.downloadRow > span { font-size: 13px; color: #546579; }
+.commuteQuiz { border: 2px solid #cfdded; border-radius: 14px; padding: 18px; scroll-margin-top: 20px; }
+@media (max-width: 520px) {
+  .commuteSetup { grid-template-columns: 1fr; }
+  .commutePlayer .handsFreeControls > button { flex: 1 1 calc(50% - 8px); }
 }
