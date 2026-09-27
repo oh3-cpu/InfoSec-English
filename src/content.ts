@@ -6,10 +6,11 @@ import meetingListening from "../content/infosec_english_content_pack/meeting_li
 import advancedContent from "../content/infosec_english_content_pack/advanced_waf_ndr.json";
 import commutingListeningCourses from "../content/infosec_english_content_pack/commuting_listening_courses.json";
 import commutingNarrationData from "../content/infosec_english_content_pack/commuting_narrations.json";
+import exampleTranslationData from "../content/infosec_english_content_pack/vocabulary_example_translations.json";
 import expansionData from "../content/infosec_english_content_pack/content_expansion_202609.json";
 
 export type Level = "beginner" | "lower_intermediate" | "intermediate" | "advanced";
-export type Vocabulary = { id: string; category_ja: string; level: Level; term_en: string; meaning_ja: string; example_en: string };
+export type Vocabulary = { id: string; category_ja: string; level: Level; term_en: string; meaning_ja: string; example_en: string; example_ja: string };
 export type Phrase = { id: string; function: string; level: Level; sentence_en: string; meaning_ja: string };
 export type Listening = { id: string; course_id?: string; category: string; level: Level; sentence_en: string; correct_ja: string; choices_ja: string[]; chatgpt_prompt: string };
 export type Scenario = { id: string; title_ja: string; context_en: string; role_ai: string; role_user: string; level: Level; turns: { speaker: string; goal: string }[]; chatgpt_prompt: string };
@@ -25,12 +26,18 @@ export const labels: Record<Level, string> = {
   advanced: "上級",
 };
 
-const advanced = advancedContent as { vocabulary: Vocabulary[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[] };
-const expansion = expansionData as { vocabulary: Vocabulary[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[]; meetings: MeetingListening[]; commutingCourses: CommutingListeningCourse[]; commutingNarrations: CommutingNarration[] };
+type VocabularySource = Omit<Vocabulary, "example_ja">;
+const exampleTranslations: Record<string, { example_en: string; example_ja: string }> = exampleTranslationData;
+
+const advanced = advancedContent as { vocabulary: VocabularySource[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[] };
+const expansion = expansionData as { vocabulary: VocabularySource[]; phrases: Phrase[]; listening: Listening[]; scenarios: Scenario[]; meetings: MeetingListening[]; commutingCourses: CommutingListeningCourse[]; commutingNarrations: CommutingNarration[] };
 export const commutingCourses = [...(commutingListeningCourses as CommutingListeningCourse[]), ...expansion.commutingCourses];
 export const commutingNarrations = [...(commutingNarrationData as CommutingNarration[]), ...expansion.commutingNarrations];
 export const commutingListening = commutingCourses.flatMap(course => course.items);
-export const vocabulary = [...(baseVocabulary as Vocabulary[]), ...advanced.vocabulary, ...expansion.vocabulary];
+export const vocabulary: Vocabulary[] = [...(baseVocabulary as VocabularySource[]), ...advanced.vocabulary, ...expansion.vocabulary].map(word => ({
+  ...word,
+  example_ja: exampleTranslations[word.id]?.example_ja ?? "",
+}));
 export const phrases = [...(basePhrases as Phrase[]), ...advanced.phrases, ...expansion.phrases];
 export const listening = [...(baseListening as Listening[]), ...advanced.listening, ...expansion.listening, ...commutingListening];
 export const scenarios = [...(baseScenarios as Scenario[]), ...advanced.scenarios, ...expansion.scenarios];
