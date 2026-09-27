@@ -1,7 +1,10 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import promptTemplates from "../content/infosec_english_content_pack/chatgpt_prompt_templates.json";
+import CommutePlayer from "./CommutePlayer";
+import type { CommuteProgress } from "./commuteModel";
+import { activeStudySeconds, studyStreak, localDate } from "./studyTime";
 import DailyCourse from "./DailyCourse";
-import { audioKey, commutingAudioKey, meetingAudioKey } from "./audio";
+import { audioKey, meetingAudioKey } from "./audio";
 import type { AudioManifest } from "./audio";
 import { createSpeechPlayback } from "./speechPlayback";
 import type { SpeechPlayback } from "./speechPlayback";
@@ -21,6 +24,9 @@ export default function App() {
   const [notice, setNotice] = useState("");
   const [audioManifest, setAudioManifest] = useState<AudioManifest>({ version: 1, items: {} });
   const [audioStatus, setAudioStatus] = useState<"idle" | "playing" | "paused" | "completed">("idle");
+  const [commutePlaying, setCommutePlaying] = useState(false);
+  const studyState = useRef({ tab, audioStatus, commutePlaying });
+  studyState.current = { tab, audioStatus, commutePlaying };
   const [audioTitle, setAudioTitle] = useState("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playbackGeneration = useRef(0);
@@ -64,8 +70,17 @@ export default function App() {
     browserPlayback.current?.setRate(progress.playbackRate);
   }, [progress.playbackRate]);
   useEffect(() => {
-    const timer = window.setInterval(() => setProgress(current => addMinutes(current)), 60000);
-    return () => window.clearInterval(timer);
+    let lastTick = performance.now(), lastInteraction = performance.now();
+    const interacted = () => { lastInteraction = performance.now(); };
+    const events = ["pointerdown", "keydown", "scroll"];
+    events.forEach(event => window.addEventListener(event, interacted, { passive: true }));
+    const timer = window.setInterval(() => {
+      const now = performance.now(), state = studyState.current;
+      const seconds = state.commutePlaying ? 0 : activeStudySeconds((now - lastTick) / 1000, document.visibilityState === "visible", state.tab !== "home", (now - lastInteraction) / 1000, state.audioStatus === "playing" || state.commutePlaying);
+      lastTick = now;
+      if (seconds > 0) setProgress(current => addMinutes(current, seconds / 60));
+    }, 1000);
+    return () => { window.clearInterval(timer); events.forEach(event => window.removeEventListener(event, interacted)); };
   }, []);
   useEffect(() => () => { if (noticeTimer.current) window.clearTimeout(noticeTimer.current); }, []);
 
@@ -74,6 +89,7 @@ export default function App() {
     browserPlayback.current?.stop();
     browserPlayback.current = null;
     if (audioRef.current) {
+      audioRef.current.onplay = audioRef.current.onpause = audioRef.current.onended = audioRef.current.onerror = audioRef.current.ontimeupdate = audioRef.current.onloadedmetadata = null;
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
       audioRef.current = null;
@@ -238,7 +254,7 @@ export default function App() {
     : tab === "course" ? <DailyCourse key={reviewOnly ? "review" : "course"} reviewOnly={reviewOnly} progress={progress} read={read} readMeeting={readMeeting} onVocabulary={markVocabulary} onAnswer={markAnswer} onLevel={setCourseLevel} onFinish={finishCourse} onHome={() => navigate("home")} />
     : tab === "vocabulary" ? <VocabularyView progress={progress} onResult={markVocabulary} copy={copy} read={read} />
     : tab === "phrases" ? <PhrasesView progress={progress} onAnswer={markAnswer} copy={copy} read={read} readMeeting={readMeeting} stopReading={stopReading} />
-    : tab === "listening" ? <ListeningView progress={progress} onAnswer={markAnswer} copy={copy} read={read} stopReading={stopReading} />
+    : tab === "listening" ? <ListeningView progress={progress} onAnswer={markAnswer} copy={copy} read={read} stopReading={stopReading} manifest={audioManifest} onCommuteChange={update => setProgress(current => ({ ...current, commute: update(current.commute) }))} onPlaying={setCommutePlaying} onStudySeconds={seconds => setProgress(current => addMinutes(current, seconds / 60))} stopOtherAudio={stopAudio} />
     : <RoleplayView copy={copy} read={read} />;
 
   return <main className="app">
@@ -269,24 +285,24 @@ function Dashboard({ progress, onNavigate, onReview, copy, exportProgress, impor
   const lastAccuracy = last?.attempts ? Math.round(last.correct / last.attempts * 100) : 0;
   return <>
     <section className="hero dailyHero"><p>今日の30分コース</p><h2>単語15語 → 短文5問 → Listening 3問 → 会議1本</h2><p className="heroText">復習期限の来た問題から優先し、次の問題は自動で読み上げます。</p><button onClick={() => onNavigate("course")}>30分コースを始める →</button></section>
-    <div className="stats"><Stat label="学習時間" value={`${progress.minutes}分`} /><Stat label="覚えた単語" value={`${progress.known.length}語`} /><Stat label="苦手項目" value={`${progress.difficult.length}件`} /><Stat label="今日の復習" value={`${due}件`} /></div>
+    <div className="stats"><Stat label="学習時間" value={`${Math.round(progress.minutes * 10) / 10}分`} /><Stat label="覚えた単語" value={`${progress.known.length}語`} /><Stat label="苦手項目" value={`${progress.difficult.length}件`} /><Stat label="今日の復習" value={`${due}件`} /></div>
     {last && <section className="card"><h2>前回の学習結果</h2><div className="summaryGrid"><Stat label="正解率" value={`${lastAccuracy}%`} /><Stat label="覚えた単語" value={`${last.knownWords}語`} /><Stat label="苦手項目" value={`${last.difficultItems}件`} /><Stat label="学習時間" value={`${last.elapsedMinutes}分`} /></div><p className="recommendation">{last.recommendation}</p></section>}
     <section className="card"><h2>3か月の進捗</h2><div className="progress"><i style={{ width: `${Math.min(100, Math.round(progress.known.length / vocabulary.length * 100))}%` }} /></div><p>{progress.known.length} / {vocabulary.length} 語を記録済み。間違えた問題は翌日・3日後・7日後に優先出題されます。</p></section>
     <WeeklyProgress progress={progress} />
     <section className="card"><h2>個別に練習</h2><div className="quick"><button onClick={() => onNavigate("vocabulary")}>単語を1語ずつ</button><button onClick={() => onNavigate("phrases")}>会議全体リスニング</button><button onClick={() => onNavigate("listening")}>🚆 通勤Listening {commutingCourses.length}コース</button><button className="reviewButton" disabled={!due} onClick={onReview}>今日の復習（{due}件）</button><button onClick={() => copy(dailyPrompt)}>🎙 ChatGPT練習をコピー</button></div></section>
-    <section className="card backupCard"><h2>学習記録のバックアップ</h2><p>JSONを保存しておくと、iPhoneを変更したあとも同じ記録を読み込めます。</p><div className="actions"><button onClick={exportProgress}>↓ JSONを保存</button><label className="fileButton">↑ JSONを読み込む<input type="file" accept="application/json,.json" onChange={event => { const file = event.target.files?.[0]; if (file) void importProgress(file); event.currentTarget.value = ""; }} /></label></div></section>
+    <section className="card backupCard"><h2>学習記録のバックアップ</h2><p>学習記録・再生位置・★保存した文をJSONで引き継げます。保存音声は含まれないため、新しい端末で再ダウンロードしてください。</p><div className="actions"><button onClick={exportProgress}>↓ JSONを保存</button><label className="fileButton">↑ JSONを読み込む<input type="file" accept="application/json,.json" onChange={event => { const file = event.target.files?.[0]; if (file) void importProgress(file); event.currentTarget.value = ""; }} /></label></div></section>
   </>;
 }
 
 function WeeklyProgress({ progress }: { progress: Progress }) {
-  const days = Array.from({ length: 7 }, (_, index) => { const date = new Date(); date.setHours(12, 0, 0, 0); date.setDate(date.getDate() - (6 - index)); return date.toISOString().slice(0, 10); });
+  const days = Array.from({ length: 7 }, (_, index) => { const date = new Date(); date.setHours(12, 0, 0, 0); date.setDate(date.getDate() - (6 - index)); return localDate(date); });
   const stats = days.map(date => progress.dailyStats.find(item => item.date === date) ?? { date, attempts: 0, correct: 0, minutes: 0 });
   const totalAttempts = stats.reduce((sum, item) => sum + item.attempts, 0);
   const totalCorrect = stats.reduce((sum, item) => sum + item.correct, 0);
   const totalMinutes = stats.reduce((sum, item) => sum + item.minutes, 0);
-  const streak = (() => { let count = 0; for (let index = stats.length - 1; index >= 0 && (stats[index].attempts > 0 || stats[index].minutes > 0); index -= 1) count += 1; return count; })();
+  const streak = studyStreak(progress.dailyStats);
   const maxMinutes = Math.max(1, ...stats.map(item => item.minutes));
-  return <section className="card weeklyCard"><div className="row"><h2>今週の学習状況</h2><span className="small">連続 {streak}日</span></div><div className="summaryGrid"><Stat label="正解率" value={`${totalAttempts ? Math.round(totalCorrect / totalAttempts * 100) : 0}%`} /><Stat label="学習時間" value={`${totalMinutes}分`} /><Stat label="苦手項目" value={`${progress.difficult.length}件`} /></div><div className="weeklyChart" aria-label="直近7日間の学習時間">{stats.map((item, index) => <div className="chartDay" key={item.date}><i style={{ height: `${Math.max(4, Math.round(item.minutes / maxMinutes * 70))}px` }} /><span>{["日", "月", "火", "水", "木", "金", "土"][new Date(`${item.date}T12:00:00`).getDay()]}</span></div>)}</div></section>;
+  return <section className="card weeklyCard"><div className="row"><h2>今週の学習状況</h2><span className="small">連続 {streak}日</span></div><div className="summaryGrid"><Stat label="正解率" value={`${totalAttempts ? Math.round(totalCorrect / totalAttempts * 100) : 0}%`} /><Stat label="学習時間" value={`${Math.round(totalMinutes * 10) / 10}分`} /><Stat label="苦手項目" value={`${progress.difficult.length}件`} /></div><div className="weeklyChart" aria-label="直近7日間の学習時間">{stats.map((item, index) => <div className="chartDay" key={item.date}><i style={{ height: `${Math.max(4, Math.round(item.minutes / maxMinutes * 70))}px` }} /><span>{["日", "月", "火", "水", "木", "金", "土"][new Date(`${item.date}T12:00:00`).getDay()]}</span></div>)}</div></section>;
 }
 
 function VocabularyView({ progress, onResult, copy, read }: { progress: Progress; onResult: (id: string, remembered: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {
@@ -345,9 +361,9 @@ function PhraseStudyView({ progress, onAnswer, read, copy }: { progress: Progres
   const start = () => { const next = prioritizedItems(available, progress, "phrase"); setQueue(next); setPosition(0); setAnswer(null); if (next[0]) read(next[0].sentence_en, audioKey("phrase", next[0].id)); };
   const next = () => { const nextPosition = position + 1; const nextQueue = nextPosition < queue.length ? queue : prioritizedItems(available, progress, "phrase"); const actualPosition = nextPosition < nextQueue.length ? nextPosition : 0; setQueue(nextQueue); setPosition(actualPosition); setAnswer(null); const nextItem = nextQueue[actualPosition]; if (nextItem) read(nextItem.sentence_en, audioKey("phrase", nextItem.id)); };
   const choose = (choice: string) => { if (!item || answer) return; setAnswer(choice); onAnswer("phrase", item.id, choice === item.meaning_ja); };
-  const choices = item ? shuffle([item.meaning_ja, ...shuffle(phrases.filter(other => other.id !== item.id).map(other => other.meaning_ja)).slice(0, 2)]) : [];
+  const choices = useMemo(() => item ? shuffle([item.meaning_ja, ...shuffle(phrases.filter(other => other.id !== item.id).map(other => other.meaning_ja)).slice(0, 2)]) : [], [item]);
   if (!item) return <section className="card sessionStart"><span className="tag">ランダム＋復習優先</span><h2>会議フレーズを1問ずつ練習</h2><p className="meaning">次へ進むと、次のフレーズをすぐ読み上げます。間違えたフレーズは復習期限順に優先します。</p><div className="studyFilters"><LevelSelect value={level} onChange={setLevel} all /><label className="fieldLabel">場面<select value={group} onChange={event => setGroup(event.target.value)}><option value="all">すべての場面</option>{groups.map(name => <option key={name} value={name}>{name}</option>)}</select></label></div><p className="reviewHint">今日が期限の会議フレーズ：<b>{dueReviews(progress, "phrase").length}件</b></p><button className="primaryButton" onClick={start}>▶ フレーズ学習を開始</button></section>;
-  return <article className="card focusCard"><div className="row"><span className="tag">{item.function} · {labels[item.level]}</span><span className="counter">{position + 1} / {queue.length}</span></div><div className="shownSentence"><h2>{item.sentence_en}</h2><p>{item.meaning_ja}</p></div><div className="actions"><button onClick={() => read(item.sentence_en, audioKey("phrase", item.id))}>🔊 もう一度</button><button onClick={() => copy(phrasePrompt(item))}>🎙 ChatGPTで練習</button></div><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? choice === item.meaning_ja ? "correct" : choice === answer ? "incorrect" : "" : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === item.meaning_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{item.meaning_ja}</p><p className="explanation">重要表現：{item.sentence_en}</p></div>}{answer && <button className="nextButton" onClick={next}>次のフレーズへ → <small>すぐ読み上げます</small></button>}</article>;
+  return <article className="card focusCard"><div className="row"><span className="tag">{item.function} · {labels[item.level]}</span><span className="counter">{position + 1} / {queue.length}</span></div><div className="shownSentence"><h2>{item.sentence_en}</h2></div><div className="actions"><button onClick={() => read(item.sentence_en, audioKey("phrase", item.id))}>🔊 もう一度</button><button onClick={() => copy(phrasePrompt(item))}>🎙 ChatGPTで練習</button></div><div className="choices">{choices.map(choice => <button key={choice} disabled={!!answer} className={answer ? choice === item.meaning_ja ? "correct" : choice === answer ? "incorrect" : "" : ""} onClick={() => choose(choice)}>{choice}</button>)}</div>{answer && <div className="answer"><b>{answer === item.meaning_ja ? "正解！" : "もう一度確認しましょう。"}</b><p>正解：{item.meaning_ja}</p><p className="explanation">重要表現：{item.sentence_en}</p></div>}{answer && <button className="nextButton" onClick={next}>次のフレーズへ → <small>すぐ読み上げます</small></button>}</article>;
 }
 
 function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; readMeeting: (dialogue: MeetingListening["dialogue"], meetingId?: string, lineIndex?: number) => void; stopReading: () => void }) {
@@ -392,129 +408,10 @@ function MeetingListeningView({ progress, onAnswer, readMeeting, stopReading }: 
   </article>;
 }
 
-function ListeningView({ progress, onAnswer, copy, read, stopReading }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => void; stopReading: () => void }) {
+function ListeningView({ progress, onAnswer, copy, read, stopReading, manifest, onCommuteChange, onPlaying, onStudySeconds, stopOtherAudio }: { manifest: AudioManifest; onCommuteChange: (update: (current: CommuteProgress) => CommuteProgress) => void; onPlaying: (playing: boolean) => void; onStudySeconds: (seconds: number) => void; stopOtherAudio: () => void; progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => void; stopReading: () => void }) {
   const [mode, setMode] = useState<"commute" | "all">("commute");
   const changeMode = (next: "commute" | "all") => { stopReading(); setMode(next); };
-  return <><ViewTitle title="Listening" text="通勤中は約4分の長文を連続・繰り返し再生。あとで40問の理解度チェックもできます。" /><div className="modeSwitch"><button className={mode === "commute" ? "selected" : ""} onClick={() => changeMode("commute")}>🚆 通勤聞き流し</button><button className={mode === "all" ? "selected" : ""} onClick={() => changeMode("all")}>理解度チェック</button></div>{mode === "commute" ? <CommutingListeningView read={read} stopReading={stopReading} /> : <GeneralListeningView progress={progress} onAnswer={onAnswer} copy={copy} read={read} />}</>;
-}
-
-function CommutingListeningView({ read, stopReading }: { read: (text: string, key?: string, onEnded?: () => void, onProgress?: (progress: PlaybackProgress) => void) => void; stopReading: () => void }) {
-  type PlayMode = "once" | "repeat" | "continuous";
-  type EnglishMode = "hidden" | "focus" | "full";
-  const [courseId, setCourseId] = useState(commutingCourses[0]?.id ?? "");
-  const [playMode, setPlayMode] = useState<PlayMode>("continuous");
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-  const [englishMode, setEnglishMode] = useState<EnglishMode>("hidden");
-  const [playbackProgress, setPlaybackProgress] = useState<PlaybackProgress>({ currentTime: 0, duration: 0 });
-  const course = commutingCourses.find(entry => entry.id === courseId) ?? commutingCourses[0];
-  const narration = commutingNarrations.find(entry => entry.course_id === courseId) ?? commutingNarrations[0];
-  const selectedIndex = Math.max(0, commutingNarrations.findIndex(entry => entry.course_id === courseId));
-  const currentNarration = playingIndex === null ? narration : commutingNarrations[playingIndex];
-  const sentences = useMemo(() => currentNarration?.narration_en.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(sentence => sentence.trim()).filter(Boolean) ?? [], [currentNarration]);
-  const currentSentenceIndex = useMemo(() => {
-    if (!sentences.length || !playbackProgress.duration) return 0;
-    const wordCounts = sentences.map(sentence => Math.max(1, sentence.split(/\s+/).length));
-    const totalWords = wordCounts.reduce((sum, count) => sum + count, 0);
-    const targetWord = Math.min(1, Math.max(0, playbackProgress.currentTime / playbackProgress.duration)) * totalWords;
-    let cumulative = 0;
-    for (let index = 0; index < wordCounts.length; index += 1) {
-      cumulative += wordCounts[index];
-      if (targetWord < cumulative) return index;
-    }
-    return sentences.length - 1;
-  }, [sentences, playbackProgress]);
-
-  const playTrack = (index: number, mode = playMode) => {
-    const target = commutingNarrations[index];
-    if (!target) return;
-    setCourseId(target.course_id);
-    setPlayingIndex(index);
-    setShowDetails(false);
-    setPlaybackProgress({ currentTime: 0, duration: 0 });
-    read(target.narration_en, commutingAudioKey(target.id), () => {
-      if (mode === "repeat") playTrack(index, mode);
-      if (mode === "continuous") playTrack((index + 1) % commutingNarrations.length, mode);
-    }, setPlaybackProgress);
-  };
-  const stopPlayer = () => {
-    stopReading();
-    setPlayingIndex(null);
-    setPlaybackProgress({ currentTime: 0, duration: 0 });
-  };
-  if (!course) return null;
-
-  return <section className="card sessionStart commuteStart">
-    <div className="row"><span className="tag">ハンズフリー長文Listening</span><span className="counter">全5本・1周約15〜20分</span></div>
-    <h2>{playingIndex === null ? "開始するコースを選択" : currentNarration?.title_ja}</h2>
-    {playingIndex === null ? <>
-      <p className="meaning">長文は1本約3〜4分（標準速度の目安）です。{commutingCourses.length}コース連続ループまたは同じコースの繰り返しなら、再生開始後の操作は不要です。</p>
-      <div className="commuteCourseGrid">{commutingCourses.map((entry, index) => <button key={entry.id} className={courseId === entry.id ? "selected" : ""} onClick={() => setCourseId(entry.id)}><span>{index + 1}</span><strong>{entry.title_ja}</strong><small>{entry.description_ja}</small><em>長文 約{commutingNarrations.find(item => item.course_id === entry.id)?.duration_min ?? 3}分</em></button>)}</div>
-      <div className="selectedCourse"><b>{narration?.title_ja}</b><span>{narration?.summary_ja}</span></div>
-      <div className="playModeSelect" aria-label="再生方法"><button className={playMode === "once" ? "selected" : ""} onClick={() => setPlayMode("once")}>1回だけ</button><button className={playMode === "repeat" ? "selected" : ""} onClick={() => setPlayMode("repeat")}>同じ内容を繰り返す</button><button className={playMode === "continuous" ? "selected" : ""} onClick={() => setPlayMode("continuous")}>{commutingCourses.length}コース連続ループ</button></div>
-      <button className="primaryButton" onClick={() => playTrack(selectedIndex)}>▶ ハンズフリー再生を開始</button>
-      <p className="small">開始後は上部の「一時停止／再開／停止」だけで操作できます。</p>
-    </> : <>
-      <div className="audioOnly commuteAudio"><span>🎧</span><p>{playMode === "repeat" ? "このコースを自動で繰り返します。" : playMode === "continuous" ? "終了すると次のコースを自動再生し、5本目の後は1本目へ戻ります。" : "このコースを1回再生します。"}</p></div>
-      <div className="handsFreeControls">
-        <button onClick={() => playTrack(playingIndex, playMode)}>↻ 最初から</button>
-        <button onClick={() => playTrack((playingIndex + 1) % commutingNarrations.length, playMode)}>次のコースへ</button>
-        <button className={englishMode === "focus" ? "selected" : ""} onClick={() => setEnglishMode(value => value === "focus" ? "hidden" : "focus")}>{englishMode === "focus" ? "3文表示を閉じる" : "前後3文を表示"}</button>
-        <button className={englishMode === "full" ? "selected" : ""} onClick={() => setEnglishMode(value => value === "full" ? "hidden" : "full")}>{englishMode === "full" ? "英文全文を隠す" : "英文全文を表示"}</button>
-        <button onClick={() => setShowDetails(value => !value)}>{showDetails ? "解説を隠す" : "日本語解説"}</button>
-      </div>
-      {englishMode === "focus" && currentNarration && <RollingTranscript key={currentNarration.id} sentences={sentences} currentIndex={currentSentenceIndex} />}
-      {(showDetails || englishMode === "full") && currentNarration && <div className="narrationDetails">
-        {showDetails && <><h3>日本語概要</h3><p>{currentNarration.summary_ja}</p><h3>重要表現</h3><ul>{currentNarration.key_points_ja.map(point => <li key={point}>{point}</li>)}</ul></>}
-        {englishMode === "full" && <><h3>English Transcript</h3><p className="narrationEnglish">{currentNarration.narration_en}</p></>}
-      </div>}
-      <button className="textButton" onClick={stopPlayer}>コース選択へ戻る</button>
-    </>}
-  </section>;
-}
-
-function RollingTranscript({ sentences, currentIndex }: { sentences: string[]; currentIndex: number }) {
-  const viewport = useRef<HTMLDivElement>(null);
-  const reel = useRef<HTMLDivElement>(null);
-  const previousIndex = useRef(currentIndex);
-  const initialized = useRef(false);
-  const [position, setPosition] = useState({ offset: 0, animate: false });
-
-  useLayoutEffect(() => {
-    const frame = viewport.current;
-    const content = reel.current;
-    if (!frame || !content) return;
-    const measure = (animate: boolean) => {
-      const active = content.children[currentIndex] as HTMLElement | undefined;
-      if (!active) return;
-      setPosition({
-        offset: frame.clientHeight / 2 - active.offsetTop - active.offsetHeight / 2,
-        animate,
-      });
-    };
-    // Opening the view, rewinding and changing courses must not fly through old text.
-    measure(initialized.current && currentIndex > previousIndex.current);
-    initialized.current = true;
-    previousIndex.current = currentIndex;
-    let dimensions = [frame.clientWidth, frame.clientHeight, content.offsetHeight].join(":");
-    const observer = new ResizeObserver(() => {
-      const next = [frame.clientWidth, frame.clientHeight, content.offsetHeight].join(":");
-      if (next !== dimensions) { dimensions = next; measure(false); }
-    });
-    observer.observe(frame);
-    observer.observe(content);
-    return () => observer.disconnect();
-  }, [currentIndex, sentences]);
-
-  return <section className="syncedTranscript" aria-label="自動スクロール英文">
-    <div className="syncedTranscriptHead"><b>下から上へ自動スクロール</b><span>{currentIndex + 1} / {sentences.length}</span></div>
-    <div className="transcriptViewport" ref={viewport}>
-      <div className={position.animate ? "transcriptReel moving" : "transcriptReel"} ref={reel} style={{ transform: `translateY(${position.offset}px)` }}>
-        {sentences.map((sentence, index) => <p key={index} lang="en" aria-current={index === currentIndex ? "true" : undefined} className={index === currentIndex ? "current" : "neighbor"}>{sentence}</p>)}
-      </div>
-    </div>
-    <small className="small">中央の強調文に追従します（音声時刻と文の長さから推定）。</small>
-  </section>;
+  return <><ViewTitle title="Listening" text={`全${commutingNarrations.length}本の長文を連続・繰り返し再生。各教材に任意の3問確認付き。`} /><div className="modeSwitch"><button className={mode === "commute" ? "selected" : ""} onClick={() => changeMode("commute")}>🚆 通勤聞き流し</button><button className={mode === "all" ? "selected" : ""} onClick={() => changeMode("all")}>理解度チェック</button></div>{mode === "commute" ? <CommutePlayer manifest={manifest} rate={progress.playbackRate} progress={progress.commute} onChange={onCommuteChange} onPlaying={onPlaying} onStudySeconds={onStudySeconds} stopOtherAudio={stopOtherAudio} /> : <GeneralListeningView progress={progress} onAnswer={onAnswer} copy={copy} read={read} />}</>;
 }
 
 function GeneralListeningView({ progress, onAnswer, copy, read }: { progress: Progress; onAnswer: (kind: ItemKind, id: string, correct: boolean) => void; copy: (text: string) => void; read: (text: string, key?: string) => void }) {

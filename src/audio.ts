@@ -3,6 +3,7 @@ export type AudioManifest = {
   generatedAt?: string;
   provider?: string;
   items: Record<string, string>;
+  commutingSegments?: Record<string, { key: string; text: string; duration: number }[]>;
 };
 
 export const audioKey = (kind: "vocabulary" | "phrase" | "listening", id: string) => `${kind}:${id}`;

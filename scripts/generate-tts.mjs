@@ -1,5 +1,7 @@
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { createHash } from "node:crypto";
+import { mp3Duration } from "./mp3-duration.mjs";
 
 const root = process.cwd();
 const publicAudio = path.join(root, "public", "audio");
@@ -27,6 +29,13 @@ for (const item of vocabulary) jobs.push({ key: `vocabulary:${item.id}`, text: `
 for (const item of phrases) jobs.push({ key: `phrase:${item.id}`, text: item.sentence_en, voice: voices.primary, file: `phrase/${item.id}.mp3` });
 for (const item of listening) jobs.push({ key: `listening:${item.id}`, text: item.sentence_en, voice: voices.primary, file: `listening/${item.id}.mp3` });
 for (const item of commutingNarrations) jobs.push({ key: `commuting:${item.id}`, text: item.narration_en, voice: voices.primary, file: `commuting/${item.id}.mp3` });
+for (const item of commutingNarrations) {
+  const sentences = item.narration_en.match(/[^.!?]+[.!?]+|[^.!?]+$/g)?.map(s => s.trim()).filter(Boolean) ?? [];
+  for (const [index, text] of sentences.entries()) {
+    const hash = createHash("sha256").update(`${voices.primary}\n${text}`).digest("hex").slice(0, 12);
+    jobs.push({ key: `commuting-segment:${item.id}:${index}`, text, voice: voices.primary, file: `commuting-segments/${item.id}-${index}-${hash}.mp3`, narrationId: item.id, index });
+  }
+}
 for (const meeting of meetings) {
   const speakers = [...new Set(meeting.dialogue.map(line => line.speaker))];
   for (const [lineIndex, line] of meeting.dialogue.entries()) {
@@ -47,7 +56,7 @@ if (process.argv.includes("--dry-run")) {
 }
 
 await mkdir(publicAudio, { recursive: true });
-const manifest = { version: 1, generatedAt: new Date().toISOString(), provider: "Azure Speech neural TTS", items: {} };
+const manifest = { version: 1, generatedAt: new Date().toISOString(), provider: "Azure Speech neural TTS", items: {}, commutingSegments: {} };
 if (!key || !region) {
   if (process.argv.includes("--require-complete")) throw new Error("Azure Speech configuration missing; refusing to deploy without natural audio.");
   await writeFile(manifestPath, JSON.stringify(manifest, null, 2) + "\n");
@@ -92,6 +101,11 @@ const worker = async () => {
     const job = jobs[next++];
     try {
       await synthesize(job);
+      if (job.narrationId) {
+        const duration = mp3Duration(await readFile(path.join(publicAudio, job.file)));
+        manifest.commutingSegments[job.narrationId] ??= [];
+        manifest.commutingSegments[job.narrationId][job.index] = { key: job.key, text: job.text, duration };
+      }
       manifest.items[job.key] = `./audio/${job.file}`;
     } catch (error) {
       failed += 1;
