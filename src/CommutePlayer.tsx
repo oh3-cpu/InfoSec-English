@@ -186,10 +186,10 @@ export default function CommutePlayer(props: Props) {
     {error && <p className="commuteError" role="alert">{error}</p>}
     {props.progress.resume && status === "idle" && <button className="primaryButton" onClick={resume}>{session?.completed ? "▶ 前回の内容をもう一度" : "▶ 前回の続きから再生"}</button>}
     <div className="commuteSetup">
-      <label>テーマ<select value={theme} onChange={event => { setTheme(event.target.value); const n = commutingNarrations.find(n => event.target.value === "すべて" || studies[n.id]?.theme === event.target.value); if (n) setSelected(n.id); }}><option>すべて</option>{[...new Set(Object.values(studies).map(study => study.theme))].map(t => <option key={t}>{t}</option>)}</select></label>
-      <label>開始する教材<select value={selected} onChange={event => setSelected(event.target.value)}>{available.map(n => <option value={n.id} key={n.id}>{n.title_ja}</option>)}</select></label>
-      <label>再生方法<select value={mode} onChange={event => setMode(event.target.value as CommuteMode)}><option value="continuous">テーマ内の教材を連続ループ</option><option value="once">選んだ教材を1回</option><option value="repeat">選んだ教材を繰り返す</option><option value="staged">4段階の聞き取り練習</option><option value="timed">通勤時間に合わせる</option></select></label>
-      {mode === "timed" && <label>学習時間<select value={minutes} onChange={event => setMinutes(Number(event.target.value))}>{[15, 30, 45].map(m => <option value={m} key={m}>約{m}分</option>)}</select></label>}
+      <label>テーマ<select aria-label="テーマ" value={theme} onChange={event => { setTheme(event.target.value); const n = commutingNarrations.find(n => event.target.value === "すべて" || studies[n.id]?.theme === event.target.value); if (n) setSelected(n.id); }}><option>すべて</option>{[...new Set(Object.values(studies).map(study => study.theme))].map(t => <option key={t}>{t}</option>)}</select></label>
+      <label>開始する教材<select aria-label="開始する教材" value={selected} onChange={event => setSelected(event.target.value)}>{available.map(n => <option value={n.id} key={n.id}>{n.title_ja}</option>)}</select></label>
+      <label>再生方法<select aria-label="再生方法" value={mode} onChange={event => setMode(event.target.value as CommuteMode)}><option value="continuous">テーマ内の教材を連続ループ</option><option value="once">選んだ教材を1回</option><option value="repeat">選んだ教材を繰り返す</option><option value="staged">4段階の聞き取り練習</option><option value="timed">通勤時間に合わせる</option></select></label>
+      {mode === "timed" && <label>学習時間<select aria-label="学習時間" value={minutes} onChange={event => setMinutes(Number(event.target.value))}>{[15, 30, 45].map(m => <option value={m} key={m}>約{m}分</option>)}</select></label>}
       <button className="primaryButton" onClick={() => start()}>▶ 選んだ内容で開始</button>
       <p className="small">時間指定は現在の再生速度を考慮します。指定時間を過ぎた文の終わりで停止します。</p>
     </div>
