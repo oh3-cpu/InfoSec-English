@@ -22,6 +22,8 @@ jobs:
         run: node scripts/validate-content-expansion.mjs
       - name: Validate audio inventory without generating MP3
         run: npm run generate:tts -- --dry-run
+      - name: Validate example translations
+        run: node scripts/validate-example-translations.mjs
       - name: Build application
         run: npm run build
       - name: Test audio updates and playback controls
