@@ -2,7 +2,7 @@
 // they are written to dist, never committed or used by the deployment workflow.
 import { chromium } from "playwright";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { execFileSync } from "node:child_process";
+import { gunzipSync } from "node:zlib";
 import { createServer } from "node:http";
 import path from "node:path";
 import assert from "node:assert/strict";
@@ -10,7 +10,8 @@ const root = process.cwd(), dist = path.join(root, "dist");
 const json = async name => JSON.parse(await readFile(path.join(root, "content/infosec_english_content_pack", name + ".json"), "utf8"));
 const narrations = [...await json("commuting_narrations"), ...(await json("content_expansion_202609")).commutingNarrations];
 const studies = await json("commute_study");
-const bytes = execFileSync("ffmpeg", ["-hide_banner", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "3", "-b:a", "160k", "-f", "mp3", "pipe:1"]);
+// Three seconds of silent MPEG-2 Layer III audio (24 kHz, 160 kbps), compressed fixture.
+const bytes = gunzipSync(Buffer.from("H4sIAAAAAAACA+3SP0jUYRgH8BcNiQYTcQgJBzscJI47Lg5pCA0NLxTEPw0SYhRHg1g0iIhgRINENEREQ1SDiDSEiIOEiIg0SESDiDhIREREw6HiIP7pdwrZmkODfL7L877wwvs87+fN1KdOhHzOtbe1NUT1dAiFTTf6sulEPJmOJxOJcJi99W+zfzaZ3uydg/NhKIRcCEUnTxWXlJadKT9bURmrqj4fT1xI11y8VHv5SuPVppbW9mud17u6b2Vv9/TevdfXPzB4/8HD4UePnzx99vzFy1dvRkbH3r4bn5icej89Mzf/YeHjp8+LS8srq1++fv/x81dubWNza3s3f2/U3M2ouVTyr8ZCrKD2YJELr8d24kGOksh3PiqFjfvvXNfckMp/gI7jk+M40z+EL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL1++fPny5cuXL9//md8jM+v8LfAAAA==", "base64"));
 const manifest = { version: 1, items: {}, commutingSegments: {} };
 await mkdir(path.join(dist, "audio/commuting-segments"), { recursive: true });
 for (const n of narrations) {
@@ -41,7 +42,7 @@ await page.addInitScript(() => {
   window.Audio = function(src) { const player = new NativeAudio(src); window.__audios.push(player); return player; };
 });
 const saved = () => page.evaluate(() => JSON.parse(localStorage.getItem("infosec-english-progress-v1")));
-const listening = () => page.getByRole("button", { name: "◉ 聞き取り" }).click();
+const listening = () => page.locator("nav").getByRole("button", { name: /聞き取り/ }).click();
 try {
   await page.goto("http://127.0.0.1:4179/InfoSec-English/");
   await page.waitForFunction(() => navigator.serviceWorker.controller);
