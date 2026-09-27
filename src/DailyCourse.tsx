@@ -47,7 +47,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
   const [choices, setChoices] = useState<string[]>([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [showTranscript, setShowTranscript] = useState(false);
-  const [startedAt, setStartedAt] = useState(0);
+  const [startedMinutes, setStartedMinutes] = useState(0);
   const [stats, setStats] = useState<Stats>({ correct: 0, attempts: 0, known: [], difficult: [] });
   const [summary, setSummary] = useState<SessionSummary | null>(null);
 
@@ -62,7 +62,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
     setMeetingQueue(meetingItems);
     setPosition(0);
     setStats({ correct: 0, attempts: 0, known: [], difficult: [] });
-    setStartedAt(Date.now());
+    setStartedMinutes(progress.minutes);
     setStage(words[0] ? "vocabulary" : phraseItems[0] ? "phrase" : listeningItems[0] ? "listening" : "summary");
     onLevel(level);
     if (words[0]) read(`${words[0].term_en}. ${words[0].example_en}`, audioKey("vocabulary", words[0].id));
@@ -101,7 +101,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       read(`${next.term_en}. ${next.example_en}`, audioKey("vocabulary", next.id));
     } else if (phraseQueue[0]) startPhrase();
     else if (listeningQueue[0]) { setStage("listening"); setPosition(0); setAnswer(null); setChoices(shuffle(listeningQueue[0].choices_ja)); read(listeningQueue[0].sentence_en, audioKey("listening", listeningQueue[0].id)); }
-    else { const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes: Math.max(1, Math.ceil((Date.now() - startedAt) / 60000)), correct: stats.correct, attempts: stats.attempts, knownWords: stats.known.length, difficultItems: stats.difficult.length, recommendation: "次回も期限が来た苦手項目を優先して復習しましょう。" }; setSummary(result); setStage("summary"); onFinish(result); }
+    else { const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes: Math.max(0, Math.round((progress.minutes - startedMinutes) * 10) / 10), correct: stats.correct + Number(remembered), attempts: stats.attempts + 1, knownWords: new Set([...stats.known, ...(remembered ? [item.id] : [])]).size, difficultItems: new Set([...stats.difficult, ...(!remembered ? [item.id] : [])]).size, recommendation: "次回も期限が来た苦手項目を優先して復習しましょう。" }; setSummary(result); setStage("summary"); onFinish(result); }
   };
 
   const answerItem = (kind: "phrase" | "listening", item: Phrase | Listening, selected: string, correctText: string) => {
@@ -122,7 +122,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       return;
     }
     const first = listeningQueue[0];
-    if (!first && reviewOnly) { const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes: Math.max(1, Math.ceil((Date.now() - startedAt) / 60000)), correct: stats.correct, attempts: stats.attempts, knownWords: stats.known.length, difficultItems: stats.difficult.length, recommendation: "次回も期限が来た苦手項目を優先して復習しましょう。" }; setSummary(result); setStage("summary"); onFinish(result); return; }
+    if (!first && reviewOnly) { const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes: Math.max(0, Math.round((progress.minutes - startedMinutes) * 10) / 10), correct: stats.correct, attempts: stats.attempts, knownWords: stats.known.length, difficultItems: stats.difficult.length, recommendation: "次回も期限が来た苦手項目を優先して復習しましょう。" }; setSummary(result); setStage("summary"); onFinish(result); return; }
     setStage("listening");
     setPosition(0);
     setAnswer(null);
@@ -142,7 +142,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       return;
     }
     if (reviewOnly) {
-      const elapsedMinutes = Math.max(1, Math.ceil((Date.now() - startedAt) / 60000));
+      const elapsedMinutes = Math.max(0, Math.round((progress.minutes - startedMinutes) * 10) / 10);
       const accuracy = stats.attempts ? Math.round(stats.correct / stats.attempts * 100) : 0;
       const result: SessionSummary = { completedAt: new Date().toISOString(), elapsedMinutes, correct: stats.correct, attempts: stats.attempts, knownWords: stats.known.length, difficultItems: stats.difficult.length, recommendation: accuracy >= 85 ? "次回は通常の30分コースに進みましょう。" : "次回も期限が来た苦手項目を優先して復習しましょう。" };
       setSummary(result); setStage("summary"); onFinish(result); return;
@@ -179,7 +179,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
       setChoices(shuffle(meeting.questions[nextIndex].choices_ja));
       return;
     }
-    const elapsedMinutes = Math.max(1, Math.ceil((Date.now() - startedAt) / 60000));
+    const elapsedMinutes = Math.max(0, Math.round((progress.minutes - startedMinutes) * 10) / 10);
     const accuracy = stats.attempts ? Math.round(stats.correct / stats.attempts * 100) : 0;
     const recommendation = accuracy >= 85
       ? "次回は1つ上の難易度、または会議全体リスニングを重点的に進めましょう。"
