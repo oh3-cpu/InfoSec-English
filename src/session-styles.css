@@ -831,3 +831,20 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.exampleTranslation {
+  color: #305c62;
+  font-size: .92rem;
+  line-height: 1.7;
+  margin: -4px 0 16px;
+  padding-left: 12px;
+  border-left: 3px solid #b7dedb;
+  overflow-wrap: anywhere;
+}
+.exampleTranslation span {
+  display: block;
+  color: #42676c;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}

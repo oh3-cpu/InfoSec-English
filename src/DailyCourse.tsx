@@ -232,7 +232,7 @@ export default function DailyCourse({ progress, read, readMeeting, onVocabulary,
         <span className="tag">{item.category_ja} · {labels[item.level]}</span>
         <h2 className="focusWord">{item.term_en}</h2>
         <p className="meaning">{item.meaning_ja}</p>
-        <p className="example">{item.example_en}</p>
+        <p className="example">{item.example_en}</p><p className="exampleTranslation" lang="ja"><span>例文の意味</span>{item.example_ja}</p>
         <button onClick={() => read(`${item.term_en}. ${item.example_en}`, audioKey("vocabulary", item.id))}>🔊 もう一度聞く</button>
         <div className="courseDecision">
           <button className="warning" onClick={() => wordResult(false)}>まだ苦手</button>

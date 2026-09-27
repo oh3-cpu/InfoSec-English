@@ -1,0 +1,3066 @@
+{
+  "vocab_0001": {
+    "example_en": "This asset requires follow-up by Friday.",
+    "example_ja": "この資産については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0002": {
+    "example_en": "We need to review the critical asset before the meeting.",
+    "example_ja": "会議の前に、重要資産を確認する必要があります。"
+  },
+  "vocab_0003": {
+    "example_en": "The security team is checking the threat.",
+    "example_ja": "セキュリティチームが脅威を確認しています。"
+  },
+  "vocab_0004": {
+    "example_en": "Please confirm the current threat actor.",
+    "example_ja": "現在の脅威アクターを確認してください。"
+  },
+  "vocab_0005": {
+    "example_en": "Please confirm the current attack vector.",
+    "example_ja": "現在の攻撃経路を確認してください。"
+  },
+  "vocab_0006": {
+    "example_en": "The security team is checking the attack surface.",
+    "example_ja": "セキュリティチームが攻撃対象領域を確認しています。"
+  },
+  "vocab_0007": {
+    "example_en": "This exposure requires follow-up by Friday.",
+    "example_ja": "この露出については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0008": {
+    "example_en": "Please confirm the current vulnerability.",
+    "example_ja": "現在の脆弱性を確認してください。"
+  },
+  "vocab_0009": {
+    "example_en": "We should document the exploit clearly.",
+    "example_ja": "攻撃コードについて、明確に文書化すべきです。"
+  },
+  "vocab_0010": {
+    "example_en": "The security team is checking the risk.",
+    "example_ja": "セキュリティチームがリスクを確認しています。"
+  },
+  "vocab_0011": {
+    "example_en": "Please confirm the current inherent risk.",
+    "example_ja": "現在の固有リスクを確認してください。"
+  },
+  "vocab_0012": {
+    "example_en": "We need to review the residual risk before the meeting.",
+    "example_ja": "会議の前に、残留リスクを確認する必要があります。"
+  },
+  "vocab_0013": {
+    "example_en": "We should document the likelihood clearly.",
+    "example_ja": "発生可能性について、明確に文書化すべきです。"
+  },
+  "vocab_0014": {
+    "example_en": "This impact requires follow-up by Friday.",
+    "example_ja": "この影響については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0015": {
+    "example_en": "The security team is checking the risk rating.",
+    "example_ja": "セキュリティチームがリスク評価レベルを確認しています。"
+  },
+  "vocab_0016": {
+    "example_en": "This risk assessment requires follow-up by Friday.",
+    "example_ja": "このリスク評価については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0017": {
+    "example_en": "Please confirm the current risk treatment.",
+    "example_ja": "現在のリスク対応を確認してください。"
+  },
+  "vocab_0018": {
+    "example_en": "We need to review the risk acceptance before the meeting.",
+    "example_ja": "会議の前に、リスク受容を確認する必要があります。"
+  },
+  "vocab_0019": {
+    "example_en": "This risk mitigation requires follow-up by Friday.",
+    "example_ja": "このリスク軽減については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0020": {
+    "example_en": "The security team is checking the risk appetite.",
+    "example_ja": "セキュリティチームがリスク許容度を確認しています。"
+  },
+  "vocab_0021": {
+    "example_en": "The control may affect the incident response plan.",
+    "example_ja": "管理策がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0022": {
+    "example_en": "Please confirm the current compensating control.",
+    "example_ja": "現在の代替管理策を確認してください。"
+  },
+  "vocab_0023": {
+    "example_en": "The control effectiveness may affect the incident response plan.",
+    "example_ja": "管理策の有効性がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0024": {
+    "example_en": "We should document the security posture clearly.",
+    "example_ja": "セキュリティ態勢について、明確に文書化すべきです。"
+  },
+  "vocab_0025": {
+    "example_en": "We need to review the security baseline before the meeting.",
+    "example_ja": "会議の前に、セキュリティ基準を確認する必要があります。"
+  },
+  "vocab_0026": {
+    "example_en": "The defense in depth may affect the incident response plan.",
+    "example_ja": "多層防御がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0027": {
+    "example_en": "Please confirm the current acceptable risk.",
+    "example_ja": "現在の許容可能なリスクを確認してください。"
+  },
+  "vocab_0028": {
+    "example_en": "This risk register requires follow-up by Friday.",
+    "example_ja": "このリスク登録簿については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0029": {
+    "example_en": "This policy exception requires follow-up by Friday.",
+    "example_ja": "このポリシー例外については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0030": {
+    "example_en": "We need to review the governance before the meeting.",
+    "example_ja": "会議の前に、ガバナンスを確認する必要があります。"
+  },
+  "vocab_0031": {
+    "example_en": "We should document the incident clearly.",
+    "example_ja": "インシデントについて、明確に文書化すべきです。"
+  },
+  "vocab_0032": {
+    "example_en": "We should document the security event clearly.",
+    "example_ja": "セキュリティイベントについて、明確に文書化すべきです。"
+  },
+  "vocab_0033": {
+    "example_en": "The alert may affect the incident response plan.",
+    "example_ja": "アラートがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0034": {
+    "example_en": "We need to review the triage before the meeting.",
+    "example_ja": "会議の前に、トリアージを確認する必要があります。"
+  },
+  "vocab_0035": {
+    "example_en": "We need to review the investigation before the meeting.",
+    "example_ja": "会議の前に、調査を確認する必要があります。"
+  },
+  "vocab_0036": {
+    "example_en": "Please confirm the current containment.",
+    "example_ja": "現在の封じ込めを確認してください。"
+  },
+  "vocab_0037": {
+    "example_en": "Please confirm the current eradication.",
+    "example_ja": "現在の根絶を確認してください。"
+  },
+  "vocab_0038": {
+    "example_en": "This recovery requires follow-up by Friday.",
+    "example_ja": "この復旧については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0039": {
+    "example_en": "The lessons learned may affect the incident response plan.",
+    "example_ja": "教訓がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0040": {
+    "example_en": "This root cause requires follow-up by Friday.",
+    "example_ja": "この根本原因については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0041": {
+    "example_en": "We need to review the timeline before the meeting.",
+    "example_ja": "会議の前に、時系列を確認する必要があります。"
+  },
+  "vocab_0042": {
+    "example_en": "Please confirm the current scope.",
+    "example_ja": "現在の範囲を確認してください。"
+  },
+  "vocab_0043": {
+    "example_en": "This severity requires follow-up by Friday.",
+    "example_ja": "この重大度については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0044": {
+    "example_en": "The priority may affect the incident response plan.",
+    "example_ja": "優先度がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0045": {
+    "example_en": "This escalation requires follow-up by Friday.",
+    "example_ja": "このエスカレーションについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0046": {
+    "example_en": "This incident commander requires follow-up by Friday.",
+    "example_ja": "このインシデント指揮官については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0047": {
+    "example_en": "The security team is checking the war room.",
+    "example_ja": "セキュリティチームが緊急対応会議室を確認しています。"
+  },
+  "vocab_0048": {
+    "example_en": "The security team is checking the bridge call.",
+    "example_ja": "セキュリティチームが緊急電話会議を確認しています。"
+  },
+  "vocab_0049": {
+    "example_en": "This status update requires follow-up by Friday.",
+    "example_ja": "この状況報告については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0050": {
+    "example_en": "The security team is checking the action item.",
+    "example_ja": "セキュリティチームが対応事項を確認しています。"
+  },
+  "vocab_0051": {
+    "example_en": "Please confirm the current owner.",
+    "example_ja": "現在の担当者を確認してください。"
+  },
+  "vocab_0052": {
+    "example_en": "We should document the deadline clearly.",
+    "example_ja": "期限について、明確に文書化すべきです。"
+  },
+  "vocab_0053": {
+    "example_en": "We should document the evidence clearly.",
+    "example_ja": "証拠について、明確に文書化すべきです。"
+  },
+  "vocab_0054": {
+    "example_en": "We need to review the chain of custody before the meeting.",
+    "example_ja": "会議の前に、証拠保全の記録を確認する必要があります。"
+  },
+  "vocab_0055": {
+    "example_en": "The security team is checking the forensic image.",
+    "example_ja": "セキュリティチームがフォレンジックイメージを確認しています。"
+  },
+  "vocab_0056": {
+    "example_en": "Please confirm the current indicator of compromise.",
+    "example_ja": "現在の侵害指標を確認してください。"
+  },
+  "vocab_0057": {
+    "example_en": "The security team is checking the compromise.",
+    "example_ja": "セキュリティチームが侵害を確認しています。"
+  },
+  "vocab_0058": {
+    "example_en": "The security team is checking the post-incident review.",
+    "example_ja": "セキュリティチームが事後レビューを確認しています。"
+  },
+  "vocab_0059": {
+    "example_en": "We should document the communication plan clearly.",
+    "example_ja": "連絡計画について、明確に文書化すべきです。"
+  },
+  "vocab_0060": {
+    "example_en": "Please confirm the current stakeholder notification.",
+    "example_ja": "現在の関係者通知を確認してください。"
+  },
+  "vocab_0061": {
+    "example_en": "Please confirm the current phishing.",
+    "example_ja": "現在のフィッシングを確認してください。"
+  },
+  "vocab_0062": {
+    "example_en": "The security team is checking the spear phishing.",
+    "example_ja": "セキュリティチームが標的型フィッシングを確認しています。"
+  },
+  "vocab_0063": {
+    "example_en": "We should document the whaling clearly.",
+    "example_ja": "経営層向けフィッシングについて、明確に文書化すべきです。"
+  },
+  "vocab_0064": {
+    "example_en": "We should document the business email compromise clearly.",
+    "example_ja": "ビジネスメール詐欺について、明確に文書化すべきです。"
+  },
+  "vocab_0065": {
+    "example_en": "The malicious attachment may affect the incident response plan.",
+    "example_ja": "悪意ある添付ファイルがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0066": {
+    "example_en": "We should document the malicious link clearly.",
+    "example_ja": "悪意あるリンクについて、明確に文書化すべきです。"
+  },
+  "vocab_0067": {
+    "example_en": "We need to review the sender before the meeting.",
+    "example_ja": "会議の前に、送信者を確認する必要があります。"
+  },
+  "vocab_0068": {
+    "example_en": "We should document the recipient clearly.",
+    "example_ja": "受信者について、明確に文書化すべきです。"
+  },
+  "vocab_0069": {
+    "example_en": "The security team is checking the spoofing.",
+    "example_ja": "セキュリティチームがなりすましを確認しています。"
+  },
+  "vocab_0070": {
+    "example_en": "The impersonation may affect the incident response plan.",
+    "example_ja": "なりすましがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0071": {
+    "example_en": "The quarantine may affect the incident response plan.",
+    "example_ja": "隔離がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0072": {
+    "example_en": "The security team is checking the email gateway.",
+    "example_ja": "セキュリティチームがメールゲートウェイを確認しています。"
+  },
+  "vocab_0073": {
+    "example_en": "This mail header requires follow-up by Friday.",
+    "example_ja": "このメールヘッダーについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0074": {
+    "example_en": "We should document the header analysis clearly.",
+    "example_ja": "メールヘッダー分析について、明確に文書化すべきです。"
+  },
+  "vocab_0075": {
+    "example_en": "This domain reputation requires follow-up by Friday.",
+    "example_ja": "このドメイン評価については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0076": {
+    "example_en": "We should document the URL reputation clearly.",
+    "example_ja": "URL評価について、明確に文書化すべきです。"
+  },
+  "vocab_0077": {
+    "example_en": "Please confirm the current user report.",
+    "example_ja": "現在の利用者報告を確認してください。"
+  },
+  "vocab_0078": {
+    "example_en": "We should document the credential harvesting clearly.",
+    "example_ja": "認証情報の窃取について、明確に文書化すべきです。"
+  },
+  "vocab_0079": {
+    "example_en": "We should document the lookalike domain clearly.",
+    "example_ja": "類似ドメインについて、明確に文書化すべきです。"
+  },
+  "vocab_0080": {
+    "example_en": "This typosquatting requires follow-up by Friday.",
+    "example_ja": "このタイポスクワッティングについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0081": {
+    "example_en": "This DMARC requires follow-up by Friday.",
+    "example_ja": "このDMARCについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0082": {
+    "example_en": "Please confirm the current DKIM.",
+    "example_ja": "現在のDKIMを確認してください。"
+  },
+  "vocab_0083": {
+    "example_en": "We need to review the SPF before the meeting.",
+    "example_ja": "会議の前に、SPFを確認する必要があります。"
+  },
+  "vocab_0084": {
+    "example_en": "This mail flow rule requires follow-up by Friday.",
+    "example_ja": "このメールフロールールについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0085": {
+    "example_en": "We should document the safe links clearly.",
+    "example_ja": "安全なリンク機能について、明確に文書化すべきです。"
+  },
+  "vocab_0086": {
+    "example_en": "The safe attachments may affect the incident response plan.",
+    "example_ja": "安全な添付ファイル機能がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0087": {
+    "example_en": "We need to review the campaign before the meeting.",
+    "example_ja": "会議の前に、キャンペーンを確認する必要があります。"
+  },
+  "vocab_0088": {
+    "example_en": "We need to review the takedown request before the meeting.",
+    "example_ja": "会議の前に、削除依頼を確認する必要があります。"
+  },
+  "vocab_0089": {
+    "example_en": "We should document the awareness training clearly.",
+    "example_ja": "意識向上教育について、明確に文書化すべきです。"
+  },
+  "vocab_0090": {
+    "example_en": "The security team is checking the report phishing button.",
+    "example_ja": "セキュリティチームがフィッシング報告ボタンを確認しています。"
+  },
+  "vocab_0091": {
+    "example_en": "The security team is checking the malware.",
+    "example_ja": "セキュリティチームがマルウェアを確認しています。"
+  },
+  "vocab_0092": {
+    "example_en": "The security team is checking the ransomware.",
+    "example_ja": "セキュリティチームがランサムウェアを確認しています。"
+  },
+  "vocab_0093": {
+    "example_en": "We should document the trojan clearly.",
+    "example_ja": "トロイの木馬について、明確に文書化すべきです。"
+  },
+  "vocab_0094": {
+    "example_en": "Please confirm the current worm.",
+    "example_ja": "現在のワームを確認してください。"
+  },
+  "vocab_0095": {
+    "example_en": "The spyware may affect the incident response plan.",
+    "example_ja": "スパイウェアがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0096": {
+    "example_en": "This keylogger requires follow-up by Friday.",
+    "example_ja": "このキーロガーについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0097": {
+    "example_en": "We should document the backdoor clearly.",
+    "example_ja": "バックドアについて、明確に文書化すべきです。"
+  },
+  "vocab_0098": {
+    "example_en": "We need to review the payload before the meeting.",
+    "example_ja": "会議の前に、ペイロードを確認する必要があります。"
+  },
+  "vocab_0099": {
+    "example_en": "We need to review the dropper before the meeting.",
+    "example_ja": "会議の前に、ドロッパーを確認する必要があります。"
+  },
+  "vocab_0100": {
+    "example_en": "This loader requires follow-up by Friday.",
+    "example_ja": "このローダーについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0101": {
+    "example_en": "We should document the command and control clearly.",
+    "example_ja": "C2について、明確に文書化すべきです。"
+  },
+  "vocab_0102": {
+    "example_en": "We need to review the C2 server before the meeting.",
+    "example_ja": "会議の前に、C2サーバーを確認する必要があります。"
+  },
+  "vocab_0103": {
+    "example_en": "The beaconing may affect the incident response plan.",
+    "example_ja": "ビーコン通信がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0104": {
+    "example_en": "The security team is checking the lateral movement.",
+    "example_ja": "セキュリティチームが横展開を確認しています。"
+  },
+  "vocab_0105": {
+    "example_en": "The security team is checking the persistence.",
+    "example_ja": "セキュリティチームが永続化を確認しています。"
+  },
+  "vocab_0106": {
+    "example_en": "The privilege escalation may affect the incident response plan.",
+    "example_ja": "権限昇格がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0107": {
+    "example_en": "The security team is checking the credential dumping.",
+    "example_ja": "セキュリティチームが認証情報ダンプを確認しています。"
+  },
+  "vocab_0108": {
+    "example_en": "We need to review the data exfiltration before the meeting.",
+    "example_ja": "会議の前に、データ持ち出しを確認する必要があります。"
+  },
+  "vocab_0109": {
+    "example_en": "Please confirm the current ransom note.",
+    "example_ja": "現在の身代金要求文を確認してください。"
+  },
+  "vocab_0110": {
+    "example_en": "The hash value may affect the incident response plan.",
+    "example_ja": "ハッシュ値がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0111": {
+    "example_en": "The security team is checking the sandbox.",
+    "example_ja": "セキュリティチームがサンドボックスを確認しています。"
+  },
+  "vocab_0112": {
+    "example_en": "The security team is checking the YARA rule.",
+    "example_ja": "セキュリティチームがYARAルールを確認しています。"
+  },
+  "vocab_0113": {
+    "example_en": "Please confirm the current signature.",
+    "example_ja": "現在のシグネチャを確認してください。"
+  },
+  "vocab_0114": {
+    "example_en": "This behavior analysis requires follow-up by Friday.",
+    "example_ja": "この振る舞い分析については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0115": {
+    "example_en": "We need to review the process injection before the meeting.",
+    "example_ja": "会議の前に、プロセスインジェクションを確認する必要があります。"
+  },
+  "vocab_0116": {
+    "example_en": "The memory dump may affect the incident response plan.",
+    "example_ja": "メモリダンプがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0117": {
+    "example_en": "The persistence mechanism may affect the incident response plan.",
+    "example_ja": "永続化メカニズムがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0118": {
+    "example_en": "This malware family requires follow-up by Friday.",
+    "example_ja": "このマルウェアファミリーについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0119": {
+    "example_en": "This reverse engineering requires follow-up by Friday.",
+    "example_ja": "このリバースエンジニアリングについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0120": {
+    "example_en": "Please confirm the current encryption routine.",
+    "example_ja": "現在の暗号化処理を確認してください。"
+  },
+  "vocab_0121": {
+    "example_en": "The security team is checking the patch.",
+    "example_ja": "セキュリティチームがパッチを確認しています。"
+  },
+  "vocab_0122": {
+    "example_en": "We should document the patch management clearly.",
+    "example_ja": "パッチ管理について、明確に文書化すべきです。"
+  },
+  "vocab_0123": {
+    "example_en": "The security team is checking the security update.",
+    "example_ja": "セキュリティチームがセキュリティ更新を確認しています。"
+  },
+  "vocab_0124": {
+    "example_en": "This zero-day vulnerability requires follow-up by Friday.",
+    "example_ja": "このゼロデイ脆弱性については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0125": {
+    "example_en": "We should document the known exploited vulnerability clearly.",
+    "example_ja": "既知悪用脆弱性について、明確に文書化すべきです。"
+  },
+  "vocab_0126": {
+    "example_en": "The security team is checking the CVE.",
+    "example_ja": "セキュリティチームがCVEを確認しています。"
+  },
+  "vocab_0127": {
+    "example_en": "The security team is checking the CVSS score.",
+    "example_ja": "セキュリティチームがCVSSスコアを確認しています。"
+  },
+  "vocab_0128": {
+    "example_en": "This proof of concept requires follow-up by Friday.",
+    "example_ja": "この概念実証コードについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0129": {
+    "example_en": "Please confirm the current exploit code.",
+    "example_ja": "現在の攻撃コードを確認してください。"
+  },
+  "vocab_0130": {
+    "example_en": "We should document the remediation clearly.",
+    "example_ja": "是正について、明確に文書化すべきです。"
+  },
+  "vocab_0131": {
+    "example_en": "We should document the workaround clearly.",
+    "example_ja": "回避策について、明確に文書化すべきです。"
+  },
+  "vocab_0132": {
+    "example_en": "This configuration issue requires follow-up by Friday.",
+    "example_ja": "この設定不備については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0133": {
+    "example_en": "We need to review the misconfiguration before the meeting.",
+    "example_ja": "会議の前に、誤設定を確認する必要があります。"
+  },
+  "vocab_0134": {
+    "example_en": "The security team is checking the unsupported system.",
+    "example_ja": "セキュリティチームがサポート終了システムを確認しています。"
+  },
+  "vocab_0135": {
+    "example_en": "Please confirm the current end of life.",
+    "example_ja": "現在のサポート終了を確認してください。"
+  },
+  "vocab_0136": {
+    "example_en": "We need to review the vulnerability scan before the meeting.",
+    "example_ja": "会議の前に、脆弱性スキャンを確認する必要があります。"
+  },
+  "vocab_0137": {
+    "example_en": "This authenticated scan requires follow-up by Friday.",
+    "example_ja": "この認証付きスキャンについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0138": {
+    "example_en": "We need to review the penetration test before the meeting.",
+    "example_ja": "会議の前に、侵入テストを確認する必要があります。"
+  },
+  "vocab_0139": {
+    "example_en": "This false positive requires follow-up by Friday.",
+    "example_ja": "この誤検知については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0140": {
+    "example_en": "We need to review the false negative before the meeting.",
+    "example_ja": "会議の前に、検知漏れを確認する必要があります。"
+  },
+  "vocab_0141": {
+    "example_en": "The exception request may affect the incident response plan.",
+    "example_ja": "例外申請がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0142": {
+    "example_en": "Please confirm the current maintenance window.",
+    "example_ja": "現在のメンテナンス時間を確認してください。"
+  },
+  "vocab_0143": {
+    "example_en": "Please confirm the current rollback plan.",
+    "example_ja": "現在の切り戻し計画を確認してください。"
+  },
+  "vocab_0144": {
+    "example_en": "We should document the change approval clearly.",
+    "example_ja": "変更承認について、明確に文書化すべきです。"
+  },
+  "vocab_0145": {
+    "example_en": "Please confirm the current emergency change.",
+    "example_ja": "現在の緊急変更を確認してください。"
+  },
+  "vocab_0146": {
+    "example_en": "The security team is checking the configuration drift.",
+    "example_ja": "セキュリティチームが設定ドリフトを確認しています。"
+  },
+  "vocab_0147": {
+    "example_en": "This secure configuration requires follow-up by Friday.",
+    "example_ja": "この安全な設定については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0148": {
+    "example_en": "We need to review the hardening before the meeting.",
+    "example_ja": "会議の前に、ハードニングを確認する必要があります。"
+  },
+  "vocab_0149": {
+    "example_en": "Please confirm the current attack path.",
+    "example_ja": "現在の攻撃経路を確認してください。"
+  },
+  "vocab_0150": {
+    "example_en": "We need to review the remediation plan before the meeting.",
+    "example_ja": "会議の前に、是正計画を確認する必要があります。"
+  },
+  "vocab_0151": {
+    "example_en": "We need to review the authentication before the meeting.",
+    "example_ja": "会議の前に、認証を確認する必要があります。"
+  },
+  "vocab_0152": {
+    "example_en": "The authorization may affect the incident response plan.",
+    "example_ja": "認可がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0153": {
+    "example_en": "The security team is checking the multi-factor authentication.",
+    "example_ja": "セキュリティチームが多要素認証を確認しています。"
+  },
+  "vocab_0154": {
+    "example_en": "The single sign-on may affect the incident response plan.",
+    "example_ja": "シングルサインオンがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0155": {
+    "example_en": "We need to review the identity provider before the meeting.",
+    "example_ja": "会議の前に、IDプロバイダーを確認する必要があります。"
+  },
+  "vocab_0156": {
+    "example_en": "This privileged account requires follow-up by Friday.",
+    "example_ja": "この特権アカウントについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0157": {
+    "example_en": "This privileged access management requires follow-up by Friday.",
+    "example_ja": "この特権アクセス管理については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0158": {
+    "example_en": "This least privilege requires follow-up by Friday.",
+    "example_ja": "この最小権限については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0159": {
+    "example_en": "This role-based access control requires follow-up by Friday.",
+    "example_ja": "このロールベースアクセス制御については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0160": {
+    "example_en": "We should document the attribute-based access control clearly.",
+    "example_ja": "属性ベースアクセス制御について、明確に文書化すべきです。"
+  },
+  "vocab_0161": {
+    "example_en": "We need to review the access review before the meeting.",
+    "example_ja": "会議の前に、アクセス権レビューを確認する必要があります。"
+  },
+  "vocab_0162": {
+    "example_en": "We should document the account lockout clearly.",
+    "example_ja": "アカウントロックについて、明確に文書化すべきです。"
+  },
+  "vocab_0163": {
+    "example_en": "The password reset may affect the incident response plan.",
+    "example_ja": "パスワードリセットがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0164": {
+    "example_en": "Please confirm the current credential.",
+    "example_ja": "現在の認証情報を確認してください。"
+  },
+  "vocab_0165": {
+    "example_en": "This service account requires follow-up by Friday.",
+    "example_ja": "このサービスアカウントについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0166": {
+    "example_en": "The security team is checking the inactive account.",
+    "example_ja": "セキュリティチームが休眠アカウントを確認しています。"
+  },
+  "vocab_0167": {
+    "example_en": "Please confirm the current orphaned account.",
+    "example_ja": "現在の孤立アカウントを確認してください。"
+  },
+  "vocab_0168": {
+    "example_en": "The joiner mover leaver process may affect the incident response plan.",
+    "example_ja": "入社・異動・退職管理がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0169": {
+    "example_en": "We should document the session timeout clearly.",
+    "example_ja": "セッションタイムアウトについて、明確に文書化すべきです。"
+  },
+  "vocab_0170": {
+    "example_en": "The security team is checking the conditional access.",
+    "example_ja": "セキュリティチームが条件付きアクセスを確認しています。"
+  },
+  "vocab_0171": {
+    "example_en": "We should document the password policy clearly.",
+    "example_ja": "パスワードポリシーについて、明確に文書化すべきです。"
+  },
+  "vocab_0172": {
+    "example_en": "Please confirm the current account takeover.",
+    "example_ja": "現在のアカウント乗っ取りを確認してください。"
+  },
+  "vocab_0173": {
+    "example_en": "The security team is checking the impossible travel.",
+    "example_ja": "セキュリティチームが不可能な移動を確認しています。"
+  },
+  "vocab_0174": {
+    "example_en": "The risky sign-in may affect the incident response plan.",
+    "example_ja": "危険なサインインがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0175": {
+    "example_en": "We should document the break-glass account clearly.",
+    "example_ja": "緊急用アカウントについて、明確に文書化すべきです。"
+  },
+  "vocab_0176": {
+    "example_en": "This access request requires follow-up by Friday.",
+    "example_ja": "このアクセス申請については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0177": {
+    "example_en": "Please confirm the current approval workflow.",
+    "example_ja": "現在の承認ワークフローを確認してください。"
+  },
+  "vocab_0178": {
+    "example_en": "This entitlement requires follow-up by Friday.",
+    "example_ja": "この権限付与については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0179": {
+    "example_en": "The deprovisioning may affect the incident response plan.",
+    "example_ja": "権限削除がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0180": {
+    "example_en": "Please confirm the current identity lifecycle.",
+    "example_ja": "現在のIDライフサイクルを確認してください。"
+  },
+  "vocab_0181": {
+    "example_en": "This firewall requires follow-up by Friday.",
+    "example_ja": "このファイアウォールについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0182": {
+    "example_en": "We should document the intrusion detection system clearly.",
+    "example_ja": "侵入検知システムについて、明確に文書化すべきです。"
+  },
+  "vocab_0183": {
+    "example_en": "The intrusion prevention system may affect the incident response plan.",
+    "example_ja": "侵入防止システムがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0184": {
+    "example_en": "We need to review the endpoint before the meeting.",
+    "example_ja": "会議の前に、エンドポイントを確認する必要があります。"
+  },
+  "vocab_0185": {
+    "example_en": "We need to review the endpoint detection and response before the meeting.",
+    "example_ja": "会議の前に、EDRを確認する必要があります。"
+  },
+  "vocab_0186": {
+    "example_en": "We need to review the antivirus before the meeting.",
+    "example_ja": "会議の前に、アンチウイルスを確認する必要があります。"
+  },
+  "vocab_0187": {
+    "example_en": "We should document the network segmentation clearly.",
+    "example_ja": "ネットワーク分離について、明確に文書化すべきです。"
+  },
+  "vocab_0188": {
+    "example_en": "This VPN requires follow-up by Friday.",
+    "example_ja": "このVPNについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0189": {
+    "example_en": "The proxy server may affect the incident response plan.",
+    "example_ja": "プロキシサーバーがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0190": {
+    "example_en": "We should document the DNS clearly.",
+    "example_ja": "DNSについて、明確に文書化すべきです。"
+  },
+  "vocab_0191": {
+    "example_en": "We should document the IP address clearly.",
+    "example_ja": "IPアドレスについて、明確に文書化すべきです。"
+  },
+  "vocab_0192": {
+    "example_en": "This port requires follow-up by Friday.",
+    "example_ja": "このポートについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0193": {
+    "example_en": "The packet capture may affect the incident response plan.",
+    "example_ja": "パケットキャプチャがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0194": {
+    "example_en": "This traffic requires follow-up by Friday.",
+    "example_ja": "この通信については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0195": {
+    "example_en": "The isolation may affect the incident response plan.",
+    "example_ja": "隔離がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0196": {
+    "example_en": "The security team is checking the blocklist.",
+    "example_ja": "セキュリティチームがブロックリストを確認しています。"
+  },
+  "vocab_0197": {
+    "example_en": "This allowlist requires follow-up by Friday.",
+    "example_ja": "この許可リストについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0198": {
+    "example_en": "Please confirm the current remote access.",
+    "example_ja": "現在のリモートアクセスを確認してください。"
+  },
+  "vocab_0199": {
+    "example_en": "We need to review the network flow before the meeting.",
+    "example_ja": "会議の前に、ネットワークフローを確認する必要があります。"
+  },
+  "vocab_0200": {
+    "example_en": "We should document the egress traffic clearly.",
+    "example_ja": "外向き通信について、明確に文書化すべきです。"
+  },
+  "vocab_0201": {
+    "example_en": "We should document the ingress traffic clearly.",
+    "example_ja": "内向き通信について、明確に文書化すべきです。"
+  },
+  "vocab_0202": {
+    "example_en": "This DDoS attack requires follow-up by Friday.",
+    "example_ja": "このDDoS攻撃については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0203": {
+    "example_en": "The rate limiting may affect the incident response plan.",
+    "example_ja": "レート制限がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0204": {
+    "example_en": "The security team is checking the web application firewall.",
+    "example_ja": "セキュリティチームがWAFを確認しています。"
+  },
+  "vocab_0205": {
+    "example_en": "The security team is checking the load balancer.",
+    "example_ja": "セキュリティチームがロードバランサーを確認しています。"
+  },
+  "vocab_0206": {
+    "example_en": "We need to review the TLS certificate before the meeting.",
+    "example_ja": "会議の前に、TLS証明書を確認する必要があります。"
+  },
+  "vocab_0207": {
+    "example_en": "This certificate authority requires follow-up by Friday.",
+    "example_ja": "この認証局については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0208": {
+    "example_en": "This network device requires follow-up by Friday.",
+    "example_ja": "このネットワーク機器については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0209": {
+    "example_en": "Please confirm the current firmware.",
+    "example_ja": "現在のファームウェアを確認してください。"
+  },
+  "vocab_0210": {
+    "example_en": "We should document the remote shell clearly.",
+    "example_ja": "リモートシェルについて、明確に文書化すべきです。"
+  },
+  "vocab_0211": {
+    "example_en": "We should document the log clearly.",
+    "example_ja": "ログについて、明確に文書化すべきです。"
+  },
+  "vocab_0212": {
+    "example_en": "This audit log requires follow-up by Friday.",
+    "example_ja": "この監査ログについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0213": {
+    "example_en": "The security team is checking the log source.",
+    "example_ja": "セキュリティチームがログソースを確認しています。"
+  },
+  "vocab_0214": {
+    "example_en": "This SIEM requires follow-up by Friday.",
+    "example_ja": "このSIEMについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0215": {
+    "example_en": "Please confirm the current SOC.",
+    "example_ja": "現在のSOCを確認してください。"
+  },
+  "vocab_0216": {
+    "example_en": "This use case requires follow-up by Friday.",
+    "example_ja": "この検知ユースケースについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0217": {
+    "example_en": "We should document the detection rule clearly.",
+    "example_ja": "検知ルールについて、明確に文書化すべきです。"
+  },
+  "vocab_0218": {
+    "example_en": "We should document the correlation clearly.",
+    "example_ja": "相関分析について、明確に文書化すべきです。"
+  },
+  "vocab_0219": {
+    "example_en": "We should document the baseline clearly.",
+    "example_ja": "基準値について、明確に文書化すべきです。"
+  },
+  "vocab_0220": {
+    "example_en": "The security team is checking the anomaly.",
+    "example_ja": "セキュリティチームが異常を確認しています。"
+  },
+  "vocab_0221": {
+    "example_en": "The telemetry may affect the incident response plan.",
+    "example_ja": "テレメトリーがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0222": {
+    "example_en": "This retention period requires follow-up by Friday.",
+    "example_ja": "この保存期間については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0223": {
+    "example_en": "We should document the dashboard clearly.",
+    "example_ja": "ダッシュボードについて、明確に文書化すべきです。"
+  },
+  "vocab_0224": {
+    "example_en": "We should document the monitoring clearly.",
+    "example_ja": "監視について、明確に文書化すべきです。"
+  },
+  "vocab_0225": {
+    "example_en": "We need to review the threat intelligence before the meeting.",
+    "example_ja": "会議の前に、脅威インテリジェンスを確認する必要があります。"
+  },
+  "vocab_0226": {
+    "example_en": "We need to review the threat hunting before the meeting.",
+    "example_ja": "会議の前に、脅威ハンティングを確認する必要があります。"
+  },
+  "vocab_0227": {
+    "example_en": "We need to review the alert fatigue before the meeting.",
+    "example_ja": "会議の前に、アラート疲れを確認する必要があります。"
+  },
+  "vocab_0228": {
+    "example_en": "We should document the suppression rule clearly.",
+    "example_ja": "抑制ルールについて、明確に文書化すべきです。"
+  },
+  "vocab_0229": {
+    "example_en": "The security team is checking the tuning.",
+    "example_ja": "セキュリティチームがチューニングを確認しています。"
+  },
+  "vocab_0230": {
+    "example_en": "We need to review the playbook before the meeting.",
+    "example_ja": "会議の前に、プレイブックを確認する必要があります。"
+  },
+  "vocab_0231": {
+    "example_en": "Please confirm the current runbook.",
+    "example_ja": "現在のランブックを確認してください。"
+  },
+  "vocab_0232": {
+    "example_en": "We should document the case management clearly.",
+    "example_ja": "ケース管理について、明確に文書化すべきです。"
+  },
+  "vocab_0233": {
+    "example_en": "Please confirm the current mean time to detect.",
+    "example_ja": "現在の平均検知時間を確認してください。"
+  },
+  "vocab_0234": {
+    "example_en": "Please confirm the current mean time to respond.",
+    "example_ja": "現在の平均対応時間を確認してください。"
+  },
+  "vocab_0235": {
+    "example_en": "The security team is checking the log ingestion.",
+    "example_ja": "セキュリティチームがログ取り込みを確認しています。"
+  },
+  "vocab_0236": {
+    "example_en": "Please confirm the current parser.",
+    "example_ja": "現在のパーサーを確認してください。"
+  },
+  "vocab_0237": {
+    "example_en": "This field mapping requires follow-up by Friday.",
+    "example_ja": "このフィールドマッピングについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0238": {
+    "example_en": "This watchlist requires follow-up by Friday.",
+    "example_ja": "この監視リストについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0239": {
+    "example_en": "The threat hunting query may affect the incident response plan.",
+    "example_ja": "脅威ハンティングクエリがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0240": {
+    "example_en": "We need to review the alert severity before the meeting.",
+    "example_ja": "会議の前に、アラート重大度を確認する必要があります。"
+  },
+  "vocab_0241": {
+    "example_en": "We should document the cloud security clearly.",
+    "example_ja": "クラウドセキュリティについて、明確に文書化すべきです。"
+  },
+  "vocab_0242": {
+    "example_en": "This shared responsibility model requires follow-up by Friday.",
+    "example_ja": "この責任共有モデルについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0243": {
+    "example_en": "Please confirm the current storage bucket.",
+    "example_ja": "現在のストレージバケットを確認してください。"
+  },
+  "vocab_0244": {
+    "example_en": "The security group may affect the incident response plan.",
+    "example_ja": "セキュリティグループがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0245": {
+    "example_en": "We should document the API key clearly.",
+    "example_ja": "APIキーについて、明確に文書化すべきです。"
+  },
+  "vocab_0246": {
+    "example_en": "The secret may affect the incident response plan.",
+    "example_ja": "シークレットがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0247": {
+    "example_en": "This secret rotation requires follow-up by Friday.",
+    "example_ja": "このシークレットローテーションについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0248": {
+    "example_en": "Please confirm the current data classification.",
+    "example_ja": "現在のデータ分類を確認してください。"
+  },
+  "vocab_0249": {
+    "example_en": "We should document the data loss prevention clearly.",
+    "example_ja": "DLPについて、明確に文書化すべきです。"
+  },
+  "vocab_0250": {
+    "example_en": "The personal data may affect the incident response plan.",
+    "example_ja": "個人データがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0251": {
+    "example_en": "We need to review the sensitive data before the meeting.",
+    "example_ja": "会議の前に、機密データを確認する必要があります。"
+  },
+  "vocab_0252": {
+    "example_en": "The data breach may affect the incident response plan.",
+    "example_ja": "データ侵害がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0253": {
+    "example_en": "The backup may affect the incident response plan.",
+    "example_ja": "バックアップがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0254": {
+    "example_en": "The security team is checking the restore.",
+    "example_ja": "セキュリティチームが復元を確認しています。"
+  },
+  "vocab_0255": {
+    "example_en": "This immutable backup requires follow-up by Friday.",
+    "example_ja": "この変更不能バックアップについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0256": {
+    "example_en": "We need to review the encryption at rest before the meeting.",
+    "example_ja": "会議の前に、保存時暗号化を確認する必要があります。"
+  },
+  "vocab_0257": {
+    "example_en": "We need to review the encryption in transit before the meeting.",
+    "example_ja": "会議の前に、通信時暗号化を確認する必要があります。"
+  },
+  "vocab_0258": {
+    "example_en": "This key management requires follow-up by Friday.",
+    "example_ja": "この鍵管理については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0259": {
+    "example_en": "We need to review the KMS before the meeting.",
+    "example_ja": "会議の前に、鍵管理サービスを確認する必要があります。"
+  },
+  "vocab_0260": {
+    "example_en": "This public exposure requires follow-up by Friday.",
+    "example_ja": "この公開状態については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0261": {
+    "example_en": "Please confirm the current private endpoint.",
+    "example_ja": "現在のプライベートエンドポイントを確認してください。"
+  },
+  "vocab_0262": {
+    "example_en": "This cloud workload requires follow-up by Friday.",
+    "example_ja": "このクラウドワークロードについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0263": {
+    "example_en": "Please confirm the current container image.",
+    "example_ja": "現在のコンテナイメージを確認してください。"
+  },
+  "vocab_0264": {
+    "example_en": "We should document the image registry clearly.",
+    "example_ja": "イメージレジストリについて、明確に文書化すべきです。"
+  },
+  "vocab_0265": {
+    "example_en": "We need to review the Kubernetes cluster before the meeting.",
+    "example_ja": "会議の前に、Kubernetesクラスターを確認する必要があります。"
+  },
+  "vocab_0266": {
+    "example_en": "Please confirm the current namespace.",
+    "example_ja": "現在の名前空間を確認してください。"
+  },
+  "vocab_0267": {
+    "example_en": "The pod may affect the incident response plan.",
+    "example_ja": "Podがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0268": {
+    "example_en": "We should document the serverless function clearly.",
+    "example_ja": "サーバーレス関数について、明確に文書化すべきです。"
+  },
+  "vocab_0269": {
+    "example_en": "Please confirm the current object storage.",
+    "example_ja": "現在のオブジェクトストレージを確認してください。"
+  },
+  "vocab_0270": {
+    "example_en": "The security team is checking the data retention.",
+    "example_ja": "セキュリティチームがデータ保持を確認しています。"
+  },
+  "vocab_0271": {
+    "example_en": "We should document the policy clearly.",
+    "example_ja": "ポリシーについて、明確に文書化すべきです。"
+  },
+  "vocab_0272": {
+    "example_en": "The standard may affect the incident response plan.",
+    "example_ja": "標準がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0273": {
+    "example_en": "The security team is checking the procedure.",
+    "example_ja": "セキュリティチームが手順を確認しています。"
+  },
+  "vocab_0274": {
+    "example_en": "The security team is checking the guideline.",
+    "example_ja": "セキュリティチームがガイドラインを確認しています。"
+  },
+  "vocab_0275": {
+    "example_en": "The compliance may affect the incident response plan.",
+    "example_ja": "コンプライアンスがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0276": {
+    "example_en": "The audit may affect the incident response plan.",
+    "example_ja": "監査がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0277": {
+    "example_en": "The security team is checking the audit finding.",
+    "example_ja": "セキュリティチームが監査指摘を確認しています。"
+  },
+  "vocab_0278": {
+    "example_en": "We need to review the corrective action before the meeting.",
+    "example_ja": "会議の前に、是正措置を確認する必要があります。"
+  },
+  "vocab_0279": {
+    "example_en": "The evidence request may affect the incident response plan.",
+    "example_ja": "証跡依頼がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0280": {
+    "example_en": "We should document the control owner clearly.",
+    "example_ja": "管理策担当者について、明確に文書化すべきです。"
+  },
+  "vocab_0281": {
+    "example_en": "The control testing may affect the incident response plan.",
+    "example_ja": "管理策テストがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0282": {
+    "example_en": "This management response requires follow-up by Friday.",
+    "example_ja": "この経営側回答については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0283": {
+    "example_en": "The gap analysis may affect the incident response plan.",
+    "example_ja": "ギャップ分析がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0284": {
+    "example_en": "This regulatory requirement requires follow-up by Friday.",
+    "example_ja": "この規制要件については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0285": {
+    "example_en": "We should document the internal control clearly.",
+    "example_ja": "内部統制について、明確に文書化すべきです。"
+  },
+  "vocab_0286": {
+    "example_en": "Please confirm the current third-party risk.",
+    "example_ja": "現在のサードパーティリスクを確認してください。"
+  },
+  "vocab_0287": {
+    "example_en": "We need to review the vendor assessment before the meeting.",
+    "example_ja": "会議の前に、ベンダー評価を確認する必要があります。"
+  },
+  "vocab_0288": {
+    "example_en": "We need to review the due diligence before the meeting.",
+    "example_ja": "会議の前に、デューデリジェンスを確認する必要があります。"
+  },
+  "vocab_0289": {
+    "example_en": "The security team is checking the service-level agreement.",
+    "example_ja": "セキュリティチームがSLAを確認しています。"
+  },
+  "vocab_0290": {
+    "example_en": "We should document the data processing agreement clearly.",
+    "example_ja": "データ処理契約について、明確に文書化すべきです。"
+  },
+  "vocab_0291": {
+    "example_en": "We need to review the privacy impact assessment before the meeting.",
+    "example_ja": "会議の前に、プライバシー影響評価を確認する必要があります。"
+  },
+  "vocab_0292": {
+    "example_en": "We should document the retention policy clearly.",
+    "example_ja": "保持ポリシーについて、明確に文書化すべきです。"
+  },
+  "vocab_0293": {
+    "example_en": "The security team is checking the acceptable use policy.",
+    "example_ja": "セキュリティチームが利用規程を確認しています。"
+  },
+  "vocab_0294": {
+    "example_en": "We should document the exception approval clearly.",
+    "example_ja": "例外承認について、明確に文書化すべきです。"
+  },
+  "vocab_0295": {
+    "example_en": "We need to review the compliance evidence before the meeting.",
+    "example_ja": "会議の前に、準拠証跡を確認する必要があります。"
+  },
+  "vocab_0296": {
+    "example_en": "This audit trail requires follow-up by Friday.",
+    "example_ja": "この監査証跡については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0297": {
+    "example_en": "We need to review the segregation of duties before the meeting.",
+    "example_ja": "会議の前に、職務分掌を確認する必要があります。"
+  },
+  "vocab_0298": {
+    "example_en": "The security team is checking the security committee.",
+    "example_ja": "セキュリティチームがセキュリティ委員会を確認しています。"
+  },
+  "vocab_0299": {
+    "example_en": "This regulator requires follow-up by Friday.",
+    "example_ja": "この規制当局については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0300": {
+    "example_en": "The security team is checking the audit scope.",
+    "example_ja": "セキュリティチームが監査範囲を確認しています。"
+  },
+  "vocab_0301": {
+    "example_en": "The agenda may affect the incident response plan.",
+    "example_ja": "議題がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0302": {
+    "example_en": "We should document the objective clearly.",
+    "example_ja": "目的について、明確に文書化すべきです。"
+  },
+  "vocab_0303": {
+    "example_en": "Please confirm the current decision.",
+    "example_ja": "現在の決定を確認してください。"
+  },
+  "vocab_0304": {
+    "example_en": "We should document the assumption clearly.",
+    "example_ja": "前提について、明確に文書化すべきです。"
+  },
+  "vocab_0305": {
+    "example_en": "This dependency requires follow-up by Friday.",
+    "example_ja": "この依存関係については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0306": {
+    "example_en": "We need to review the constraint before the meeting.",
+    "example_ja": "会議の前に、制約を確認する必要があります。"
+  },
+  "vocab_0307": {
+    "example_en": "Please confirm the current timeline.",
+    "example_ja": "現在のスケジュールを確認してください。"
+  },
+  "vocab_0308": {
+    "example_en": "We need to review the milestone before the meeting.",
+    "example_ja": "会議の前に、マイルストーンを確認する必要があります。"
+  },
+  "vocab_0309": {
+    "example_en": "The blocker may affect the incident response plan.",
+    "example_ja": "阻害要因がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0310": {
+    "example_en": "We should document the follow-up clearly.",
+    "example_ja": "フォローアップについて、明確に文書化すべきです。"
+  },
+  "vocab_0311": {
+    "example_en": "Please confirm the current meeting minutes.",
+    "example_ja": "現在の議事録を確認してください。"
+  },
+  "vocab_0312": {
+    "example_en": "We need to review the decision log before the meeting.",
+    "example_ja": "会議の前に、決定事項ログを確認する必要があります。"
+  },
+  "vocab_0313": {
+    "example_en": "We need to review the stakeholder before the meeting.",
+    "example_ja": "会議の前に、関係者を確認する必要があります。"
+  },
+  "vocab_0314": {
+    "example_en": "Please confirm the current alignment.",
+    "example_ja": "現在の認識合わせを確認してください。"
+  },
+  "vocab_0315": {
+    "example_en": "The security team is checking the clarification.",
+    "example_ja": "セキュリティチームが明確化を確認しています。"
+  },
+  "vocab_0316": {
+    "example_en": "The security team is checking the summary.",
+    "example_ja": "セキュリティチームがまとめを確認しています。"
+  },
+  "vocab_0317": {
+    "example_en": "This next step requires follow-up by Friday.",
+    "example_ja": "この次のステップについては、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0318": {
+    "example_en": "Please confirm the current open item.",
+    "example_ja": "現在の未解決事項を確認してください。"
+  },
+  "vocab_0319": {
+    "example_en": "We need to review the parking lot before the meeting.",
+    "example_ja": "会議の前に、後で扱う事項を確認する必要があります。"
+  },
+  "vocab_0320": {
+    "example_en": "The approval may affect the incident response plan.",
+    "example_ja": "承認がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0321": {
+    "example_en": "This recommendation requires follow-up by Friday.",
+    "example_ja": "この推奨事項については、金曜日までに追加の対応が必要です。"
+  },
+  "vocab_0322": {
+    "example_en": "We need to review the concern before the meeting.",
+    "example_ja": "会議の前に、懸念を確認する必要があります。"
+  },
+  "vocab_0323": {
+    "example_en": "The trade-off may affect the incident response plan.",
+    "example_ja": "トレードオフがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0324": {
+    "example_en": "The security team is checking the implementation plan.",
+    "example_ja": "セキュリティチームが実装計画を確認しています。"
+  },
+  "vocab_0325": {
+    "example_en": "Please confirm the current communication channel.",
+    "example_ja": "現在の連絡チャネルを確認してください。"
+  },
+  "vocab_0326": {
+    "example_en": "Please confirm the current point of contact.",
+    "example_ja": "現在の窓口を確認してください。"
+  },
+  "vocab_0327": {
+    "example_en": "The security team is checking the handover.",
+    "example_ja": "セキュリティチームが引き継ぎを確認しています。"
+  },
+  "vocab_0328": {
+    "example_en": "The availability may affect the incident response plan.",
+    "example_ja": "可用性がインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0329": {
+    "example_en": "The time zone may affect the incident response plan.",
+    "example_ja": "タイムゾーンがインシデント対応計画に影響する可能性があります。"
+  },
+  "vocab_0330": {
+    "example_en": "The security team is checking the meeting cadence.",
+    "example_ja": "セキュリティチームが会議頻度を確認しています。"
+  },
+  "vocab_0331": {
+    "example_en": "We need to confirm the scope today.",
+    "example_ja": "今日、影響範囲を確認する必要があります。"
+  },
+  "vocab_0332": {
+    "example_en": "We need to isolate the host today.",
+    "example_ja": "今日、ホストを隔離する必要があります。"
+  },
+  "vocab_0333": {
+    "example_en": "We need to disable the account today.",
+    "example_ja": "今日、アカウントを無効化する必要があります。"
+  },
+  "vocab_0334": {
+    "example_en": "We need to reset the password today.",
+    "example_ja": "今日、パスワードをリセットする必要があります。"
+  },
+  "vocab_0335": {
+    "example_en": "We need to block the domain today.",
+    "example_ja": "今日、ドメインをブロックする必要があります。"
+  },
+  "vocab_0336": {
+    "example_en": "We need to block the IP address today.",
+    "example_ja": "今日、IPアドレスをブロックする必要があります。"
+  },
+  "vocab_0337": {
+    "example_en": "We need to preserve the logs today.",
+    "example_ja": "今日、ログを保全する必要があります。"
+  },
+  "vocab_0338": {
+    "example_en": "We need to collect evidence today.",
+    "example_ja": "今日、証拠を収集する必要があります。"
+  },
+  "vocab_0339": {
+    "example_en": "We need to review the timeline today.",
+    "example_ja": "今日、時系列を確認する必要があります。"
+  },
+  "vocab_0340": {
+    "example_en": "We need to raise the severity today.",
+    "example_ja": "今日、重大度を上げる必要があります。"
+  },
+  "vocab_0341": {
+    "example_en": "We need to apply the patch today.",
+    "example_ja": "今日、パッチを適用する必要があります。"
+  },
+  "vocab_0342": {
+    "example_en": "We need to prepare a rollback plan today.",
+    "example_ja": "今日、切り戻し計画を準備する必要があります。"
+  },
+  "vocab_0343": {
+    "example_en": "We need to verify the backup today.",
+    "example_ja": "今日、バックアップを確認する必要があります。"
+  },
+  "vocab_0344": {
+    "example_en": "We need to restore the service today.",
+    "example_ja": "今日、サービスを復旧する必要があります。"
+  },
+  "vocab_0345": {
+    "example_en": "We need to notify stakeholders today.",
+    "example_ja": "今日、関係者に通知する必要があります。"
+  },
+  "vocab_0346": {
+    "example_en": "We need to escalate to management today.",
+    "example_ja": "今日、経営層へエスカレーションする必要があります。"
+  },
+  "vocab_0347": {
+    "example_en": "We need to request vendor support today.",
+    "example_ja": "今日、ベンダー支援を依頼する必要があります。"
+  },
+  "vocab_0348": {
+    "example_en": "We need to document the exception today.",
+    "example_ja": "今日、例外を文書化する必要があります。"
+  },
+  "vocab_0349": {
+    "example_en": "We need to accept the residual risk today.",
+    "example_ja": "今日、残留リスクを受容する必要があります。"
+  },
+  "vocab_0350": {
+    "example_en": "We need to tune the detection rule today.",
+    "example_ja": "今日、検知ルールを調整する必要があります。"
+  },
+  "vocab_0351": {
+    "example_en": "We need to increase monitoring today.",
+    "example_ja": "今日、監視を強化する必要があります。"
+  },
+  "vocab_0352": {
+    "example_en": "We need to revoke the API key today.",
+    "example_ja": "今日、APIキーを失効させる必要があります。"
+  },
+  "vocab_0353": {
+    "example_en": "We need to rotate the secret today.",
+    "example_ja": "今日、シークレットをローテーションする必要があります。"
+  },
+  "vocab_0354": {
+    "example_en": "We need to review access rights today.",
+    "example_ja": "今日、アクセス権を確認する必要があります。"
+  },
+  "vocab_0355": {
+    "example_en": "We need to remove excessive permissions today.",
+    "example_ja": "今日、過剰権限を削除する必要があります。"
+  },
+  "vocab_0356": {
+    "example_en": "We need to run a vulnerability scan today.",
+    "example_ja": "今日、脆弱性スキャンを実行する必要があります。"
+  },
+  "vocab_0357": {
+    "example_en": "We need to check lateral movement today.",
+    "example_ja": "今日、横展開を確認する必要があります。"
+  },
+  "vocab_0358": {
+    "example_en": "We need to check data exfiltration today.",
+    "example_ja": "今日、データ持ち出しを確認する必要があります。"
+  },
+  "vocab_0359": {
+    "example_en": "We need to send a takedown request today.",
+    "example_ja": "今日、削除依頼を送る必要があります。"
+  },
+  "vocab_0360": {
+    "example_en": "We need to analyze the mail header today.",
+    "example_ja": "今日、メールヘッダーを分析する必要があります。"
+  },
+  "vocab_0361": {
+    "example_en": "We need to confirm business impact today.",
+    "example_ja": "今日、事業影響を確認する必要があります。"
+  },
+  "vocab_0362": {
+    "example_en": "We need to prepare the incident report today.",
+    "example_ja": "今日、インシデント報告書を準備する必要があります。"
+  },
+  "vocab_0363": {
+    "example_en": "We need to summarize the action items today.",
+    "example_ja": "今日、対応事項をまとめる必要があります。"
+  },
+  "vocab_0364": {
+    "example_en": "We need to assign an owner today.",
+    "example_ja": "今日、担当者を割り当てる必要があります。"
+  },
+  "vocab_0365": {
+    "example_en": "We need to agree on a deadline today.",
+    "example_ja": "今日、期限について合意する必要があります。"
+  },
+  "advanced_vocab_001": {
+    "example_en": "The WAF blocked a series of SQL injection attempts against the customer portal.",
+    "example_ja": "WAFは、顧客向けポータルに対する一連のSQLインジェクションの試みを遮断しました。"
+  },
+  "advanced_vocab_002": {
+    "example_en": "We need WAF rule tuning to reduce false positives without weakening protection.",
+    "example_ja": "防御を弱めずに誤検知を減らすため、WAFルールのチューニングが必要です。"
+  },
+  "advanced_vocab_003": {
+    "example_en": "The security team confirmed that the blocked request was a false positive.",
+    "example_ja": "セキュリティチームは、遮断されたリクエストが誤検知だったことを確認しました。"
+  },
+  "advanced_vocab_004": {
+    "example_en": "A false negative could allow a malicious payload to reach the application.",
+    "example_ja": "検知の見逃しによって、悪意あるペイロードがアプリケーションに到達する可能性があります。"
+  },
+  "advanced_vocab_005": {
+    "example_en": "Rate limiting was enabled to contain the credential-stuffing campaign.",
+    "example_ja": "盗まれた認証情報を大量に試す一連の攻撃を抑えるため、レート制限を有効にしました。"
+  },
+  "advanced_vocab_006": {
+    "example_en": "NDR detected encrypted outbound traffic to an unusual destination.",
+    "example_ja": "NDRは、通常と異なる宛先への暗号化された外向き通信を検知しました。"
+  },
+  "advanced_vocab_007": {
+    "example_en": "The NDR investigation found abnormal east-west traffic between servers.",
+    "example_ja": "NDRによる調査で、サーバー間の異常な内部通信が見つかりました。"
+  },
+  "advanced_vocab_008": {
+    "example_en": "We are checking whether the attacker used lateral movement after the initial compromise.",
+    "example_ja": "最初の侵害の後、攻撃者が横展開を行ったかどうかを確認しています。"
+  },
+  "advanced_vocab_009": {
+    "example_en": "The analyst identified possible C2 traffic in the DNS logs.",
+    "example_ja": "分析担当者は、DNSログ内にC2通信の可能性があるものを見つけました。"
+  },
+  "advanced_vocab_010": {
+    "example_en": "Network telemetry gives us visibility into suspicious connections.",
+    "example_ja": "ネットワークテレメトリによって、不審な接続を把握できます。"
+  },
+  "advanced_vocab_011": {
+    "example_en": "Detection engineering will create a correlation rule for this behavior.",
+    "example_ja": "検知ルール設計チームが、この動作に対する相関ルールを作成します。"
+  },
+  "advanced_vocab_012": {
+    "example_en": "We mapped the alert to a MITRE ATT&CK technique before prioritizing it.",
+    "example_ja": "優先順位を決める前に、そのアラートをMITRE ATT&CKの攻撃手法に対応付けました。"
+  },
+  "advanced_vocab_013": {
+    "example_en": "Please search the IOC across endpoint, DNS, and proxy logs.",
+    "example_ja": "エンドポイント、DNS、プロキシの各ログを横断して、その侵害指標を検索してください。"
+  },
+  "advanced_vocab_014": {
+    "example_en": "Behavioral analytics highlighted an account accessing data outside its normal pattern.",
+    "example_ja": "振る舞い分析によって、通常とは異なるパターンでデータにアクセスするアカウントが浮かび上がりました。"
+  },
+  "advanced_vocab_015": {
+    "example_en": "The roadmap applies zero trust architecture to privileged access.",
+    "example_ja": "そのロードマップでは、特権アクセスにゼロトラストアーキテクチャを適用します。"
+  },
+  "advanced_vocab_016": {
+    "example_en": "Microsegmentation can limit the blast radius of a compromised workload.",
+    "example_ja": "マイクロセグメンテーションによって、侵害されたワークロードから影響が広がる範囲を制限できます。"
+  },
+  "advanced_vocab_017": {
+    "example_en": "The DLP policy prevented confidential files from being uploaded to personal storage.",
+    "example_ja": "DLPポリシーによって、機密ファイルが個人用ストレージへアップロードされるのを防ぎました。"
+  },
+  "advanced_vocab_018": {
+    "example_en": "We need a containment strategy that preserves evidence and protects production.",
+    "example_ja": "証拠を保全し、本番環境を保護する封じ込め戦略が必要です。"
+  },
+  "expanded_vocab_0001": {
+    "example_en": "Packet loss increased after the route changed.",
+    "example_ja": "経路が変わった後で、パケット損失が増加しました。"
+  },
+  "expanded_vocab_0002": {
+    "example_en": "Latency is higher on the backup link.",
+    "example_ja": "予備回線では遅延が大きくなっています。"
+  },
+  "expanded_vocab_0003": {
+    "example_en": "Jitter is affecting the voice call.",
+    "example_ja": "遅延の揺らぎが音声通話に影響しています。"
+  },
+  "expanded_vocab_0004": {
+    "example_en": "Throughput improved after we replaced the cable.",
+    "example_ja": "ケーブルを交換した後、実効転送速度が改善しました。"
+  },
+  "expanded_vocab_0005": {
+    "example_en": "The backup circuit has limited bandwidth.",
+    "example_ja": "予備回線の帯域幅には限りがあります。"
+  },
+  "expanded_vocab_0006": {
+    "example_en": "The round-trip time doubled during the incident.",
+    "example_ja": "インシデントの発生中、往復遅延時間が2倍になりました。"
+  },
+  "expanded_vocab_0007": {
+    "example_en": "The outage affected our Singapore office.",
+    "example_ja": "サービス停止は当社のシンガポール拠点に影響しました。"
+  },
+  "expanded_vocab_0008": {
+    "example_en": "We noticed degradation before the service stopped.",
+    "example_ja": "サービスが停止する前に、性能の劣化に気付きました。"
+  },
+  "expanded_vocab_0009": {
+    "example_en": "Congestion is causing packet drops on the uplink.",
+    "example_ja": "輻輳によって上位接続回線でパケットが破棄されています。"
+  },
+  "expanded_vocab_0010": {
+    "example_en": "Our upstream provider is checking its routers.",
+    "example_ja": "当社の上位回線事業者が自社のルーターを確認しています。"
+  },
+  "expanded_vocab_0011": {
+    "example_en": "The transit provider confirmed a routing change.",
+    "example_ja": "トランジット事業者は経路の変更を確認しました。"
+  },
+  "expanded_vocab_0012": {
+    "example_en": "Peering gives us a direct path to that network.",
+    "example_ja": "ピアリングによって、そのネットワークへの直接の経路を利用できます。"
+  },
+  "expanded_vocab_0013": {
+    "example_en": "An autonomous system can advertise multiple prefixes.",
+    "example_ja": "一つの自律システムから複数のプレフィックスを広告できます。"
+  },
+  "expanded_vocab_0014": {
+    "example_en": "We checked the route advertisement before the cutover.",
+    "example_ja": "切り替え前に経路広告を確認しました。"
+  },
+  "expanded_vocab_0015": {
+    "example_en": "The route withdrawal triggered a path change.",
+    "example_ja": "経路の取り下げが、通信経路の変更を引き起こしました。"
+  },
+  "expanded_vocab_0016": {
+    "example_en": "The provider is investigating a possible route leak.",
+    "example_ja": "事業者は経路漏えいの可能性を調査しています。"
+  },
+  "expanded_vocab_0017": {
+    "example_en": "We cannot confirm a prefix hijack from this alert alone.",
+    "example_ja": "このアラートだけでは、プレフィックスの乗っ取りがあったとは確認できません。"
+  },
+  "expanded_vocab_0018": {
+    "example_en": "Higher local preference selects our preferred outbound path.",
+    "example_ja": "ローカル優先度を高くすると、優先したい外向きの経路が選択されます。"
+  },
+  "expanded_vocab_0019": {
+    "example_en": "The AS path includes an unexpected network.",
+    "example_ja": "ASパスには想定外のネットワークが含まれています。"
+  },
+  "expanded_vocab_0020": {
+    "example_en": "The next hop is reachable from this router.",
+    "example_ja": "このルーターからネクストホップに到達できます。"
+  },
+  "expanded_vocab_0021": {
+    "example_en": "The default route points to the edge firewall.",
+    "example_ja": "デフォルト経路は境界のファイアウォールを指しています。"
+  },
+  "expanded_vocab_0022": {
+    "example_en": "The routing table contains both advertised prefixes.",
+    "example_ja": "ルーティングテーブルには、広告された両方のプレフィックスが含まれています。"
+  },
+  "expanded_vocab_0023": {
+    "example_en": "The return path uses a different provider.",
+    "example_ja": "戻り経路では別の事業者を利用しています。"
+  },
+  "expanded_vocab_0024": {
+    "example_en": "Asymmetric routing complicates stateful firewall troubleshooting.",
+    "example_ja": "非対称ルーティングにより、ステートフルファイアウォールの障害調査が複雑になります。"
+  },
+  "expanded_vocab_0025": {
+    "example_en": "Route convergence took longer than expected.",
+    "example_ja": "経路の収束に想定より長い時間がかかりました。"
+  },
+  "expanded_vocab_0026": {
+    "example_en": "The route filter rejected an unauthorized prefix.",
+    "example_ja": "経路フィルターが未承認のプレフィックスを拒否しました。"
+  },
+  "expanded_vocab_0027": {
+    "example_en": "Please confirm the prefix length before applying the filter.",
+    "example_ja": "フィルターを適用する前に、プレフィックス長を確認してください。"
+  },
+  "expanded_vocab_0028": {
+    "example_en": "The cross-connect links our rack to the provider.",
+    "example_ja": "構内接続回線が、当社のラックと事業者を接続しています。"
+  },
+  "expanded_vocab_0029": {
+    "example_en": "We replaced the optical transceiver during maintenance.",
+    "example_ja": "保守作業中に光トランシーバーを交換しました。"
+  },
+  "expanded_vocab_0030": {
+    "example_en": "A link flap triggered several monitoring alerts.",
+    "example_ja": "リンクの断続的な切断と復旧により、監視アラートが複数発生しました。"
+  },
+  "expanded_vocab_0031": {
+    "example_en": "The scrubbing center is forwarding clean traffic.",
+    "example_ja": "攻撃通信の洗浄拠点が、攻撃通信を除去した通信を転送しています。"
+  },
+  "expanded_vocab_0032": {
+    "example_en": "Traffic diversion started after approval from the incident lead.",
+    "example_ja": "インシデント対応責任者の承認後、通信の迂回を開始しました。"
+  },
+  "expanded_vocab_0033": {
+    "example_en": "A volumetric attack can saturate the access circuit.",
+    "example_ja": "大量通信型攻撃によってアクセス回線が飽和する可能性があります。"
+  },
+  "expanded_vocab_0034": {
+    "example_en": "The team suspects a reflection attack using spoofed sources.",
+    "example_ja": "チームは、偽装された送信元を使う反射型攻撃を疑っています。"
+  },
+  "expanded_vocab_0035": {
+    "example_en": "The amplification attack generated large reply packets.",
+    "example_ja": "増幅型攻撃によって、大きな応答パケットが生成されました。"
+  },
+  "expanded_vocab_0036": {
+    "example_en": "The gateway reported a sharp increase in SYN flood traffic.",
+    "example_ja": "ゲートウェイはSYNフラッドの通信量の急増を報告しました。"
+  },
+  "expanded_vocab_0037": {
+    "example_en": "The UDP flood targeted the public game servers.",
+    "example_ja": "UDPフラッドは公開ゲームサーバーを標的にしました。"
+  },
+  "expanded_vocab_0038": {
+    "example_en": "The connection table is almost full.",
+    "example_ja": "接続管理テーブルがほぼ満杯です。"
+  },
+  "expanded_vocab_0039": {
+    "example_en": "The connection limit applies separately to each client.",
+    "example_ja": "接続数の上限は、クライアントごとに個別に適用されます。"
+  },
+  "expanded_vocab_0040": {
+    "example_en": "The request rate increased without a matching rise in users.",
+    "example_ja": "利用者数はそれほど増えていないのに、リクエスト頻度が増加しました。"
+  },
+  "expanded_vocab_0041": {
+    "example_en": "Burst traffic may also come from a legitimate launch.",
+    "example_ja": "突発的な大量通信は、正規のサービス開始に伴って発生することもあります。"
+  },
+  "expanded_vocab_0042": {
+    "example_en": "We must check whether legitimate traffic is being dropped.",
+    "example_ja": "正規の通信が破棄されていないか確認する必要があります。"
+  },
+  "expanded_vocab_0043": {
+    "example_en": "Clean traffic is returning through the tunnel.",
+    "example_ja": "攻撃通信を除去した通信が、トンネルを通って戻っています。"
+  },
+  "expanded_vocab_0044": {
+    "example_en": "The mitigation threshold needs review before the event.",
+    "example_ja": "イベントの前に、対策発動のしきい値を見直す必要があります。"
+  },
+  "expanded_vocab_0045": {
+    "example_en": "Automatic mitigation started within one minute.",
+    "example_ja": "1分以内に自動の攻撃緩和が始まりました。"
+  },
+  "expanded_vocab_0046": {
+    "example_en": "Manual activation requires an on-call engineer.",
+    "example_ja": "手動での発動には、当番の技術者が必要です。"
+  },
+  "expanded_vocab_0047": {
+    "example_en": "We will monitor traffic during the cooldown period.",
+    "example_ja": "解除判断前の待機期間中、通信を監視します。"
+  },
+  "expanded_vocab_0048": {
+    "example_en": "A blackhole route would also drop legitimate traffic to that destination.",
+    "example_ja": "通信を破棄する経路を設定すると、その宛先への正規の通信も破棄されます。"
+  },
+  "expanded_vocab_0049": {
+    "example_en": "The flow sample shows a concentration of destination ports.",
+    "example_ja": "フローのサンプルでは、宛先ポートの集中が見られます。"
+  },
+  "expanded_vocab_0050": {
+    "example_en": "The source distribution changed during the attack.",
+    "example_ja": "攻撃中に送信元の分布が変化しました。"
+  },
+  "expanded_vocab_0051": {
+    "example_en": "The packet rate is high despite moderate bandwidth usage.",
+    "example_ja": "帯域の使用量はそれほど多くありませんが、毎秒のパケット数は多くなっています。"
+  },
+  "expanded_vocab_0052": {
+    "example_en": "The connection rate exceeded the normal evening peak.",
+    "example_ja": "接続の発生頻度が、通常の夕方のピークを超えました。"
+  },
+  "expanded_vocab_0053": {
+    "example_en": "An application-layer attack may resemble ordinary requests.",
+    "example_ja": "アプリケーション層への攻撃は、通常の要求に似ている場合があります。"
+  },
+  "expanded_vocab_0054": {
+    "example_en": "We compared challenge response results before adjusting the rule.",
+    "example_ja": "ルールを調整する前に、チャレンジへの応答結果を比較しました。"
+  },
+  "expanded_vocab_0055": {
+    "example_en": "Some bot traffic comes from approved monitoring systems.",
+    "example_ja": "ボットの通信の一部は、承認済みの監視システムから発生しています。"
+  },
+  "expanded_vocab_0056": {
+    "example_en": "The traffic fingerprint changed after the first filter was applied.",
+    "example_ja": "最初のフィルターを適用した後、通信の特徴パターンが変わりました。"
+  },
+  "expanded_vocab_0057": {
+    "example_en": "The filter caused collateral impact on shared networks.",
+    "example_ja": "フィルターによって、共有ネットワークに副次的な影響が出ました。"
+  },
+  "expanded_vocab_0058": {
+    "example_en": "Service saturation persisted after the link recovered.",
+    "example_ja": "回線が復旧した後も、サービスの処理能力が飽和した状態が続きました。"
+  },
+  "expanded_vocab_0059": {
+    "example_en": "The attack peak occurred just after midnight.",
+    "example_ja": "攻撃のピークは午前0時を少し過ぎた頃でした。"
+  },
+  "expanded_vocab_0060": {
+    "example_en": "We prepared a mitigation rollback in case users lost access.",
+    "example_ja": "利用者がアクセスできなくなる場合に備え、緩和設定の切り戻しを準備しました。"
+  },
+  "expanded_vocab_0061": {
+    "example_en": "A long passphrase can be easier to remember.",
+    "example_ja": "長いパスフレーズの方が覚えやすい場合があります。"
+  },
+  "expanded_vocab_0062": {
+    "example_en": "The user registered a passkey on the new phone.",
+    "example_ja": "利用者は新しい携帯電話にパスキーを登録しました。"
+  },
+  "expanded_vocab_0063": {
+    "example_en": "Keep the spare security key in a secure location.",
+    "example_ja": "予備のセキュリティキーは安全な場所に保管してください。"
+  },
+  "expanded_vocab_0064": {
+    "example_en": "The recovery code must not appear in the support ticket.",
+    "example_ja": "復旧用コードをサポートチケットに記載してはいけません。"
+  },
+  "expanded_vocab_0065": {
+    "example_en": "The user received an unexpected authentication push notification.",
+    "example_ja": "利用者は予期しない認証のプッシュ通知を受け取りました。"
+  },
+  "expanded_vocab_0066": {
+    "example_en": "Number matching helps users identify the login request.",
+    "example_ja": "番号照合は、利用者がログイン要求を識別するのに役立ちます。"
+  },
+  "expanded_vocab_0067": {
+    "example_en": "We revoked the session token after the device was lost.",
+    "example_ja": "端末の紛失後、セッショントークンを失効させました。"
+  },
+  "expanded_vocab_0068": {
+    "example_en": "The application used a refresh token to request new access.",
+    "example_ja": "アプリケーションは更新用トークンを使って、新しいアクセスを要求しました。"
+  },
+  "expanded_vocab_0069": {
+    "example_en": "Token expiry caused the background job to fail.",
+    "example_ja": "トークンの有効期限切れによって、バックグラウンドのジョブが失敗しました。"
+  },
+  "expanded_vocab_0070": {
+    "example_en": "Token revocation is part of the containment plan.",
+    "example_ja": "トークンの失効は封じ込め計画の一部です。"
+  },
+  "expanded_vocab_0071": {
+    "example_en": "Device registration is required before remote access.",
+    "example_ja": "リモートアクセスの前に端末登録が必要です。"
+  },
+  "expanded_vocab_0072": {
+    "example_en": "Device compliance is checked at sign-in.",
+    "example_ja": "サインイン時に、端末が基準に適合しているか確認されます。"
+  },
+  "expanded_vocab_0073": {
+    "example_en": "A trusted device still needs regular security updates.",
+    "example_ja": "信頼済み端末でも、定期的なセキュリティ更新が必要です。"
+  },
+  "expanded_vocab_0074": {
+    "example_en": "Federation connects the application to our identity service.",
+    "example_ja": "認証連携によって、アプリケーションを当社の認証サービスに接続しています。"
+  },
+  "expanded_vocab_0075": {
+    "example_en": "A password is only one authentication factor.",
+    "example_ja": "パスワードは、認証要素の一つにすぎません。"
+  },
+  "expanded_vocab_0076": {
+    "example_en": "Step-up authentication is required for this sensitive action.",
+    "example_ja": "この機密性の高い操作には追加認証が必要です。"
+  },
+  "expanded_vocab_0077": {
+    "example_en": "Passwordless sign-in is available to the pilot group.",
+    "example_ja": "試験導入グループは、パスワードを使わないサインインを利用できます。"
+  },
+  "expanded_vocab_0078": {
+    "example_en": "The team is reviewing the sign-in frequency policy.",
+    "example_ja": "チームは再認証の頻度に関するポリシーを見直しています。"
+  },
+  "expanded_vocab_0079": {
+    "example_en": "Session binding can limit how stolen session material is reused.",
+    "example_ja": "セッションを端末などにひも付けることで、盗まれたセッション情報の再利用を制限できます。"
+  },
+  "expanded_vocab_0080": {
+    "example_en": "The consent grant allowed the application to read mail.",
+    "example_ja": "同意による権限付与によって、アプリケーションがメールを読めるようになりました。"
+  },
+  "expanded_vocab_0081": {
+    "example_en": "This application permission is broader than the job requires.",
+    "example_ja": "このアプリケーション権限は、業務に必要な範囲より広くなっています。"
+  },
+  "expanded_vocab_0082": {
+    "example_en": "The client uses a delegated permission on behalf of the user.",
+    "example_ja": "クライアントは、利用者に代わって委任された権限を使います。"
+  },
+  "expanded_vocab_0083": {
+    "example_en": "The access package expires when the project ends.",
+    "example_ja": "アクセス権のパッケージは、プロジェクトの終了時に期限切れになります。"
+  },
+  "expanded_vocab_0084": {
+    "example_en": "Temporary access will end after the maintenance window.",
+    "example_ja": "保守作業の時間帯が終わると、一時的なアクセス権も終了します。"
+  },
+  "expanded_vocab_0085": {
+    "example_en": "The privilege review found two unnecessary administrator roles.",
+    "example_ja": "特権の見直しで、不要な管理者ロールが二つ見つかりました。"
+  },
+  "expanded_vocab_0086": {
+    "example_en": "The account sponsor must confirm that access is still needed.",
+    "example_ja": "アカウントの管理責任者は、アクセスが引き続き必要か確認しなければなりません。"
+  },
+  "expanded_vocab_0087": {
+    "example_en": "The guest account belongs to our audit partner.",
+    "example_ja": "そのゲストアカウントは、当社の監査パートナーのものです。"
+  },
+  "expanded_vocab_0088": {
+    "example_en": "A shared account makes individual accountability harder.",
+    "example_ja": "共有アカウントでは、個人ごとの責任を明確にすることが難しくなります。"
+  },
+  "expanded_vocab_0089": {
+    "example_en": "The authentication failure followed a certificate change.",
+    "example_ja": "証明書の変更後に認証失敗が発生しました。"
+  },
+  "expanded_vocab_0090": {
+    "example_en": "We are investigating the unexpected access denial.",
+    "example_ja": "予期しないアクセス拒否について調査しています。"
+  },
+  "expanded_vocab_0091": {
+    "example_en": "The cloud tenant contains several business applications.",
+    "example_ja": "クラウドのテナントには、複数の業務アプリケーションがあります。"
+  },
+  "expanded_vocab_0092": {
+    "example_en": "The subscription boundary separates production from testing.",
+    "example_ja": "サブスクリプションの境界で、本番環境とテスト環境を分離しています。"
+  },
+  "expanded_vocab_0093": {
+    "example_en": "The resource group contains the application's monitoring components.",
+    "example_ja": "そのリソースグループには、アプリケーションの監視コンポーネントが含まれています。"
+  },
+  "expanded_vocab_0094": {
+    "example_en": "The service uses a managed identity instead of a stored password.",
+    "example_ja": "そのサービスは、保存されたパスワードの代わりにマネージドIDを使います。"
+  },
+  "expanded_vocab_0095": {
+    "example_en": "We reviewed the workload identity before changing its permissions.",
+    "example_ja": "権限を変更する前に、ワークロードIDを確認しました。"
+  },
+  "expanded_vocab_0096": {
+    "example_en": "Access to instance metadata should be considered in the threat model.",
+    "example_ja": "脅威モデルでは、インスタンスのメタデータへのアクセスも考慮すべきです。"
+  },
+  "expanded_vocab_0097": {
+    "example_en": "The public endpoint was disabled after testing private access.",
+    "example_ja": "プライベートアクセスをテストした後、公開エンドポイントを無効にしました。"
+  },
+  "expanded_vocab_0098": {
+    "example_en": "Private connectivity avoids exposing this service directly to the internet.",
+    "example_ja": "プライベート接続により、このサービスをインターネットへ直接公開せずに済みます。"
+  },
+  "expanded_vocab_0099": {
+    "example_en": "The security policy assignment covers new resources automatically.",
+    "example_ja": "セキュリティポリシーの割り当ては、新しいリソースも自動的に対象とします。"
+  },
+  "expanded_vocab_0100": {
+    "example_en": "Resource tagging helps us identify the service owner.",
+    "example_ja": "リソースへのタグ付けは、サービスの責任者を特定するのに役立ちます。"
+  },
+  "expanded_vocab_0101": {
+    "example_en": "Infrastructure as code makes configuration changes reviewable.",
+    "example_ja": "コードによるインフラ管理により、設定変更をレビューできるようになります。"
+  },
+  "expanded_vocab_0102": {
+    "example_en": "The approved template is stored in the configuration repository.",
+    "example_ja": "承認済みのテンプレートは、構成管理リポジトリに保存されています。"
+  },
+  "expanded_vocab_0103": {
+    "example_en": "The deployment pipeline stopped when the security check failed.",
+    "example_ja": "セキュリティチェックが失敗したため、デプロイ用パイプラインが停止しました。"
+  },
+  "expanded_vocab_0104": {
+    "example_en": "The ephemeral environment is removed after the test.",
+    "example_ja": "一時的な実行環境は、テスト後に削除されます。"
+  },
+  "expanded_vocab_0105": {
+    "example_en": "The container runtime needs a security update.",
+    "example_ja": "コンテナ実行基盤にはセキュリティ更新が必要です。"
+  },
+  "expanded_vocab_0106": {
+    "example_en": "We pinned the deployment to a verified image digest.",
+    "example_ja": "デプロイ対象を、検証済みのイメージのダイジェスト値に固定しました。"
+  },
+  "expanded_vocab_0107": {
+    "example_en": "The admission check rejected an invalid image signature.",
+    "example_ja": "受け入れ時の検査が、無効なイメージの署名を拒否しました。"
+  },
+  "expanded_vocab_0108": {
+    "example_en": "The admission policy blocks privileged test containers.",
+    "example_ja": "リソース受け入れポリシーは、特権を持つテスト用コンテナをブロックします。"
+  },
+  "expanded_vocab_0109": {
+    "example_en": "The network policy limits communication between workloads.",
+    "example_ja": "ネットワーク通信ポリシーによって、ワークロード間の通信を制限しています。"
+  },
+  "expanded_vocab_0110": {
+    "example_en": "Control plane access is restricted to the operations team.",
+    "example_ja": "制御プレーンへのアクセスは、運用チームに限定されています。"
+  },
+  "expanded_vocab_0111": {
+    "example_en": "Data plane traffic is still flowing during the management outage.",
+    "example_ja": "管理機能が停止している間も、データプレーンの通信は流れ続けています。"
+  },
+  "expanded_vocab_0112": {
+    "example_en": "The backup service runs in another availability zone.",
+    "example_ja": "バックアップサービスは、別の可用性ゾーンで稼働しています。"
+  },
+  "expanded_vocab_0113": {
+    "example_en": "Region failover requires an updated traffic plan.",
+    "example_ja": "リージョン間の切り替えには、通信計画の更新が必要です。"
+  },
+  "expanded_vocab_0114": {
+    "example_en": "The resource quota blocked the emergency deployment.",
+    "example_ja": "リソース使用量の上限によって、緊急のデプロイが阻まれました。"
+  },
+  "expanded_vocab_0115": {
+    "example_en": "An orphaned resource may continue to generate charges.",
+    "example_ja": "管理元を失ったリソースにも、料金が発生し続ける場合があります。"
+  },
+  "expanded_vocab_0116": {
+    "example_en": "The cloud audit event records who changed the policy.",
+    "example_ja": "クラウドの監査イベントには、誰がポリシーを変更したかが記録されます。"
+  },
+  "expanded_vocab_0117": {
+    "example_en": "Cross-account access is limited to the backup role.",
+    "example_ja": "アカウント間アクセスは、バックアップ用のロールに限定されています。"
+  },
+  "expanded_vocab_0118": {
+    "example_en": "Object versioning can help recover an overwritten file.",
+    "example_ja": "オブジェクトの世代管理は、上書きされたファイルの復旧に役立ちます。"
+  },
+  "expanded_vocab_0119": {
+    "example_en": "The signed URL expires after the approved sharing period.",
+    "example_ja": "署名付きURLは、承認された共有期間が終わると期限切れになります。"
+  },
+  "expanded_vocab_0120": {
+    "example_en": "We enabled the public access block on the archive storage.",
+    "example_ja": "保管用ストレージで、公開アクセスの遮断設定を有効にしました。"
+  },
+  "expanded_vocab_0121": {
+    "example_en": "The recovery point objective allows fifteen minutes of data loss.",
+    "example_ja": "復旧時点目標では、15分間分のデータ損失が許容されています。"
+  },
+  "expanded_vocab_0122": {
+    "example_en": "The recovery time objective is two hours.",
+    "example_ja": "復旧時間目標は2時間です。"
+  },
+  "expanded_vocab_0123": {
+    "example_en": "The restore test revealed a missing encryption key.",
+    "example_ja": "復元テストで、暗号鍵が見つからないことが判明しました。"
+  },
+  "expanded_vocab_0124": {
+    "example_en": "We verify backup integrity before starting recovery.",
+    "example_ja": "復旧を始める前に、バックアップの完全性を確認します。"
+  },
+  "expanded_vocab_0125": {
+    "example_en": "The offline copy was not reachable from the affected network.",
+    "example_ja": "影響を受けたネットワークからは、オフラインのコピーにアクセスできませんでした。"
+  },
+  "expanded_vocab_0126": {
+    "example_en": "An air gap separates this recovery system from production.",
+    "example_ja": "この復旧システムは、エアギャップによって本番環境から分離されています。"
+  },
+  "expanded_vocab_0127": {
+    "example_en": "The backup catalog identifies available recovery points.",
+    "example_ja": "バックアップの管理目録で、利用可能な復旧時点を確認できます。"
+  },
+  "expanded_vocab_0128": {
+    "example_en": "The retention lock prevents early deletion of the archive.",
+    "example_ja": "保持期間中の削除防止設定により、保管データが早期に削除されるのを防ぎます。"
+  },
+  "expanded_vocab_0129": {
+    "example_en": "The recovery environment is isolated from the incident network.",
+    "example_ja": "復旧用環境は、インシデントが発生したネットワークから隔離されています。"
+  },
+  "expanded_vocab_0130": {
+    "example_en": "We chose a clean rebuild instead of reusing the compromised image.",
+    "example_ja": "侵害されたイメージを再利用せず、安全な構成からの再構築を選びました。"
+  },
+  "expanded_vocab_0131": {
+    "example_en": "Failback will happen after data synchronization completes.",
+    "example_ja": "データの同期が完了した後で、元の環境に切り戻します。"
+  },
+  "expanded_vocab_0132": {
+    "example_en": "The failover test exposed an outdated DNS record.",
+    "example_ja": "切り替えテストによって、古いDNSレコードが見つかりました。"
+  },
+  "expanded_vocab_0133": {
+    "example_en": "Replication lag increased during peak traffic.",
+    "example_ja": "通信のピーク時に、複製の遅延が増加しました。"
+  },
+  "expanded_vocab_0134": {
+    "example_en": "The application owner must confirm data consistency.",
+    "example_ja": "アプリケーションの責任者は、データの整合性を確認する必要があります。"
+  },
+  "expanded_vocab_0135": {
+    "example_en": "We will review progress at each recovery checkpoint.",
+    "example_ja": "復旧の各確認地点で、進捗を確認します。"
+  },
+  "expanded_vocab_0136": {
+    "example_en": "The dependency map shows which database starts first.",
+    "example_ja": "依存関係図には、どのデータベースを最初に起動するかが示されています。"
+  },
+  "expanded_vocab_0137": {
+    "example_en": "The recovery sequence begins with identity and network services.",
+    "example_ja": "復旧は、認証サービスとネットワークサービスから始めます。"
+  },
+  "expanded_vocab_0138": {
+    "example_en": "We can operate at the minimum service level during recovery.",
+    "example_ja": "復旧中も、最低限のサービス水準で運用できます。"
+  },
+  "expanded_vocab_0139": {
+    "example_en": "Business continuity includes people and communication as well as systems.",
+    "example_ja": "事業継続には、システムだけでなく人員と連絡体制も含まれます。"
+  },
+  "expanded_vocab_0140": {
+    "example_en": "The disaster recovery exercise includes a regional outage.",
+    "example_ja": "災害復旧演習には、地域全体の停止も含まれています。"
+  },
+  "expanded_vocab_0141": {
+    "example_en": "The tabletop exercise tested our escalation process.",
+    "example_ja": "机上演習で、当社のエスカレーション手順を検証しました。"
+  },
+  "expanded_vocab_0142": {
+    "example_en": "The recovery drill took longer than planned.",
+    "example_ja": "復旧訓練には計画より長い時間がかかりました。"
+  },
+  "expanded_vocab_0143": {
+    "example_en": "The shared power feed is a single point of failure.",
+    "example_ja": "共有している電源供給系統が単一障害点です。"
+  },
+  "expanded_vocab_0144": {
+    "example_en": "Redundancy does not replace regular failover testing.",
+    "example_ja": "冗長性を確保していても、定期的な切り替えテストの代わりにはなりません。"
+  },
+  "expanded_vocab_0145": {
+    "example_en": "The second circuit uses a diverse path into the building.",
+    "example_ja": "2本目の回線は、別の経路で建物内に引き込まれています。"
+  },
+  "expanded_vocab_0146": {
+    "example_en": "The standby system is ready to accept traffic.",
+    "example_ja": "待機系システムは、通信を受け入れる準備ができています。"
+  },
+  "expanded_vocab_0147": {
+    "example_en": "The health check passed, but user testing is still required.",
+    "example_ja": "稼働状態の確認には合格しましたが、利用者によるテストはまだ必要です。"
+  },
+  "expanded_vocab_0148": {
+    "example_en": "The readiness check includes staff availability.",
+    "example_ja": "開始準備の確認には、担当者が対応可能かどうかも含まれます。"
+  },
+  "expanded_vocab_0149": {
+    "example_en": "Reconciliation found three transactions missing from the restored database.",
+    "example_ja": "照合によって、復元されたデータベースに取引が3件欠落していることが分かりました。"
+  },
+  "expanded_vocab_0150": {
+    "example_en": "Recovery sign-off requires both technical and business confirmation.",
+    "example_ja": "復旧完了の承認には、技術面と業務面の両方の確認が必要です。"
+  },
+  "expanded_vocab_0151": {
+    "example_en": "The event timestamp uses coordinated universal time.",
+    "example_ja": "イベントの発生時刻には、協定世界時を使っています。"
+  },
+  "expanded_vocab_0152": {
+    "example_en": "Clock skew made the incident sequence unclear.",
+    "example_ja": "機器間の時計のずれによって、インシデントの発生順序が不明確になりました。"
+  },
+  "expanded_vocab_0153": {
+    "example_en": "Time synchronization is essential for comparing logs.",
+    "example_ja": "ログを比較するには、時刻同期が不可欠です。"
+  },
+  "expanded_vocab_0154": {
+    "example_en": "The ingestion delay explains why the alert arrived late.",
+    "example_ja": "取り込み遅延が、アラートの到着が遅れた理由です。"
+  },
+  "expanded_vocab_0155": {
+    "example_en": "There is a log gap between midnight and one o'clock.",
+    "example_ja": "午前0時から1時までのログが欠落しています。"
+  },
+  "expanded_vocab_0156": {
+    "example_en": "We cannot assume log completeness after the agent stopped.",
+    "example_ja": "エージェントが停止した後は、ログが完全にそろっているとは想定できません。"
+  },
+  "expanded_vocab_0157": {
+    "example_en": "The source identifier links the event to a specific sensor.",
+    "example_ja": "送信元の識別値で、イベントを特定のセンサーにひも付けます。"
+  },
+  "expanded_vocab_0158": {
+    "example_en": "Event normalization makes searches consistent across products.",
+    "example_ja": "イベント形式の正規化により、製品をまたいで一貫した検索ができます。"
+  },
+  "expanded_vocab_0159": {
+    "example_en": "Extend the query window to include the previous shift.",
+    "example_ja": "前の勤務時間帯も含まれるように、検索対象の時間範囲を広げてください。"
+  },
+  "expanded_vocab_0160": {
+    "example_en": "The search filter excluded the test environment.",
+    "example_ja": "検索条件によって、テスト環境が除外されていました。"
+  },
+  "expanded_vocab_0161": {
+    "example_en": "The raw event contains a field missing from the dashboard.",
+    "example_ja": "加工前のイベントには、ダッシュボードに表示されていない項目が含まれています。"
+  },
+  "expanded_vocab_0162": {
+    "example_en": "Enrichment added the asset owner to the alert.",
+    "example_ja": "関連情報の付加によって、アラートに資産の責任者が追加されました。"
+  },
+  "expanded_vocab_0163": {
+    "example_en": "The analyst assigned a low confidence level to the attribution.",
+    "example_ja": "分析担当者は、攻撃主体の特定に対する確信度を低いと評価しました。"
+  },
+  "expanded_vocab_0164": {
+    "example_en": "Our working hypothesis is a misconfigured scheduled task.",
+    "example_ja": "現在検証している仮説は、スケジュールされたタスクの設定ミスです。"
+  },
+  "expanded_vocab_0165": {
+    "example_en": "Record the search scope with each negative finding.",
+    "example_ja": "該当する証拠が見つからなかった場合は、その都度、検索範囲も記録してください。"
+  },
+  "expanded_vocab_0166": {
+    "example_en": "Evidence preservation must start before logs expire.",
+    "example_ja": "ログの保存期限が切れる前に、証拠保全を開始する必要があります。"
+  },
+  "expanded_vocab_0167": {
+    "example_en": "Volatile data may be lost when the device is powered off.",
+    "example_ja": "端末の電源を切ると、揮発性データが失われる可能性があります。"
+  },
+  "expanded_vocab_0168": {
+    "example_en": "Disk acquisition is scheduled with the forensic team.",
+    "example_ja": "ディスクデータの取得は、フォレンジックチームと予定を調整しています。"
+  },
+  "expanded_vocab_0169": {
+    "example_en": "The examiner used a write blocker during acquisition.",
+    "example_ja": "調査担当者は、データ取得中に書き込み防止装置を使用しました。"
+  },
+  "expanded_vocab_0170": {
+    "example_en": "The evidence hash matched after the transfer.",
+    "example_ja": "移管後も、証拠データのハッシュ値は一致しました。"
+  },
+  "expanded_vocab_0171": {
+    "example_en": "Include the case identifier in the evidence record.",
+    "example_ja": "証拠の記録に、調査案件の識別番号を含めてください。"
+  },
+  "expanded_vocab_0172": {
+    "example_en": "The custody transfer was recorded before delivery.",
+    "example_ja": "引き渡し前に、証拠管理責任の移管が記録されました。"
+  },
+  "expanded_vocab_0173": {
+    "example_en": "The analyst note distinguishes observations from assumptions.",
+    "example_ja": "分析担当者の記録では、観測事項と仮定を区別しています。"
+  },
+  "expanded_vocab_0174": {
+    "example_en": "The investigation lead approved the next collection step.",
+    "example_ja": "調査責任者は、次の収集作業を承認しました。"
+  },
+  "expanded_vocab_0175": {
+    "example_en": "A second affected account caused a scope expansion.",
+    "example_ja": "影響を受けた2つ目のアカウントが見つかり、調査範囲が広がりました。"
+  },
+  "expanded_vocab_0176": {
+    "example_en": "The retrospective search found related activity last week.",
+    "example_ja": "過去にさかのぼる検索で、先週の関連する活動が見つかりました。"
+  },
+  "expanded_vocab_0177": {
+    "example_en": "Timeline reconstruction requires logs from several systems.",
+    "example_ja": "時系列を再構成するには、複数のシステムのログが必要です。"
+  },
+  "expanded_vocab_0178": {
+    "example_en": "Evidence handling follows the approved incident procedure.",
+    "example_ja": "証拠は、承認されたインシデント対応手順に従って取り扱います。"
+  },
+  "expanded_vocab_0179": {
+    "example_en": "Data provenance helps reviewers understand where evidence came from.",
+    "example_ja": "データの由来が分かると、確認者は証拠の入手元を理解しやすくなります。"
+  },
+  "expanded_vocab_0180": {
+    "example_en": "Investigation closure requires a documented explanation of remaining uncertainty.",
+    "example_ja": "調査を終了するには、残っている不確実性について文書で説明する必要があります。"
+  },
+  "expanded_vocab_0181": {
+    "example_en": "Input validation rejected the unexpected field format.",
+    "example_ja": "入力値の検証で、想定外の項目形式が拒否されました。"
+  },
+  "expanded_vocab_0182": {
+    "example_en": "Output encoding depends on where the value is rendered.",
+    "example_ja": "出力時のエンコード方法は、値がどこに表示されるかによって異なります。"
+  },
+  "expanded_vocab_0183": {
+    "example_en": "The developer replaced string concatenation with a parameterized query.",
+    "example_ja": "開発者は、文字列の連結をパラメーター化されたクエリに置き換えました。"
+  },
+  "expanded_vocab_0184": {
+    "example_en": "The review found a possible cross-site scripting issue in the preview page.",
+    "example_ja": "レビューで、プレビューページにクロスサイトスクリプティングの問題がある可能性が見つかりました。"
+  },
+  "expanded_vocab_0185": {
+    "example_en": "The form includes a control against cross-site request forgery.",
+    "example_ja": "そのフォームには、クロスサイトリクエストフォージェリへの対策が含まれています。"
+  },
+  "expanded_vocab_0186": {
+    "example_en": "The URL fetcher is being reviewed for server-side request forgery.",
+    "example_ja": "URL取得機能について、サーバーサイドリクエストフォージェリの観点からレビューしています。"
+  },
+  "expanded_vocab_0187": {
+    "example_en": "The team removed a component that allowed insecure deserialization.",
+    "example_ja": "チームは、安全でないデシリアライズを可能にしていた部品を削除しました。"
+  },
+  "expanded_vocab_0188": {
+    "example_en": "The file handler needs protection against path traversal.",
+    "example_ja": "ファイル処理機能には、パストラバーサルへの対策が必要です。"
+  },
+  "expanded_vocab_0189": {
+    "example_en": "The access control check runs before the document is returned.",
+    "example_ja": "文書を返す前に、アクセス制御の検査が実行されます。"
+  },
+  "expanded_vocab_0190": {
+    "example_en": "Object-level authorization prevents users from reading unrelated records.",
+    "example_ja": "オブジェクト単位の認可により、利用者が関係のない記録を読むのを防ぎます。"
+  },
+  "expanded_vocab_0191": {
+    "example_en": "The application renews session identifiers to reduce session fixation risk.",
+    "example_ja": "アプリケーションは、セッション固定攻撃のリスクを減らすため、セッション識別子を更新します。"
+  },
+  "expanded_vocab_0192": {
+    "example_en": "The browser rejected an incompatible cookie attribute.",
+    "example_ja": "ブラウザーは、互換性のないCookie属性を拒否しました。"
+  },
+  "expanded_vocab_0193": {
+    "example_en": "We tested the content security policy in report-only mode.",
+    "example_ja": "コンテンツセキュリティポリシーを、報告のみのモードでテストしました。"
+  },
+  "expanded_vocab_0194": {
+    "example_en": "The cross-origin request was rejected by the browser.",
+    "example_ja": "異なるオリジンへのリクエストは、ブラウザーに拒否されました。"
+  },
+  "expanded_vocab_0195": {
+    "example_en": "The API gateway applies authentication and request limits.",
+    "example_ja": "APIゲートウェイは、認証とリクエスト制限を適用します。"
+  },
+  "expanded_vocab_0196": {
+    "example_en": "Schema validation rejected an unexpected nested object.",
+    "example_ja": "スキーマ検証で、想定外の入れ子になったオブジェクトが拒否されました。"
+  },
+  "expanded_vocab_0197": {
+    "example_en": "The request body contains information that must be redacted.",
+    "example_ja": "リクエスト本文には、伏せ字処理が必要な情報が含まれています。"
+  },
+  "expanded_vocab_0198": {
+    "example_en": "The response header revealed an unnecessary version string.",
+    "example_ja": "レスポンスヘッダーに、不要なバージョン情報が表示されていました。"
+  },
+  "expanded_vocab_0199": {
+    "example_en": "The origin server should not accept unrestricted direct traffic.",
+    "example_ja": "配信元サーバーは、制限のない直接通信を受け入れるべきではありません。"
+  },
+  "expanded_vocab_0200": {
+    "example_en": "The reverse proxy terminates the client connection.",
+    "example_ja": "リバースプロキシが、クライアントからの接続を終端します。"
+  },
+  "expanded_vocab_0201": {
+    "example_en": "The team is investigating a possible cache poisoning issue.",
+    "example_ja": "チームは、キャッシュ汚染の問題がある可能性を調査しています。"
+  },
+  "expanded_vocab_0202": {
+    "example_en": "Inconsistent request parsing can create request smuggling risks.",
+    "example_ja": "リクエストの解析方法の不一致は、リクエストスマグリングのリスクを生む可能性があります。"
+  },
+  "expanded_vocab_0203": {
+    "example_en": "The business logic flaw allowed an approval step to be skipped.",
+    "example_ja": "業務ロジックの欠陥により、承認手順を飛ばせる状態になっていました。"
+  },
+  "expanded_vocab_0204": {
+    "example_en": "Secure code review identified a missing authorization check.",
+    "example_ja": "セキュリティを考慮したコードレビューで、認可チェックの欠落が見つかりました。"
+  },
+  "expanded_vocab_0205": {
+    "example_en": "Dependency scanning flagged an outdated parser library.",
+    "example_ja": "依存ライブラリの検査で、古いパーサーライブラリが検出されました。"
+  },
+  "expanded_vocab_0206": {
+    "example_en": "The software bill of materials lists the bundled libraries.",
+    "example_ja": "ソフトウェア部品表には、同梱されているライブラリが一覧で記載されています。"
+  },
+  "expanded_vocab_0207": {
+    "example_en": "We verified the build artifact before deployment.",
+    "example_ja": "デプロイ前に、ビルド成果物を検証しました。"
+  },
+  "expanded_vocab_0208": {
+    "example_en": "Artifact signing helps establish the source of a release.",
+    "example_ja": "成果物への署名は、リリースの出所を確認するのに役立ちます。"
+  },
+  "expanded_vocab_0209": {
+    "example_en": "A reproducible build supports independent verification of the artifact.",
+    "example_ja": "再現可能なビルドは、成果物を独立して検証することを可能にします。"
+  },
+  "expanded_vocab_0210": {
+    "example_en": "The vendor is investigating a possible supply-chain compromise.",
+    "example_ja": "ベンダーは、供給網を通じた侵害の可能性を調査しています。"
+  },
+  "expanded_vocab_0211": {
+    "example_en": "Please use the screen lock before leaving your desk.",
+    "example_ja": "席を離れる前に、画面をロックしてください。"
+  },
+  "expanded_vocab_0212": {
+    "example_en": "Report a lost device as soon as possible.",
+    "example_ja": "端末を紛失した場合は、できるだけ早く報告してください。"
+  },
+  "expanded_vocab_0213": {
+    "example_en": "Do not connect unknown removable media to the laptop.",
+    "example_ja": "出所の分からない取り外し可能な記録媒体を、ノートパソコンに接続しないでください。"
+  },
+  "expanded_vocab_0214": {
+    "example_en": "Disk encryption was enabled before the laptop was issued.",
+    "example_ja": "ノートパソコンの支給前に、ディスク暗号化を有効にしました。"
+  },
+  "expanded_vocab_0215": {
+    "example_en": "The recovery key is stored in the approved system.",
+    "example_ja": "復旧キーは、承認されたシステムに保存されています。"
+  },
+  "expanded_vocab_0216": {
+    "example_en": "The device inventory lists the laptop owner.",
+    "example_ja": "端末台帳には、ノートパソコンの所有者が記載されています。"
+  },
+  "expanded_vocab_0217": {
+    "example_en": "The software inventory includes the installed version.",
+    "example_ja": "ソフトウェア台帳には、インストール済みのバージョンが記載されています。"
+  },
+  "expanded_vocab_0218": {
+    "example_en": "The operating system will restart after the update.",
+    "example_ja": "更新後、基本ソフトウェアが再起動します。"
+  },
+  "expanded_vocab_0219": {
+    "example_en": "The browser extension requested access to all websites.",
+    "example_ja": "そのブラウザー拡張機能は、すべてのウェブサイトへのアクセス権を要求しました。"
+  },
+  "expanded_vocab_0220": {
+    "example_en": "The suspicious file was found in the download folder.",
+    "example_ja": "不審なファイルは、ダウンロード用フォルダーで見つかりました。"
+  },
+  "expanded_vocab_0221": {
+    "example_en": "The user opened the attachment preview without saving the file.",
+    "example_ja": "利用者はファイルを保存せずに、添付ファイルのプレビューを開きました。"
+  },
+  "expanded_vocab_0222": {
+    "example_en": "Check the file extension before opening the attachment.",
+    "example_ja": "添付ファイルを開く前に、ファイル名の拡張子を確認してください。"
+  },
+  "expanded_vocab_0223": {
+    "example_en": "The digital signature could not be verified.",
+    "example_ja": "電子署名を検証できませんでした。"
+  },
+  "expanded_vocab_0224": {
+    "example_en": "A trusted publisher name alone does not prove the file is safe.",
+    "example_ja": "信頼済みの発行元の名前だけでは、そのファイルが安全である証明にはなりません。"
+  },
+  "expanded_vocab_0225": {
+    "example_en": "This task does not require a local administrator account.",
+    "example_ja": "この作業には、ローカル管理者アカウントは必要ありません。"
+  },
+  "expanded_vocab_0226": {
+    "example_en": "Remote wipe may help protect data on a missing managed device.",
+    "example_ja": "遠隔消去は、紛失した管理対象端末のデータを保護するのに役立つ場合があります。"
+  },
+  "expanded_vocab_0227": {
+    "example_en": "Device enrollment must finish before work apps are installed.",
+    "example_ja": "業務アプリをインストールする前に、端末の管理登録を完了する必要があります。"
+  },
+  "expanded_vocab_0228": {
+    "example_en": "The security agent stopped reporting yesterday.",
+    "example_ja": "セキュリティ監視エージェントは、昨日から報告を停止しています。"
+  },
+  "expanded_vocab_0229": {
+    "example_en": "We check agent health during the morning review.",
+    "example_ja": "朝の確認で、監視エージェントの稼働状態を確認します。"
+  },
+  "expanded_vocab_0230": {
+    "example_en": "Low disk space prevented the logs from being saved.",
+    "example_ja": "ディスクの空き容量が少なかったため、ログを保存できませんでした。"
+  },
+  "expanded_vocab_0231": {
+    "example_en": "The restart request explains when work may be interrupted.",
+    "example_ja": "再起動の依頼には、業務がいつ中断する可能性があるかが説明されています。"
+  },
+  "expanded_vocab_0232": {
+    "example_en": "Please send the update status after the restart.",
+    "example_ja": "再起動後に、更新の状態を報告してください。"
+  },
+  "expanded_vocab_0233": {
+    "example_en": "Use the approved service for external file sharing.",
+    "example_ja": "社外へのファイル共有には、承認されたサービスを使ってください。"
+  },
+  "expanded_vocab_0234": {
+    "example_en": "The sharing link is limited to named recipients.",
+    "example_ja": "共有用リンクは、指定された受信者だけが利用できます。"
+  },
+  "expanded_vocab_0235": {
+    "example_en": "Confirm the external recipient before sending the report.",
+    "example_ja": "報告書を送る前に、社外の受信者を確認してください。"
+  },
+  "expanded_vocab_0236": {
+    "example_en": "The confidential document must stay in the approved folder.",
+    "example_ja": "機密文書は、承認されたフォルダー内に保管しなければなりません。"
+  },
+  "expanded_vocab_0237": {
+    "example_en": "The data owner approved the sharing request.",
+    "example_ja": "データの管理責任者は、共有申請を承認しました。"
+  },
+  "expanded_vocab_0238": {
+    "example_en": "Redaction removed personal details from the screenshot.",
+    "example_ja": "伏せ字処理によって、スクリーンショットから個人の情報を除去しました。"
+  },
+  "expanded_vocab_0239": {
+    "example_en": "Secure deletion is required before the device is reused.",
+    "example_ja": "端末を再利用する前に、安全なデータ削除が必要です。"
+  },
+  "expanded_vocab_0240": {
+    "example_en": "The disposal record includes the device serial number.",
+    "example_ja": "廃棄記録には、端末の製造番号が記載されています。"
+  },
+  "expanded_vocab_0241": {
+    "example_en": "We need an acknowledgment from the on-call engineer.",
+    "example_ja": "当番の技術者から、受領の確認が必要です。"
+  },
+  "expanded_vocab_0242": {
+    "example_en": "The estimated completion time is four o'clock.",
+    "example_ja": "完了予定時刻は4時です。"
+  },
+  "expanded_vocab_0243": {
+    "example_en": "Please include the next update time in the message.",
+    "example_ja": "メッセージに、次の報告時刻を含めてください。"
+  },
+  "expanded_vocab_0244": {
+    "example_en": "The current status is under investigation.",
+    "example_ja": "現在の状態は「調査中」です。"
+  },
+  "expanded_vocab_0245": {
+    "example_en": "The affected service is the remote access portal.",
+    "example_ja": "影響を受けたサービスは、リモートアクセス用のポータルです。"
+  },
+  "expanded_vocab_0246": {
+    "example_en": "Email is an unaffected service in this incident.",
+    "example_ja": "今回のインシデントでは、メールサービスに影響はありません。"
+  },
+  "expanded_vocab_0247": {
+    "example_en": "We are still checking the customer impact.",
+    "example_ja": "顧客への影響を引き続き確認しています。"
+  },
+  "expanded_vocab_0248": {
+    "example_en": "The dashboard lists work in progress.",
+    "example_ja": "ダッシュボードには、進行中の作業が表示されています。"
+  },
+  "expanded_vocab_0249": {
+    "example_en": "The change is pending approval from the service owner.",
+    "example_ja": "その変更は、サービス責任者の承認待ちです。"
+  },
+  "expanded_vocab_0250": {
+    "example_en": "The contact list includes an after-hours number.",
+    "example_ja": "連絡先一覧には、時間外の連絡先番号も含まれています。"
+  },
+  "expanded_vocab_0251": {
+    "example_en": "The on-call engineer has joined the call.",
+    "example_ja": "当番の技術者が通話に参加しました。"
+  },
+  "expanded_vocab_0252": {
+    "example_en": "Please finish the handover before the shift change.",
+    "example_ja": "勤務交代の前に、引き継ぎを終えてください。"
+  },
+  "expanded_vocab_0253": {
+    "example_en": "The handover note explains the remaining tasks.",
+    "example_ja": "引き継ぎのメモには、残っている作業が説明されています。"
+  },
+  "expanded_vocab_0254": {
+    "example_en": "Please add the error message to the support ticket.",
+    "example_ja": "サポートチケットに、エラーメッセージを追加してください。"
+  },
+  "expanded_vocab_0255": {
+    "example_en": "The ticket reference is in the email subject.",
+    "example_ja": "問い合わせの参照番号は、メールの件名に記載されています。"
+  },
+  "expanded_vocab_0256": {
+    "example_en": "I have one follow-up question about the deadline.",
+    "example_ja": "期限について、追加の質問が一つあります。"
+  },
+  "expanded_vocab_0257": {
+    "example_en": "We need written confirmation before the work begins.",
+    "example_ja": "作業を始める前に、書面での確認が必要です。"
+  },
+  "expanded_vocab_0258": {
+    "example_en": "The revised estimate includes the additional testing time.",
+    "example_ja": "修正した見積もりには、追加のテスト時間が含まれています。"
+  },
+  "expanded_vocab_0259": {
+    "example_en": "The progress report is due this afternoon.",
+    "example_ja": "進捗報告の期限は今日の午後です。"
+  },
+  "expanded_vocab_0260": {
+    "example_en": "The meeting invitation includes the correct time zone.",
+    "example_ja": "会議への招待には、正しいタイムゾーンが記載されています。"
+  },
+  "expanded_vocab_0261": {
+    "example_en": "Poor audio quality made the number difficult to hear.",
+    "example_ja": "音声の品質が悪く、数字を聞き取りにくくなっていました。"
+  },
+  "expanded_vocab_0262": {
+    "example_en": "Please stop screen sharing before opening the password manager.",
+    "example_ja": "パスワード管理ツールを開く前に、画面共有を止めてください。"
+  },
+  "expanded_vocab_0263": {
+    "example_en": "Could you copy the address into a chat message?",
+    "example_ja": "そのアドレスをチャットのメッセージにコピーしていただけますか。"
+  },
+  "expanded_vocab_0264": {
+    "example_en": "Please confirm the spelling of the host name.",
+    "example_ja": "ホスト名のつづりを確認してください。"
+  },
+  "expanded_vocab_0265": {
+    "example_en": "I need help with the pronunciation of this term.",
+    "example_ja": "この用語の発音について、教えてもらう必要があります。"
+  },
+  "expanded_vocab_0266": {
+    "example_en": "Please allow a short pause after each question.",
+    "example_ja": "質問の後に、毎回少し間を置いてください。"
+  },
+  "expanded_vocab_0267": {
+    "example_en": "Thank you for the correction to the meeting notes.",
+    "example_ja": "会議メモを訂正していただき、ありがとうございます。"
+  },
+  "expanded_vocab_0268": {
+    "example_en": "Each task needs an action owner.",
+    "example_ja": "各作業には、対応の担当者が必要です。"
+  },
+  "expanded_vocab_0269": {
+    "example_en": "The due date has moved to next Tuesday.",
+    "example_ja": "期限の日付は、次の火曜日に変更されました。"
+  },
+  "expanded_vocab_0270": {
+    "example_en": "Send a completion notice after the final check.",
+    "example_ja": "最終確認の後、完了通知を送ってください。"
+  },
+  "expanded_vocab_0271": {
+    "example_en": "The display name looked familiar, but the address was different.",
+    "example_ja": "表示名には見覚えがありましたが、アドレスは異なっていました。"
+  },
+  "expanded_vocab_0272": {
+    "example_en": "The reply-to address points to an unrelated domain.",
+    "example_ja": "返信先アドレスは、関係のないドメインを指しています。"
+  },
+  "expanded_vocab_0273": {
+    "example_en": "The message identifier helps us trace the email.",
+    "example_ja": "メッセージの識別番号は、メールを追跡するのに役立ちます。"
+  },
+  "expanded_vocab_0274": {
+    "example_en": "Unexpected mailbox forwarding was found during the review.",
+    "example_ja": "確認中に、予期しないメールボックスの自動転送が見つかりました。"
+  },
+  "expanded_vocab_0275": {
+    "example_en": "The inbox rule moved security alerts to the archive.",
+    "example_ja": "受信トレイのルールによって、セキュリティアラートがアーカイブに移動されていました。"
+  },
+  "expanded_vocab_0276": {
+    "example_en": "The delivery failure affected only external recipients.",
+    "example_ja": "配信失敗の影響を受けたのは、社外の受信者だけでした。"
+  },
+  "expanded_vocab_0277": {
+    "example_en": "Quarantine release requires review of the message.",
+    "example_ja": "隔離メールを解放するには、メッセージの確認が必要です。"
+  },
+  "expanded_vocab_0278": {
+    "example_en": "Sender verification should use an independently known contact.",
+    "example_ja": "送信者の確認には、別の手段で確認済みの連絡先を使うべきです。"
+  },
+  "expanded_vocab_0279": {
+    "example_en": "Callback verification stopped the fraudulent payment request.",
+    "example_ja": "折り返し電話による確認で、不正な支払い依頼を阻止しました。"
+  },
+  "expanded_vocab_0280": {
+    "example_en": "The email requested payment redirection to a new account.",
+    "example_ja": "そのメールでは、新しい口座への振込先変更を求めていました。"
+  },
+  "expanded_vocab_0281": {
+    "example_en": "Finance reported a possible invoice fraud attempt.",
+    "example_ja": "経理部門は、請求書を使った詐欺の試みの可能性を報告しました。"
+  },
+  "expanded_vocab_0282": {
+    "example_en": "The awareness session included QR code phishing examples.",
+    "example_ja": "注意喚起の研修には、QRコードを使ったフィッシングの例が含まれていました。"
+  },
+  "expanded_vocab_0283": {
+    "example_en": "The help desk received a voice phishing call.",
+    "example_ja": "ヘルプデスクに、音声通話を使ったフィッシングの電話がありました。"
+  },
+  "expanded_vocab_0284": {
+    "example_en": "The employee reported an SMS phishing message.",
+    "example_ja": "従業員は、SMSを使ったフィッシングのメッセージを報告しました。"
+  },
+  "expanded_vocab_0285": {
+    "example_en": "The caller used an urgent audit as a pretext.",
+    "example_ja": "電話の相手は、緊急の監査を口実にしました。"
+  },
+  "expanded_vocab_0286": {
+    "example_en": "Social engineering may target the help desk directly.",
+    "example_ja": "人の心理を利用した攻撃は、ヘルプデスクを直接狙うこともあります。"
+  },
+  "expanded_vocab_0287": {
+    "example_en": "An urgent request still needs normal identity checks.",
+    "example_ja": "緊急の依頼でも、通常の本人確認が必要です。"
+  },
+  "expanded_vocab_0288": {
+    "example_en": "Identity verification failed, so we did not reset the password.",
+    "example_ja": "本人確認に失敗したため、パスワードをリセットしませんでした。"
+  },
+  "expanded_vocab_0289": {
+    "example_en": "Send the recovery instructions through an approved channel.",
+    "example_ja": "承認された連絡経路で、復旧手順を送ってください。"
+  },
+  "expanded_vocab_0290": {
+    "example_en": "The training explains our reporting channel for suspicious messages.",
+    "example_ja": "研修では、不審なメッセージの報告窓口を説明します。"
+  },
+  "expanded_vocab_0291": {
+    "example_en": "The awareness campaign focuses on reporting without blame.",
+    "example_ja": "注意喚起活動では、報告した人を責めないことを重視しています。"
+  },
+  "expanded_vocab_0292": {
+    "example_en": "The simulation exercise uses fictional messages and accounts.",
+    "example_ja": "模擬演習では、架空のメッセージとアカウントを使います。"
+  },
+  "expanded_vocab_0293": {
+    "example_en": "User guidance explains what to do after clicking a link.",
+    "example_ja": "利用者向けの案内では、リンクをクリックした後に何をすべきかを説明します。"
+  },
+  "expanded_vocab_0294": {
+    "example_en": "The help-desk script includes a verification step.",
+    "example_ja": "ヘルプデスクの対応手順には、確認の工程が含まれています。"
+  },
+  "expanded_vocab_0295": {
+    "example_en": "Never read a verification code to an unexpected caller.",
+    "example_ja": "予期しない電話の相手に、確認コードを読み上げてはいけません。"
+  },
+  "expanded_vocab_0296": {
+    "example_en": "Account recovery must not bypass identity verification.",
+    "example_ja": "アカウントの復旧でも、本人確認を省略してはいけません。"
+  },
+  "expanded_vocab_0297": {
+    "example_en": "Call the trusted contact listed in the vendor record.",
+    "example_ja": "ベンダーの記録に載っている、確認済みの連絡先に電話してください。"
+  },
+  "expanded_vocab_0298": {
+    "example_en": "The fraud report includes the requested bank account change.",
+    "example_ja": "詐欺の報告には、依頼された銀行口座の変更内容が含まれています。"
+  },
+  "expanded_vocab_0299": {
+    "example_en": "The message trace shows that delivery was blocked.",
+    "example_ja": "配送追跡の結果から、メッセージの配信がブロックされたことが分かります。"
+  },
+  "expanded_vocab_0300": {
+    "example_en": "The attacker may have copied a real email thread.",
+    "example_ja": "攻撃者は、実際のメールのやり取りをコピーした可能性があります。"
+  },
+  "expanded_vocab_0301": {
+    "example_en": "The control objective is to limit unauthorized changes.",
+    "example_ja": "統制の目的は、未承認の変更を制限することです。"
+  },
+  "expanded_vocab_0302": {
+    "example_en": "The test sample includes both approved and rejected requests.",
+    "example_ja": "検査対象のサンプルには、承認された申請と却下された申請の両方が含まれています。"
+  },
+  "expanded_vocab_0303": {
+    "example_en": "The sampling period covers the last quarter.",
+    "example_ja": "サンプル抽出の対象期間は、前の四半期です。"
+  },
+  "expanded_vocab_0304": {
+    "example_en": "The evidence index links each file to a control.",
+    "example_ja": "証拠資料の索引で、各ファイルを統制にひも付けています。"
+  },
+  "expanded_vocab_0305": {
+    "example_en": "Evidence freshness matters when configurations change frequently.",
+    "example_ja": "設定が頻繁に変わる場合、証拠資料が新しいことが重要です。"
+  },
+  "expanded_vocab_0306": {
+    "example_en": "The remediation tracker shows two overdue actions.",
+    "example_ja": "是正状況の管理表には、期限を過ぎた対応が2件あります。"
+  },
+  "expanded_vocab_0307": {
+    "example_en": "The overdue action has been escalated to its owner.",
+    "example_ja": "期限を過ぎた対応について、担当者へエスカレーションしました。"
+  },
+  "expanded_vocab_0308": {
+    "example_en": "The target date depends on vendor delivery.",
+    "example_ja": "目標日は、ベンダーの納品時期によって決まります。"
+  },
+  "expanded_vocab_0309": {
+    "example_en": "The control gap affects emergency access reviews.",
+    "example_ja": "統制上の不足が、緊急アクセスの確認に影響しています。"
+  },
+  "expanded_vocab_0310": {
+    "example_en": "Exception expiry will trigger a new review.",
+    "example_ja": "例外承認の期限が切れると、新たな見直しが行われます。"
+  },
+  "expanded_vocab_0311": {
+    "example_en": "The risk statement identifies the asset and potential harm.",
+    "example_ja": "リスクを説明する記述では、対象の資産と想定される損害を明示しています。"
+  },
+  "expanded_vocab_0312": {
+    "example_en": "The request needs a clear business justification.",
+    "example_ja": "申請には、明確な業務上の必要性の説明が必要です。"
+  },
+  "expanded_vocab_0313": {
+    "example_en": "The approval record was attached to the change ticket.",
+    "example_ja": "承認の記録は、変更チケットに添付されました。"
+  },
+  "expanded_vocab_0314": {
+    "example_en": "The review cadence is quarterly for this control.",
+    "example_ja": "この統制を見直す周期は、四半期ごとです。"
+  },
+  "expanded_vocab_0315": {
+    "example_en": "New staff must complete the policy acknowledgment.",
+    "example_ja": "新しい職員は、規程の確認と同意を完了する必要があります。"
+  },
+  "expanded_vocab_0316": {
+    "example_en": "Control design should match the stated objective.",
+    "example_ja": "統制の設計は、明示された目的に合っているべきです。"
+  },
+  "expanded_vocab_0317": {
+    "example_en": "We need evidence of operating effectiveness over time.",
+    "example_ja": "一定期間にわたって運用上有効に機能していた証拠が必要です。"
+  },
+  "expanded_vocab_0318": {
+    "example_en": "Management attestation does not replace all technical evidence.",
+    "example_ja": "管理者による確認表明は、すべての技術的な証拠の代わりにはなりません。"
+  },
+  "expanded_vocab_0319": {
+    "example_en": "The report explains the scope limitation clearly.",
+    "example_ja": "報告書では、対象範囲の制約を明確に説明しています。"
+  },
+  "expanded_vocab_0320": {
+    "example_en": "An independent review will check the closure evidence.",
+    "example_ja": "独立した立場からのレビューで、完了を裏付ける証拠を確認します。"
+  },
+  "expanded_vocab_0321": {
+    "example_en": "Supplier assurance includes how incidents are reported.",
+    "example_ja": "供給業者の安全性の確認には、インシデントの報告方法も含まれます。"
+  },
+  "expanded_vocab_0322": {
+    "example_en": "The vendor must identify the relevant subcontractor.",
+    "example_ja": "ベンダーは、関係する再委託先を特定する必要があります。"
+  },
+  "expanded_vocab_0323": {
+    "example_en": "The contract contains a notification commitment for incidents.",
+    "example_ja": "契約には、インシデントの通知に関する約束が含まれています。"
+  },
+  "expanded_vocab_0324": {
+    "example_en": "The exit plan covers data return and account removal.",
+    "example_ja": "契約終了時の移行計画では、データの返却とアカウントの削除を扱っています。"
+  },
+  "expanded_vocab_0325": {
+    "example_en": "The project has a data residency requirement.",
+    "example_ja": "そのプロジェクトには、データの保管地域に関する要件があります。"
+  },
+  "expanded_vocab_0326": {
+    "example_en": "Data minimization reduces unnecessary exposure.",
+    "example_ja": "扱うデータを最小限にすると、不要な露出を減らせます。"
+  },
+  "expanded_vocab_0327": {
+    "example_en": "Purpose limitation affects how the dataset may be reused.",
+    "example_ja": "利用目的の限定は、データセットをどのように再利用できるかに影響します。"
+  },
+  "expanded_vocab_0328": {
+    "example_en": "A legal hold may suspend the normal deletion schedule.",
+    "example_ja": "法的な保存措置によって、通常の削除スケジュールが停止される場合があります。"
+  },
+  "expanded_vocab_0329": {
+    "example_en": "The retention schedule differs by data category.",
+    "example_ja": "保存期間は、データの分類によって異なります。"
+  },
+  "expanded_vocab_0330": {
+    "example_en": "We requested a deletion certificate after the contract ended.",
+    "example_ja": "契約終了後に、削除証明書を求めました。"
+  },
+  "expanded_vocab_0331": {
+    "example_en": "The affected version is installed on two internal servers.",
+    "example_ja": "影響を受けるバージョンが、社内サーバー2台にインストールされています。"
+  },
+  "expanded_vocab_0332": {
+    "example_en": "The fixed release is available in the test repository.",
+    "example_ja": "修正済みリリースは、テスト用リポジトリで利用できます。"
+  },
+  "expanded_vocab_0333": {
+    "example_en": "The vendor advisory lists the affected configurations.",
+    "example_ja": "ベンダーの注意情報には、影響を受ける構成が記載されています。"
+  },
+  "expanded_vocab_0334": {
+    "example_en": "Exploitability depends on the exposed feature and permissions.",
+    "example_ja": "悪用のしやすさは、外部から利用できる機能と権限によって異なります。"
+  },
+  "expanded_vocab_0335": {
+    "example_en": "Network reachability changes the immediate exposure assessment.",
+    "example_ja": "ネットワークからの到達可能性によって、現時点での露出の評価が変わります。"
+  },
+  "expanded_vocab_0336": {
+    "example_en": "The attack prerequisite is not present in our configuration.",
+    "example_ja": "当社の構成では、攻撃が成立する前提条件が存在しません。"
+  },
+  "expanded_vocab_0337": {
+    "example_en": "Patch coverage excludes devices that have been offline.",
+    "example_ja": "パッチ適用の網羅状況には、オフラインだった端末は含まれていません。"
+  },
+  "expanded_vocab_0338": {
+    "example_en": "Patch verification includes a version check after restart.",
+    "example_ja": "パッチ適用の確認には、再起動後のバージョン確認も含まれます。"
+  },
+  "expanded_vocab_0339": {
+    "example_en": "The reboot requirement affects the maintenance schedule.",
+    "example_ja": "再起動の必要性が、保守スケジュールに影響します。"
+  },
+  "expanded_vocab_0340": {
+    "example_en": "The first deployment ring contains noncritical devices.",
+    "example_ja": "最初の配布グループには、重要度の低い端末が含まれています。"
+  },
+  "expanded_vocab_0341": {
+    "example_en": "The pilot rollout revealed an application compatibility issue.",
+    "example_ja": "試験的な展開で、アプリケーションの互換性の問題が見つかりました。"
+  },
+  "expanded_vocab_0342": {
+    "example_en": "A staged rollout limits the initial impact of a bad update.",
+    "example_ja": "段階的な展開により、不具合のある更新による初期の影響を限定できます。"
+  },
+  "expanded_vocab_0343": {
+    "example_en": "The canary deployment passed the agreed health checks.",
+    "example_ja": "少数環境への先行展開は、合意した稼働状態の確認に合格しました。"
+  },
+  "expanded_vocab_0344": {
+    "example_en": "The rollback trigger is a sustained increase in errors.",
+    "example_ja": "切り戻しの条件は、エラーが継続的に増加することです。"
+  },
+  "expanded_vocab_0345": {
+    "example_en": "The change freeze starts before the launch weekend.",
+    "example_ja": "サービス開始予定の週末に先立ち、変更作業の凍結期間が始まります。"
+  },
+  "expanded_vocab_0346": {
+    "example_en": "The change record includes the test result and approval.",
+    "example_ja": "変更の記録には、テスト結果と承認が含まれています。"
+  },
+  "expanded_vocab_0347": {
+    "example_en": "The pre-change check confirms the backup configuration.",
+    "example_ja": "変更前の確認では、バックアップ用の設定を確認します。"
+  },
+  "expanded_vocab_0348": {
+    "example_en": "The post-change check includes a user login test.",
+    "example_ja": "変更後の確認には、利用者によるログインテストも含まれます。"
+  },
+  "expanded_vocab_0349": {
+    "example_en": "Save a configuration backup before editing the policy.",
+    "example_ja": "ポリシーを編集する前に、設定のバックアップを保存してください。"
+  },
+  "expanded_vocab_0350": {
+    "example_en": "The version mismatch caused the cluster warning.",
+    "example_ja": "バージョンの不一致によって、クラスターの警告が発生しました。"
+  },
+  "expanded_vocab_0351": {
+    "example_en": "The compatibility test covers our authentication plug-in.",
+    "example_ja": "互換性テストは、当社の認証プラグインを対象に含めています。"
+  },
+  "expanded_vocab_0352": {
+    "example_en": "The regression test found a broken export function.",
+    "example_ja": "既存機能への影響を調べるテストで、出力機能の不具合が見つかりました。"
+  },
+  "expanded_vocab_0353": {
+    "example_en": "The maintenance notice includes the expected interruption.",
+    "example_ja": "保守作業の案内には、予想される中断が記載されています。"
+  },
+  "expanded_vocab_0354": {
+    "example_en": "This service dependency must be restored before login can work.",
+    "example_ja": "ログインを機能させるには、先にこの依存先サービスを復旧する必要があります。"
+  },
+  "expanded_vocab_0355": {
+    "example_en": "The rescan confirmed that the exposed component was updated.",
+    "example_ja": "再スキャンで、露出していたコンポーネントが更新されたことを確認しました。"
+  },
+  "expanded_vocab_0356": {
+    "example_en": "Attach verification evidence before closing the finding.",
+    "example_ja": "指摘事項を完了扱いにする前に、確認の証拠を添付してください。"
+  },
+  "expanded_vocab_0357": {
+    "example_en": "The unsupported dependency needs a replacement plan.",
+    "example_ja": "サポート対象外の依存部品には、置き換え計画が必要です。"
+  },
+  "expanded_vocab_0358": {
+    "example_en": "Technical debt is making security updates harder to deploy.",
+    "example_ja": "技術的負債により、セキュリティ更新を展開しにくくなっています。"
+  },
+  "expanded_vocab_0359": {
+    "example_en": "Remediation priority combines exposure with business importance.",
+    "example_ja": "修正対応の優先順位は、露出の状況と業務上の重要性を組み合わせて決めます。"
+  },
+  "expanded_vocab_0360": {
+    "example_en": "The temporary exception expires after the replacement is installed.",
+    "example_ja": "代替のものが導入されると、一時的な例外は終了します。"
+  },
+  "expanded_vocab_0361": {
+    "example_en": "The threat model identifies each trust boundary crossed by the request.",
+    "example_ja": "脅威モデルでは、リクエストが越える信頼境界をすべて特定しています。"
+  },
+  "expanded_vocab_0362": {
+    "example_en": "The threat model includes abuse of administrator workflows.",
+    "example_ja": "脅威モデルには、管理者の作業手順の悪用も含まれています。"
+  },
+  "expanded_vocab_0363": {
+    "example_en": "The abuse case describes how a legitimate feature could be misused.",
+    "example_ja": "悪用のシナリオでは、正規の機能がどのように不正利用され得るかを説明しています。"
+  },
+  "expanded_vocab_0364": {
+    "example_en": "The security invariant requires authorization before every data export.",
+    "example_ja": "常に維持すべき安全条件として、データを出力するたびに事前の認可が必要です。"
+  },
+  "expanded_vocab_0365": {
+    "example_en": "Separate credentials reduce the blast radius of a compromised job.",
+    "example_ja": "認証情報を分けることで、侵害されたジョブから影響が広がる範囲を縮小できます。"
+  },
+  "expanded_vocab_0366": {
+    "example_en": "Credential isolation limits access from unrelated workloads.",
+    "example_ja": "認証情報の分離によって、無関係なワークロードからのアクセスを制限します。"
+  },
+  "expanded_vocab_0367": {
+    "example_en": "Just-in-time access expires after the approved task.",
+    "example_ja": "必要な時だけ付与するアクセス権は、承認された作業の終了後に失効します。"
+  },
+  "expanded_vocab_0368": {
+    "example_en": "The review examines where code crosses a privilege boundary.",
+    "example_ja": "レビューでは、コードが権限の境界を越える箇所を確認します。"
+  },
+  "expanded_vocab_0369": {
+    "example_en": "Egress restriction limits which destinations the workload can contact.",
+    "example_ja": "外向き通信の制限によって、ワークロードが接続できる宛先を限定します。"
+  },
+  "expanded_vocab_0370": {
+    "example_en": "The service mesh provides workload-level traffic controls.",
+    "example_ja": "サービスメッシュは、ワークロード単位の通信制御を提供します。"
+  },
+  "expanded_vocab_0371": {
+    "example_en": "Mutual TLS authenticates both ends of the connection.",
+    "example_ja": "相互TLS認証では、接続の両端を認証します。"
+  },
+  "expanded_vocab_0372": {
+    "example_en": "Certificate rotation needs testing across all dependent clients.",
+    "example_ja": "証明書の入れ替えには、依存するすべてのクライアントでのテストが必要です。"
+  },
+  "expanded_vocab_0373": {
+    "example_en": "Certificate pinning can complicate emergency certificate replacement.",
+    "example_ja": "証明書などを固定して検証する方式では、緊急時の証明書交換が複雑になる場合があります。"
+  },
+  "expanded_vocab_0374": {
+    "example_en": "The key escrow design requires a clear access policy.",
+    "example_ja": "鍵の預託の設計には、明確なアクセスポリシーが必要です。"
+  },
+  "expanded_vocab_0375": {
+    "example_en": "The hardware security module protects the signing key.",
+    "example_ja": "ハードウェアによる鍵保護装置が、署名鍵を保護します。"
+  },
+  "expanded_vocab_0376": {
+    "example_en": "Cryptographic agility helps teams replace algorithms when requirements change.",
+    "example_ja": "暗号方式を切り替えられる柔軟性は、要件が変わったときにアルゴリズムを置き換えるのに役立ちます。"
+  },
+  "expanded_vocab_0377": {
+    "example_en": "The token generator needs sufficient entropy.",
+    "example_ja": "トークン生成器には、十分な予測困難さが必要です。"
+  },
+  "expanded_vocab_0378": {
+    "example_en": "The protocol uses a nonce to distinguish requests.",
+    "example_ja": "そのプロトコルは、一度だけ使う値でリクエストを区別します。"
+  },
+  "expanded_vocab_0379": {
+    "example_en": "Replay protection prevents reuse of a captured valid message.",
+    "example_ja": "再送悪用への防御によって、取得された有効なメッセージの再利用を防ぎます。"
+  },
+  "expanded_vocab_0380": {
+    "example_en": "The integrity check failed after the package was modified.",
+    "example_ja": "パッケージが変更された後、改ざんの有無の検査に失敗しました。"
+  },
+  "expanded_vocab_0381": {
+    "example_en": "The signature supports verification of the artifact's authenticity.",
+    "example_ja": "署名は、成果物が真正なものであることの確認を支えます。"
+  },
+  "expanded_vocab_0382": {
+    "example_en": "Nonrepudiation requirements affect how approvals are recorded.",
+    "example_ja": "否認防止の要件は、承認の記録方法に影響します。"
+  },
+  "expanded_vocab_0383": {
+    "example_en": "Security assurance depends on evidence as well as design claims.",
+    "example_ja": "安全性の裏付けには、設計上の主張だけでなく証拠も必要です。"
+  }
+}
