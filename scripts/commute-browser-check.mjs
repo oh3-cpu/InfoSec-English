@@ -67,6 +67,7 @@ try {
   await page.waitForFunction(() => window.__audios[0].currentTime > .4);
   await page.getByRole("button", { name: "■ 停止・位置を保存" }).click();
   const before = await saved(); assert.ok(before.commute.resume.offset > .2); assert.equal(before.commute.bookmarks.length, 1);
+  console.log("PASS: playback controls and saved position");
   await page.reload(); await listening();
   await page.getByRole("button", { name: "▶ 前回の続きから再生" }).click();
   await page.waitForFunction(() => window.__audios[0]?.currentTime > .2 && !window.__audios[0].paused);
@@ -82,11 +83,13 @@ try {
   await page.getByRole("button", { name: "次の段階へ" }).click();
   assert.equal(await page.locator(".syncedTranscript").count(), 0);
   await page.getByRole("button", { name: "■ 停止・位置を保存" }).click();
+  console.log("PASS: caption stages");
   await page.locator(".commuteDownloads summary").click();
   await page.locator(".downloadRow").first().getByRole("button", { name: "↓ 保存", exact: true }).click();
   await page.waitForFunction(() => document.querySelector(".downloadRow")?.textContent.includes("保存済み"));
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, "390px layout fits screen");
   await page.screenshot({ path: "/tmp/commute-mobile.png", fullPage: true });
+  console.log("PASS: course download and mobile width");
   await context.setOffline(true);
   await page.reload(); await listening();
   await page.getByRole("button", { name: "▶ 前回の続きから再生" }).click();
@@ -103,4 +106,7 @@ try {
   await page.waitForFunction(() => document.querySelector(".downloadRow")?.textContent.includes("未保存"));
   assert.deepEqual(errors, []);
   console.log("PASS: mobile layout, real MP3 playback/sync, paused speed, resume, stages, bookmarks, offline reload/playback, quiz, deletion");
+} catch (error) {
+  console.error("Browser diagnostics:", errors, await page.locator("body").innerText().catch(() => "no body"));
+  throw error;
 } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }
