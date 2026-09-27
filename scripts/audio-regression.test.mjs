@@ -4,6 +4,8 @@ import { readFile } from "node:fs/promises";
 import vm from "node:vm";
 import path from "node:path";
 import { stripTypeScriptTypes } from "node:module";
+import { createHash } from "node:crypto";
+import { mp3Duration } from "./mp3-duration.mjs";
 
 const speechSource = await readFile(new URL("../src/speechPlayback.ts", import.meta.url), "utf8");
 function speechFixture() {
@@ -82,17 +84,18 @@ test("Offline inventory uses last valid cache; missing cache never returns app H
 
 const generatorSource = (await readFile(new URL("./generate-tts.mjs", import.meta.url), "utf8"))
   .replace(/^import .*;\n/gm, "");
-async function generate(fetcher, configured = true) {
+async function generate(fetcher, configured = true, narrations = []) {
   const files = new Map(), delays = [];
   const sources = {
     "advanced_waf_ndr.json": { vocabulary: [], phrases: [], listening: [] },
     "content_expansion_202609.json": { vocabulary: [], phrases: [], listening: [], commutingCourses: [], commutingNarrations: [], meetings: [] },
     "vocabulary.json": [{ id: "test", term_en: "asset", example_en: "Protect the asset." }],
+    "commuting_narrations.json": narrations,
   };
   const promise = vm.runInNewContext(`(async () => { ${generatorSource} })()`, {
-    path, Buffer, AbortSignal, Date, console: { log() {}, warn() {} },
+    path, Buffer, AbortSignal, Date, createHash, mp3Duration, console: { log() {}, warn() {} },
     process: { cwd: () => "/fixture", argv: ["node", "script", "--require-complete"], env: configured ? { AZURE_SPEECH_KEY: "dummy", AZURE_SPEECH_REGION: "test" } : {} },
-    readFile: async file => JSON.stringify(sources[path.basename(file)] ?? []),
+    readFile: async file => files.get(file) ?? JSON.stringify(sources[path.basename(file)] ?? []),
     mkdir: async () => {}, stat: async () => { throw new Error("not found"); },
     writeFile: async (file, data) => files.set(file, data),
     fetch: fetcher, setTimeout: (fn, delay) => { delays.push(delay); fn(); },
@@ -113,4 +116,14 @@ test("Persistent generation errors and missing credentials block deployment", as
   await assert.rejects(generate(async () => { attempts++; return new Response("busy", { status: 503 }); }), /refusing to deploy/);
   assert.equal(attempts, 8);
   await assert.rejects(generate(async () => { throw new Error("must not call network"); }, false), /configuration missing/);
+});
+test("Generated sentence inventory preserves text order and real MP3 durations", async () => {
+  const frame = Buffer.alloc(480); frame.set([255,243,228,192]);
+  const bytes = Buffer.concat([frame, frame]);
+  const result = await generate(async () => new Response(bytes), true, [{ id: "long", narration_en: "One. Two!" }]);
+  const manifest = JSON.parse(result.files.get("/fixture/public/audio/manifest.json"));
+  assert.deepEqual(manifest.commutingSegments.long.map(s => s.text), ["One.", "Two!"]);
+  assert.equal(manifest.commutingSegments.long[0].duration, .048);
+  assert.match(manifest.items["commuting-segment:long:0"], /commuting-segments\/long-0-[a-f0-9]{12}\.mp3$/);
+  await assert.rejects(generate(async () => new Response("invalid mp3"), true, [{ id: "bad", narration_en: "One." }]), /refusing to deploy/);
 });
