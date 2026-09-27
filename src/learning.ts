@@ -1,3 +1,5 @@
+import { emptyCommute, normalizeCommute } from "./commuteModel";
+import type { CommuteProgress } from "./commuteModel";
 import type { VoicePreference } from "./voices";
 
 export type ItemKind = "vocabulary" | "phrase" | "listening" | "meeting";
@@ -38,6 +40,7 @@ export type Progress = {
   courseLevel: "beginner" | "lower_intermediate" | "intermediate" | "advanced";
   lastSession: SessionSummary | null;
   dailyStats: DailyStat[];
+  commute: CommuteProgress;
 };
 
 export const storeKey = "infosec-english-progress-v1";
@@ -55,6 +58,7 @@ export const emptyProgress: Progress = {
   courseLevel: "beginner",
   lastSession: null,
   dailyStats: [],
+  commute: emptyCommute(),
 };
 
 const dateText = (date: Date) => {
@@ -86,6 +90,7 @@ export function normalizeProgress(value: unknown): Progress {
   }) : [];
   return {
     version: 3,
+    commute: normalizeCommute(source.commute),
     known: strings(source.known),
     difficult: strings(source.difficult),
     correct: numberOr(source.correct, 0),
@@ -97,7 +102,7 @@ export function normalizeProgress(value: unknown): Progress {
     preferredVoice: voicePreferences.includes(source.preferredVoice as VoicePreference) ? source.preferredVoice as VoicePreference : "Ava",
     courseLevel: levels.includes(source.courseLevel as typeof levels[number]) ? source.courseLevel as Progress["courseLevel"] : "beginner",
     lastSession: source.lastSession && typeof source.lastSession === "object" ? source.lastSession as SessionSummary : null,
-    dailyStats: Array.isArray(source.dailyStats) ? source.dailyStats.filter((item): item is DailyStat => Boolean(item && typeof item === "object" && typeof (item as DailyStat).date === "string" && typeof (item as DailyStat).attempts === "number" && typeof (item as DailyStat).correct === "number" && typeof (item as DailyStat).minutes === "number")).slice(-90) : [],
+    dailyStats: Array.isArray(source.dailyStats) ? source.dailyStats.filter((item): item is DailyStat => Boolean(item && typeof item === "object" && typeof (item as DailyStat).date === "string" && typeof (item as DailyStat).attempts === "number" && typeof (item as DailyStat).correct === "number" && typeof (item as DailyStat).minutes === "number")) : [],
   };
 }
 
@@ -137,7 +142,7 @@ export function recordResult(progress: Progress, kind: ItemKind, itemId: string,
 
   const date = todayText();
   const previous = progress.dailyStats.find(stat => stat.date === date) ?? { date, attempts: 0, correct: 0, minutes: 0 };
-  const dailyStats = [...progress.dailyStats.filter(stat => stat.date !== date), { ...previous, attempts: previous.attempts + 1, correct: previous.correct + (isCorrect ? 1 : 0) }].slice(-90);
+  const dailyStats = [...progress.dailyStats.filter(stat => stat.date !== date), { ...previous, attempts: previous.attempts + 1, correct: previous.correct + (isCorrect ? 1 : 0) }];
   return {
     ...progress,
     difficult,
@@ -152,7 +157,7 @@ export function recordResult(progress: Progress, kind: ItemKind, itemId: string,
 export function addMinutes(progress: Progress, amount = 1): Progress {
   const date = todayText();
   const previous = progress.dailyStats.find(stat => stat.date === date) ?? { date, attempts: 0, correct: 0, minutes: 0 };
-  return { ...progress, minutes: progress.minutes + amount, lastDate: date, dailyStats: [...progress.dailyStats.filter(stat => stat.date !== date), { ...previous, minutes: previous.minutes + amount }].slice(-90) };
+  return { ...progress, minutes: progress.minutes + amount, lastDate: date, dailyStats: [...progress.dailyStats.filter(stat => stat.date !== date), { ...previous, minutes: previous.minutes + amount }] };
 }
 
 export function recordVocabulary(progress: Progress, itemId: string, remembered: boolean): Progress {
