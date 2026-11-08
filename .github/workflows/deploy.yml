@@ -24,6 +24,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Audit dependencies before generating audio or deploying
+        run: npm audit --audit-level=low
       - name: Generate natural MP3 audio
         run: npm run generate:tts -- --require-complete
         env:

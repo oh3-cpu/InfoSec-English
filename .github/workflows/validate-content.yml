@@ -10,7 +10,8 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    # Playwright 1.56.1 supports Ubuntu 24.04, not the newer ubuntu-latest image.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,6 +19,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Audit locked dependencies
+        run: npm audit --audit-level=low
       - name: Validate content counts and references
         run: node scripts/validate-content-expansion.mjs
       - name: Validate audio inventory without generating MP3
@@ -31,6 +34,7 @@ jobs:
       - name: Install browser test tools
         run: |
           npm install --no-save --package-lock=false playwright@1.56.1
+          npm audit --audit-level=low --package-lock=false
           npx playwright install --with-deps chromium
       - name: Test commute playback and offline mode in a mobile viewport
         run: node scripts/commute-browser-check.mjs
